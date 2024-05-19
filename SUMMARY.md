@@ -32,18 +32,33 @@
 * [Overlay Service](base-implementations/overlay-service.md)
 * [Teranode](base-implementations/teranode.md)
 
-## Software Development Kits
+## Important Concepts
 
-* [Concepts](./SDKs/concepts/README.md)
   * [Linked Keys "42"](./SDKs/concepts/42.md)
+  * [Chain SPV](./SDKs/concepts/CHAIN_SPV.md)
   * [Hashes](./SDKs/concepts/HASHES.md)
   * [BEEF](./SDKs/concepts/BEEF.md)
+
+## SDKs
+
+* [Guides](./guides/overview.md)
+  * [Gettings Started](./guides/getting-started.md)
+  * [(Node, CommonJS)](./SDKs/examples/GETTING_STARTED_NODE_CJS.md)
+  * [(React)](./SDKs/examples/GETTING_STARTED_REACT.md)
 * [Examples](./SDKs/examples/README.md)
-
-## Guides
-
-* [Overview](guides/overview.md)
-* [Getting Started](guides/getting-started.md)
+  * [Example: Creating a Simple Transaction](EXAMPLE_SIMPLE_TX.md)
+  * [Example: Verifying a BEEF Structure](EXAMPLE_VERIFYING_BEEF.md)
+  * [Example: Creating Transactions with Inputs, Outputs and Templates](EXAMPLE_COMPLEX_TX.md)
+  * [Example: Creating the R-puzzle Script Template](EXAMPLE_SCRIPT_TEMPLATES.md)
+  * [Example: Message Encryption and Decryption](EXAMPLE_ENCRYPT_DECRYPT_MESSAGE.md)
+  * [Example: Message Signing](EXAMPLE_MESSAGE_SIGNING.md)
+  * [Example: Building a Custom Transaction Broadcast Client](EXAMPLE_BUILDING_CUSTOM_TX_BROADCASTER.md)
+  * [Example: Verifying Spends with Script Intrepreter](EXAMPLE_VERIFYING_SPENDS.md)
+  * [Example: BIP32 Key Derivation with HD Wallets](EXAMPLE_HD_WALLETS.md)
+  * [Example: Using Type 42 Key Derivation for Bitcoin Wallet Management](EXAMPLE_TYPE_42.md)
+  * [Example: Creating a Custom Transaction Fee Model](EXAMPLE_FEE_MODELING.md)
+  * [Example: Building a Pulse Block Headers Client](EXAMPLE_PULSE_HEADERS.md)
+  * [Example: Using ECIES Encryption](EXAMPLE_ECIES.md)* [](./SDKs/examples/README.md)
 
 ## Research and Development
 
