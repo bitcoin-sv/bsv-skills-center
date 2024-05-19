@@ -41,24 +41,25 @@
 
 ## SDKs
 
-* [Guides](guides/overview.md)
-  * [Gettings Started](guides/getting-started.md)
-  * [Node, CommonJS](SDKs/examples/GETTING\_STARTED\_NODE\_CJS.md)
-  * [React](SDKs/examples/GETTING\_STARTED\_REACT.md)
-* [Examples](SDKs/examples/README.md)
-  * [Example: Creating a Simple Transaction](sdks/examples/example-creating-a-simple-transaction.md)
-  * [Example: Verifying a BEEF Structure](sdks/examples/example-verifying-a-beef-structure.md)
-  * [Example: Creating Transactions with Inputs, Outputs and Templates](sdks/examples/example-creating-transactions-with-inputs-outputs-and-templates.md)
-  * [Example: Creating the R-puzzle Script Template](sdks/examples/example-creating-the-r-puzzle-script-template.md)
-  * [Example: Message Encryption and Decryption](sdks/examples/example-message-encryption-and-decryption.md)
-  * [Example: Message Signing](sdks/examples/example-message-signing.md)
-  * [Example: Building a Custom Transaction Broadcast Client](sdks/examples/example-building-a-custom-transaction-broadcast-client.md)
-  * [Example: Verifying Spends with Script Intrepreter](sdks/examples/example-verifying-spends-with-script-intrepreter.md)
-  * [Example: BIP32 Key Derivation with HD Wallets](sdks/examples/example-bip32-key-derivation-with-hd-wallets.md)
-  * [Example: Using Type 42 Key Derivation for Bitcoin Wallet Management](sdks/examples/example-using-type-42-key-derivation-for-bitcoin-wallet-management.md)
-  * [Example: Creating a Custom Transaction Fee Model](sdks/examples/example-creating-a-custom-transaction-fee-model.md)
-  * [Example: Building a Pulse Block Headers Client](sdks/examples/example-building-a-pulse-block-headers-client.md)
-  * [Example: Using ECIES Encryption\*](sdks/examples/example-using-ecies-encryption.md)
+* [Guides](./guides/overview.md)
+  * [Gettings Started](./guides/getting-started.md)
+  * [Node, CommonJS](./SDKs/examples/GETTING_STARTED_NODE_CJS.md)
+  * [React](./SDKs/examples/GETTING_STARTED_REACT.md)
+* [Examples](./SDKs/examples/README.md)
+  * [Example: Creating a Simple Transaction](./SDKs/examples/EXAMPLE_SIMPLE_TX.md)
+  * [Example: Verifying a BEEF Structure](./SDKs/examples/EXAMPLE_VERIFYING_BEEF.md)
+  * [Example: Creating Transactions with Inputs, Outputs and Templates](./SDKs/examples/EXAMPLE_COMPLEX_TX.md)
+  * [Example: Creating the R-puzzle Script Template](./SDKs/examples/EXAMPLE_SCRIPT_TEMPLATES.md)
+  * [Example: Message Encryption and Decryption](./SDKs/examples/EXAMPLE_ENCRYPT_DECRYPT_MESSAGE.md)
+  * [Example: Message Signing](./SDKs/examples/EXAMPLE_MESSAGE_SIGNING.md)
+  * [Example: Building a Custom Transaction Broadcast Client](./SDKs/examples/EXAMPLE_BUILDING_CUSTOM_TX_BROADCASTER.md)
+  * [Example: Verifying Spends with Script Intrepreter](./SDKs/examples/EXAMPLE_VERIFYING_SPENDS.md)
+  * [Example: BIP32 Key Derivation with HD Wallets](./SDKs/examples/EXAMPLE_HD_WALLETS.md)
+  * [Example: Using Type 42 Key Derivation for Bitcoin Wallet Management](./SDKs/examples/EXAMPLE_TYPE_42.md)
+  * [Example: Creating a Custom Transaction Fee Model](./SDKs/examples/EXAMPLE_FEE_MODELING.md)
+  * [Example: Building a Pulse Block Headers Client](./SDKs/examples/EXAMPLE_PULSE_HEADERS.md)
+  * [Example: Using ECIES Encryption](./SDKs/examples/EXAMPLE_ECIES.md)
+
 
 ## Research and Development
 
