@@ -104,7 +104,7 @@ import { PrivateKey, PublicKey, Transaction, BigNumber, Hash, Point, P2PKH } fro
 
 // Function to hash ticket information
 const hashTicket = (ticketInfo: string) => {
-  return Hash.sha256(ticketInfo).toString();
+  return Hash.sha256(ticketInfo);
 };
 
 // Function to add a hash to a public key
@@ -125,8 +125,9 @@ export const createTrancheTransaction = async (tickets: string[]) => {
 
   const transaction = tickets.map((ticket) => {
     const ticketHash = hashTicket(ticket);
-    const newPubKey = addHashToPublicKey(publicKey, BigNumber.fromHex(ticketHash));
+    const newPubKey = addHashToPublicKey(publicKey, new BigNumber(ticketHash));
     const lockingScript = new P2PKH().lock(newPubKey.toAddress());
+
     const tx = new Transaction();
     
     tx.addOutput({
