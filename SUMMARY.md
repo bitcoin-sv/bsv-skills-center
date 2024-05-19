@@ -37,6 +37,11 @@
 * [ts-sdk (Typescript Software Development Kit)](tools-and-libraries/ts-sdk-typescript-software-development-kit.md)
 * [go-sdk (Golang Software Development Kit)](tools-and-libraries/go-sdk-golang-software-development-kit.md)
 * [py-sdk (Python Software Development Kit)](tools-and-libraries/py-sdk-python-software-development-kit.md)
+* [Primitives](tools-and-libraries/docs/primitives.md) — Covers public and private keys, key derivation, digital signaturs, symmetric keys, and low-level operations
+* [Script](./script.md) — Covers Bitcoin scripts, the templating system, serialization, and the Spend class (script interpreter)
+* [Transaction](tools-and-libraries/docs/examples/README.md) — Covers transaction construction, signing, broadcasters, fee models, merkle proofs, and SPV structures like BUMP
+* [Messages](tools-and-libraries/docs/examples/EXAMPLE_MESSAGE_SIGNING.md) — Covers generalizable message signing, verification, encryption and decryption
+* [Compat](tools-and-libraries/docs/examples/EXAMPLE_HD_WALLETS.md) — Covers deprecated functionality for legacy systems like BIP32 and ECIES
 
 ## Guides
 
