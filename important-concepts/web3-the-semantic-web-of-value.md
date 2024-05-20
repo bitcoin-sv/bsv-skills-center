@@ -16,12 +16,13 @@
 
 1. Distributor creates tranches of tickets and combines the hash of each ticket with pubKey from a public-private EC-keypair.
 
-* This can be done by converting the key and the hash to big numbers, combining them (either by adding, multiplying, subtracting, or xoring) and multiplying the result by the generator point of the curve, G.
+* This can be done by converting the key and the hash to big numbers, combining them (either by hashing, adding, multiplying, subtracting, or xoring) and multiplying the result by the generator point of the curve, G.
 * Each tranche only need to be 1 transaction and each output is associated with a ticket.
 * Tickets are unique
 * Tranches provide a way for distribution attributes to be included such as early-bird pricing
 
-2. The distributor distributes the tickets to sellers by spending the ticket outputs to outputs each of the sellers control. They also give the sellers the ticket hashes, the ticket information, and the Merkle paths which the sellers can use to perform an SPV check.
+2. The distributor distributes the tickets to sellers by spending the ticket outputs to outputs each of the sellers control. They also give the sellers the ticket hashes, the basic ticket information, and the Merkle paths which the sellers can use to perform an SPV check. They could aslo include the ticket hashes in a separate output or in a pattern such as ticket with the ticket hash immediately following it: vout0 = combined, vout1 = ticket hash.
+   1. This could represent a transaction type. A version hash could also be included in the version field of the transaction to denote it being part of a particular event or tranche.
 3. The sellers sell the tickets repeating the same process that was used to give them tickets with each sale.
 4. Event attendees can then spend their ticket at the gate using the same process
 
