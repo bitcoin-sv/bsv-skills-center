@@ -49,5 +49,5 @@ The benefits of doing things this way:
   * The ticket distributor, sellers, and event attendees also understand red circles
   * The ticket distributor and sellers understand blue circles (another event) but the event attendee that bought tickets for the red circle event and not the blue circle event, does not understand blue circles.
   * The event company working the gate understands red circles, but not blue circles, so if an attendee for the blue circle event tried to attend the red circle event, they would not be able to get in because the gate company would not understand the output (via SPV and validation checks)
-* This is how polymorphism works: a general type (base transactions)  are understood by everyone, but more specific types are only understood by certain classes or entities
+* This is how polymorphism works: a general type (base transactions)  are understood by everyone, but more specific types are only understood by certain classes or entities, yet fundamentally, every entity is interoperable because the general type they understand is the same, any specificity is _overlayed_ on to the general type making it more specific.
 
