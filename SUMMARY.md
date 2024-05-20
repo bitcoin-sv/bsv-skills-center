@@ -14,7 +14,6 @@
 ## Important Concepts
 
 * [Overview](important-concepts/overview.md)
-* [Type 42](bsv-skills-center/key-concepts/type-42.md)
 * [UTXO-Base vs Account-Based Systems](bsv-skills-center/key-concepts/utxo-base-vs-account-based-systems.md)
 * [Linked Keys "42"](SDKs/concepts/42.md)
 * [Simplified Payment Verification (SPV)](bsv-skills-center/key-concepts/simplified-payment-verification-spv.md)
