@@ -13,6 +13,7 @@
 
 ## Important Concepts
 
+* [Web3: The Semantic Web of Value](important-concepts/web3-the-semantic-web-of-value.md)
 * [Overview](important-concepts/overview.md)
 * [UTXO-Base vs Account-Based Systems](bsv-skills-center/key-concepts/utxo-base-vs-account-based-systems.md)
 * [Linked Keys "42"](SDKs/concepts/42.md)
