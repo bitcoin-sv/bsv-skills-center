@@ -13,7 +13,6 @@
 
 ## Important Concepts
 
-* [Web3: The Semantic Web of Value](important-concepts/web3-the-semantic-web-of-value.md)
 * [Overview](important-concepts/overview.md)
 * [UTXO-Base vs Account-Based Systems](bsv-skills-center/key-concepts/utxo-base-vs-account-based-systems.md)
 * [Linked Keys "42"](SDKs/concepts/42.md)
@@ -21,9 +20,10 @@
 * [Chain SPV](SDKs/concepts/CHAIN\_SPV.md)
 * [Hashes](SDKs/concepts/HASHES.md)
 * [BEEF](SDKs/concepts/BEEF.md)
-* [SIGHASH Flags](important-concepts/sighash-flags.md)
 * [Tokens](important-concepts/tokens.md)
 * [Smart Contracts](important-concepts/smart-contracts.md)
+* [SIGHASH Flags](important-concepts/sighash-flags.md)
+* [Web3: The Semantic Web of Value](important-concepts/web3-the-semantic-web-of-value.md)
 
 ## Base Implementations
 
