@@ -39,7 +39,7 @@
 * [Guides](guides/overview.md)
   * [Node, CommonJS](SDKs/examples/GETTING\_STARTED\_NODE\_CJS.md)
   * [React](SDKs/examples/GETTING\_STARTED\_REACT.md)
-  * [Gettings Started](guides/getting-started.md)
+  * [Creating a Tranche of Event Tickets](guides/getting-started.md)
 * [Examples](SDKs/examples/README.md)
   * [Example: Creating a Simple Transaction](SDKs/examples/EXAMPLE\_SIMPLE\_TX.md)
   * [Example: Verifying a BEEF Structure](SDKs/examples/EXAMPLE\_VERIFYING\_BEEF.md)
