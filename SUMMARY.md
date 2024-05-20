@@ -8,7 +8,6 @@
   * [Tokens](bsv-skills-center/key-concepts/tokens.md)
   * [Non-Fungible Tokens (NFTs)](bsv-skills-center/key-concepts/non-fungible-tokens-nfts.md)
   * [Smart Contracts](bsv-skills-center/key-concepts/smart-contracts.md)
-  * [SIGHASH Flags](bsv-skills-center/key-concepts/sighash-flags.md)
 * [Network Topology](bsv-skills-center/network-topology/README.md)
   * [Nodes](bsv-skills-center/network-topology/nodes.md)
   * [Overlays](bsv-skills-center/network-topology/overlays.md)
@@ -19,13 +18,14 @@
 ## Important Concepts
 
 * [Overview](important-concepts/overview.md)
-* [Type 42](important-concepts/type-42.md)
-* [UTXO-Base vs Account-Based Systems](important-concepts/utxo-base-vs-account-based-systems.md)
+* [Type 42](bsv-skills-center/key-concepts/type-42.md)
+* [UTXO-Base vs Account-Based Systems](bsv-skills-center/key-concepts/utxo-base-vs-account-based-systems.md)
 * [Linked Keys "42"](SDKs/concepts/42.md)
-* [Simplified Payment Verification (SPV)](important-concepts/simplified-payment-verification-spv.md)
+* [Simplified Payment Verification (SPV)](bsv-skills-center/key-concepts/simplified-payment-verification-spv.md)
 * [Chain SPV](SDKs/concepts/CHAIN\_SPV.md)
 * [Hashes](SDKs/concepts/HASHES.md)
 * [BEEF](SDKs/concepts/BEEF.md)
+* [SIGHASH Flags](important-concepts/sighash-flags.md)
 
 ## Base Implementations
 
