@@ -4,10 +4,6 @@
 
 * [Overview](README.md)
 * [BSV Protocol Documentation](https://protocol.bsvblockchain.org/)
-* [Key Concepts](bsv-skills-center/key-concepts/README.md)
-  * [Tokens](bsv-skills-center/key-concepts/tokens.md)
-  * [Non-Fungible Tokens (NFTs)](bsv-skills-center/key-concepts/non-fungible-tokens-nfts.md)
-  * [Smart Contracts](bsv-skills-center/key-concepts/smart-contracts.md)
 * [Network Topology](bsv-skills-center/network-topology/README.md)
   * [Nodes](bsv-skills-center/network-topology/nodes.md)
   * [Overlays](bsv-skills-center/network-topology/overlays.md)
@@ -26,6 +22,8 @@
 * [Hashes](SDKs/concepts/HASHES.md)
 * [BEEF](SDKs/concepts/BEEF.md)
 * [SIGHASH Flags](important-concepts/sighash-flags.md)
+* [Tokens](important-concepts/tokens.md)
+* [Smart Contracts](important-concepts/smart-contracts.md)
 
 ## Base Implementations
 
