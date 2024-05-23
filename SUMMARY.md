@@ -4,26 +4,33 @@
 
 * [Overview](README.md)
 * [BSV Protocol Documentation](https://protocol.bsvblockchain.org/)
-* [Network Topology](bsv-skills-center/network-topology/README.md)
-  * [Nodes](bsv-skills-center/network-topology/nodes.md)
-  * [Overlays](bsv-skills-center/network-topology/overlays.md)
-  * [SPV Wallets](bsv-skills-center/network-topology/spv-wallets.md)
 * [The Benefits of BSV Blockchain](bsv-skills-center/the-benefits-of-bsv-blockchain.md)
 * [The History of BSV Blockchain](bsv-skills-center/the-history-of-bsv-blockchain.md)
+
+## Network Topology
+
+* [Overview](network-topology/overview.md)
+* [Nodes](network-topology/nodes/README.md)
+  * [SV Node](network-topology/nodes/sv-node.md)
+  * [Teranode](network-topology/nodes/teranode.md)
+* [Overlays](network-topology/overlays.md)
+* [Wallets](network-topology/spv-wallets.md)
 
 ## Important Concepts
 
 * [Overview](important-concepts/overview.md)
-* [UTXO-Base vs Account-Based Systems](bsv-skills-center/key-concepts/utxo-base-vs-account-based-systems.md)
-* [Linked Keys "42"](SDKs/concepts/42.md)
-* [Simplified Payment Verification (SPV)](bsv-skills-center/key-concepts/simplified-payment-verification-spv.md)
+* [High Level](important-concepts/high-level/README.md)
+  * [UTXO-Base vs Account-Based Systems](important-concepts/high-level/utxo-base-vs-account-based-systems.md)
+  * [Linked Keys "42"](important-concepts/high-level/42.md)
+  * [Simplified Payment Verification (SPV)](important-concepts/high-level/simplified-payment-verification-spv.md)
+  * [Web3: The Semantic Web of Value](important-concepts/high-level/web3-the-semantic-web-of-value.md)
 * [Chain SPV](SDKs/concepts/CHAIN\_SPV.md)
 * [Hashes](SDKs/concepts/HASHES.md)
 * [BEEF](SDKs/concepts/BEEF.md)
 * [Tokens](important-concepts/tokens.md)
 * [Smart Contracts](important-concepts/smart-contracts.md)
 * [SIGHASH Flags](important-concepts/sighash-flags.md)
-* [Web3: The Semantic Web of Value](important-concepts/web3-the-semantic-web-of-value.md)
+* [Script](important-concepts/script.md)
 
 ## Base Implementations
 

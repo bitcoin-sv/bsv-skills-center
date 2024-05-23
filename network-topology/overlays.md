@@ -15,3 +15,8 @@ The constituent components an overlay requires are:
 * UTXO management; e.g., a UTXO store that provides an API&#x20;
 * TX store; unlike nodes which don't need to store TX data, overlays do need to store transaction data whether it be to provide TX history or as part of a service mechanism.
 * TX validator: Nodes validate the general transaction type while overlays add a further, more specific, validation as a filtering mechanism.
+
+
+
+* Generalized explanation
+* Reference soft-launched project

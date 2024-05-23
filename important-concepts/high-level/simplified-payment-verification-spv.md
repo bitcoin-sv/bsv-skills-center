@@ -8,6 +8,15 @@ This technique leverages the properties of the blockchain to ensure that a trans
 
 * **Definition**: SPV enables users to confirm that a transaction has been included in a block and thus is part of the blockchain without needing to validate the entire blockchain. This is accomplished by using the longest chain of block headers and the specific Merkle branch related to the transaction being verified to perform a Merkle proof and match the result against the Merkle root of the relevant block header.
 
+### Verification Steps <a href="#verification-steps" id="verification-steps"></a>
+
+Checks made on receipt of a transaction from a counterparty:
+
+1. Script evaluation of each unlocking script results in `TRUE`.
+2. The sum of the satoshis-in must be greater than the sum of the satoshis-out.
+3. Each input must be associated with a Merkle path to a block.
+4. nLocktime, and nSequence of each input are set to the expected values.
+
 #### How SPV Works
 
 1. **Block Headers**: The receiver keeps a copy of the block headers of the longest proof-of-work chain. Block headers are significantly smaller in size compared to full blocks, making it feasible to store and verify them without needing much storage.
