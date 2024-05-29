@@ -42,7 +42,7 @@ Now you should get something in your console which looks like this:
 { address: '1E7ZM72qRDSa0rqUhZoMCMb5MAFYFEaKQp' }
 ```
 
-You can copy and paste the address into any BSV wallet and send a few satoshis to it. If you have zero BSV - go buy some, or ask the BSV community on X or discord to send you a few satoshis.
+You can copy and paste the address into any BSV wallet and send a few satoshis to it. If you have zero BSV - go [buy some](https://www.rockwallet.com/), or ask the BSV community on [X](https://x.com/BSVBlockchain) or [discord](https://discord.gg/bsv) to send you a few satoshis.
 
 > Make sure you're sending BSV, and only a few satoshis, so that you don't care if you lose access to it. $0.01 equivalent is perfect.
 
