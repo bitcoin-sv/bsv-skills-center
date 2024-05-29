@@ -1,5 +1,7 @@
 import { readFile, writeFile, chmod } from 'node:fs/promises'
 import { PrivateKey } from '@bsv/sdk'
+import crypto from 'crypto'
+global.self = { crypto }
 
 export async function createKey() {
     try {
