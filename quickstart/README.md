@@ -12,22 +12,27 @@ To create your first transcation you need to send some BSV into a locking script
 
 ```javascript
 // makeKey.js
-const fs = require('fs')
-const { PrivateKey } = require('@bsv/sdk')
+import { readFile, writeFile, chmod } from 'node:fs/promises'
+import { PrivateKey } from '@bsv/sdk'
+import crypto from 'crypto'
+global.self = { crypto }
 
-const key = PrivateKey.fromRandom()
-try {
-    const envFile = fs.openSync('.wif', 'w')
-    fs.writeSync(envFile, key.toWif())
-    fs.fchmodSync(envFile, 0o400)
-    fs.closeSync(envFile)
-    console.log({ address: key.toAddress() })
-} catch (error) {
-    const WIF = fs.readFileSync('.wif')
-    const key = PrivateKey.fromWif(WIF.toString())
-    console.error('You already have a key file, delete .wif manually if you know what you\'re doing.')
-    console.log({ address: key.toAddress() })
+export async function createKey() {
+    try {
+        const WIF = await readFile('.wif')
+        const key = PrivateKey.fromWif(WIF.toString())
+        console.error('You already have a key file, delete .wif manually if you know what you\'re doing.')
+        console.log({ address: key.toAddress() })
+    } catch (error) {
+        const key = PrivateKey.fromRandom()
+        const WIF = key.toWif()
+        await writeFile('.wif', WIF)
+        await chmod('.wif', 0o400)
+        console.log({ address: key.toAddress() })
+    }
 }
+
+createKey()
 ```
 
 Run the above code by copying it into `makeKey.js` and running `node makeKey.js`
