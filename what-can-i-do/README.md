@@ -61,10 +61,10 @@ Transfer transactions would like something like:
 
 | inputs | outputs |
 |------|------|
-| { "sometoken": 1000 } | { "sometoken": 600 } |
-| { "memecoin": 234 } | { "sometoken": 300 } |
-| fundingUtxo | { "memecoin": 234 } |
-|| { "sometoken": 100 } |
+| { "sometoken": 1000 } 1 satoshi | { "sometoken": 600 } 1 satoshi |
+| { "memecoin": 234 } 1 satoshi | { "sometoken": 300 } 1 satoshi |
+| fundingUtxo | { "memecoin": 234 } 1 satoshi |
+|| { "sometoken": 100 } 1 satoshi |
 
 The simple rule being "to accept an inbound transaction it must have equal inputs and outputs of each token type.
 
@@ -77,10 +77,12 @@ This would involve using the satoshis themselves to represent specific denominat
 A transfer would then look like:
 | inputs | outputs |
 |------|------|
-| "sometoken" drop p2pkh 10 satoshis | p2pkh  5 satoshis |
-| "memecoin" drop p2pkh 3 satoshis | p2pkh 8 satoshis |
+| "sometoken" "1:1" 10 satoshis | 5 satoshis |
+| "memecoin" "3:1" 3 satoshis | 8 satoshis |
 
-In this case, the 0th output would now contain 5 sometokens, and the 1st output would contain 5 sometokens and 3 memecoins. This assumes the mint utxos used as inputs here specified a 1:1 token to satoshi denomination.
+In this case, the 0th output would now contain 5 sometokens, and the 1st output would contain 5 sometokens and 9 memecoins. The push data in the inputs refers to token type and token to satoshi ratio.
+
+Thereafter there would be no need for push data, just satoshi values, the tokens would transfer using the order of satoshis in subsequent transactions, thus offering a higher degree of privacy.
 
 ## Data Integrity
 
