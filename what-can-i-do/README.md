@@ -49,8 +49,7 @@ The idea here is that you mint tokens by pushing a blob of data to denominate th
 For example a JSON push data might look like:
 ```json
 {
-  "asset": "sometoken",
-  "amount": 1000
+  "sometoken": 1000
 }
 ```
 
@@ -58,6 +57,30 @@ This would be pushed to the script as a blob of data which is then dropped off t
 
 Thereafter, these tokens are spendable only within the context of the token's issuing overlay. In other words, each spend needs to be send to that overlay such that the new token outputs can be noted for eventual redemption / burning at the end of the token lifecycle.
 
+Transfer transactions would like something like:
+
+| inputs | outputs |
+|------|------|
+| { "sometoken": 1000 } | { "sometoken": 600 } |
+| { "memecoin": 234 } | { "sometoken": 300 } |
+| fundingUtxo | { "memecoin": 234 } |
+|| { "sometoken": 100 } |
+
+The simple rule being "to accept an inbound transaction it must have equal inputs and outputs of each token type.
+
+From the minting transaction onward the issuer of the tokens keeps a working UTXO set of all their tokens, updating them as new transactions come in. This allows them to enforce rules as they deem appropriate for their particular use case.
+
+#### Ordinal Approach
+
+This would involve using the satoshis themselves to represent specific denominations and using the order of satoshis in the inputs and outputs to define where the tokens were being transfered, rather than the push data.
+
+A transfer would then look like:
+| inputs | outputs |
+|------|------|
+| "sometoken" drop p2pkh 10 satoshis | p2pkh  5 satoshis |
+| "memecoin" drop p2pkh 3 satoshis | p2pkh 8 satoshis |
+
+In this case, the 0th output would now contain 5 sometokens, and the 1st output would contain 5 sometokens and 3 memecoins. This assumes the mint utxos used as inputs here specified a 1:1 token to satoshi denomination.
 
 ## Data Integrity
 
