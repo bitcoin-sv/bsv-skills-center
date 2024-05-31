@@ -86,3 +86,55 @@ Thereafter there would be no need for push data, just satoshi values, the tokens
 
 ## Data Integrity
 
+BSV Blockchain provides a globally distributed timestamp server backed by proof of work. What this means is that every block added to the chain is linked to a previous block such that all history of transactions remains immutable. The security of this model is that the chain of hashes is broadly distributed, ideally to all users of the system. This constitutes a very small amount of data - 80 bytes every 10 minutes - while incorporating proof of inclusion for an unbounded number of transactions.
+
+### Implementation
+
+Broadly speaking the idea is to contain a proof that some data existed in a transaction which is submitted for inclusion within the blockchain. When a valid block is found, the transaction is in effect timestamped as having existed at that point in time at that specific block height. We can then use the transaction itself, a Merkle path, and the block header to prove it mathematically. This allows us to provide proof that the data within the transaction has not changed at all since its inclusion.
+
+The key primitive which allows this is something called a Cryptographic Hash Function, specifically in BSV we use sha256. If we want to prove data integrity privately, we can publish a hash of the data rather than the data itself.
+
+What this requires is a server to host the data, and a client which knows how to run the proof. The data can be stored like so:
+
+```json
+{
+    "data": "Enemy at the gate",
+    "tx": "0100beef01fe77eb0c000e02fdd8140017...",
+    "out": 0, // output index in which the hash of the data appears within the transaction
+}
+```
+
+The exact format in terms of the hash algo used, where the push data is within the output, whether it's signed, can all be decided by the implementer based on their needs.
+
+What you can then do as a consumer of the data to check integrity is make a request to the server holding this information. You retrieve the data, which you then hash and check against the transaction data to verify inclusion. Then you run transaction verification:
+
+```javascript
+import { Transaction, WhatsOnChain } from '@bsv/sdk'
+
+// some id related to the content you want
+const id = '5ca05a2be61fccf24465525c4692ce92c2f67c43d5cbdd4cbc233e3ed29f4822'
+
+// request from a data integrity overlay
+const response = await (await fetch(`https://data-integrity-service.com/${id}`)).json()
+
+// parse as a transaction using the SDK
+const tx = Transaction.fromHexBEEF(response.tx)
+
+const data = response.data
+const hash = sha256(response.data)
+
+// check if the data's hash appears in the transaction
+const included = tx.outputs[response.out].lockingScript.toHex()
+    .includes(hash)
+
+// Make sure the tx is really part of the blockchain.
+const valid = tx.verify(new WhatsOnChain())
+
+if (valid && included) {
+    console.log(data, 'valid data timestamped in block: ', tx.merklePath.blockHeight)
+} else {
+    console.error('corrupt data')
+}
+```
+
+WhatsOnChain provides headers in the example code above - but in an ideal world you would be checking against your own Block Headers Service. We provide free open source software which will get and maintain an independently validated chain of headers you can reference to validate data independently. This is the one thing which is actually important to distribute broadly.
