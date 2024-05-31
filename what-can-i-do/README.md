@@ -84,6 +84,12 @@ In this case, the 0th output would now contain 5 sometokens, and the 1st output 
 
 Thereafter there would be no need for push data, just satoshi values, the tokens would transfer using the order of satoshis in subsequent transactions, thus offering a higher degree of privacy.
 
+### Offline Transactions
+
+Fundamentally the benefit of tokens over account based payment systems is that each transfer is independent of all other transfers. This means you can do offline payments, chain a bunch of payments together, and then broadcast everything when you next connect to arrive at a valid confirmed state. Many people can all do this simultaneously, so there is no upper bound to the number of transactions per second which can be facilitated in this way. Payments can occur entirely P2P and settlement can be asynchronous without any underlying issue.
+
+Bad actors cannot fake their tokens since they come with Merkle paths, so fraud is significantly more difficult. Given the time to settle is 80ms or so once connected, there's no incentive to attempt it - you don't know whether the receiving party is connected or not.
+
 ## Data Integrity
 
 BSV Blockchain provides a globally distributed timestamp server backed by proof of work. What this means is that every block added to the chain is linked to a previous block such that all history of transactions remains immutable. The security of this model is that the chain of hashes is broadly distributed, ideally to all users of the system. This constitutes a very small amount of data - 80 bytes every 10 minutes - while incorporating proof of inclusion for an unbounded number of transactions.
