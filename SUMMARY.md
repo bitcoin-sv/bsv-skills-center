@@ -1,8 +1,13 @@
 # Table of contents
 
+## Intro
+
+* [Quick Start](README.md)
+* [What Can I Do](what-can-i-do/README.md)
+
 ## BSV Skills Center
 
-* [Overview](README.md)
+* [Overview](<README (1).md>)
 * [BSV Protocol Documentation](https://protocol.bsvblockchain.org/)
 * [The Benefits of BSV Blockchain](bsv-skills-center/the-benefits-of-bsv-blockchain.md)
 * [The History of BSV Blockchain](bsv-skills-center/the-history-of-bsv-blockchain.md)
@@ -14,14 +19,14 @@
   * [SV Node](network-topology/nodes/sv-node.md)
   * [Teranode](network-topology/nodes/teranode.md)
 * [Overlays](network-topology/overlays.md)
-* [Wallets](network-topology/spv-wallets.md)
+* [Wallets](network-topology/wallets.md)
 
 ## Important Concepts
 
 * [Overview](important-concepts/overview.md)
 * [High Level](important-concepts/high-level/README.md)
   * [UTXO-Base vs Account-Based Systems](important-concepts/high-level/utxo-base-vs-account-based-systems.md)
-  * [Linked Keys "42"](important-concepts/high-level/42.md)
+  * [Linked Keys "42"](important-concepts/high-level/linked-keys-42.md)
   * [Simplified Payment Verification (SPV)](important-concepts/high-level/simplified-payment-verification-spv.md)
   * [Web3: The Semantic Web of Value](important-concepts/high-level/web3-the-semantic-web-of-value.md)
 * [Chain SPV](SDKs/concepts/CHAIN\_SPV.md)
@@ -65,14 +70,6 @@
 * [BRCs (BSV Request for Comments)](https://bsv.brc.dev)
 * [Standards](research-and-development/standards.md)
 
-## Developer Resources
-
-* [Community Support](developer-resources/community-support.md)
-* [Contributing and Feedback](developer-resources/contributing-and-feedback.md)
-* [Developer Programs](developer-resources/developer-programs.md)
-* [Developer Events](developer-resources/developer-events.md)
-* [Developer Success Stories](developer-resources/developer-success-stories.md)
-
 ## Guides
 
 * [Setup Developer Environment](guides/setup-developer-environment/README.md)
@@ -84,7 +81,10 @@
     * [Application Development](guides/setup-developer-environment/application-development/README.md)
     * [Application Development](guides/setup-developer-environment/application-development/README.md)
 
-## Intro
+## Developer Resources
 
-* [Quick Start](quickstart/README.md)
-* [What Can I Do](what-can-i-do/README.md)
+* [Community Support](developer-resources/community-support.md)
+* [Contributing and Feedback](developer-resources/contributing-and-feedback.md)
+* [Developer Programs](developer-resources/developer-programs.md)
+* [Developer Events](developer-resources/developer-events.md)
+* [Developer Success Stories](developer-resources/developer-success-stories.md)

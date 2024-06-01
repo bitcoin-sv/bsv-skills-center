@@ -1,0 +1,2 @@
+# SIGHASH Flags
+
