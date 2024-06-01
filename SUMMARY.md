@@ -64,7 +64,7 @@
 
 ## BSV Skills Center
 
-* [BSV Protocol Documentation](https://protocol.bsvblockchain.org/)
+* [BSV Protocol Documentation](bsv-skills-center/bsv-protocol-documentation/README.md)
   * [BSV Blockchain](bsv-skills-center/bsv-protocol-documentation/bsv-blockchain/README.md)
     * [Blocks](bsv-skills-center/bsv-protocol-documentation/bsv-blockchain/blocks.md)
     * [Transactions](bsv-skills-center/bsv-protocol-documentation/bsv-blockchain/transactions.md)
