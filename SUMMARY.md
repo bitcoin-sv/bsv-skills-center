@@ -8,7 +8,8 @@
 ## Important Concepts
 * High Level
   * [Web3](important-concepts/high-level/web3-the-semantic-web-of-value.md)
-  * [Timestamping](important-concepts/high-level/time-stamping-and-on-chain-data.md)
+  <!-- * [Timestamping](important-concepts/high-level/time-stamping-and-on-chain-data.md) -->
+  * [SPV](important-concepts/high-level/simplified-payment-verification-spv.md)
   * [UTXO vs Account Based](important-concepts/high-level/utxo-base-vs-account-based-systems.md)
   * [Linked Keys](important-concepts/high-level/linked-keys-42.md)
 * Details
