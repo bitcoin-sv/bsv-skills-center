@@ -72,3 +72,19 @@
 * [Developer Programs](developer-resources/developer-programs.md)
 * [Developer Events](developer-resources/developer-events.md)
 * [Developer Success Stories](developer-resources/developer-success-stories.md)
+
+## Guides
+
+* [Setup Developer Environment](guides/setup-developer-environment/README.md)
+  * [Local Blockchain Stack](guides/setup-developer-environment/local-blockchain-stack/README.md)
+    * [Mockchain Stack](guides/setup-developer-environment/local-blockchain-stack/mockchain/README.md)
+    * [SV Node](guides/setup-developer-environment/local-blockchain-stack/svnode/README.md)
+    * [Teranode](guides/setup-developer-environment/local-blockchain-stack/teranode/README.md)
+  * [Application Development](guides/setup-developer-environment/application-development/README.md)
+    * [Application Development](guides/setup-developer-environment/application-development/README.md)
+    * [Application Development](guides/setup-developer-environment/application-development/README.md)
+
+## Intro
+
+* [Quick Start](quickstart/README.md)
+* [What Can I Do](what-can-i-do/README.md)
