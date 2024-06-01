@@ -5,9 +5,28 @@
 * [Quick Start](README.md)
 * [What Can I Do](what-can-i-do/README.md)
 
+## Important Concepts
+* High Level
+  * [Web3](important-concepts/high-level/web3-the-semantic-web-of-value.md)
+  * [Timestamping](important-concepts/high-level/time-stamping-and-on-chain-data.md)
+  * [UTXO vs Account Based](important-concepts/high-level/utxo-base-vs-account-based-systems.md)
+  * [Linked Keys](important-concepts/high-level/linked-keys-42.md)
+* Details
+  * [Hash Functions](important-concepts/details/cryptographic-hash-functions.md)
+  * [Digital Signatures](important-concepts/details/digital-signatures.md)
+  * [Merkle Trees](important-concepts/details/merkle-trees.md)
+  * [Sighash Flags](important-concepts/details/sighash-flags.md)
+  * [Script](important-concepts/details/script.md)
+  * SPV
+    * [Deep Dive](important-concepts/details/SPV%20Wallet/deep-dive.md)
+    * [Payments Flow](important-concepts/details/SPV%20Wallet/payments-flow.md)
+    * [Data Models](important-concepts/details/SPV%20Wallet/data-models.md)
+    * [Broadcasting](important-concepts/details/SPV%20Wallet/broadcasting.md)
+
+<!-- -------- -->
+
 ## BSV Skills Center
 
-* [Overview](<README (1).md>)
 * [BSV Protocol Documentation](https://protocol.bsvblockchain.org/)
   * [BSV Blockchain](bsv-skills-center/bsv-protocol-documentation/bsv-blockchain/README.md)
     * [Blocks](bsv-skills-center/bsv-protocol-documentation/bsv-blockchain/blocks.md)
@@ -67,7 +86,6 @@
 ## Important Concepts
 
 * [Overview](important-concepts/overview.md)
-* [High Level](important-concepts/high-level/README.md)
   * [UTXO-Base vs Account-Based Systems](important-concepts/high-level/utxo-base-vs-account-based-systems.md)
   * [Linked Keys "42"](important-concepts/high-level/linked-keys-42.md)
   * [Simplified Payment Verification (SPV)](important-concepts/high-level/simplified-payment-verification-spv.md)
