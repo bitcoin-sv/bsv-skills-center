@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head><script src="//archive.org/includes/analytics.js?v=cf34f82" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app202.us.archive.org';v.server_ms=145;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="/_static/js/bundle-playback.js?v=36gO9Ebf" charset="utf-8"></script>
+<script type="text/javascript" src="/_static/js/wombat.js?v=UHAOicsW" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("https://web.archive.org/web");
+  __wm.wombat("https://bitcoinsv.io/documentation/miners/installation/bitcoind/","20211022220246","https://web.archive.org/","web","/_static/",
+	      "1634940166");
+</script>
+<link rel="stylesheet" type="text/css" href="/_static/css/banner-styles.css?v=fantwOh2" />
+<link rel="stylesheet" type="text/css" href="/_static/css/iconochive.css?v=qtvMKcIJ" />
+<!-- End Wayback Rewrite JS Include -->
+
+  <meta charset="UTF-8"/>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://web.archive.org/web/20211022220246js_/https://www.googletagmanager.com/gtag/js?id=UA-124676622-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-124676622-1');
+  </script>
+
+  <!-- Google Tag Manager --> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://web.archive.org/web/20211022220246/https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-P8RC2FF');</script> <!-- End Google Tag Manager -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <link rel="profile" href="https://gmpg.org/xfn/11"/>
+  <link rel="stylesheet" href="https://web.archive.org/web/20211022220246cs_/https://bitcoinsv.io/wp-content/themes/wp.bitcoinsvio/css/bootstrap.min.css"/>
+  <link rel="icon" href="https://web.archive.org/web/20211022220246im_/https://bitcoinsv.io/wp-content/themes/wp.bitcoinsvio/assets/BSV_400px_transparent-150x150.png" sizes="150x150">
+  <link href="https://web.archive.org/web/20211022220246cs_/https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://web.archive.org/web/20211022220246cs_/https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <script src="https://web.archive.org/web/20211022220246js_/https://bitcoinsv.io/wp-content/themes/wp.bitcoinsvio/js/jquery.min.js"></script>
+  <script src="https://web.archive.org/web/20211022220246js_/https://bitcoinsv.io/wp-content/themes/wp.bitcoinsvio/js/popper.min.js"></script>
+  <script src="https://web.archive.org/web/20211022220246js_/https://bitcoinsv.io/wp-content/themes/wp.bitcoinsvio/js/bootstrap.min.js"></script>
+  <script src="https://web.archive.org/web/20211022220246js_/https://bitcoinsv.io/wp-content/themes/wp.bitcoinsvio/js/flexibility.js"></script>
+
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
+
+	<!-- This site is optimized with the Yoast SEO plugin v16.9 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Bitcoind - Bitcoin SV</title>
+	<link rel="canonical" href="https://web.archive.org/web/20211022220246/https://stag.bitcoinsv.io/documentation/miners/installation/bitcoind/"/>
+	<meta property="og:locale" content="en_GB"/>
+	<meta property="og:locale:alternate" content="zh_CN"/>
+	<meta property="og:type" content="article"/>
+	<meta property="og:title" content="Bitcoind - Bitcoin SV"/>
+	<meta property="og:description" content="The following instructions describe installing Bitcoin SV Node using tools available in most mainstream Linux distributions. The assumption has been made that you are using a Bourne-like shell such as bash. To start the install of Bitcoin, make sure you use an account that can use su or sudo to install software into directories owned by the root user. Download […]"/>
+	<meta property="og:url" content="https://web.archive.org/web/20211022220246/https://stag.bitcoinsv.io/documentation/miners/installation/bitcoind/"/>
+	<meta property="og:site_name" content="Bitcoin SV"/>
+	<meta property="article:modified_time" content="2020-09-29T19:30:47+00:00"/>
+	<meta property="og:image" content="https://web.archive.org/web/20211022220246im_/https://bitcoinsv.io/wp-content/uploads/2020/09/bitcoin-sv-bsv-mines-world-record-128mb-blocks.jpg"/>
+	<meta property="og:image:width" content="1234"/>
+	<meta property="og:image:height" content="616"/>
+	<meta name="twitter:card" content="summary_large_image"/>
+	<meta name="twitter:site" content="@BitcoinSVNode"/>
+	<meta name="twitter:label1" content="Estimated reading time"/>
+	<meta name="twitter:data1" content="7 minutes"/>
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://web.archive.org/web/20211022220246/https://schema.org","@graph":[{"@type":"Organization","@id":"https://web.archive.org/web/20211022220246/https://bitcoinsv.io/#organization","name":"Bitcoin SV","url":"https://web.archive.org/web/20211022220246/https://bitcoinsv.io/","sameAs":["https://web.archive.org/web/20211022220246/https://twitter.com/BitcoinSVNode"],"logo":{"@type":"ImageObject","@id":"https://web.archive.org/web/20211022220246/https://bitcoinsv.io/#logo","inLanguage":"en-GB","url":"https://web.archive.org/web/20211022220246/https://bitcoinsv.io/wp-content/uploads/2020/10/bsv-logo-wh-medium.png","contentUrl":"https://web.archive.org/web/20211022220246/https://bitcoinsv.io/wp-content/uploads/2020/10/bsv-logo-wh-medium.png","width":800,"height":144,"caption":"Bitcoin SV"},"image":{"@id":"https://web.archive.org/web/20211022220246/https://bitcoinsv.io/#logo"}},{"@type":"WebSite","@id":"https://web.archive.org/web/20211022220246/https://bitcoinsv.io/#website","url":"https://web.archive.org/web/20211022220246/https://bitcoinsv.io/","name":"Bitcoin SV","description":"Build on the only public blockchain designed for Enterprise","publisher":{"@id":"https://web.archive.org/web/20211022220246/https://bitcoinsv.io/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://web.archive.org/web/20211022220246/https://bitcoinsv.io/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-GB"},{"@type":"WebPage","@id":"https://web.archive.org/web/20211022220246/https://stag.bitcoinsv.io/documentation/miners/installation/bitcoind/#webpage","url":"https://web.archive.org/web/20211022220246/https://stag.bitcoinsv.io/documentation/miners/installation/bitcoind/","name":"Bitcoind - Bitcoin SV","isPartOf":{"@id":"https://web.archive.org/web/20211022220246/https://bitcoinsv.io/#website"},"datePublished":"2020-09-29T22:04:25+00:00","dateModified":"2020-09-29T19:30:47+00:00","breadcrumb":{"@id":"https://web.archive.org/web/20211022220246/https://stag.bitcoinsv.io/documentation/miners/installation/bitcoind/#breadcrumb"},"inLanguage":"en-GB","potentialAction":[{"@type":"ReadAction","target":["https://web.archive.org/web/20211022220246/https://stag.bitcoinsv.io/documentation/miners/installation/bitcoind/"]}]},{"@type":"BreadcrumbList","@id":"https://web.archive.org/web/20211022220246/https://stag.bitcoinsv.io/documentation/miners/installation/bitcoind/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://web.archive.org/web/20211022220246/https://bitcoinsv.io/"},{"@type":"ListItem","position":2,"name":"Miner Documents","item":"https://web.archive.org/web/20211022220246/https://stag.bitcoinsv.io/documentation/miners/"},{"@type":"ListItem","position":3,"name":"Installation","item":"https://web.archive.org/web/20211022220246/https://stag.bitcoinsv.io/documentation/miners/installation/"},{"@type":"ListItem","position":4,"name":"Bitcoind"}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="//web.archive.org/web/20211022220246/https://www.google.com/"/>
+<link rel="dns-prefetch" href="//web.archive.org/web/20211022220246/https://s.w.org/"/>
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/web.archive.org\/web\/20211022220246\/https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/web.archive.org\/web\/20211022220246\/https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/web.archive.org\/web\/20211022220246\/https:\/\/bitcoinsv.io\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.1"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="https://web.archive.org/web/20211022220246cs_/https://bitcoinsv.io/wp-includes/css/dist/block-library/style.min.css?ver=5.8.1" type="text/css" media="all"/>
+<link rel="stylesheet" id="activecampaign-form-block-css" href="https://web.archive.org/web/20211022220246cs_/https://bitcoinsv.io/wp-content/plugins/activecampaign-subscription-forms/activecampaign-form-block/build/style-index.css?ver=1621987212" type="text/css" media="all"/>
+<link rel="stylesheet" id="contact-form-7-css" href="https://web.archive.org/web/20211022220246cs_/https://bitcoinsv.io/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.4.2" type="text/css" media="all"/>
+<link rel="stylesheet" id="cookie-law-info-css" href="https://web.archive.org/web/20211022220246cs_/https://bitcoinsv.io/wp-content/plugins/cookie-law-info/public/css/cookie-law-info-public.css?ver=2.0.5" type="text/css" media="all"/>
+<link rel="stylesheet" id="cookie-law-info-gdpr-css" href="https://web.archive.org/web/20211022220246cs_/https://bitcoinsv.io/wp-content/plugins/cookie-law-info/public/css/cookie-law-info-gdpr.css?ver=2.0.5" type="text/css" media="all"/>
+<link rel="stylesheet" id="bitcoinsvio-style-css" href="https://web.archive.org/web/20211022220246cs_/https://bitcoinsv.io/wp-content/themes/wp.bitcoinsvio/style.css?ver=1.0.85" type="text/css" media="all"/>
+<script type="text/javascript" src="https://web.archive.org/web/20211022220246js_/https://bitcoinsv.io/wp-includes/js/jquery/jquery.min.js?ver=3.6.0" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20211022220246js_/https://bitcoinsv.io/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script>
+<script type="text/javascript" id="cookie-law-info-js-extra">
+/* <![CDATA[ */
+var Cli_Data = {"nn_cookie_ids":[],"cookielist":[],"non_necessary_cookies":[],"ccpaEnabled":"","ccpaRegionBased":"","ccpaBarEnabled":"","strictlyEnabled":["necessary","obligatoire"],"ccpaType":"gdpr","js_blocking":"1","custom_integration":"","triggerDomRefresh":"","secure_cookies":""};
+var cli_cookiebar_settings = {"animate_speed_hide":"500","animate_speed_show":"500","background":"#FFF","border":"#b1a6a6c2","border_on":"","button_1_button_colour":"#61a229","button_1_button_hover":"#4e8221","button_1_link_colour":"#fff","button_1_as_button":"1","button_1_new_win":"","button_2_button_colour":"#333","button_2_button_hover":"#292929","button_2_link_colour":"#444","button_2_as_button":"","button_2_hidebar":"","button_3_button_colour":"#dedfe0","button_3_button_hover":"#b2b2b3","button_3_link_colour":"#333333","button_3_as_button":"1","button_3_new_win":"","button_4_button_colour":"#dedfe0","button_4_button_hover":"#b2b2b3","button_4_link_colour":"#333333","button_4_as_button":"1","button_7_button_colour":"#61a229","button_7_button_hover":"#4e8221","button_7_link_colour":"#fff","button_7_as_button":"1","button_7_new_win":"","font_family":"inherit","header_fix":"","notify_animate_hide":"1","notify_animate_show":"","notify_div_id":"#cookie-law-info-bar","notify_position_horizontal":"right","notify_position_vertical":"bottom","scroll_close":"","scroll_close_reload":"","accept_close_reload":"","reject_close_reload":"","showagain_tab":"","showagain_background":"#fff","showagain_border":"#000","showagain_div_id":"#cookie-law-info-again","showagain_x_position":"100px","text":"#333333","show_once_yn":"","show_once":"10000","logging_on":"","as_popup":"","popup_overlay":"1","bar_heading_text":"","cookie_bar_as":"banner","popup_showagain_position":"bottom-right","widget_position":"left"};
+var log_object = {"ajax_url":"https:\/\/web.archive.org\/web\/20211022220246\/https:\/\/bitcoinsv.io\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://web.archive.org/web/20211022220246js_/https://bitcoinsv.io/wp-content/plugins/cookie-law-info/public/js/cookie-law-info-public.js?ver=2.0.5" id="cookie-law-info-js"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20211022220246js_/https://bitcoinsv.io/wp-content/plugins/e-ozdemir-wp.plugin-acf.milestones.v2-ee8b935b4454/js/script.js?ver=5.8.1" id="milestones_script-js"></script>
+<link rel="https://api.w.org/" href="https://bitcoinsv.io/wp-json/"/><link rel="alternate" type="application/json" href="https://web.archive.org/web/20211022220246/https://bitcoinsv.io/wp-json/wp/v2/miner_document/367"/><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://bitcoinsv.io/xmlrpc.php?rsd"/>
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://bitcoinsv.io/wp-includes/wlwmanifest.xml"/> 
+<meta name="generator" content="WordPress 5.8.1"/>
+<link rel="shortlink" href="https://web.archive.org/web/20211022220246/https://bitcoinsv.io/?p=367"/>
+<link rel="alternate" type="application/json+oembed" href="https://web.archive.org/web/20211022220246/https://bitcoinsv.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbitcoinsv.io%2Fdocumentation%2Fminers%2Finstallation%2Fbitcoind%2F"/>
+<link rel="alternate" type="text/xml+oembed" href="https://web.archive.org/web/20211022220246/https://bitcoinsv.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbitcoinsv.io%2Fdocumentation%2Fminers%2Finstallation%2Fbitcoind%2F&amp;format=xml"/>
+<link rel="alternate" href="https://web.archive.org/web/20211022220246/https://bitcoinsv.io/documentation/miners/installation/bitcoind/" hreflang="en"/>
+<link rel="alternate" href="https://web.archive.org/web/20211022220246/https://bitcoinsv.io/zh/documentation/miners/installation/bitcoind/" hreflang="zh"/>
+		<style type="text/css" id="wp-custom-css">
+			.ctable td {
+    padding: 1rem;
+    font-size: 1rem;
+}		</style>
+		</head>
+
+<body class="miner_document-template-default single single-miner_document postid-367">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://web.archive.org/web/20211022220246if_/https://www.googletagmanager.com/ns.html?id=GTM-P8RC2FF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  
+  <nav class="navbar navbar-expand-lg navbar-dark header">
+    <div class="header__logo__container">
+      <a href="https://web.archive.org/web/20211022220246/https://bitcoinsv.io/"><img class="header__logo__img" src="https://web.archive.org/web/20211022220246im_/https://bitcoinsv.io/wp-content/themes/wp.bitcoinsvio/assets/logo.png"/></a>
+    </div>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header-topmenu" aria-controls="header-topmenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="header-topmenu">
+      <ul id="menu-header_menu" class="navbar-nav mr-auto"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-512" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-512 nav-item"><a title="Learn about BSV" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-512">Learn about BSV</a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-512" role="menu">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-515" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-515 nav-item"><a title="Satoshi Vision" href="https://web.archive.org/web/20211022220246/https://bitcoinsv.io/satoshis-vision/" class="dropdown-item">Satoshi Vision</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-489" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-489 nav-item"><a title="Bitcoin Wiki" target="_blank" href="https://web.archive.org/web/20211022220246/https://wiki.bitcoinsv.io/" class="dropdown-item">Bitcoin Wiki</a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-507" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-507 nav-item"><a title="For Developers" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-507">For Developers</a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-507" role="menu">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-514" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-514 nav-item"><a title="Developer Resources" href="https://web.archive.org/web/20211022220246/https://bitcoinsv.io/devtools/" class="dropdown-item">Developer Resources</a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-506" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-506 nav-item"><a title="For Miners" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-506">For Miners</a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-506" role="menu">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-500" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-500 nav-item"><a title="Get Started" href="/web/20211022220246/https://bitcoinsv.io/documentation/miners/introduction-miners/" class="dropdown-item">Get Started</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-509" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-509 nav-item"><a title="Node Software" href="https://web.archive.org/web/20211022220246/https://bitcoinsv.io/node-software/" class="dropdown-item">Node Software</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-505" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-505 nav-item"><a title="Miner Profile" href="https://web.archive.org/web/20211022220246/https://bitcoinsv.io/minerid/" class="dropdown-item">Miner Profile</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-513" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-513 nav-item"><a title="Miner Resources" href="https://web.archive.org/web/20211022220246/https://bitcoinsv.io/miner-tools/" class="dropdown-item">Miner Resources</a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-511" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-511 nav-item"><a title="Our Approach" href="https://web.archive.org/web/20211022220246/https://bitcoinsv.io/professional-engineering/" class="nav-link">Our Approach</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-508" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-508 nav-item"><a title="Blog" href="https://web.archive.org/web/20211022220246/https://bitcoinsv.io/blog/" class="nav-link">Blog</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-5208" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5208 nav-item"><a title="Contact" href="https://web.archive.org/web/20211022220246/https://bitcoinsv.io/contact/" class="nav-link">Contact</a></li>
+</ul>    </div>
+
+    <form id="header-searchbar" class="header__searchbar d-none d-lg-flex" method="get" action="https://web.archive.org/web/20211022220246/https://bitcoinsv.io/" autocomplete="off">
+      <span onclick="document.querySelector('#header-searchbar').classList.add('focus-within');document.querySelector('#s').focus();" class="header__searchbar__icon"></span>
+      <input id="s" type="text" name="s" placeholder="Type to search" aria-label="Search">
+
+      <div class="header__searchbar__close" onclick="document.querySelector('#header-searchbar').classList.remove('focus-within');">
+        <svg focusable="false" preserveaspectratio="xMidYMid meet" style="will-change:transform" description="Clear search" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 32 32" aria-hidden="true">
+          <path fill="#909090" d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4l6.6 6.6L8 22.6 9.4 24l6.6-6.6 6.6 6.6 1.4-1.4-6.6-6.6L24 9.4z"></path>
+        </svg>
+      </div>
+    </form>
+
+    <div class="header__langselector__container d-none d-lg-block">
+      <label class="header__langselector">
+        <select name="lang_choice_1" id="lang_choice_1">
+	<option value="en" selected="selected">English</option>
+	<option value="zh">中文 (中国)</option>
+
+</select>
+<script type="text/javascript">
+					//<![CDATA[
+					var urls_1 = {"en":"https:\/\/web.archive.org\/web\/20211022220246\/https:\/\/bitcoinsv.io\/documentation\/miners\/installation\/bitcoind\/","zh":"https:\/\/web.archive.org\/web\/20211022220246\/https:\/\/bitcoinsv.io\/zh\/documentation\/miners\/installation\/bitcoind\/"};
+					document.getElementById( "lang_choice_1" ).onchange = function() {
+						location.href = urls_1[this.value];
+					}
+					//]]>
+				</script>      </label>
+    </div>
+  </nav>
+
+<div class="documentation__container">
+  <div class="documentation">
+        
+<div class="documentation__sidebar">
+  <div class="documentation__sidebar__header">
+    <div class="documentation__sidebar__heading">
+      Documentation for Miners    </div>
+    <div class="documentation__sidebar__selector dropright d-none">
+      <span class="documentation__sidebar__selector__button" data-toggle="dropdown">
+        <svg width="1em" height="1em" viewbox="0 0 16 16" class="bi bi-three-dots-vertical" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+        </svg>
+      </span>
+      <ul class="dropdown-menu" data-heading="Select a documentation"><li id="menu-item-498" class="menu-item menu-item-type-post_type menu-item-object-document menu-item-498"><a href="https://web.archive.org/web/20211022220246/https://bitcoinsv.io/?post_type=document&amp;p=277" class="dropdown-item">Documentation for Devs</a></li>
+<li id="menu-item-519" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-519"><a href="https://web.archive.org/web/20211022220246/https://bitcoinsv.io/documentation-home/" class="dropdown-item">Documentation Home</a></li>
+</ul>    </div>
+  </div>
+
+  <ul class="documentation__nav">
+      <li>
+      <span>Overview</span>
+            <ul>
+                  <li class="" data-id="359">
+            <a href="https://web.archive.org/web/20211022220246/https://bitcoinsv.io/documentation/miners/introduction-miners/">Introduction</a>
+                      </li>
+                  <li class="" data-id="361">
+            <a href="https://web.archive.org/web/20211022220246/https://bitcoinsv.io/documentation/miners/system-architecture/">System Architecture</a>
+                      </li>
+                  <li class="" data-id="363">
+            <a href="https://web.archive.org/web/20211022220246/https://bitcoinsv.io/documentation/miners/system-requirements/">System Requirements</a>
+                      </li>
+                  <li class="has_child collapsed" data-id="365">
+            <a href="https://web.archive.org/web/20211022220246/https://bitcoinsv.io/documentation/miners/installation/">Installation <span class="chevron"></span></a>
+                          <ul class="collapse">
+                                  <li class="" data-id="369">
+                    <a href="https://web.archive.org/web/20211022220246/https://bitcoinsv.io/documentation/miners/installation/miner-id/">Miner ID</a>
+                  </li>
+                                  <li class="" data-id="371">
+                    <a href="https://web.archive.org/web/20211022220246/https://bitcoinsv.io/documentation/miners/installation/upgrade-release-mapi-v1-3-0/">mAPI</a>
+                  </li>
+                                  <li class="active" data-id="367">
+                    <a href="https://web.archive.org/web/20211022220246/https://bitcoinsv.io/documentation/miners/installation/bitcoind/">Bitcoind</a>
+                  </li>
+                              </ul>
+                      </li>
+                  <li class="" data-id="381">
+            <a href="https://web.archive.org/web/20211022220246/https://bitcoinsv.io/documentation/miners/settings/">Settings</a>
+                      </li>
+              </ul>
+          </li>
+    </ul>
+</div>
+
+<script>
+  $(document).ready(function(){
+    function show_active_elements(){
+      let active_li = $('.documentation__nav li.active');
+      let parent_li = active_li.parents('.has_child');
+      let child_ul = active_li.children('ul');
+      parent_li.removeClass('collapsed');
+      parent_li.children('ul').removeClass('collapse').addClass('show');
+      child_ul.removeClass('collapse').addClass('show');
+    }
+    show_active_elements();
+
+    $('.chevron').on('click', function(event){
+      event.preventDefault();
+      var el = $(this);
+      var parent_li = el.parents('li').eq(0);
+      parent_li.toggleClass('collapsed');
+      parent_li.children('ul').toggleClass('show collapse');
+    });
+  })
+</script>
+    <div class="documentation__document">
+              <div class="documentation__document__heading">Bitcoind</div>
+        <div class="documentation__document__body"><!-- wp:paragraph -->
+<p>The following instructions describe installing Bitcoin SV Node using tools available in most mainstream Linux distributions. The assumption has been made that you are using a Bourne-like shell such as&nbsp;<code>bash</code>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>To start the install of Bitcoin, make sure you use an account that can use&nbsp;<code>su</code>&nbsp;or&nbsp;<code>sudo</code>&nbsp;to install software into directories owned by the root user.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 id="markdown-header-download">Download</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Download the zipped release of your choosing, for this example we are using 1.0.5 which is the latest release at the time of writing:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:preformatted -->
+<pre class="wp-block-preformatted">$ wget https://download.bitcoinsv.io/bitcoinsv/1.0.5/bitcoin-sv-1.0.5-x86_64-linux-gnu.tar.gz
+</pre>
+<!-- /wp:preformatted -->
+
+<!-- wp:paragraph -->
+<p>Confirm downloaded file sha hash matches those provided at&nbsp;<a href="https://web.archive.org/web/20211022220246/https://download.bitcoinsv.io/bitcoinsv/">download.bitcoinsv.io</a>&nbsp;for the version you have downloaded.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:preformatted -->
+<pre class="wp-block-preformatted">$ sha256sum bitcoin-sv-1.0.5-x86_64-linux-gnu.tar.gz
+//Expected Output 
+96f7c56c7ebd4ecb2dcd664297fcf0511169ac33eaf216407ebc49dae2535578  bitcoin-sv-1.0.5-x86_64-linux-gnu.tar.gz
+</pre>
+<!-- /wp:preformatted -->
+
+<!-- wp:heading -->
+<h2 id="markdown-header-setup">Setup</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Locate the file you downloaded and extract it using the&nbsp;<code>tar</code>&nbsp;command followed by the argument&nbsp;<code>xzf</code>&nbsp;followed by the file name. The argument&nbsp;<code>xzf</code>&nbsp;means eXtract the gZipped tar archive file. For example, for a 64-bit tar archive in your current directory, the command is:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:preformatted -->
+<pre class="wp-block-preformatted">$ tar xvf bitcoin-sv-1.0.5-x86_64-linux-gnu.tar.gz
+</pre>
+<!-- /wp:preformatted -->
+
+<!-- wp:paragraph -->
+<p>Create a symbolic link from a new directory called&nbsp;<code>bitcoin</code>&nbsp;to the&nbsp;<code>bitcoin-sv-1.0.5</code>&nbsp;directory you just made by unzipping for easier use and updates:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:preformatted -->
+<pre class="wp-block-preformatted">$ ln -s bitcoin-sv-1.0.5 bitcoin
+</pre>
+<!-- /wp:preformatted -->
+
+<!-- wp:paragraph -->
+<p>Create a&nbsp;<code>bitcoin-data</code>&nbsp;directory to put bitcoin data in (or else Bitcoin will put data in&nbsp;<code>~/.bitcoin</code>&nbsp;by default):</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:preformatted -->
+<pre class="wp-block-preformatted">$ mkdir bitcoin-data
+</pre>
+<!-- /wp:preformatted -->
+
+<!-- wp:paragraph -->
+<p>Create a&nbsp;<code>bitcoin.conf</code>&nbsp;file in the directory to configure the settings to run your node using:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:preformatted -->
+<pre class="wp-block-preformatted">$ cd bitcoin-data/
+$ vim bitcoin.conf
+</pre>
+<!-- /wp:preformatted -->
+
+<!-- wp:paragraph -->
+<p>Below is an example&nbsp;<code>bitcoin.conf</code>&nbsp;file used by a node on the&nbsp;<strong>STN</strong>:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>A full list of available options can be seen by running&nbsp;<code>bitcoind --help</code></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:preformatted -->
+<pre class="wp-block-preformatted">#start in background
+daemon=1
+
+#select network -- comment out both for mainnet
+#testnet=1
+stn=1
+
+#Required Consensus Rules for Genesis
+excessiveblocksize=10000000000 #10GB
+maxstackmemoryusageconsensus=100000000 #100MB
+
+#Mining
+#biggest block size you want to mine
+blockmaxsize=4000000000 
+blockassembler=journaling #journaling is default as of 1.0.5
+
+#preload mempool
+preload=1
+
+#mempool usage allowance
+maxmempool=8000 #8G
+dbcache=8192 #8G
+
+#Pruning -- Uncomment to trim the chain in an effort to keep disk usage below the figure set
+#prune=100000 #100GB
+
+#orphan transaction storage 
+#blockreconstructionextratxn=200000
+#maxorphantxsize=10000
+
+#transaction options
+#maxsigcachesize=260
+#maxscriptcachesize=260
+#minrelaytxfee=0.00000001
+#mintxfee=0.00000001
+#dustrelayfee=0.00000001
+#blockmintxfee=0.00000001
+#relaypriority=0
+#feefilter=0
+#limitfreerelay=1000
+#maxscriptsizepolicy=500000
+
+#OP Return max size
+#datacarriersize=100000 #Genesis default is UINT32_MAX
+
+#Max number and size of related Child and Parent transactions per block template 
+limitancestorcount=100
+limitdescendantcount=100
+#limitancestorsize=25000000
+#limitdescendantsize=25000000
+
+#connection options
+maxconnections=80
+
+#ZMQ
+#zmqpubhashtx=tcp://127.0.0.1:28332
+#zmqpubhashblock=tcp://127.0.0.1:28332
+
+#Ports - Leave commented for defaults
+#port=9333
+#rpcport=9332
+
+#rpc settings
+rpcworkqueue=600
+rpcthreads=16
+#rpcallowip=0.0.0.0/0 
+rpcuser=CHANGE_ME
+rpcpassword=CHANGE_ME
+
+#debug options
+#can be: net, tor,
+#       mempool, http, bench, zmq, db, rpc, addrman, selectcoins,
+#       reindex, cmpctblock, rand, prune, proxy, mempoolrej, libevent,
+#       coindb, leveldb, txnprop, txnsrc, journal, txnval.
+# 1 = all options enabled.
+# 0 = off which is default
+#debug=1
+
+#debugexclude to ignore set log items, can be used to keep log file a bit cleaner
+debugexclude=libevent
+debugexclude=leveldb
+debugexclude=zmq
+debugexclude=txnsrc
+debugexclude=net
+
+#shrinkdebugfile=0 # Setting to 1 prevents bitcoind from clearning the log file on restart. 0/off is default
+
+#multi-threaded options
+#threadsperblock=32
+#maxparallelblocks
+#scriptvalidatormaxbatchsize
+#maxparallelblocksperpeer
+maxstdtxvalidationduration=15
+maxcollectedoutpoints=1000000
+maxstdtxnsperthreadratio=10000
+#maxnonstdtxvalidationduration
+</pre>
+<!-- /wp:preformatted -->
+
+<!-- wp:heading -->
+<h2 id="markdown-header-run">Run</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 id="markdown-header-run-directly">Run directly</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>To run Bitcoind, pass in the location of the configuration file as well as the location of where to store the bitcoin data:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>(In our example the user test was used)</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:preformatted -->
+<pre class="wp-block-preformatted">$ /home/test/bitcoin/bin/bitcoind -conf<strong>=</strong>/home/test/bitcoin-data/bitcoin.conf -datadir<strong>=</strong>/home/test/bitcoin-data -daemon
+</pre>
+<!-- /wp:preformatted -->
+
+<!-- wp:heading {"level":3} -->
+<h3 id="markdown-header-run-with-systemctl">Run with&nbsp;<code>systemctl</code></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Create the&nbsp;<code>bitcoind.service</code>&nbsp;file:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:preformatted -->
+<pre class="wp-block-preformatted">$ sudo vim /etc/systemd/system/bitcoind.service
+</pre>
+<!-- /wp:preformatted -->
+
+<!-- wp:paragraph -->
+<p><code>bitcoind.service</code>:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:preformatted -->
+<pre class="wp-block-preformatted"><strong>[Unit]</strong>
+Description<strong>=</strong>Bitcoin service
+After<strong>=</strong>network.target
+<strong>[Service]</strong>
+Type<strong>=</strong>forking
+ExecStart<strong>=</strong>/home/test/bitcoin/bin/bitcoind -conf=/home/test/bitcoin-data/bitcoin.conf -datadir=/home/test/bitcoin-data -daemon
+ExecStop<strong>=</strong>/home/test/bitcoin/bin/bitcoin-cli -conf=/home/test/bitcoin-data/bitcoin.conf -datadir=/home/test/bitcoin-data stop
+ExecReload<strong>=</strong>/bin/kill -s HUP $MAINPID
+Restart<strong>=</strong>on-abnormal
+TimeoutStopSec<strong>=</strong>120
+KillMode<strong>=</strong>none
+PrivateTmp<strong>=</strong>true
+User<strong>=</strong>test
+<strong>[Install]</strong>
+WantedBy<strong>=</strong>multi-user.target
+</pre>
+<!-- /wp:preformatted -->
+
+<!-- wp:paragraph -->
+<p>(be sure to replace&nbsp;<code>test</code>&nbsp;in the above with your logged user)</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Then start:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:preformatted -->
+<pre class="wp-block-preformatted">$ sudo systemctl start bitcoind.service
+</pre>
+<!-- /wp:preformatted -->
+
+<!-- wp:heading {"level":3} -->
+<h3 id="markdown-header-run-with-docker">Run with Docker</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Included in this repo are docker images for the Bitcoin SV Node implementation. Thanks to Josh Ellithorpe and his&nbsp;<a href="https://web.archive.org/web/20211022220246/https://github.com/zquestz/docker-bitcoin">repository</a>, which provided the base for this repo.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This Docker image provides&nbsp;<code>bitcoind</code>,&nbsp;<code>bitcoin-cli</code>&nbsp;and&nbsp;<code>bitcoin-tx</code>&nbsp;which can be used to run and interact with a Bitcoin server.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>To see the available versions/tags, please visit the&nbsp;<a href="https://web.archive.org/web/20211022220246/https://hub.docker.com/r/bitcoinsv/bitcoin-sv/">Docker Hub page</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4 id="markdown-header-usage">Usage</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>To run the latest version of Bitcoin SV:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:preformatted -->
+<pre class="wp-block-preformatted">$ docker run bitcoinsv/bitcoin-sv
+</pre>
+<!-- /wp:preformatted -->
+
+<!-- wp:paragraph -->
+<p>To run a container in the background, pass the -d option to docker run, and give your container a name for easy reference later:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:preformatted -->
+<pre class="wp-block-preformatted">$ docker run -d --rm --name bitcoind bitcoinsv/bitcoin-sv
+</pre>
+<!-- /wp:preformatted -->
+
+<!-- wp:paragraph -->
+<p>Once you have the bitcoind service running in the background, you can show running containers:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:preformatted -->
+<pre class="wp-block-preformatted">$ docker ps
+</pre>
+<!-- /wp:preformatted -->
+
+<!-- wp:paragraph -->
+<p>Or view the logs of a service:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:preformatted -->
+<pre class="wp-block-preformatted">$ docker logs -f bitcoind
+</pre>
+<!-- /wp:preformatted -->
+
+<!-- wp:paragraph -->
+<p>To stop and restart a running container:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:preformatted -->
+<pre class="wp-block-preformatted">$ docker stop bitcoind
+$ docker start bitcoind
+</pre>
+<!-- /wp:preformatted -->
+
+<!-- wp:heading {"level":4} -->
+<h4 id="markdown-header-configuring-bitcoin">Configuring Bitcoin</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The best method to configure the server is to pass arguments to the bitcoind command. For example, to run Bitcoin SV on the testnet:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:preformatted -->
+<pre class="wp-block-preformatted">$ docker run --name bitcoind-testnet bitcoinsv/bitcoin-sv bitcoind -testnet
+</pre>
+<!-- /wp:preformatted -->
+
+<!-- wp:paragraph -->
+<p>Alternatively, you can edit the&nbsp;<code>bitcoin.conf</code>&nbsp;file which is generated in your data directory (see below).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4 id="markdown-header-data-volumes">Data Volumes</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>By default, Docker will create ephemeral containers. That is, the blockchain data will not be persisted, and you will need to sync the blockchain from scratch each time you launch a container.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>To keep your blockchain data between container restarts or upgrades, simply add the&nbsp;<code>-v</code>&nbsp;option to create a&nbsp;<a href="https://web.archive.org/web/20211022220246/https://docs.docker.com/engine/tutorials/dockervolumes/">data volume</a>:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:preformatted -->
+<pre class="wp-block-preformatted">$ docker run -d --rm --name bitcoind -v bitcoin-data:/data bitcoinsv/bitcoin-sv
+$ docker ps
+$ docker inspect bitcoin-data
+</pre>
+<!-- /wp:preformatted -->
+
+<!-- wp:paragraph -->
+<p>Alternatively, you can map the data volume to a location on your host:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:preformatted -->
+<pre class="wp-block-preformatted">$ docker run -d --rm --name bitcoind -v "$PWD/data:/data" bitcoinsv/bitcoin-sv
+$ ls -alh ./data
+</pre>
+<!-- /wp:preformatted -->
+
+<!-- wp:heading {"level":4} -->
+<h4 id="markdown-header-using-bitcoin-cli">Using bitcoin-cli</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>By default, Docker runs all containers on a private bridge network. This means that you are unable to access the RPC port (8332) necessary to run&nbsp;<code>bitcoin-cli</code>&nbsp;commands.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>There are several methods to run&nbsp;<code>bitcoin-cli</code>&nbsp;against a running&nbsp;<code>bitcoind</code>&nbsp;container. The easiest is to simply let your&nbsp;<code>bitcoin-cli</code>&nbsp;container share networking with your&nbsp;<code>bitcoind</code>&nbsp;container:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:preformatted -->
+<pre class="wp-block-preformatted">$ docker run -d --rm --name bitcoind -v bitcoin-data:/data bitcoinsv/bitcoin-sv
+$ docker run --rm --network container:bitcoind bitcoinsv/bitcoin-sv bitcoin-cli getinfo
+</pre>
+<!-- /wp:preformatted -->
+
+<!-- wp:paragraph -->
+<p>If you plan on exposing the RPC port to multiple containers (for example, if you are developing an application which communicates with the RPC port directly), you probably want to consider creating a user-defined network. You can then use this network for both your&nbsp;<code>bitcoind</code>&nbsp;and&nbsp;<code>bitclin-cli</code>&nbsp;containers, passing&nbsp;<code>-rpcconnect</code>&nbsp;to specify the hostname of your bitcoind container:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:preformatted -->
+<pre class="wp-block-preformatted">$ docker network create bitcoin
+$ docker run -d --rm --name bitcoind -v bitcoin-data:/data --network bitcoin bitcoinsv/bitcoin-sv
+$ docker run --rm --network bitcoin bitcoinsv/bitcoin-sv bitcoin-cli -rpcconnect<strong>=</strong>bitcoind getinfo
+</pre>
+<!-- /wp:preformatted -->
+
+<!-- wp:heading {"level":4} -->
+<h4 id="markdown-header-kubernetes-configs">Kubernetes Configs</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The following directions will walk you through creating a Bitcoin SV node within GKE (Google Kubernetes Engine).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If you wish to run another version of bitcoind, just change the image reference in&nbsp;<code>bitcoin-deployment.yml</code>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Steps:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:preformatted -->
+<pre class="wp-block-preformatted">1- Add a new blank disk on GCE called bitcoin-data that is 200GB. You can always expand it later.
+2- Save the following code snippets and place them in a new directory kube.
+3- Change the rpcuser and rpcpass values in bitcoin-secrets.yml. They are base64 encoded. To base64 a string, just run echo -n SOMESTRING | base64.
+4- Run kubectl create -f /path/to/kube
+5- Profit!
+</pre>
+<!-- /wp:preformatted -->
+
+<!-- wp:heading {"level":5} -->
+<h5 id="markdown-header-bitcoin-deploymentyml">bitcoin-deployment.yml</h5>
+<!-- /wp:heading -->
+
+<!-- wp:preformatted -->
+<pre class="wp-block-preformatted">apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  namespace: default
+  labels:
+    service: bitcoin
+  name: bitcoin
+spec:
+  strategy:
+    type: Recreate
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        service: bitcoin
+    spec:
+      containers:
+      - env:
+        - name: BITCOIN_RPC_USER
+          valueFrom:
+            secretKeyRef:
+              name: bitcoin
+              key: rpcuser
+        - name: BITCOIN_RPC_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: bitcoin
+              key: rpcpass
+        image: bitcoinsv/bitcoin-sv
+        name: bitcoin
+        volumeMounts:
+          - mountPath: /data
+            name: bitcoin-data
+        resources:
+          requests:
+            memory: "2Gi"
+      restartPolicy: Always
+      volumes:
+        - name: bitcoin-data
+          gcePersistentDisk:
+            pdName: bitcoin-data
+            fsType: ext4
+</pre>
+<!-- /wp:preformatted -->
+
+<!-- wp:heading {"level":5} -->
+<h5 id="markdown-header-bitcoin-secretsyml">bitcoin-secrets.yml</h5>
+<!-- /wp:heading -->
+
+<!-- wp:preformatted -->
+<pre class="wp-block-preformatted">apiVersion: v1
+kind: Secret
+metadata:
+  name: bitcoin
+type: Opaque
+data:
+  rpcuser: YWRtaW4=
+  rpcpass: aXRvbGR5b3V0b2NoYW5nZXRoaXM=
+</pre>
+<!-- /wp:preformatted -->
+
+<!-- wp:heading {"level":5} -->
+<h5 id="markdown-header-bitcoin-srvyml">bitcoin-srv.yml</h5>
+<!-- /wp:heading -->
+
+<!-- wp:preformatted -->
+<pre class="wp-block-preformatted">apiVersion: v1
+kind: Service
+metadata:
+  name: bitcoin
+  namespace: default
+spec:
+  ports:
+    - port: 8333
+      targetPort: 8333
+  selector:
+    service: bitcoin
+  type: LoadBalancer
+  externalTrafficPolicy: Local
+</pre>
+<!-- /wp:preformatted --></div>
+          </div>
+  </div>
+</div>
+
+  <div class="footer__container">
+    <div class="footer__box container">
+      <div class="footer">
+        <div class="footer__top">
+          <div class="row">
+            <div class="col-12 col-md-8">
+              <div class="footer__top__left">
+                <ul id="menu-footer_menu" class="footer__top__listmenu"><li id="menu-item-486" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-486"><a href="#">Learn About BSV</a>
+<ul class="sub-menu">
+	<li id="menu-item-516" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-516"><a href="https://web.archive.org/web/20211022220246/https://bitcoinsv.io/satoshis-vision/">Satoshi Vision</a></li>
+	<li id="menu-item-510" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-510"><a href="https://web.archive.org/web/20211022220246/https://bitcoinsv.io/blog/">Blog</a></li>
+	<li id="menu-item-490" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-490"><a target="_blank" rel="noopener" href="https://web.archive.org/web/20211022220246/https://wiki.bitcoinsv.io/">Bitcoin Wiki</a></li>
+</ul>
+</li>
+<li id="menu-item-485" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-485"><a href="#">For Developers</a>
+<ul class="sub-menu">
+	<li id="menu-item-494" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-494"><a href="https://web.archive.org/web/20211022220246/https://bitcoinsv.io/devtools/">Developer Resources</a></li>
+</ul>
+</li>
+<li id="menu-item-487" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-487"><a href="#">For Miners</a>
+<ul class="sub-menu">
+	<li id="menu-item-4402" class="menu-item menu-item-type-post_type menu-item-object-miner_document menu-item-4402"><a href="https://web.archive.org/web/20211022220246/https://bitcoinsv.io/documentation/miners/introduction-miners/">Get Started</a></li>
+	<li id="menu-item-496" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-496"><a href="https://web.archive.org/web/20211022220246/https://bitcoinsv.io/node-software/">Node Software</a></li>
+	<li id="menu-item-495" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-495"><a href="https://web.archive.org/web/20211022220246/https://bitcoinsv.io/minerid/">Miner Profile</a></li>
+	<li id="menu-item-517" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-517"><a href="https://web.archive.org/web/20211022220246/https://bitcoinsv.io/miner-tools/">Miner Resources</a></li>
+</ul>
+</li>
+</ul>              </div>
+            </div>
+            <div class="col-12 col-md-4 offset-md-0">
+              <div class="footer__top__right">
+                <div class="footer__newsletter__container">
+                  <div role="form" class="wpcf7" id="wpcf7-f481-o1" lang="en-US" dir="ltr">
+<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+<form action="/web/20211022220246/https://bitcoinsv.io/documentation/miners/installation/bitcoind/#wpcf7-f481-o1" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="481"/>
+<input type="hidden" name="_wpcf7_version" value="5.4.2"/>
+<input type="hidden" name="_wpcf7_locale" value="en_US"/>
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f481-o1"/>
+<input type="hidden" name="_wpcf7_container_post" value="0"/>
+<input type="hidden" name="_wpcf7_posted_data_hash" value=""/>
+<input type="hidden" name="_wpcf7_recaptcha_response" value=""/>
+</div>
+<div class="footer__newsletter__label">
+   Send me tips, trends &amp; updates
+</div>
+<div class="wpcf7-response-output" aria-hidden="true"></div>
+<div class="footer__newsletter">
+<div class="footer__newsletter__input__container">
+<div><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email footer__newsletter__input" aria-required="true" aria-invalid="false" placeholder="Email address"/></div>
+<div>
+<div class="footer__newsletter__unsubscribe">You can unsubscribe at anytime</div>
+<div><a href="/web/20211022220246/https://bitcoinsv.io/privacy-policy" class="footer__newsletter__policy d-none d-lg-block">Privacy Policy</a></div>
+</div>
+</div>
+<div>
+      <button class="footer__newsletter__button btn btn-primary">Sign me up</button><a href="/web/20211022220246/https://bitcoinsv.io/privacy-policy" class="footer__newsletter__policy d-block d-lg-none">Privacy Policy</a>
+   </div>
+</div>
+</form></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <div class="footer__bottom__left">
+                <ul id="menu-footer_bottom_menu" class="footer__bottom__menu"><li id="menu-item-497" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-497"><a href="https://web.archive.org/web/20211022220246/https://bitcoinsv.io/professional-engineering/">Our Approach</a></li>
+<li id="menu-item-4107" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4107"><a href="https://web.archive.org/web/20211022220246/https://bitcoinsv.io/security/">Security</a></li>
+<li id="menu-item-488" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-488"><a target="_blank" rel="noopener" href="https://web.archive.org/web/20211022220246/https://nchain.com/careers/">Careers</a></li>
+<li id="menu-item-518" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-518"><a href="https://web.archive.org/web/20211022220246/https://bitcoinsv.io/terms-of-use/">Terms</a></li>
+<li id="menu-item-4250" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4250"><a href="https://web.archive.org/web/20211022220246/https://bitcoinsv.io/contact/">Contact</a></li>
+</ul>                <div class="footer__bottom__companydetails">
+                  © Copyright Bitcoin Association 2020. All rights reserved.
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="footer__bottom__right">
+                <ul class="footer__socialbuttons">
+                  <li><a href="https://web.archive.org/web/20211022220246/https://github.com/bitcoin-sv" target="blank"><img src="https://web.archive.org/web/20211022220246im_/https://bitcoinsv.io/wp-content/themes/wp.bitcoinsvio/assets/github_icon.png"/></a></li>
+                  <li><a href="https://web.archive.org/web/20211022220246/https://twitter.com/BitcoinSVNode" target="blank"><img src="https://web.archive.org/web/20211022220246im_/https://bitcoinsv.io/wp-content/themes/wp.bitcoinsvio/assets/twitter_icon.png"/></a></li>
+                </ul>
+                <div class="footer__langselector__container">
+                  <label class="footer__langselector">
+                    <select name="lang_choice_2" id="lang_choice_2">
+	<option value="en" selected="selected">English</option>
+	<option value="zh">中文 (中国)</option>
+
+</select>
+<script type="text/javascript">
+					//<![CDATA[
+					var urls_2 = {"en":"https:\/\/web.archive.org\/web\/20211022220246\/https:\/\/bitcoinsv.io\/documentation\/miners\/installation\/bitcoind\/","zh":"https:\/\/web.archive.org\/web\/20211022220246\/https:\/\/bitcoinsv.io\/zh\/documentation\/miners\/installation\/bitcoind\/"};
+					document.getElementById( "lang_choice_2" ).onchange = function() {
+						location.href = urls_2[this.value];
+					}
+					//]]>
+				</script>                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // flex polyfill
+    function supportsFlexBox() {
+      var test = document.createElement('test');
+      test.style.display = 'flex';
+      return test.style.display === 'flex';
+    }
+    if (supportsFlexBox()) {
+    } else {
+      flexibility(document.documentElement);
+    }
+
+    // fallback lang selector
+    $('.footer__langselector__select').on('change', function(){
+      //var el = $(this);
+      window.location =  $("option:selected", this).data('href')
+    });
+  </script>
+
+  <!--googleoff: all--><div id="cookie-law-info-bar" data-nosnippet="true"><span><div class="cli-bar-container cli-style-v2"><div class="cli-bar-message">We use cookies on our website to give you the most relevant experience by remembering your preferences and repeat visits. By clicking “Accept All”, you consent to the use of ALL the cookies. However, you may visit "Cookie Settings" to provide a controlled consent.</div><div class="cli-bar-btn_container"><a role="button" tabindex="0" class="medium cli-plugin-button cli-plugin-main-button cli_settings_button" style="margin:0px 5px 0px 0px;">Cookie Settings</a><a id="wt-cli-accept-all-btn" tabindex="0" role="button" data-cli_action="accept_all" class="wt-cli-element medium cli-plugin-button wt-cli-accept-all-btn cookie_action_close_header cli_action_button">Accept All</a></div></div></span></div><div id="cookie-law-info-again" style="display:none;" data-nosnippet="true"><span id="cookie_hdr_showagain">Manage consent</span></div><div class="cli-modal" data-nosnippet="true" id="cliSettingsPopup" tabindex="-1" role="dialog" aria-labelledby="cliSettingsPopup" aria-hidden="true">
+  <div class="cli-modal-dialog" role="document">
+	<div class="cli-modal-content cli-bar-popup">
+	  	<button type="button" class="cli-modal-close" id="cliModalClose">
+			<svg class="" viewbox="0 0 24 24"><path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"></path><path d="M0 0h24v24h-24z" fill="none"></path></svg>
+			<span class="wt-cli-sr-only">Close</span>
+	  	</button>
+	  	<div class="cli-modal-body">
+			<div class="cli-container-fluid cli-tab-container">
+	<div class="cli-row">
+		<div class="cli-col-12 cli-align-items-stretch cli-px-0">
+			<div class="cli-privacy-overview">
+				<h4>Privacy Overview</h4>				<div class="cli-privacy-content">
+					<div class="cli-privacy-content-text">This website uses cookies to improve your experience while you navigate through the website. Out of these cookies, the cookies that are categorized as necessary are stored on your browser as they are essential for the working of basic functionalities of the website. We also use third-party cookies that help us analyze and understand how you use this website. These cookies will be stored in your browser only with your consent. You also have the option to opt-out of these cookies. But opting out of some of these cookies may have an effect on your browsing experience.</div>
+				</div>
+				<a class="cli-privacy-readmore" aria-label="Show more" tabindex="0" role="button" data-readmore-text="Show more" data-readless-text="Show less"></a>			</div>
+		</div>
+		<div class="cli-col-12 cli-align-items-stretch cli-px-0 cli-tab-section-container">
+												<div class="cli-tab-section">
+						<div class="cli-tab-header">
+							<a role="button" tabindex="0" class="cli-nav-link cli-settings-mobile" data-target="necessary" data-toggle="cli-toggle-tab">
+								Necessary							</a>
+							<div class="wt-cli-necessary-checkbox">
+                        <input type="checkbox" class="cli-user-preference-checkbox" id="wt-cli-checkbox-necessary" data-id="checkbox-necessary" checked="checked"/>
+                        <label class="form-check-label" for="wt-cli-checkbox-necessary">Necessary</label>
+                    </div>
+                    <span class="cli-necessary-caption">Always Enabled</span> 						</div>
+						<div class="cli-tab-content">
+							<div class="cli-tab-pane cli-fade" data-id="necessary">
+								<div class="wt-cli-cookie-description">
+									Necessary cookies are absolutely essential for the website to function properly. This category only includes cookies that ensures basic functionalities and security features of the website. These cookies do not store any personal information.								</div>
+							</div>
+						</div>
+					</div>
+																	<div class="cli-tab-section">
+						<div class="cli-tab-header">
+							<a role="button" tabindex="0" class="cli-nav-link cli-settings-mobile" data-target="non-necessary" data-toggle="cli-toggle-tab">
+								Non-necessary							</a>
+							<div class="cli-switch">
+                        <input type="checkbox" id="wt-cli-checkbox-non-necessary" class="cli-user-preference-checkbox" data-id="checkbox-non-necessary" checked="checked"/>
+                        <label for="wt-cli-checkbox-non-necessary" class="cli-slider" data-cli-enable="Enabled" data-cli-disable="Disabled"><span class="wt-cli-sr-only">Non-necessary</span></label>
+                    </div>						</div>
+						<div class="cli-tab-content">
+							<div class="cli-tab-pane cli-fade" data-id="non-necessary">
+								<div class="wt-cli-cookie-description">
+									Any cookies that may not be particularly necessary for the website to function and is used specifically to collect user personal data via analytics, ads, other embedded contents are termed as non-necessary cookies. It is mandatory to procure user consent prior to running these cookies on your website.								</div>
+							</div>
+						</div>
+					</div>
+										</div>
+	</div>
+</div>
+	  	</div>
+	  	<div class="cli-modal-footer">
+			<div class="wt-cli-element cli-container-fluid cli-tab-container">
+				<div class="cli-row">
+					<div class="cli-col-12 cli-align-items-stretch cli-px-0">
+						<div class="cli-tab-footer wt-cli-privacy-overview-actions">
+						
+															<a id="wt-cli-privacy-save-btn" role="button" tabindex="0" data-cli-action="accept" class="wt-cli-privacy-btn cli_setting_save_button wt-cli-privacy-accept-btn cli-btn">SAVE &amp; ACCEPT</a>
+													</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  </div>
+</div>
+<div class="cli-modal-backdrop cli-fade cli-settings-overlay"></div>
+<div class="cli-modal-backdrop cli-fade cli-popupbar-overlay"></div>
+<!--googleon: all--><script type="text/javascript" id="site_tracking-js-extra">
+/* <![CDATA[ */
+var php_data = {"ac_settings":{"tracking_actid":610121386,"site_tracking_default":1},"user_email":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://web.archive.org/web/20211022220246js_/https://bitcoinsv.io/wp-content/plugins/activecampaign-subscription-forms/site_tracking.js?ver=5.8.1" id="site_tracking-js"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20211022220246js_/https://bitcoinsv.io/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.7" id="regenerator-runtime-js"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20211022220246js_/https://bitcoinsv.io/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" id="wp-polyfill-js"></script>
+<script type="text/javascript" id="contact-form-7-js-extra">
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/web.archive.org\/web\/20211022220246\/https:\/\/bitcoinsv.io\/wp-json\/","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://web.archive.org/web/20211022220246js_/https://bitcoinsv.io/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.4.2" id="contact-form-7-js"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20211022220246js_/https://www.google.com/recaptcha/api.js?render=6LexzZ4UAAAAAOYlUrExShGWcHE27nzp8Eqmv1us&amp;ver=3.0" id="google-recaptcha-js"></script>
+<script type="text/javascript" id="wpcf7-recaptcha-js-extra">
+/* <![CDATA[ */
+var wpcf7_recaptcha = {"sitekey":"6LexzZ4UAAAAAOYlUrExShGWcHE27nzp8Eqmv1us","actions":{"homepage":"homepage","contactform":"contactform"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://web.archive.org/web/20211022220246js_/https://bitcoinsv.io/wp-content/plugins/contact-form-7/modules/recaptcha/index.js?ver=5.4.2" id="wpcf7-recaptcha-js"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20211022220246js_/https://bitcoinsv.io/wp-includes/js/wp-embed.min.js?ver=5.8.1" id="wp-embed-js"></script>
+
+  </body>
+</html>
+<!--
+     FILE ARCHIVED ON 22:02:46 Oct 22, 2021 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 10:16:03 Apr 27, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 81.723
+  exclusion.robots: 0.136
+  exclusion.robots.policy: 0.127
+  cdx.remote: 0.083
+  esindex: 0.012
+  LoadShardBlock: 53.35 (3)
+  PetaboxLoader3.datanode: 61.739 (4)
+  CDXLines.iter: 20.336 (3)
+  load_resource: 50.282
+  PetaboxLoader3.resolve: 19.929
+-->
