@@ -1,10 +1,12 @@
 # Quick Start
 
 ## Install
-We're using [node.js and npm](https://nodejs.org/en/download/package-manager) on a local machine, once you're ready to start, initialize a project with `npm init -y` and install the BSV Blockchain official SDK.
+
 ```bash
 npm i @bsv/sdk
 ```
+
+We're using [node.js and npm](https://nodejs.org/en/download/package-manager) on a local machine, once you're ready to start, initialize a project with `npm init -y` and install the BSV Blockchain official SDK.
 
 ## Build Your First Transaction
 
@@ -38,6 +40,7 @@ createKey()
 Run the above code by copying it into `createKey.js` and running `node createKey.js`
 
 Now you should get something in your console which looks like this:
+
 ```bash
 { address: '1E7ZM72qRDSa0rqUhZoMCMb5MAFYFEaKQp' }
 ```
@@ -110,7 +113,7 @@ You should see a response like this:
 
 ## Congratulations
 
-You're a BSV Developer. The you can keep running the same script - it will keep appending new transactions to the `.transactions` file until you run out of funds. BSV is so cheap that this could be a few thousand transactions later. 
+You're a BSV Developer. The you can keep running the same script - it will keep appending new transactions to the `.transactions` file until you run out of funds. BSV is so cheap that this could be a few thousand transactions later.
 
 In the mean time, you can create your own Bitcoin ScriptTemplates by defining your own classes like so:
 
@@ -139,13 +142,16 @@ class SumScript {
 ```
 
 To create this output you simply add the class to an output:
+
 ```javascript
 tx.addOutput({
     satoshis: 3,
     lockingScript: new SumScript().lock(41)
 })
 ```
+
 Unlocking it in a future transaction you can simply do:
+
 ```javascript
 tx.addInput({
     sourceTransaction,
@@ -155,6 +161,7 @@ tx.addInput({
 ```
 
 To check that the script works you can then run:
+
 ```javascript
 await tx.verify('scripts only')
 ```
