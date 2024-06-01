@@ -113,7 +113,9 @@ You should see a response like this:
 
 ## Congratulations
 
-You're a BSV Developer. The you can keep running the same script - it will keep appending new transactions to the `.transactions` file until you run out of funds. BSV is so cheap that this could be a few thousand transactions later.
+You're a BSV Developer.&#x20;
+
+You can keep running the same script - it will keep appending new transactions to the `.transactions` file until you run out of funds. BSV is so cheap that this could be a few thousand transactions later.
 
 In the mean time, you can create your own Bitcoin ScriptTemplates by defining your own classes like so:
 
