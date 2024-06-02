@@ -2,12 +2,12 @@
 description: Paymail Capability Extensions
 ---
 
-# 💵 Payments Flow
+# Payments Flow
 
 The SPV Wallet uses Paymail capabilities to publicly reveal their ability to interpret SPV transaction data.
 
 {% hint style="info" %}
-### What is Paymail?
+#### What is Paymail?
 
 It's a service discovery mechanism for counterparty web APIs. It allows users to pay something which looks like an email address, but under the hood resolves a specific endpoint for a wallet to use for payment negotiation.\
 \
@@ -18,7 +18,7 @@ It's a service discovery mechanism for counterparty web APIs. It allows users to
 
 <div data-full-width="true">
 
-<figure><picture><source srcset="../.gitbook/assets/swimlanes-43c7c4ee01b286fea3be26b28804e591 (1).png" media="(prefers-color-scheme: dark)"><img src="../.gitbook/assets/swimlanes-43c7c4ee01b286fea3be26b28804e591.png" alt=""></picture><figcaption></figcaption></figure>
+<figure><picture><source srcset="../.gitbook/assets/swimlanes-43c7c4ee01b286fea3be26b28804e591%20(1).png" media="(prefers-color-scheme: dark)"><img src="../.gitbook/assets/swimlanes-43c7c4ee01b286fea3be26b28804e591.png" alt=""></picture><figcaption></figcaption></figure>
 
 </div>
 

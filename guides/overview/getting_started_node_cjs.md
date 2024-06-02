@@ -1,6 +1,6 @@
-# Getting Started with BSV SDK in NodeJS (CommonJS)
+# Node, CommonJS
 
-Welcome to the BSV SDK! This guide is tailored for developers working in a NodeJS environment, specifically those who are using the CommonJS module system. We'll walk you through the installation process and show you how to get started with creating and signing a Bitcoin SV transaction using the SDK. Whether you're building on BSV for the first time or transitioning an existing project to use the SDK, this guide is for you.
+This guide is tailored for developers working in a NodeJS environment, specifically those who are using the CommonJS module system. We'll walk you through the installation process and show you how to get started with creating and signing a Bitcoin SV transaction using the SDK. Whether you're building on BSV for the first time or transitioning an existing project to use the SDK, this guide is for you.
 
 ## Prerequisites
 

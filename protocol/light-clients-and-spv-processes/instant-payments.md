@@ -8,7 +8,7 @@ description: >-
 
 Another important feature of Simplified Payment Verification is confirmation of instant payments.
 
-As described earlier, Bob uses the node to get a payment acknowledgement to ensure transaction's validity accepting it. This is where the node performs validation steps on the raw transaction involving validating the script that is present in the unspent UTXO and the signature that is provided by Alice and executing both the input and output script as described in [transaction-lifecycle](../../transaction-lifecycle/ "mention").
+As described earlier, Bob uses the node to get a payment acknowledgement to ensure transaction's validity accepting it. This is where the node performs validation steps on the raw transaction involving validating the script that is present in the unspent UTXO and the signature that is provided by Alice and executing both the input and output script as described in [transaction-lifecycle](../transaction-lifecycle/ "mention").
 
 **Why is Bob able to trust the system for instant transactions?**
 
@@ -20,7 +20,7 @@ The transaction data that Bob receives has the raw payment transaction, the Merk
 
 <figure><img src="https://github.com/jonesjBSV/bsv-skills-center/blob/master/bsv-skills-center/bsv-protocol-documentation/.gitbook/assets/LightClientsandSPVInfastructures_Slide02%20(1).png" alt=""><figcaption></figcaption></figure>
 
-<table><thead><tr><th width="186">Verification Step</th><th>Description</th></tr></thead><tbody><tr><td>Steps 1 and 2</td><td>Bob performs the checks locally</td></tr><tr><td>Step 3</td><td>Bob will interact with BHC as described in <a data-mention href="broken-reference">Broken link</a></td></tr><tr><td>Step 4</td><td>Bob uses Node to perform Signature validation</td></tr><tr><td>Step 5</td><td>Bob performs the check locally</td></tr></tbody></table>
+<table><thead><tr><th width="186">Verification Step</th><th>Description</th></tr></thead><tbody><tr><td>Steps 1 and 2</td><td>Bob performs the checks locally</td></tr><tr><td>Step 3</td><td>Bob will interact with BHC as described in <a data-mention href="../../bsv-skills-center/bsv-protocol-documentation/light-clients-and-spv-processes/simplified-payment-verification-spv/broken-reference/">broken-reference</a></td></tr><tr><td>Step 4</td><td>Bob uses Node to perform Signature validation</td></tr><tr><td>Step 5</td><td>Bob performs the check locally</td></tr></tbody></table>
 
 As described above, steps 1,2,3 and 5 are performed locally by Bob, which means most of the error scenarios for an invalid transaction are performed locally by Bob, effectively making this process independent of any node.
 
@@ -38,7 +38,7 @@ Th following diagram provides a high-level illustration of the digital signing p
 
 <figure><img src="https://github.com/jonesjBSV/bsv-skills-center/blob/master/bsv-skills-center/bsv-protocol-documentation/.gitbook/assets/LightClientsandSPVInfastructures_Slide03%20(1).png" alt=""><figcaption></figcaption></figure>
 
-This process comprises the following components (see [privacy](../../privacy/ "mention") for a more detailed description of the process):
+This process comprises the following components (see [privacy](../privacy/ "mention") for a more detailed description of the process):
 
 * Signed message
 * Digital signature

@@ -2,7 +2,7 @@
 description: What data is sent between counterparties for SPV Payments?
 ---
 
-# 🤖 Data Models
+# Data Models
 
 There are two main data models used in SPV transactions. Firstly, the Merkle paths of transactions are contained
 

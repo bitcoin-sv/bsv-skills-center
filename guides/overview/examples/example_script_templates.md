@@ -17,7 +17,6 @@ For example, a locking script might require the presentation of a public key tha
 The unlocking script, or input script, provides the evidence needed to satisfy the conditions set by the locking script. The `unlock` method in a script template not only generates this script but also offers two key functionalities — it's a function that returns an object with two properties:
 
 1. **`estimateLength`**: Before a transaction is signed and broadcast to the network, it's crucial to estimate its size to calculate the required fee accurately. The `estimateLength` function predicts the length of the unlocking script once it will be created, allowing developers to make informed decisions about fee estimation.
-
 2. **`sign`**: This function generates an unlocking script that includes the necessary signatures or data required to unlock the bitcoins. By accepting a transaction and an input index as arguments, it ensures that the unlocking script is correctly associated with the specific transaction input it intends to fund, allowing signatures to be scoped accordingly.
 
 ### Creating a Script Template
@@ -163,7 +162,7 @@ export default class RPuzzle implements ScriptTemplate {
 }
 ```
 
-In this example, `RPuzzle` defines custom logic for creating both locking and unlocking scripts. The opcodes, intermixed with the various template fields, enable end-users to implement R-puzzles into their applications without being concerned with these low-level details. Check out [this guide](./EXAMPLE_COMPLEX_TX.md) to see an example of this template used in a transaction.
+In this example, `RPuzzle` defines custom logic for creating both locking and unlocking scripts. The opcodes, intermixed with the various template fields, enable end-users to implement R-puzzles into their applications without being concerned with these low-level details. Check out [this guide](example\_complex\_tx.md) to see an example of this template used in a transaction.
 
 ### Conclusion
 

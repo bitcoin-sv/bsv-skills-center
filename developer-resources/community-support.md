@@ -1,9 +1,5 @@
 # Community Support
 
-Discord
-
-Forums
-
-Developer Chat
-
-Developer Hours
+{% embed url="https://discord.gg/bsv" %}
+Join our discord
+{% endembed %}

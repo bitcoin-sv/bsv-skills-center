@@ -2,7 +2,7 @@
 description: Transaction Broadcasting from SPV Wallet
 ---
 
-# 📣 Broadcasting
+# Broadcasting
 
 The SPV Wallet broadcasts all valid transactions it receives or creates to ARC.
 

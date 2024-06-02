@@ -1,8 +1,8 @@
 # Example: BIP32 Key Derivation with HD Wallets
 
-For a long time, BIP32 was the standard way to structure a Bitcoin wallet. While [type-42](EXAMPLE_TYPE_42.md) has since taken over as the standard approach due to its increased privacy and open-ended invoice numbering scheme, it's sometimes still necessary to interact with legacy systems using BIP32 key derivation.
+For a long time, BIP32 was the standard way to structure a Bitcoin wallet. While [type-42](example\_type\_42.md) has since taken over as the standard approach due to its increased privacy and open-ended invoice numbering scheme, it's sometimes still necessary to interact with legacy systems using BIP32 key derivation.
 
-This guide will show you how to generate keys, derive child keys, and convert them to WIF and Bitcoin address formats. At the end, we'll compare BIP32 to the [type-42 system and encourage you to adopt the new approach](EXAMPLE_TYPE_42.md) to key management.
+This guide will show you how to generate keys, derive child keys, and convert them to WIF and Bitcoin address formats. At the end, we'll compare BIP32 to the [type-42 system and encourage you to adopt the new approach](example\_type\_42.md) to key management.
 
 ## Generating BIP32 keys
 
@@ -68,4 +68,4 @@ This guide has demonstrated how to use BIP32 for key derivation and format conve
 
 ## Disadvantages and Risks
 
-BIP32 allows anyone to derive child keys if they know an XPUB. The number of child keys per parent is limited to 2^31, and there's no support for custom invoice numbering schemes that can be used when deriving a child, only a simple integer. Finally, BIP32 has no support for private derivation, where two parties share a common key universe no one else can link to them, even while knowing the master public key. It's for these reasons that we recommend the use of type-42 over BIP32. You can read an equivalent guide [here](EXAMPLE_TYPE_42.md).
+BIP32 allows anyone to derive child keys if they know an XPUB. The number of child keys per parent is limited to 2^31, and there's no support for custom invoice numbering schemes that can be used when deriving a child, only a simple integer. Finally, BIP32 has no support for private derivation, where two parties share a common key universe no one else can link to them, even while knowing the master public key. It's for these reasons that we recommend the use of type-42 over BIP32. You can read an equivalent guide [here](example\_type\_42.md).
