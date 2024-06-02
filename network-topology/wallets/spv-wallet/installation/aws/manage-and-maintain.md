@@ -8,7 +8,7 @@ description: 'How to: get access to EKS, get admin keys, read logs'
 
 ### AWS Console
 
-<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="..//.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
 #### Step 1
 
@@ -33,7 +33,7 @@ In the example from picture above the value which you should copy would be:\
 
 #### Step 5
 
-<figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="..//.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
 
 Open user menu at the right top corner and click `Switch role` button
 
@@ -43,7 +43,7 @@ If you're setting role to switch for the first time, additional view will be dis
 
 #### Step 6
 
-<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="..//.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
 
 Fill the form with:
 
@@ -53,7 +53,7 @@ Fill the form with:
 
 After filling the form, click `Switch Role` button. If everything is correct, you will be switched to that role (otherwise after clicking the button, it looks like nothing happend - so you need to fix the values provided in the form).
 
-<figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="..//.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
 
 After switchin the role the user menu after clicking the role name at the top right should look like on the picture above.
 
@@ -77,7 +77,7 @@ Now in the tab Resources you can see all the pods, deployments, config maps that
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="..//.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -101,7 +101,7 @@ Now you need to obtain "update kubeconfig command" from outputs of the installed
 
 {% tabs %}
 {% tab title="AWS Console" %}
-<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="..//.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 
 #### Step 3a
 
@@ -207,7 +207,7 @@ You need to have ability to Switch Role in AWS Console like in the instruction i
 
 Ensure that you switched the role to the "EKS Master" role.
 
-<figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption><p>Steps 2 - 4</p></figcaption></figure>
+<figure><img src="..//.gitbook/assets/image (19).png" alt=""><figcaption><p>Steps 2 - 4</p></figcaption></figure>
 
 ### Step 1
 
@@ -227,7 +227,7 @@ Find `spv-wallet-keys` on the list and click the name to see details
 
 ### Step 5
 
-<figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="..//.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
 
 Check the options to decode the values. And then you can copy admin xpriv and xpub values.
 {% endtab %}
@@ -256,7 +256,7 @@ In order to maintain or query Block Headers Service you may need to retrieve API
 
 {% tabs %}
 {% tab title="AWS Console" %}
-<figure><img src="../../.gitbook/assets/image (22).png" alt=""><figcaption><p>Steps 2-4</p></figcaption></figure>
+<figure><img src="..//.gitbook/assets/image (22).png" alt=""><figcaption><p>Steps 2-4</p></figcaption></figure>
 
 ### Step 1
 
@@ -276,7 +276,7 @@ Find `block-headers-service-secret` on the list and click the name to see detail
 
 ### Step 5
 
-<figure><img src="../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="..//.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
 
 Check the options to decode the values. And then you can copy value of block-headers-service-auth-token.
 {% endtab %}

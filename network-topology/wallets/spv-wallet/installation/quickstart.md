@@ -49,7 +49,7 @@ If you want to expose the services on the public domains please read the section
 
 After answering all the questions, the script will start the environment and the selected applications. Example of the script output:
 
-<figure><img src="../.gitbook/assets/run_script.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/.gitbook/assets/run_script.png" alt=""><figcaption></figcaption></figure>
 
 It's worth to mention that after first go through those questions, the script can be started next time with the saved configuration. To do this, simply run the script with option `--load` or `-l`:
 
