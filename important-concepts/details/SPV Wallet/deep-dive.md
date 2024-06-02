@@ -10,7 +10,7 @@ Storage gets really expensive when you have billions of transactions to store - 
 
 The total cumulative size of all blockheaders is currently \~68MB. When comparing this to storing the whole blockchain, the advantage becomes obvious. The total size of the BSV blockchain at time of writing is over 10TB.
 
-<figure><picture><source srcset="../.gitbook/assets/RPReplay_Final1702566030-ezgif.com-effects.gif" media="(prefers-color-scheme: dark)"><img src="../.gitbook/assets/RPReplay_Final1702566030.gif" alt=""></picture><figcaption><p>Some blocks in the past have been 4GB in size. This is expected to increase dramatically in future.<br>In contrast, the block header will always and forever be 80 bytes exactly.</p></figcaption></figure>
+<figure><picture><source srcset="/.gitbook/assets/RPReplay_Final1702566030-ezgif.com-effects.gif" media="(prefers-color-scheme: dark)"><img src="/.gitbook/assets/RPReplay_Final1702566030.gif" alt=""></picture><figcaption><p>Some blocks in the past have been 4GB in size. This is expected to increase dramatically in future.<br>In contrast, the block header will always and forever be 80 bytes exactly.</p></figcaption></figure>
 
 ### What's in a Block Header?
 
@@ -45,7 +45,7 @@ The <mark style="color:green;">**Previous Block Hash**</mark> allows us to link 
 
 <div data-full-width="false">
 
-<figure><picture><source srcset="../.gitbook/assets/headers-ezgif.com-effects.gif" media="(prefers-color-scheme: dark)"><img src="../.gitbook/assets/headers.gif" alt=""></picture><figcaption><p>The headers are all linked, each pointing to the previous header.</p></figcaption></figure>
+<figure><picture><source srcset="/.gitbook/assets/headers-ezgif.com-effects.gif" media="(prefers-color-scheme: dark)"><img src="/.gitbook/assets/headers.gif" alt=""></picture><figcaption><p>The headers are all linked, each pointing to the previous header.</p></figcaption></figure>
 
 </div>
 
@@ -100,6 +100,6 @@ The <mark style="color:blue;">**Merkle Root**</mark> is what we compare to the c
 
 <div data-full-width="false">
 
-<figure><picture><source srcset="../.gitbook/assets/ezgif.com-effects.gif" media="(prefers-color-scheme: dark)"><img src="../.gitbook/assets/merkle%20proof.gif" alt=""></picture><figcaption><p>Getting from a txid to a Merkle root.</p></figcaption></figure>
+<figure><picture><source srcset="/.gitbook/assets/ezgif.com-effects.gif" media="(prefers-color-scheme: dark)"><img src="/.gitbook/assets/merkle%20proof.gif" alt=""></picture><figcaption><p>Getting from a txid to a Merkle root.</p></figcaption></figure>
 
 </div>
