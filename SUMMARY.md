@@ -1,10 +1,8 @@
 # Table of contents
 
-* [Page](README.md)
-
 ## Intro
 
-* [Quick Start](<README (1).md>)
+* [Quick Start](<README.md>)
 * [What Can I Do](what-can-i-do/README.md)
 * [The Benefits of BSV Blockchain](bsv-skills-center/the-benefits-of-bsv-blockchain.md)
 
@@ -78,21 +76,6 @@
     * [Data Models](<important-concepts/details/SPV Wallet/data-models.md>)
     * [Broadcasting](<important-concepts/details/SPV Wallet/broadcasting.md>)
 
-## Important Concepts
-
-* [Overview](important-concepts/overview.md)
-  * [UTXO-Base vs Account-Based Systems](important-concepts/high-level/utxo-base-vs-account-based-systems.md)
-  * [Linked Keys "42"](important-concepts/high-level/linked-keys-42.md)
-  * [Simplified Payment Verification (SPV)](important-concepts/high-level/simplified-payment-verification-spv.md)
-  * [Web3: The Semantic Web of Value](important-concepts/high-level/web3-the-semantic-web-of-value.md)
-* [Chain SPV](SDKs/concepts/CHAIN\_SPV.md)
-* [Hashes](SDKs/concepts/HASHES.md)
-* [BEEF](SDKs/concepts/BEEF.md)
-* [Tokens](important-concepts/tokens.md)
-* [Smart Contracts](important-concepts/smart-contracts.md)
-* [SIGHASH Flags](important-concepts/sighash-flags.md)
-* [Script](important-concepts/script.md)
-
 ## Network Topology
 
 * [Nodes](network-topology/nodes/README.md)
@@ -137,23 +120,42 @@
     * [Teranode](guides/setup-developer-environment/local-blockchain-stack/teranode/README.md)
 * [Business Use Cases](guides/business-use-cases/README.md)
   * [Creating a Tranche of Event Tickets](guides/getting-started.md)
-* [Application Development](guides/overview.md)
+* [Application Development](guides/README.md)
   * [Node, CommonJS](SDKs/examples/GETTING\_STARTED\_NODE\_CJS.md)
   * [React](SDKs/examples/GETTING\_STARTED\_REACT.md)
-  * [Examples](SDKs/examples/README.md)
-    * [Example: Creating a Simple Transaction](SDKs/examples/EXAMPLE\_SIMPLE\_TX.md)
-    * [Example: Verifying a BEEF Structure](SDKs/examples/EXAMPLE\_VERIFYING\_BEEF.md)
-    * [Example: Creating Transactions with Inputs, Outputs and Templates](SDKs/examples/EXAMPLE\_COMPLEX\_TX.md)
-    * [Example: Creating the R-puzzle Script Template](SDKs/examples/EXAMPLE\_SCRIPT\_TEMPLATES.md)
-    * [Example: Message Encryption and Decryption](SDKs/examples/EXAMPLE\_ENCRYPT\_DECRYPT\_MESSAGE.md)
-    * [Example: Message Signing](SDKs/examples/EXAMPLE\_MESSAGE\_SIGNING.md)
-    * [Example: Building a Custom Transaction Broadcast Client](SDKs/examples/EXAMPLE\_BUILDING\_CUSTOM\_TX\_BROADCASTER.md)
-    * [Example: Verifying Spends with Script Intrepreter](SDKs/examples/EXAMPLE\_VERIFYING\_SPENDS.md)
-    * [Example: BIP32 Key Derivation with HD Wallets](SDKs/examples/EXAMPLE\_HD\_WALLETS.md)
-    * [Example: Using Type 42 Key Derivation for Bitcoin Wallet Management](SDKs/examples/EXAMPLE\_TYPE\_42.md)
-    * [Example: Creating a Custom Transaction Fee Model](SDKs/examples/EXAMPLE\_FEE\_MODELING.md)
-    * [Example: Building a Pulse Block Headers Client](sdks/examples/example-building-a-pulse-block-headers-client.md)
-    * [Example: Using ECIES Encryption](SDKs/examples/EXAMPLE\_ECIES.md)
+  * [Concepts](guides/application-development/concepts/README.md)
+    * [BEEF](guides/application-development/concepts/BEEF.md)
+    * [Fees](guides/application-development/concepts/FEE.md)
+    * [SPV](guides/application-development/concepts/CHAIN_SPV.md)
+    * [Transactions](guides/application-development/concepts/HOW_TX.md)
+    * [Op Codes](guides/application-development/concepts/OP.md)
+    * [Script Templates](guides/application-development/concepts/TEMPLATES.md)
+    * [Signatures](guides/application-development/concepts/TX_SIG.md)
+    * [Verification](guides/application-development/concepts/TX_VALID.md)
+  * [Low Level](guides/application-development/low-level/README.md)
+    * [Verification](guides/application-development/low-level/AES_SYMMETRIC_ENCRYPTION.md)
+    * [ECDH](guides/application-development/low-level/ECDH.md)
+    * [Numbers & Points](guides/application-development/low-level/NUMBERS_POINTS.md)
+    * [Signatures](guides/application-development/low-level/TX_SIG.md)
+    * [42](guides/application-development/low-level/TYPE_42.md)
+    * [ECDSA](guides/application-development/low-level/USING_ECDSA.md)
+    * [Hmacs](guides/application-development/low-level/USING_HASHES_AND_HMACS.md)
+    * [Keys](guides/application-development/low-level/USING_PRIVATE_PUBLIC_KEYS.md)
+    * [Scripts](guides/application-development/low-level/USING_SCRIPTS.md)
+  * [Examples](guides/application-development/examples/README.md)
+    * [Creating a Simple Transaction](guides/application-development/examples/EXAMPLE\_SIMPLE\_TX.md)
+    * [Verifying a BEEF Structure](guides/application-development/examples/EXAMPLE\_VERIFYING\_BEEF.md)
+    * [Creating Transactions with Inputs, Outputs and Templates](guides/application-development/examples/EXAMPLE\_COMPLEX\_TX.md)
+    * [Creating the R-puzzle Script Template](guides/application-development/examples/EXAMPLE\_SCRIPT\_TEMPLATES.md)
+    * [Message Encryption and Decryption](guides/application-development/examples/EXAMPLE\_ENCRYPT\_DECRYPT\_MESSAGE.md)
+    * [Message Signing](guides/application-development/examples/EXAMPLE\_MESSAGE\_SIGNING.md)
+    * [Building a Custom Transaction Broadcast Client](guides/application-development/examples/EXAMPLE\_BUILDING\_CUSTOM\_TX\_BROADCASTER.md)
+    * [Verifying Spends with Script Intrepreter](guides/application-development/examples/EXAMPLE\_VERIFYING\_SPENDS.md)
+    * [BIP32 Key Derivation with HD Wallets](guides/application-development/examples/EXAMPLE\_HD\_WALLETS.md)
+    * [Using Type 42 Key Derivation for Bitcoin Wallet Management](guides/application-development/examples/EXAMPLE_TYPE_42.md)
+    * [Creating a Custom Transaction Fee Model](guides/application-development/examples/EXAMPLE_FEE_MODELING.md)
+    * [Building a Pulse Block Headers Client](guides/application-development/examples/example-building-a-pulse-block-headers-client.md)
+    * [Using ECIES Encryption](SDKs/examples/EXAMPLE_ECIES.md)
 
 ## Research and Development
 
