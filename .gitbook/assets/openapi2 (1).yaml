@@ -1,0 +1,520 @@
+schemes: []
+swagger: '2.0'
+info:
+  description: ''
+  title: ''
+  contact: {}
+  version: ''
+host: 'yourdomain.tld'
+basePath: /api/v1
+paths:
+  /../../status:
+    get:
+      consumes:
+        - '*/*'
+      produces:
+        - application/json
+      tags:
+        - status
+      summary: Check the status of the server
+      responses:
+        '200':
+          description: OK
+  /access:
+    get:
+      security:
+        - Bearer: []
+      consumes:
+        - '*/*'
+      produces:
+        - application/json
+      tags:
+        - access
+      summary: Get information about token
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/domains.Token'
+    post:
+      security:
+        - Bearer: []
+      consumes:
+        - '*/*'
+      produces:
+        - application/json
+      tags:
+        - access
+      summary: Creates new token
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/domains.Token'
+  /access/{token}:
+    delete:
+      security:
+        - Bearer: []
+      consumes:
+        - '*/*'
+      produces:
+        - application/json
+      tags:
+        - access
+      summary: Gets header state
+      parameters:
+        - type: string
+          description: Token to delete
+          name: token
+          in: path
+          required: true
+      responses:
+        '200':
+          description: OK
+  /chain/header/byHeight:
+    get:
+      security:
+        - Bearer: []
+      consumes:
+        - '*/*'
+      produces:
+        - application/json
+      tags:
+        - headers
+      summary: Gets header by height
+      parameters:
+        - type: integer
+          description: Height to start from
+          name: height
+          in: query
+          required: true
+        - type: integer
+          description: Headers count (optional)
+          name: count
+          in: query
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/headers.BlockHeaderResponse'
+  /chain/header/commonAncestor:
+    post:
+      security:
+        - Bearer: []
+      consumes:
+        - '*/*'
+      produces:
+        - application/json
+      tags:
+        - headers
+      summary: Gets common ancestors
+      parameters:
+        - description: JSON
+          name: ancesstors
+          in: body
+          required: true
+          schema:
+            type: array
+            items:
+              type: string
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/headers.BlockHeaderResponse'
+  /chain/header/state/{hash}:
+    get:
+      security:
+        - Bearer: []
+      consumes:
+        - '*/*'
+      produces:
+        - application/json
+      tags:
+        - headers
+      summary: Gets header state
+      parameters:
+        - type: string
+          description: Requested Header Hash
+          name: hash
+          in: path
+          required: true
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/headers.BlockHeaderStateResponse'
+  /chain/header/{hash}:
+    get:
+      security:
+        - Bearer: []
+      consumes:
+        - '*/*'
+      produces:
+        - application/json
+      tags:
+        - headers
+      summary: Gets header by hash
+      parameters:
+        - type: string
+          description: Requested Header Hash
+          name: hash
+          in: path
+          required: true
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/headers.BlockHeaderResponse'
+  /chain/header/{hash}/{ancestorHash}/ancestor:
+    get:
+      security:
+        - Bearer: []
+      consumes:
+        - '*/*'
+      produces:
+        - application/json
+      tags:
+        - headers
+      summary: Gets header ancestors
+      parameters:
+        - type: string
+          description: Requested Header Hash
+          name: hash
+          in: path
+          required: true
+        - type: string
+          description: Ancestor Header Hash
+          name: ancestorHash
+          in: path
+          required: true
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/headers.BlockHeaderResponse'
+  /chain/merkleroot/verify:
+    post:
+      security:
+        - Bearer: []
+      consumes:
+        - '*/*'
+      produces:
+        - application/json
+      tags:
+        - merkleroots
+      summary: Verifies Merkle roots inclusion in the longest chain
+      parameters:
+        - description: JSON
+          name: request
+          in: body
+          required: true
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/domains.MerkleRootConfirmationRequestItem'
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/merkleroots.MerkleRootsConfirmationsResponse'
+  /chain/tip:
+    get:
+      security:
+        - Bearer: []
+      consumes:
+        - '*/*'
+      produces:
+        - application/json
+      tags:
+        - tip
+      summary: Gets all tips
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: array
+            items:
+              type: array
+              items:
+                $ref: '#/definitions/tips.TipStateResponse'
+  /chain/tip/longest:
+    get:
+      security:
+        - Bearer: []
+      consumes:
+        - '*/*'
+      produces:
+        - application/json
+      tags:
+        - tip
+      summary: Gets tip of longest chain
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/tips.TipStateResponse'
+  /chain/tip/prune/{hash}:
+    get:
+      security:
+        - Bearer: []
+      consumes:
+        - '*/*'
+      produces:
+        - application/json
+      tags:
+        - tip
+      summary: Prune tip
+      parameters:
+        - type: string
+          description: Requested Header Hash
+          name: hash
+          in: path
+          required: true
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: string
+  /network/peer:
+    get:
+      security:
+        - Bearer: []
+      consumes:
+        - '*/*'
+      produces:
+        - application/json
+      tags:
+        - network
+      summary: Gets all peers
+      responses:
+        '200':
+          description: OK
+  /network/peer/count:
+    get:
+      security:
+        - Bearer: []
+      consumes:
+        - '*/*'
+      produces:
+        - application/json
+      tags:
+        - network
+      summary: Gets peers count
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: integer
+  /webhook:
+    get:
+      security:
+        - Bearer: []
+      consumes:
+        - '*/*'
+      produces:
+        - application/json
+      tags:
+        - webhooks
+      summary: Get webhook
+      parameters:
+        - type: string
+          description: Url of webhook to check
+          name: url
+          in: query
+          required: true
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/notification.Webhook'
+    post:
+      security:
+        - Bearer: []
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      tags:
+        - webhooks
+      summary: Register new webhook
+      parameters:
+        - description: Webhook to register
+          name: data
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/webhook.WebhookRequest'
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/notification.Webhook'
+    delete:
+      security:
+        - Bearer: []
+      consumes:
+        - '*/*'
+      produces:
+        - application/json
+      tags:
+        - webhooks
+      summary: Revoke webhook
+      parameters:
+        - type: string
+          description: Url of webhook to revoke
+          name: url
+          in: query
+          required: true
+      responses:
+        '200':
+          description: OK
+definitions:
+  domains.MerkleRootConfirmationRequestItem:
+    type: object
+    properties:
+      blockHeight:
+        type: integer
+      merkleRoot:
+        type: string
+  domains.MerkleRootConfirmationState:
+    type: string
+    enum:
+      - CONFIRMED
+      - UNABLE_TO_VERIFY
+      - INVALID
+    x-enum-varnames:
+      - Confirmed
+      - UnableToVerify
+      - Invalid
+  domains.Token:
+    type: object
+    properties:
+      createdAt:
+        type: string
+      isAdmin:
+        type: boolean
+      token:
+        type: string
+  headers.BlockHeaderResponse:
+    type: object
+    properties:
+      creationTimestamp:
+        type: integer
+      difficultyTarget:
+        type: integer
+      hash:
+        type: string
+      merkleRoot:
+        type: string
+      nonce:
+        type: integer
+      prevBlockHash:
+        type: string
+      version:
+        type: integer
+      work:
+        type: string
+  headers.BlockHeaderStateResponse:
+    type: object
+    properties:
+      chainWork:
+        type: string
+      header:
+        $ref: '#/definitions/headers.BlockHeaderResponse'
+      height:
+        type: integer
+      state:
+        type: string
+  merkleroots.MerkleRootConfirmation:
+    type: object
+    properties:
+      blockHash:
+        type: string
+      blockHeight:
+        type: integer
+      confirmation:
+        $ref: '#/definitions/domains.MerkleRootConfirmationState'
+      merkleRoot:
+        type: string
+  merkleroots.MerkleRootsConfirmationsResponse:
+    type: object
+    properties:
+      confirmationState:
+        $ref: '#/definitions/domains.MerkleRootConfirmationState'
+      confirmations:
+        type: array
+        items:
+          $ref: '#/definitions/merkleroots.MerkleRootConfirmation'
+  notification.Webhook:
+    type: object
+    properties:
+      active:
+        type: boolean
+      createdAt:
+        type: string
+      errorsCount:
+        type: integer
+      lastEmitStatus:
+        type: string
+      lastEmitTimestamp:
+        type: string
+      url:
+        type: string
+  tips.TipResponse:
+    type: object
+    properties:
+      creationTimestamp:
+        type: integer
+      difficultyTarget:
+        type: integer
+      hash:
+        type: string
+      merkleRoot:
+        type: string
+      nonce:
+        type: integer
+      prevBlockHash:
+        type: string
+      version:
+        type: integer
+      work:
+        type: string
+  tips.TipStateResponse:
+    type: object
+    properties:
+      chainWork:
+        type: string
+      header:
+        $ref: '#/definitions/tips.TipResponse'
+      height:
+        type: integer
+      state:
+        type: string
+  webhook.RequiredAuth:
+    type: object
+    properties:
+      header:
+        type: string
+      token:
+        type: string
+      type:
+        type: string
+  webhook.WebhookRequest:
+    type: object
+    properties:
+      requiredAuth:
+        $ref: '#/definitions/webhook.RequiredAuth'
+      url:
+        type: string
+securityDefinitions:
+  Bearer:
+    type: apiKey
+    name: Authorization
+    in: header
