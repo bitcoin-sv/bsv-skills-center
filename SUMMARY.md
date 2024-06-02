@@ -157,11 +157,10 @@
 
 ## Research and Development
 
-* [BRCs (BSV Request for Comments)](https://bsv.brc.dev)
-* [Standards](research-and-development/standards.md)
+* [BRCs](https://bsv.brc.dev)
+* [Technical Standards](https://tsc.bsvblockchain.org)
 
-## Developer Resources
+## Support & Contribution
 
 * [Join Our Discord](https://discord.gg/bsv)
-* [BRCs](https://bsv.brc.dev)
 * [GitHub](https://github.com/bitcoin-sv)
