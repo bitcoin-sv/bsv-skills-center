@@ -123,7 +123,7 @@
 * [Wallets](network-topology/README.md)
   * [💸 SPV Wallet](network-topology/spv-wallet/README.md)
     * [⚡ Quickstart](network-topology/spv-wallet/installation/quickstart.md)
-    * [💡 Key Concepts](network-topology/spv-wallet/concepts/key-concepts.md)
+    * [💡 Key Concepts](network-topology/spv-wallet/key-concepts.md)
     * [🚀 AWS](network-topology/spv-wallet/installation/aws/README.md)
       * [Installation](network-topology/spv-wallet/installation/aws/installation.md)
       * [Manage & Maintain](network-topology/spv-wallet/installation/aws/manage-and-maintain.md)
