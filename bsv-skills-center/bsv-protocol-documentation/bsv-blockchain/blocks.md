@@ -8,7 +8,7 @@ description: Understanding blockchain abstractions and concepts
 
 We have discussed blockchain as a public ledger, which is made up of a chain of data structures called ‘blocks’. The blocks are linked together to form a continual chain of blocks using cryptography, hence the term "blockchain".
 
-<figure><img src="../.gitbook/assets/WhatIsBlockchain_Slide08.png" alt=""><figcaption><p>Chain of blocks, write forward, read backwards</p></figcaption></figure>
+<figure><img src="/.gitbook/assets/WhatIsBlockchain_Slide08.png" alt=""><figcaption><p>Chain of blocks, write forward, read backwards</p></figcaption></figure>
 
 {% hint style="info" %}
 Explore blocks using the BSV Blockchain explorer, www.whatsonchain.com
@@ -18,7 +18,7 @@ Explore blocks using the BSV Blockchain explorer, www.whatsonchain.com
 
 Each block is an abstraction which is a container of a group of transactions. A block contains a variable number of transactions and a header, called a block header, which includes the block ID of the previous block, effectively creating a chain.
 
-<figure><img src="../.gitbook/assets/WhatIsBlockchain_Slide09.png" alt=""><figcaption><p>Data structure of a block</p></figcaption></figure>
+<figure><img src="/.gitbook/assets/WhatIsBlockchain_Slide09.png" alt=""><figcaption><p>Data structure of a block</p></figcaption></figure>
 
 The block header contains the following fields:
 
@@ -33,11 +33,11 @@ The block header contains the following fields:
 
 The block arranges transactions in a specialised structure known as a Merkle Tree. The root of the Merkle Tree is a single value that protects the integrity of every transaction in that block. This value is stored in the block header as Merkle Root, as shown in the diagram below.
 
-<figure><img src="../.gitbook/assets/WhatIsBlockchain_Slide10.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/.gitbook/assets/WhatIsBlockchain_Slide10.png" alt=""><figcaption></figcaption></figure>
 
 The Merkle tree is the original implementation of a hash tree, proposed by Ralph Merkle in 1979, which is typically interpreted as a binary hash tree. Merkle trees are formed from multiple data elements (In this case, actual transaction data) by first putting each element through a hash function (the transaction ID) to generate the leaf nodes (shown as TXID in the diagram) at the bottom of the Merkle tree. To generate the upper layers of the tree back to the root node, these leaf node values are then concatenated together as ordered pairs and hashed to form another fixed-length string on the next layer up of the tree toward the single root value.
 
-<figure><img src="../.gitbook/assets/WhatIsBlockchain_Slide12.png" alt=""><figcaption><p>Hash Tree</p></figcaption></figure>
+<figure><img src="/.gitbook/assets/WhatIsBlockchain_Slide12.png" alt=""><figcaption><p>Hash Tree</p></figcaption></figure>
 
 Each leaf node consists of a hashed data entry, so 'n' data entries would result in 'n' leaf nodes. Moving one up the layers, we combine leaf node values by hashing the concatenation of the two individual values provided at the previous layer. This process is repeated by going level up every time there are two node values until the complete information is captured as a single value known as the Merkle Root. The diagram demonstrates this process for a 4-leaf Merkle Tree.
 
@@ -49,7 +49,7 @@ The Merkle Root protects the integrity of all of the underlying data, as even a 
 
 Hash mentioned in the above diagram represents a cryptographic hashing function, which is a one-way function i.e. it is easy to calculate the hash value from the original data but computationally infeasible to calculate initial data values from the hash.
 
-<figure><img src="../.gitbook/assets/WhatIsBlockchain_Slide11.png" alt=""><figcaption><p>One-Way Hash function</p></figcaption></figure>
+<figure><img src="/.gitbook/assets/WhatIsBlockchain_Slide11.png" alt=""><figcaption><p>One-Way Hash function</p></figcaption></figure>
 
 A cryptographic hash algorithm produces irreversible and unique hashes. The Bitcoin protocol uses the SHA256 hash function extensively. In cryptography and computer science, a Hash or Hashing function can also be considered as a unique digital signature produced by a data block when passed through a mathematical cryptographic function, in this case, SHA256.
 
@@ -65,7 +65,7 @@ Bitcoin (BSV) protocol uses public-private key-pairs extensively to assign posse
 
 The mechanism is such that the tokens are locked to a public key, and only the owner of the corresponding private key can access the tokens. The process is described in the following diagram.
 
-<figure><img src="../.gitbook/assets/WhatIsBlockchain_Slide13.png" alt=""><figcaption><p>Key <strong>pair (</strong><span class="math">P,p</span>) <strong>and Bitco</strong>in Address</p></figcaption></figure>
+<figure><img src="/.gitbook/assets/WhatIsBlockchain_Slide13.png" alt=""><figcaption><p>Key <strong>pair (</strong><span class="math">P,p</span>) <strong>and Bitco</strong>in Address</p></figcaption></figure>
 
 Every time a new transfer of tokens is made, it creates an output where the tokens will be locked to the next owner's public key.
 

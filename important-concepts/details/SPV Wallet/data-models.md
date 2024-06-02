@@ -12,7 +12,7 @@ The Compound Merkle Path Format
 
 <div data-full-width="true">
 
-<figure><picture><source srcset="../.gitbook/assets/ScreenRecording2024-01-16at5.31.29PM-ezgif.com-effects.gif" media="(prefers-color-scheme: dark)"><img src="../.gitbook/assets/ScreenRecording2024-01-16at5.31.29PM-ezgif.com-video-to-gif-converter.gif" alt=""></picture><figcaption><p>BUMP format demo</p></figcaption></figure>
+<figure><picture><source srcset="/.gitbook/assets/ScreenRecording2024-01-16at5.31.29PM-ezgif.com-effects.gif" media="(prefers-color-scheme: dark)"><img src="/.gitbook/assets/ScreenRecording2024-01-16at5.31.29PM-ezgif.com-video-to-gif-converter.gif" alt=""></picture><figcaption><p>BUMP format demo</p></figcaption></figure>
 
 </div>
 
