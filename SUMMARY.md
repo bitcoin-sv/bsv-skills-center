@@ -55,7 +55,7 @@
 
 ## Network Access Rules
 
-* [Network Access Rules](network-access-rules/README.md)
+* [Rules](network-access-rules/README.md)
   * [Table of Contents](network-access-rules/table-of-contents.md)
   * [Background to the Rules](network-access-rules/background-to-the-rules.md)
   * [PART I - MASTER RULES](network-access-rules/part-i-master-rules.md)
@@ -63,10 +63,10 @@
   * [PART III - ENFORCEMENT RULES](network-access-rules/part-iii-enforcement-rules.md)
   * [PART IV - DISPUTE RESOLUTION RULES](network-access-rules/part-iv-dispute-resolution-rules.md)
   * [PART V - INTERPRETIVE RULES](network-access-rules/part-v-interpretive-rules.md)
-* [Frequently Asked Questions](frequently-asked-questions/README.md)
-  * [FAQ for miners](frequently-asked-questions/faq-for-miners.md)
-  * [FAQ for legal professionals](frequently-asked-questions/faq-for-legal-professionals.md)
-  * [FAQ for the general audience](frequently-asked-questions/faq-for-the-general-audience.md)
+* [FAQs](network-access-rules/frequently-asked-questions/README.md)
+  * [Miners](network-access-rules/frequently-asked-questions/faq-for-miners.md)
+  * [Professionals](network-access-rules/frequently-asked-questions/faq-for-legal-professionals.md)
+  * [Users](network-access-rules/frequently-asked-questions/faq-for-the-general-audience.md)
 
 ## Important Concepts
 
