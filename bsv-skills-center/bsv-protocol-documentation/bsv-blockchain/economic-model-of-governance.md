@@ -26,7 +26,7 @@ These tokens are distributed in the network to its participants via a process ca
 
 In future, the network will have minimal subsidisation, and the majority of the earnings for nodes will depend on transaction fees. This is illustrated in the following diagram.
 
-<figure><img src="../.gitbook/assets/BlockchainGovernance_Slide06.png" alt=""><figcaption><p>Incentive model in Bitcoin Protocol</p></figcaption></figure>
+<figure><img src="/.gitbook/assets/BlockchainGovernance_Slide06.png" alt=""><figcaption><p>Incentive model in Bitcoin Protocol</p></figcaption></figure>
 
 It means the network needs to have as high a volume of transactions as possible to meet the nodes' expenses in offering their services as transaction processors. Supporting this volume of transactions will require that the network is providing usage for the multitude of use cases that a blockchain offers, like micropayments, Central Bank Digital Currencies (CBDC), data transactions and digital contracts.
 

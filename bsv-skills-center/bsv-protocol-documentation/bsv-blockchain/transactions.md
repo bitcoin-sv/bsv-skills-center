@@ -6,19 +6,19 @@ description: Understanding blockchain abstractions and concepts
 
 Transactions are events that are recorded and persisted on the public ledger. They are organised into blocks: a group of events that occur over a period of time that are time-stamped together.
 
-<figure><img src="../.gitbook/assets/WhatIsBlockchain_Slide14.png" alt=""><figcaption><p>Blockchain Transactions</p></figcaption></figure>
+<figure><img src="/.gitbook/assets/WhatIsBlockchain_Slide14.png" alt=""><figcaption><p>Blockchain Transactions</p></figcaption></figure>
 
 Transactions are made up of inputs and outputs. An input will unlock the tokens it intends to spend, transferring ownership of funds from one owner to another. An output will lock tokens to the new owner. Transactions can also be considered electronic contracts that move the ownership of funds from one party to another.
 
 To illustrate this, let’s look at some transactions between Alice, Bob, Carol and Dave. These transactions can be in the same or different blocks and can happen at any time, as shown in the following diagram.
 
-<figure><img src="../.gitbook/assets/WhatIsBlockchain_Slide16.png" alt=""><figcaption><p>Transactions moving tokens from Alice to Bob to Charlie</p></figcaption></figure>
+<figure><img src="/.gitbook/assets/WhatIsBlockchain_Slide16.png" alt=""><figcaption><p>Transactions moving tokens from Alice to Bob to Charlie</p></figcaption></figure>
 
 Alice is represented in the ledger by her public-private key-pair, but her identity is not published. When funds are transferred from Alice to Bob, a transaction is created where Alice provides her digital signature stating that she owns the funds (source of funds for Alice), and that she is transferring the ownership of them to Bob by locking access to them with Bob’s public key.
 
 The transaction itself does not have any identifying information associated with Alice or Bob. The diagram then shows that Bob, who has received funds from Alice, now has the private key able to spend the funds. He uses transaction T2 to transfer the funds to Carol. Carol then transfers the funds to Dave in transaction T3.
 
-<figure><img src="../.gitbook/assets/WhatIsBlockchain_Slide17.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/.gitbook/assets/WhatIsBlockchain_Slide17.png" alt=""><figcaption></figcaption></figure>
 
 The first transaction of every block is called a "Coinbase transaction". This transaction does not have an input and has a single output which acts to bring coins into circulation as a reward for the node which won the right to add the relevant block to the blockchain in a process known as Proof of Work. This reward consists of two components: a block subsidy and transaction fees. See [network-policies](../network-policies/ "mention") and [transaction-lifecycle](../transaction-lifecycle/ "mention") for further details.
 
@@ -32,7 +32,7 @@ Transaction outputs that have not been used as inputs, i.e., spent, are called U
 
 The following diagram illustrates this comparison while also describing UTXO creation and end of existence. Blockchains maintain a UTXO database, which stores the current state of all UTXOs that exist at any point in time.
 
-<figure><img src="../.gitbook/assets/WhatIsBlockchain_Slide18.png" alt=""><figcaption><p>UTXO Model of accounting defined by Bitcoin Protocol</p></figcaption></figure>
+<figure><img src="/.gitbook/assets/WhatIsBlockchain_Slide18.png" alt=""><figcaption><p>UTXO Model of accounting defined by Bitcoin Protocol</p></figcaption></figure>
 
 There is a significant difference in terms of processing when it comes to Accounts vs UTXO. A single owner can have multiple UTXOs for a single key or even have one keypair per UTXO. Unlike an account, the Identity of the owner is not attached to the UTXO and there is no need to maintain account balances (which is quite normal in account-based systems).
 
@@ -66,6 +66,6 @@ In traditional payment systems, a transaction will have a single input and singl
 
 Each output contains a predicate (evaluates to true or false) locking script that that must receive the correct missing information in order to evaluate to true when being included as an input in a new transaction. This property makes every transaction an electronic contract when used in conjunction with the public ledger. Locking scripts use a native programming language called Script (colloquially Bitcoin Script), allowing a large variety of electronic contracts to be supported natively.
 
-<figure><img src="../.gitbook/assets/WhatIsBlockchain_Slide19.png" alt=""><figcaption><p>Transaction Inputs and Outputs</p></figcaption></figure>
+<figure><img src="/.gitbook/assets/WhatIsBlockchain_Slide19.png" alt=""><figcaption><p>Transaction Inputs and Outputs</p></figcaption></figure>
 
 These transactions effectively form a chain where the coins start their journey from the time they come into circulation (the first transaction in any block) to where they currently are assigned in terms of ownership (public keys of owners of these coins). This structure is what makes a coin effectively a chain of digital signatures.

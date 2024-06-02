@@ -10,7 +10,7 @@ If you observe, It is in the self interest of the node to perform this validatio
 
 This is shown in the diagram below.
 
-<figure><img src="../.gitbook/assets/TransactionLifecycle_Slide09.png" alt=""><figcaption><p>Proof of Work</p></figcaption></figure>
+<figure><img src="/.gitbook/assets/TransactionLifecycle_Slide09.png" alt=""><figcaption><p>Proof of Work</p></figcaption></figure>
 
 The diagram presents the blockchain network analogous to how a client-server architecture is setup. The Clients are network users who produce transactions, and the Server represents the network of nodes that participate in the Proof-Of-Work process to create new blocks and maintain the blockchain's operations. The 'Clients' will submit transactions to the 'Server'. The Server, being the network of nodes, will have all of the nodes collaborating (by sharing every transaction they receive with every other node in the network) and competing (by creating a proposal of a block of transactions which can become the next block in the blockchain). The competition is a puzzle to be solved using heavy machines and when a solution is found, the nodes cooperate again to validate the proposed block. When they all agree on a single answer, the new block is added to the blockchain.
 
