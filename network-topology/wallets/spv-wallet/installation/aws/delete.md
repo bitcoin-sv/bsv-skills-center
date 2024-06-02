@@ -16,7 +16,7 @@ Please ensure all funds are sent out of hosted wallets, and a record of all tran
 
 {% tabs %}
 {% tab title="AWS Console" %}
-<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="..//.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
 ## Step 1
 
