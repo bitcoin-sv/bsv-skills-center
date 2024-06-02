@@ -171,3 +171,7 @@ await tx.verify('scripts only')
 Ask the AI if you want to learn more, or [join our discord](https://discord.gg/bsv) if you need help from a human.\
 \
 If you want to contribute new ScriptTemplates of your own design there's a [repo for that here](https://github.com/bitcoin-sv/ts-templates).
+
+For more guidance from the documentation - jump here.
+
+[Broken link](broken-reference "mention")

@@ -1,4 +1,4 @@
-# The Role of Chain Trackers within the SPV Ecosystem
+# SPV
 
 ## Introduction
 
@@ -8,18 +8,16 @@ Simplified Payment Verification (SPV) is a method that allows participants in th
 
 The SPV process was originally proposed to allow anyone to verify transactions without requiring the complete blockchain data. Instead of storing the entire ledger, people only need to maintain a copy of the block headers. The essential components of SPV include:
 
-- **Block Headers**: Clients store headers of all blocks instead of full blocks, significantly reducing the data storage requirement.
-- **Merkle Proofs**: These proofs allow the verification of the inclusion of a transaction within a block without needing the entire block's content.
+* **Block Headers**: Clients store headers of all blocks instead of full blocks, significantly reducing the data storage requirement.
+* **Merkle Proofs**: These proofs allow the verification of the inclusion of a transaction within a block without needing the entire block's content.
 
 ## Role of Chain Trackers
 
 A chain tracker is a specialized component within the SPV architecture responsible for maintaining and updating a consistent and accurate view of the blockchain header chain. Its functions include:
 
-- **Header Discovery and Verification**: Chain trackers continuously discover new block headers propagated through the network. They verify each header's integrity by checking the correctness of the proof-of-work and ensuring it correctly references the previous header.
-
-- **Merkle Root Verification**: Once a new block header is accepted, the chain tracker validates Merkle roots presented in transaction proofs against the expected Merkle root in the block header. This step is crucial for ensuring that the transaction was indeed included in the block.
-
-- **Chain Reorganizations**: In cases where the blockchain undergoes a reorganization (a rare occurrence), chain trackers adjust their header chain accordingly. They ensure that the client's view of the block sequence is always aligned with the honest chain, as recognized by the network.
+* **Header Discovery and Verification**: Chain trackers continuously discover new block headers propagated through the network. They verify each header's integrity by checking the correctness of the proof-of-work and ensuring it correctly references the previous header.
+* **Merkle Root Verification**: Once a new block header is accepted, the chain tracker validates Merkle roots presented in transaction proofs against the expected Merkle root in the block header. This step is crucial for ensuring that the transaction was indeed included in the block.
+* **Chain Reorganizations**: In cases where the blockchain undergoes a reorganization (a rare occurrence), chain trackers adjust their header chain accordingly. They ensure that the client's view of the block sequence is always aligned with the honest chain, as recognized by the network.
 
 ### Security and Trust
 
@@ -35,4 +33,4 @@ To illustrate the role of chain trackers, consider a scenario where an SPV clien
 
 ## Conclusion
 
-Chain trackers are indispensable in the SPV ecosystem, providing a balance between efficiency and security. By managing blockchain headers and verifying Merkle proofs, they ensure that participants can trust and validate transactions with confidence. Their role is foundational in enabling scalable, secure, and efficient transaction verification across the network. You can see a tutorial on integrating a chain tracker with the TypeScript BSV SDK [here](../examples/EXAMPLE_VERIFYING_ROOTS.md).
+Chain trackers are indispensable in the SPV ecosystem, providing a balance between efficiency and security. By managing blockchain headers and verifying Merkle proofs, they ensure that participants can trust and validate transactions with confidence. Their role is foundational in enabling scalable, secure, and efficient transaction verification across the network. You can see a tutorial on integrating a chain tracker with the TypeScript BSV SDK [here](../../../SDKs/examples/EXAMPLE\_VERIFYING\_ROOTS.md).

@@ -1,3 +1,0 @@
-# SV Node
-
-Soon™
