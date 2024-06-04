@@ -16,25 +16,25 @@ Please ensure all funds are sent out of hosted wallets, and a record of all tran
 
 {% tabs %}
 {% tab title="AWS Console" %}
-<figure><img src="..//.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image%20(11).png" alt=""><figcaption></figcaption></figure>
 
-## Step 1
+### Step 1
 
 Open [AWS console -> Cloud Formation -> Stacks](https://console.aws.amazon.com/cloudformation/home#stacks)
 
-## Step 2
+### Step 2
 
 Make sure you're in the same region you chose in [Step 3](installation.md#step-4) of installation
 
-## Step 3
+### Step 3
 
 Click your top level stack, the one without the `NESTED` badge.
 
-## Step 4
+### Step 4
 
 Click the `Delete` button at the top right.
 
-## Step 5
+### Step 5
 
 Confirm that you want to delete the stack.
 
@@ -46,7 +46,7 @@ Deleting the deployment will result in **TOTAL LOSS OF FUNDS** held by all accou
 Please ensure all funds are sent out of hosted wallets, and a record of all transactions has been exported prior to deletion of the deployment.
 {% endhint %}
 
-## Step 6
+### Step 6
 
 Wait until status of the stack will reach the value `DELETE_COMPLETE`
 
@@ -56,13 +56,13 @@ In some rare cases, it can happen that deletion will end up with error. Often th
 {% endtab %}
 
 {% tab title="AWS CLI" %}
-## Step 1
+### Step 1
 
 Make sure you have AWS CLI installed and authenticated
 
 <table data-card-size="large" data-column-title-hidden data-view="cards" data-full-width="true"><thead><tr><th align="center"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center"><strong>Install AWS CLI</strong></td><td><a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html</a></td></tr><tr><td align="center"><strong>Authenticate AWS CLI</strong></td><td><a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html">https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html</a></td></tr></tbody></table>
 
-## Step 2
+### Step 2
 
 Replace variables described below with previously chosen options in the following command and run it to delete the stack.
 
@@ -83,7 +83,7 @@ Where:
 * ${Stack\_Name} - is the stack name chosen during installation process
 * ${AWS\_Region} - is the region where the stack was installed
 
-## Step 3
+### Step 3
 
 Check the status of the stack (wait until following command will return error that stack dosn't exist)
 
@@ -96,4 +96,3 @@ In some rare cases, it can happen that deletion will end up with error. Often th
 {% endhint %}
 {% endtab %}
 {% endtabs %}
-

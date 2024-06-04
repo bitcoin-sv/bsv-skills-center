@@ -2,7 +2,8 @@
 
 ## Intro
 
-* [Quick Start](README.md)
+* [BSV Skills Center](README.md)
+* [Quick Start](<README (1).md>)
 * [What Can I Do](what-can-i-do/README.md)
 * [The Benefits of BSV Blockchain](bsv-skills-center/the-benefits-of-bsv-blockchain.md)
 
@@ -121,7 +122,7 @@
   * [Teranode](network-topology/nodes/teranode.md)
 * [Overlays](network-topology/overlays.md)
 * [Wallets](network-topology/wallets/README.md)
-  * [💸 SPV Wallet](network-topology/wallets/spv-wallet/README.md)
+  * [📖 SPV Wallet](network-topology/wallets/spv-wallet/README.md)
     * [⚡ Quickstart](network-topology/wallets/spv-wallet/installation/quickstart.md)
     * [💡 Key Concepts](network-topology/wallets/spv-wallet/key-concepts.md)
     * [🚀 AWS](network-topology/wallets/spv-wallet/installation/aws/README.md)
@@ -157,16 +158,15 @@
     * [JS Client](network-topology/wallets/spv-wallet/developers-guide/developer-docs/spv-wallet-js-client.md)
   * [⛏️ Additional Components](network-topology/wallets/spv-wallet/further-reading/additional-components.md)
 
-
 ## Guides
 
 * [Local Blockchain Stack](guides/local-blockchain-stack/README.md)
   * [Mockchain Stack](guides/local-blockchain-stack/mockchain.md)
 * [Business Use Cases](guides/business-use-cases/README.md)
-  * [Creating a Tranche of Event Tickets](guides/business-use-cases/event_tickets.md)
+  * [Creating a Tranche of Event Tickets](guides/business-use-cases/event\_tickets.md)
 * [Application Development](guides/application-development/README.md)
-  * [Node, CommonJS](guides/application-development/GETTING_STARTED_NODE_CJS.md)
-  * [React](guides/application-development/GETTING_STARTED_REACT.md)
+  * [Node, CommonJS](guides/application-development/GETTING\_STARTED\_NODE\_CJS.md)
+  * [React](guides/application-development/GETTING\_STARTED\_REACT.md)
   * [Concepts](guides/application-development/concepts/README.md)
     * [BEEF](guides/application-development/concepts/BEEF.md)
     * [Fees](guides/application-development/concepts/FEE.md)

@@ -4,11 +4,11 @@ description: 'How to: get access to EKS, get admin keys, read logs'
 
 # Manage & Maintain
 
-## Accessing EKS cluster&#x20;
+## Accessing EKS cluster
 
 ### AWS Console
 
-<figure><img src="..//.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image%20(12).png" alt=""><figcaption></figcaption></figure>
 
 #### Step 1
 
@@ -33,7 +33,7 @@ In the example from picture above the value which you should copy would be:\
 
 #### Step 5
 
-<figure><img src="..//.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image%20(15).png" alt=""><figcaption></figcaption></figure>
 
 Open user menu at the right top corner and click `Switch role` button
 
@@ -43,7 +43,7 @@ If you're setting role to switch for the first time, additional view will be dis
 
 #### Step 6
 
-<figure><img src="..//.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image%20(16).png" alt=""><figcaption></figcaption></figure>
 
 Fill the form with:
 
@@ -53,7 +53,7 @@ Fill the form with:
 
 After filling the form, click `Switch Role` button. If everything is correct, you will be switched to that role (otherwise after clicking the button, it looks like nothing happend - so you need to fix the values provided in the form).
 
-<figure><img src="..//.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image%20(17).png" alt=""><figcaption></figcaption></figure>
 
 After switchin the role the user menu after clicking the role name at the top right should look like on the picture above.
 
@@ -69,7 +69,7 @@ Next time when you want to use this EKS Master Role, all you need to do is to op
 
 #### Step 6
 
-Navigate to [Amazon Elastic Kubernetes Service (EKS) ](https://eu-central-1.console.aws.amazon.com/eks/home#/clusters)
+Navigate to [Amazon Elastic Kubernetes Service (EKS)](https://eu-central-1.console.aws.amazon.com/eks/home#/clusters)
 
 Choose your active cluster.
 
@@ -77,7 +77,7 @@ Now in the tab Resources you can see all the pods, deployments, config maps that
 
 <div align="left">
 
-<figure><img src="..//.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image%20(18).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -101,31 +101,31 @@ Now you need to obtain "update kubeconfig command" from outputs of the installed
 
 {% tabs %}
 {% tab title="AWS Console" %}
-<figure><img src="..//.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image%20(13).png" alt=""><figcaption></figcaption></figure>
 
-#### Step 3a
+**Step 3a**
 
 Open [AWS console -> Cloud Formation -> Stacks](https://console.aws.amazon.com/cloudformation/home#stacks)
 
-#### Step 3b
+**Step 3b**
 
 Make sure you're in the same region you chose in [Step 3](installation.md#step-4).
 
-#### Step 3c
+**Step 3c**
 
 Click name of your top level stack, the one without the `NESTED` badge. This should open the details of the stack.
 
-#### Step 3d
+**Step 3d**
 
 Open `Outputs` tab
 
-#### Step 3e
+**Step 3e**
 
 Copy the `aws eks update-kubeconfig` command from the `EKSConstructClusterConfgi***` value.
 {% endtab %}
 
 {% tab title="AWS CLI" %}
-#### Step 3a
+**Step 3a**
 
 Issue the following command, replacing variables with chosen values during installation. And copy the result
 
@@ -152,7 +152,7 @@ Issue copied command from the the previous step. It should look like this:
 aws eks update-kubeconfig --name EKSConstructEKSCluster*** --role-arn=arn:aws:iam::22******67:role/spv-wallet-EKSConstructEksMastersRole*** --region eu-central-1
 ```
 
-This will configure  your **kubectl**  context and use it, so just after issuing the command you should be able to use **kubectl** to manage your cluster.
+This will configure your **kubectl** context and use it, so just after issuing the command you should be able to use **kubectl** to manage your cluster.
 
 {% hint style="info" %}
 If you have multiple kubectl contexts, you can also setup different name of the created context and of the created user configuration.
@@ -191,58 +191,58 @@ bsv-spv-wallet-web-frontend-7d45fff896-gvjd2   1/1     Running     0            
 
 ## Retrieving SPV Wallet Admin Keys
 
-In order to maintain the application you may need to access the Admin Console using admin private key.&#x20;
+In order to maintain the application you may need to access the Admin Console using admin private key.
 
 Also in case of developing own integration with SPV Wallet, it is common to have a need for authenticating as admin.
 
-&#x20;Admin keys are generated and stored in k8s secret during deployment by an automated script.
+Admin keys are generated and stored in k8s secret during deployment by an automated script.
 
 To retrieve it follow instructions below
 
 {% tabs %}
 {% tab title="AWS Console" %}
-### Prerequisites
+#### Prerequisites
 
 You need to have ability to Switch Role in AWS Console like in the instruction in the section [#aws-console](manage-and-maintain.md#aws-console "mention")
 
 Ensure that you switched the role to the "EKS Master" role.
 
-<figure><img src="..//.gitbook/assets/image (19).png" alt=""><figcaption><p>Steps 2 - 4</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image%20(19).png" alt=""><figcaption><p>Steps 2 - 4</p></figcaption></figure>
 
-### Step 1
+#### Step 1
 
 Navigate to [Amazon Elastic Kubernetes Service (EKS) ](https://eu-central-1.console.aws.amazon.com/eks/home#/clusters)and choose your active cluster (click its name)
 
-### Step 2
+#### Step 2
 
 Open `Resources` tab.
 
-### Step 3
+#### Step 3
 
 Choose `Secrets` from the left menu
 
-### Step 4
+#### Step 4
 
 Find `spv-wallet-keys` on the list and click the name to see details
 
-### Step 5
+#### Step 5
 
-<figure><img src="..//.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image%20(21).png" alt=""><figcaption></figcaption></figure>
 
 Check the options to decode the values. And then you can copy admin xpriv and xpub values.
 {% endtab %}
 
 {% tab title="kubectl" %}
-### Prerequisites
+#### Prerequisites
 
 You need to have **kubectl** installed and configured like in the instruction in the section [#terminal-kubectl](manage-and-maintain.md#terminal-kubectl "mention")
 
-### Command to get admin private key
+#### Command to get admin private key
 
 <pre class="language-bash"><code class="lang-bash"><strong>kubectl get secret spv-wallet-keys -o jsonpath="{.data.admin_xpriv}" | base64 --decode
 </strong></code></pre>
 
-### Command to get admin public key
+#### Command to get admin public key
 
 ```bash
 kubectl get secret spv-wallet-keys -o jsonpath="{.data.admin_xpub}" | base64 --decode
@@ -256,37 +256,37 @@ In order to maintain or query Block Headers Service you may need to retrieve API
 
 {% tabs %}
 {% tab title="AWS Console" %}
-<figure><img src="..//.gitbook/assets/image (22).png" alt=""><figcaption><p>Steps 2-4</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image%20(22).png" alt=""><figcaption><p>Steps 2-4</p></figcaption></figure>
 
-### Step 1
+#### Step 1
 
 Navigate to [Amazon Elastic Kubernetes Service (EKS) ](https://eu-central-1.console.aws.amazon.com/eks/home#/clusters)and choose your active cluster (click its name)
 
-### Step 2
+#### Step 2
 
 Open `Resources` tab.
 
-### Step 3
+#### Step 3
 
 Choose `Secrets` from the left menu
 
-### Step 4
+#### Step 4
 
 Find `block-headers-service-secret` on the list and click the name to see details
 
-### Step 5
+#### Step 5
 
-<figure><img src="..//.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image%20(23).png" alt=""><figcaption></figcaption></figure>
 
 Check the options to decode the values. And then you can copy value of block-headers-service-auth-token.
 {% endtab %}
 
 {% tab title="kubectl" %}
-### Prerequisites
+#### Prerequisites
 
 You need to have **kubectl** installed and configured like in the instruction in the section [#terminal-kubectl](manage-and-maintain.md#terminal-kubectl "mention")
 
-### Command
+#### Command
 
 ```bash
 kubectl get secret block-headers-service-secret -o jsonpath='{.data.block-headers-service-auth-token}' | base64 --decode
@@ -304,11 +304,11 @@ We don't provide any integration with logs collectors / viewers, like Kibana or 
 
 {% tabs %}
 {% tab title="kubectl" %}
-### Prerequisites
+#### Prerequisites
 
 You need to have **kubectl** installed and configured like in the instruction in the section [#terminal-kubectl](manage-and-maintain.md#terminal-kubectl "mention")
 
-### Step 1
+#### Step 1
 
 First get the list of available deployments
 
@@ -327,13 +327,13 @@ bsv-spv-wallet-web-backend    1/1     1            1           3h
 bsv-spv-wallet-web-frontend   1/1     1            1           3h
 ```
 
-### Step 2
+#### Step 2
 
-Now choose and copy the name from the list of the component you want to see the logs,&#x20;
+Now choose and copy the name from the list of the component you want to see the logs,
 
 For example `bsv-spv-wallet`
 
-### Step 3
+#### Step 3
 
 Issue the following command to get the logs of that component:
 
@@ -341,7 +341,7 @@ Issue the following command to get the logs of that component:
 kubectl logs deployment/${name}
 ```
 
-Where&#x20;
+Where
 
 ${name} - is the deployment name you choose in [Step 2](manage-and-maintain.md#step-2-2)
 
@@ -350,4 +350,3 @@ You can add the flag `--follow` at the and of this command to follow the logs fr
 {% endhint %}
 {% endtab %}
 {% endtabs %}
-
