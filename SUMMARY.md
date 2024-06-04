@@ -139,7 +139,7 @@
     * [🏎️ Functionality & Roadmap](network-topology/wallets/spv-wallet/introduction/functionality-and-roadmap.md)
     * [💸 User Guide](network-topology/wallets/spv-wallet/introduction/user-guide.md)
   * [💻 Contribute](network-topology/wallets/spv-wallet/developers-guide/contribute.md)
-  * [📖 Developer Docs](network-topology/wallets/spv-wallet/README.md)
+  * [📖 Developer Docs](network-topology/wallets/spv-wallet/developers-guide/developer-docs/README.md)
     * [SPV Wallet](network-topology/wallets/spv-wallet/developers-guide/developer-docs/spv-wallet/README.md)
       * [Engine](network-topology/wallets/spv-wallet/developers-guide/developer-docs/spv-wallet/engine/README.md)
         * [Configuration](network-topology/wallets/spv-wallet/developers-guide/developer-docs/spv-wallet/engine/configuration.md)
@@ -155,7 +155,7 @@
     * [Go Client](network-topology/wallets/spv-wallet/developers-guide/developer-docs/spv-wallet-go-client/README.md)
       * [Authentication](network-topology/wallets/spv-wallet/developers-guide/developer-docs/spv-wallet-go-client/authentication.md)
     * [JS Client](network-topology/wallets/spv-wallet/developers-guide/developer-docs/spv-wallet-js-client.md)
-  * [⛏️ Additional Components](further-reading/additional-components.md)
+  * [⛏️ Additional Components](network-topology/wallets/spv-wallet/further-reading/additional-components.md)
 
 
 ## Guides
