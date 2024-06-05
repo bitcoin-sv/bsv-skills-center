@@ -1,3 +1,5 @@
+I would mention the benefits of these rules for the network: protect the network against centralisation, BSV considered as a utility token etc
+
 # Network Access Rules
 
 ### Introduction
