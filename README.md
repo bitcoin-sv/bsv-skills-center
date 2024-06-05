@@ -10,6 +10,8 @@ description: Everything you need to know about BSV Blockchain
 This documentation is built with AI responses in mind, the response will cite pages from within to get you the answers you're looking for.
 {% endhint %}
 
+### How do I begin?
+
 <details>
 
 <summary>Application Developers</summary>
@@ -17,6 +19,8 @@ This documentation is built with AI responses in mind, the response will cite pa
 [README (1).md](<README (1).md> "mention")
 
 [mockchain.md](guides/local-blockchain-stack/mockchain.md "mention")
+
+[EXAMPLE\_VERIFYING\_BEEF.md](guides/application-development/examples/EXAMPLE\_VERIFYING\_BEEF.md "mention")
 
 </details>
 
@@ -28,6 +32,8 @@ This documentation is built with AI responses in mind, the response will cite pa
 
 [the-benefits-of-bsv-blockchain.md](bsv-skills-center/the-benefits-of-bsv-blockchain.md "mention")
 
+[event\_tickets.md](guides/business-use-cases/event\_tickets.md "mention")
+
 </details>
 
 <details>
@@ -37,6 +43,8 @@ This documentation is built with AI responses in mind, the response will cite pa
 [Broken link](broken-reference "mention")
 
 [Broken link](broken-reference "mention")
+
+[digital-signatures.md](bsv-skills-center/bsv-protocol-documentation/privacy/digital-signatures.md "mention")
 
 </details>
 
