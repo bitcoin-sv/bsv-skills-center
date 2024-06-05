@@ -9,7 +9,7 @@ Most issues related to stuck blocks and IBD (Initial Block Downloads) are the re
 
 ### Configuration
 
-Check the _`excessiveblocksize`_ is up-to-date (current recommendation is 10GB = 10000000000). If a block is in excess of the _`excessiveblocksize`_, the node will regard the block as invalid and it will not be added to the blockchain.
+Check that `excessiveblocksize` is up-to-date (current recommendation is 10GB = 10000000000). If a block is in excess of the `excessiveblocksize`, the node will regard the block as invalid and it will not be added to the blockchain.
 
 I.e. Blocks arriving over the network larger than the specified size with be rejected and the blockchain will stall. An IBD (Initial Block Download) will not progress passed this block.
 

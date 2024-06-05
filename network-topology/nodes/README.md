@@ -17,4 +17,4 @@ Unpacking the above, nodes are network entities that:
 
 Nodes sit at the centre of the network and out of economic necessity are densely connected to each other forming a small-world network.
 
-Users and/or services interact with the node network by submitting transaction to it for timestamping and by receiving the necessary block information to derive Merkle paths for Siimplified Payment Verification (SPV)
+Users and/or services interact with the node network by submitting transaction to it for timestamping and by receiving the necessary block information to derive Merkle paths for Simplified Payment Verification (SPV)
