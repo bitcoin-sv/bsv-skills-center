@@ -1,3 +1,5 @@
+I would mention Mandala network topology
+
 # Nodes
 
 The Bitcoin white paper defines the actions of a node in section 5:
