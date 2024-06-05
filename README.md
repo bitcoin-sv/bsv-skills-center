@@ -1,4 +1,8 @@
----
+TG: I would start with: 
+- Welcome to the BSV skill center + blablabla
+- A little paragraph of what is BSV Blockchain in a nutschel
+- In this documentation you will find + key components
+- How do I begin
 description: Everything you need to know about BSV Blockchain
 ---
 
