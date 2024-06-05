@@ -16,7 +16,7 @@ This documentation is built with AI responses in mind, the response will cite pa
 
 [README (1).md](<README (1).md> "mention")
 
-[local-blockchain-stack](guides/local-blockchain-stack/ "mention")
+[mockchain.md](guides/local-blockchain-stack/mockchain.md "mention")
 
 </details>
 
