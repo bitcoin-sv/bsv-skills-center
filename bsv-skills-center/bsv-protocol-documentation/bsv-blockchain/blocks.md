@@ -1,3 +1,15 @@
+I would add a Network topology section mentionning the mandala network with the following content: 
+
+https://www.bsvblockchain.org/news/mandala-upgrade-explained-scaling-bsv-blockchain-with-a-mandala-network-topology
+
+or 
+
+A core node network with Teranode – In February, BSV Blockchain announced technical testing on Teranode, an upgrade that will allow the BSV blockchain to operate at upwards of 1.1million transactions per second (TPS). Teranode stands at the centre of the new upgrade and is responsible for ordering transactions into timestamped blocks while maintaining high throughput capacity.
+
+Overlay services – The term ‘Overlay’ usually refers to a virtual network built on top of an existing physical network. It can provide various services such as routing, peer-to-peer networking, or distributed computing while allowing specialisation. Overlays use SPV to ensure their data is valid, allowing applications to share a universal source of truth while limiting the cost of operation.
+
+SPV usage at the edge of the BSV network with SPV Wallets – it enables seamless transaction verification and management at significantly reduced costs. SPV Wallet can be used in place of the BSV blockchain node software to validate transactions and make outbound payments.
+
 ---
 description: Understanding blockchain abstractions and concepts
 ---
