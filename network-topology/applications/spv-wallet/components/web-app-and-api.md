@@ -6,7 +6,7 @@ description: Example application
 
 The frontend web wallet application allows users to register, make transactions, and see their balance. This is what we'd expect you to replace with your own application front end, but is included in the deployment to provide a working demo for basic payment functionality.
 
-<figure><img src="..//.gitbook/assets/Web App SPV Wallet.png" alt=""><figcaption><p>SPV Wallet - Web App</p></figcaption></figure>
+<figure><img src="../../../wallets/spv-wallet/introduction/.gitbook/assets/Web%20App%20SPV%20Wallet.png" alt=""><figcaption><p>SPV Wallet - Web App</p></figcaption></figure>
 
 ### Front End
 

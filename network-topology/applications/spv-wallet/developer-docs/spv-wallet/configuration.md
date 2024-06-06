@@ -85,7 +85,7 @@ Going throught highlighted options:
 * The `paymail` section contains the `enabled` option which is used to enable or disable paymail. The `domains` option is used to define the list of domains.
 * The `beef` section contains the `use_beef` option which is used to enable or disable beef. The `block_headers_service_url` option is used to define the url to Block Headers Service, used for merkle root verification. The `block_headers_service_auth_token` option is used to authenticate the Block Headers Service calls.
 
-You can read more about the SPV and BEEF in the [SPV and BEEF](spv\_and\_beef.md) section.
+You can read more about the SPV and BEEF in the [SPV and BEEF](../../../../wallets/spv-wallet/developer-docs/spv-wallet/spv\_and\_beef.md) section.
 
 ## Environment Variables
 

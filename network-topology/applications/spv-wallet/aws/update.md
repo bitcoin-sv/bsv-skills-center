@@ -6,7 +6,7 @@ description: How to update the deployment to newer version
 
 {% tabs %}
 {% tab title="AWS Console" %}
-<figure><img src="../.gitbook/assets/image%20(10).png" alt=""><figcaption><p>Steps 1-4</p></figcaption></figure>
+<figure><img src="../../../wallets/spv-wallet/installation/.gitbook/assets/image%20(10).png" alt=""><figcaption><p>Steps 1-4</p></figcaption></figure>
 
 ### Step 1
 
@@ -24,7 +24,7 @@ Click your top level stack, the one without the `NESTED` badge.
 
 Click the `Update` button at the top right.
 
-<figure><img src="../.gitbook/assets/image%20(9).png" alt=""><figcaption><p>Steps 5-8</p></figcaption></figure>
+<figure><img src="../../../wallets/spv-wallet/installation/.gitbook/assets/image%20(9).png" alt=""><figcaption><p>Steps 5-8</p></figcaption></figure>
 
 ### Step 5
 

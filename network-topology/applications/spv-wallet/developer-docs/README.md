@@ -18,6 +18,6 @@ description: >-
 
 ## SPV Wallet ecosystem
 
-![SPV Wallet Toolbox](spv\_wallet.jpg) ![SPV Wallet Toolbox Desc](../developers-guide/.gitbook/assets/thing.jpg)
+![SPV Wallet Toolbox](../../../wallets/spv-wallet/developer-docs/spv\_wallet.jpg) ![SPV Wallet Toolbox Desc](../../../wallets/spv-wallet/developers-guide/.gitbook/assets/thing.jpg)
 
 These diagrams show how SPV Wallet Toolbox is built. It is a set of tools which can be used to create a wallet, send and receive transactions, create and manage paymails and more. It is built to be used as a standalone app or as a module in bigger system.

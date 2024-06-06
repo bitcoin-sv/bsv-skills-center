@@ -2,7 +2,7 @@
 
 SPV Wallet Engine transaction engine database overview:
 
-![# SPV Wallet Engine database schema](db/spv-wallet-db-diag.png)
+![# SPV Wallet Engine database schema](../../../../../wallets/spv-wallet/developer-docs/spv-wallet/engine/db/spv-wallet-db-diag.png)
 
 > **Note**: The lack of relations in database does not mean there is no logical relationships between models.
 
@@ -14,25 +14,25 @@ SPV Wallet Engine transaction engine database overview:
 
 Represents an HD-Key or extended public key (xPub for short). Model has no external references.
 
-![xpubs](db/xpubs.png)
+![xpubs](../../../../../wallets/spv-wallet/developer-docs/spv-wallet/engine/db/xpubs.png)
 
 ### access\_keys
 
 AccessKey is a private key with a corresponding public key. Model is linked to **xpubs** by _xpub\_id_ field.
 
-![access\_keys](db/access\_keys.png)
+![access\_keys](../../../../../wallets/spv-wallet/developer-docs/spv-wallet/engine/db/access\_keys.png)
 
 ### paymail\_addresses
 
 Represents paymail data like _public name, avatar etc._. Model is linked to **xpubs** by _xpub\_id_ field.
 
-![paymails](db/paymails.png)
+![paymails](../../../../../wallets/spv-wallet/developer-docs/spv-wallet/engine/db/paymails.png)
 
 ### block\_headers
 
 Represents the BSV block header. Model may refer to another **block\_header** record through _hash\_previous\_block_ field.
 
-![block\_headers](db/block\_headers.png)
+![block\_headers](../../../../../wallets/spv-wallet/developer-docs/spv-wallet/engine/db/block\_headers.png)
 
 ### transactions
 
@@ -40,13 +40,13 @@ Represents the BSV transaction. In the table we store all transactions in the sy
 
 > **Note**: Transactions inside the same SPV Walllet Engine system (between two paymails in same system) are recorded as **outgoing** only!
 
-![transactions](db/transactions.png)
+![transactions](../../../../../wallets/spv-wallet/developer-docs/spv-wallet/engine/db/transactions.png)
 
 ### draft\_transactions
 
 Represents the draft _outgoing_ BSV transaction prior to the final transaction. Model is linked to **xpubs** by _xpub\_id_ field and **transactions** by _final\_tx\_id_.
 
-![draft-transactions](db/draft\_transactions.png)
+![draft-transactions](../../../../../wallets/spv-wallet/developer-docs/spv-wallet/engine/db/draft\_transactions.png)
 
 * **sync\_transactions**
 
@@ -54,7 +54,7 @@ Represents the chain-state sync configuration and results for a given transactio
 
 > **Note**: **sync\_transactions** does not represents transaction per se, but its synchronization state.
 
-![sync-transactions](db/sync\_transactions.png)
+![sync-transactions](../../../../../wallets/spv-wallet/developer-docs/spv-wallet/engine/db/sync\_transactions.png)
 
 Possible values for status fields (_p2p\_status, sync\_status, broadcast\_status_ ):
 
@@ -72,10 +72,10 @@ Represents the incoming (external) transaction (for pre-processing). Model is re
 
 > **NOTE**: Internal incoming transactions (from SPV Wallet to SPV Wallet) are not recorded in **incoming\_transactions**
 
-![incoming-transactions](db/incoming\_transactions.png)
+![incoming-transactions](../../../../../wallets/spv-wallet/developer-docs/spv-wallet/engine/db/incoming\_transactions.png)
 
 ### utxos
 
 Represents a BSV unspent transaction. Model is related to **transactions** by _transaction\_id_ field.
 
-![utxos](db/utxos.png)
+![utxos](../../../../../wallets/spv-wallet/developer-docs/spv-wallet/engine/db/utxos.png)
