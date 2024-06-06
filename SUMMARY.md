@@ -90,6 +90,7 @@
 
 ## Network Topology
 
+* [Mandala Upgrade](network-topology/mandala-upgrade.md)
 * [Nodes](network-topology/nodes/README.md)
   * [SV Node](network-topology/nodes/sv-node/README.md)
     * [Architecture](network-topology/nodes/sv-node/system-architecture.md)
