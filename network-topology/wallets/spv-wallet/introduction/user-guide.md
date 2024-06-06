@@ -20,13 +20,13 @@ To begin, navigate to **https://wallet.**_**yourdomain.tld**_ replacing the latt
 {% tab title="Signup" %}
 Here you must fill in all of the fields as instructed. Use any email address, and a strong password. Agree to the terms and conditions and privacy policy, these are nonsense placeholder documents for demonstration purposes only. Hit the Sign up button.
 
-<figure><img src="../../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Backup" %}
 Then you will be shown the instructions for securely storing your mnemonic, and given a paymail which will allow you to receive funds.
 
-<figure><img src="../../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
