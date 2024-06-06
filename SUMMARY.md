@@ -122,7 +122,7 @@
       * [Bug Bounty](network-topology/nodes/sv-node/frequently-asked-questions/bug-bounty.md)
   * [Teranode](network-topology/nodes/teranode.md)
 * [Overlay Services](network-topology/overlay-services/README.md)
-  * [Concept](network-topology/overlay-services/concept.md)
+  * [Overlay Example](network-topology/overlay-services/overlay-example.md)
 * [Applications](network-topology/applications/README.md)
   * [📖 SPV Wallet](network-topology/applications/spv-wallet/README.md)
     * [⚡ Quickstart](network-topology/applications/spv-wallet/quickstart.md)
