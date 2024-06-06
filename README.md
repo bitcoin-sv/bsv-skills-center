@@ -2,9 +2,9 @@
 description: '[  ⌘ / Ctrl  ]  + [  K  ]  Ask a question about BSV Blockchain'
 ---
 
-# Welcome To The BSV Skills Center
+# Welcome
 
-A comprehensive collection of documents covering all aspects of BSV Blockchain system. Technology, philosophy, legal, and economic topics are included, along with practical guides for those who want to build on top of it.
+The BSV Skills Center is a comprehensive collection of documents covering all aspects of BSV Blockchain system. Technology, philosophy, legal, and economic topics are included, along with practical guides for those who want to build on top of it.
 
 {% hint style="info" %}
 This documentation is built with the AI search tool in mind, responses will cite pages from within this documentation repository to answer your questions.
