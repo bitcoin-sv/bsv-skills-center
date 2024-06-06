@@ -4,7 +4,7 @@
 
 * [Introduction](README.md)
 * [Quick Start](<README (1).md>)
-* [What Can I Do](what-can-i-do/README.md)
+* [What Can I Do?](what-can-i-do/README.md)
 * [The Benefits of BSV Blockchain](bsv-skills-center/the-benefits-of-bsv-blockchain.md)
 
 ## Protocol

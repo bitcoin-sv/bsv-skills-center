@@ -1,16 +1,14 @@
 ---
-description: Everything you need to know about BSV Blockchain
+description: '[  ⌘ / Ctrl  ]  + [  K  ]  Ask a question about BSV Blockchain'
 ---
 
-# BSV Skills Center
-
-## Use \[  ⌘ + K  ] to a**sk a question about BSV Blockchain.**
+# Introduction
 
 {% hint style="info" %}
-This documentation is built with AI responses in mind, the response will cite pages from within to get you the answers you're looking for.
+This documentation is built with the AI search tool in mind, responses will cite pages from within this documentation repository to answer your questions.
 {% endhint %}
 
-### How do I begin?
+### How should I begin?
 
 <details>
 
