@@ -26,7 +26,7 @@ These tokens are distributed in the network to its participants via a process ca
 
 In future, the network will have minimal subsidisation, and the majority of the earnings for nodes will depend on transaction fees. This is illustrated in the following diagram.
 
-<figure><img src="/.gitbook/assets/BlockchainGovernance_Slide06.png" alt=""><figcaption><p>Incentive model in Bitcoin Protocol</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/BlockchainGovernance_Slide06.png" alt=""><figcaption><p>Incentive model in Bitcoin Protocol</p></figcaption></figure>
 
 It means the network needs to have as high a volume of transactions as possible to meet the nodes' expenses in offering their services as transaction processors. Supporting this volume of transactions will require that the network is providing usage for the multitude of use cases that a blockchain offers, like micropayments, Central Bank Digital Currencies (CBDC), data transactions and digital contracts.
 
@@ -40,7 +40,7 @@ A Blockchain uses a network consensus methodology (defined in Bitcoin protocol) 
 
 There is another reason for such a system design:
 
-_"In a proof of work system, what you did yesterday or what you do today does not determine what you will do tomorrow and hence what you will earn or control tomorrow. The requirement for continuous investment changes the nature of the system in proof-of-work." - Dr Craig S Wright_
+> _In a proof of work system, what you did yesterday or what you do today does not determine what you will do tomorrow and hence what you will earn or control tomorrow. The requirement for continuous investment changes the nature of the system in proof-of-work._
 
 The Bitcoin protocol intended to replace trusted intermediaries in a value exchange system with non-trusted ones, which required that these non-trusted entities function honestly. It meant that they are never "at rest". The PoW system described above would strip any entity of any advantage they can get (by being early, influential, etc.). They earn only if they perform "the work" and solve the computation. The implementation of this methodology is quite independent of everything the node needs to do for processing transactions, which is described in detail in the node architecture section.
 
