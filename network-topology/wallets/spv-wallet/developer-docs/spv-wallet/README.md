@@ -29,7 +29,7 @@ To verify merkleroots we need to have a block headers service running. More abou
 
 [BUMP](https://bsv.brc.dev/transactions/0074)\
 [BEEF](https://bsv.brc.dev/transactions/0062)\
-[SPV](broken-reference)
+[SPV](../../developers-guide/developer-docs/spv-wallet/broken-reference/)
 
 ### SPV Wallet HTTP Server
 

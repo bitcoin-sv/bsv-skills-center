@@ -2,9 +2,9 @@
 
 ## Diagram
 
-![Transaction Lifecycle](../../../developer-docs/spv-wallet/transactions/transaction\_lifecycle.png)
+![Transaction Lifecycle](transactions/transaction\_lifecycle.png)
 
-SPV Wallet supports both types on transactions: outgoing and [incoming](../../../developer-docs/spv-wallet/transactions/incoming\_transaction.md)
+SPV Wallet supports both types on transactions: outgoing and [incoming](transactions/incoming\_transaction.md)
 
 Process of creation of a transaction in SPV Wallet consists of 4 stages:
 

@@ -135,7 +135,7 @@ Database connection, like everything in SPV Wallet, is defined in config [files]
 
 ## Paymail
 
-Before starting SPV Wallet you need to have a [paymail](../../../paymail/) domain properly configured.\
+Before starting SPV Wallet you need to have a [paymail](../../paymail/) domain properly configured.\
 At first it is necessary to add SRV record to domain which you want to use as paymail domain. This record will be used for service discovery by Paymail clients - pointing them to your host.
 
 Example of SRV record:

@@ -16,7 +16,7 @@ This service exposes a REST API with multiple endpoints, the most important from
 
 `GET /chain/merkleroots/verify`
 
-![Merkle Roots Verify](../../developer-docs/block-headers-service/merkleroots.jpg)
+![Merkle Roots Verify](block-headers-service/merkleroots.jpg)
 
 ## How merkle roots are verified
 
