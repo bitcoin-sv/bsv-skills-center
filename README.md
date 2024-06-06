@@ -16,7 +16,7 @@ This documentation is built with the AI search tool in mind, responses will cite
 
 <summary>Application Developers</summary>
 
-[README (1).md](<README (1).md> "mention")
+[quick-start.md](intro/quick-start.md "mention")
 
 [mockchain.md](guides/local-blockchain-stack/mockchain.md "mention")
 
