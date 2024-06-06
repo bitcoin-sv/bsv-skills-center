@@ -2,7 +2,7 @@
 
 ## Intro
 
-* [Introduction](README.md)
+* [Welcome To The BSV Skills Center](README.md)
 * [Quick Start](<README (1).md>)
 * [What Can I Do?](what-can-i-do/README.md)
 * [The Benefits of BSV Blockchain](bsv-skills-center/the-benefits-of-bsv-blockchain.md)
