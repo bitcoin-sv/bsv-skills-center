@@ -1,4 +1,4 @@
-# Example: Creating a Simple Transaction
+# Creating a Simple Transaction
 
 This guide walks you through the steps of creating a simple Bitcoin transaction. To get started, let's explain some basic concepts around Bitcoin transactions.
 
@@ -10,7 +10,9 @@ Transactions in Bitcoin are mechanisms for transferring value and invoking smart
 
 Consider the scenario where you need to create a transaction. The process involves specifying inputs (where the bitcoins are coming from) and outputs (where they're going). Here's a simplified example:
 
-```typescript
+{% tabs %}
+{% tab title="JavaScript" %}
+```javascript
 import { Transaction, PrivateKey, PublicKey, P2PKH, ARC } from '@bsv/sdk'
 
 const privKey = PrivateKey.fromWif('...') // Your P2PKH private key
@@ -47,6 +49,72 @@ await tx.sign()
 const apiKey = 'mainnet_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' // replace
 await tx.broadcast(new ARC('https://api.taal.com/arc', apiKey))
 ```
+
+
+{% endtab %}
+
+{% tab title="Go" %}
+```go
+package main
+
+import (
+	"encoding/hex"
+	"log"
+
+	ec "github.com/bitcoin-sv/go-sdk/primitives/ec"
+	"github.com/bitcoin-sv/go-sdk/script"
+	"github.com/bitcoin-sv/go-sdk/transaction"
+	"github.com/bitcoin-sv/go-sdk/transaction/template/p2pkh"
+)
+
+func main() {
+	priv, _ := ec.PrivateKeyFromWif("K...")
+	address, _ := script.NewAddressFromPublicKey(priv.PubKey(), true)
+
+	// Source transaction data
+	sourceRawtx := "010000000138c7..."
+	sourceMerklePathHex := "fed7c509000a02fddd01..."
+
+	sourceTransaction, _ := transaction.NewTransactionFromHex(sourceRawtx)
+	merklePath, _ := transaction.NewMerklePathFromHex(sourceMerklePathHex)
+	sourceTransaction.MerklePath = merklePath
+
+	// Create a new transaction
+	tx := transaction.NewTransaction()
+
+	// Create a new P2PKH unlocking script template
+	unlockingScriptTemplate, _ := p2pkh.Unlock(priv, nil)
+	
+	// Add the input
+	tx.AddInput(&transaction.TransactionInput{
+		SourceTXID:              sourceTransaction.TxIDBytes(),
+		SourceTxOutIndex:        0,
+		SourceTransaction:       sourceTransaction,
+		UnlockingScriptTemplate: unlockingScriptTemplate,
+		SequenceNumber:          transaction.DefaultSequenceNumber,
+	})
+
+	// Create a new P2PKH locking script
+	lockingScript, _ := p2pkh.Lock(address)
+	
+	// Add the output
+	tx.AddOutput(&transaction.TransactionOutput{
+		LockingScript: lockingScript,
+		Satoshis:      1,
+	})
+
+	// Sign the transaction
+	_ := tx.Sign()
+
+	beef, _ := tx.BEEF()
+	log.Printf("beef: %s\n", hex.EncodeToString(beef))
+
+	ef, _ := tx.EF()
+	log.Printf("ef: %s\n", hex.EncodeToString(ef))
+}
+```
+{% endtab %}
+{% endtabs %}
 
 This code snippet demonstrates creating a transaction, adding an input and an output, setting a change script, configuring the fee, signing the transaction, and broadcasting with the ARC broadcaster. It uses the P2PKH Template, which is a specific type of Bitcoin locking program. To learn more about templates, check out this example (link to be provided once cmpplete).
 
