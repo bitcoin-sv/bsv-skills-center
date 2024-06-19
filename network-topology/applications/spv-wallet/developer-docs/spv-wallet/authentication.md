@@ -25,7 +25,7 @@
 The following description is providing examples in http requests, but we strongly encourage you to use one of the SPV Wallet client libraries provided for different languages, which can be easily configured and handle authentication for you:
 
 * [spv-wallet-go-client](../spv-wallet-go-client/)
-* [spv-wallet-js-client](../spv-wallet-js-client.md)
+* [spv-wallet-js-client](../spv-wallet-js-client/)
 
 ## Deep dive into authentication using client libraries as an example
 

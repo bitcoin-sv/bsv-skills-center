@@ -167,5 +167,5 @@ To use SPV Wallet you can choose between provided clients.
 Three options are available:
 
 1. [spv-wallet-go-client](../spv-wallet-go-client/) - Golang
-2. [spv-wallet-js-client](../spv-wallet-js-client.md) - JavaScript
+2. [spv-wallet-js-client](../spv-wallet-js-client/) - JavaScript
 3. [spv-wallet-admin-keygen](../spv-wallet-admin-keygen.md) - SPV Wallet Admin Keygen

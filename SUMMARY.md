@@ -159,7 +159,9 @@
       * [Paymail](network-topology/applications/spv-wallet/developer-docs/go-paymail.md)
       * [Go Client](network-topology/applications/spv-wallet/developer-docs/spv-wallet-go-client/README.md)
         * [Authentication](network-topology/applications/spv-wallet/developer-docs/spv-wallet-go-client/authentication.md)
-      * [JS Client](network-topology/applications/spv-wallet/developer-docs/spv-wallet-js-client.md)
+      * [JS Client](network-topology/applications/spv-wallet/developer-docs/spv-wallet-js-client/README.md)
+        * [Examples](network-topology/applications/spv-wallet/developer-docs/spv-wallet-js-client/examples/README.md)
+          * [Admin Add User](network-topology/applications/spv-wallet/developer-docs/spv-wallet-js-client/examples/admin-add-user.md)
     * [⛏️ Additional Components](network-topology/applications/spv-wallet/additional-components.md)
 
 ## Guides
