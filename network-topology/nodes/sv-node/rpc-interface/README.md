@@ -72,14 +72,17 @@ curl --user yourusername:yourpassword --data-binary '{"jsonrpc": "1.0", "id":"cu
 
 You can also use the installed `bitcoin-cli` to run these commands from the node's command line
 
-<pre class="language-bash"><code class="lang-bash">~/bitcoin/bin/bitcoin-cli -rpcclienttimeout=30 -datadir="/home/ubuntu/bitcoin-data" getinfo
+```bash
+~/bitcoin/bin/bitcoin-cli -rpcclienttimeout=30 -datadir="/home/ubuntu/bitcoin-data" getinfo
+```
 
-<strong># {
-</strong>#  "version": 101010000,
-#  "protocolversion": 70016,
-#  ...
-# }
-</code></pre>
+```json
+{
+  "version": 101010000,
+  "protocolversion": 70016,
+  ...
+}
+```
 
 ### Available Methods
 
@@ -87,36 +90,40 @@ The full list of available commands can be generated with the `help` command
 
 ```bash
 ~/bitcoin/bin/bitcoin-cli -datadir="/home/ubuntu/bitcoin-data" help
+```
 
-# == Blockchain ==
-# checkjournal
-# getbestblockhash
-# getblock "blockhash" ( verbosity )
-# ...
+```
+== Blockchain ==
+checkjournal
+getbestblockhash
+getblock "blockhash" ( verbosity )
+...
 ```
 
 And you can get more information about a specific method using the `help <command>` call.
 
 ```bash
 ~/bitcoin/bin/bitcoin-cli -datadir="/home/ubuntu/bitcoin-data" help submitminingsolution
+```
 
-# submitminingsolution "<json string>"
-# 
-# Attempts to submit a new block to the network.
-# 
-# Json Object should comprise of the following and must be escaped
-#     {
-#         "id": n,         (string) ID from getminingcandidate RPC
-#         "nonce": n,      (integer) Miner generated nonce
-#         "coinbase": "",  (hex string, optional) Modified Coinbase transaction
-#         "time": n,       (integer, optional) Block time
-#         "version": n     (integer, optional) Block version
-#     }
-# 
-# Result:
-# 
-# Nothing on success, error string if block was rejected.
-# Identical to "submitblock".
+```json
+submitminingsolution "<json string>"
+
+Attempts to submit a new block to the network.
+
+Json Object should comprise of the following and must be escaped
+    {
+        "id": n,         (string) ID from getminingcandidate RPC
+        "nonce": n,      (integer) Miner generated nonce
+        "coinbase": "",  (hex string, optional) Modified Coinbase transaction
+        "time": n,       (integer, optional) Block time
+        "version": n     (integer, optional) Block version
+    }
+
+Result:
+
+Nothing on success, error string if block was rejected.
+Identical to "submitblock".
 ```
 
 A full list of methods is also available in [rpc-methods.md](rpc-methods.md "mention"). The most commonly used methods are:
