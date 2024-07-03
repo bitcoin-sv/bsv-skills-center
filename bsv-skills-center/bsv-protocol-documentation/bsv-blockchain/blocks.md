@@ -27,7 +27,7 @@ The block header contains the following fields:
 * **Merkle Root.** A Merkle root is the hash of all the transactions included in this block.
 * **Timestamp.** A 4 byte field containing the Unix epoch timestamp applied to all transactions in the block. Current network policy only requires this value to be accurate to within 2 hours of the validating nodes’ local timestamp. The timestamp has a 1 second precision.
 * **Bits/Difficulty.** The difficulty is a 4 byte field containing the difficulty target value of the proof-of-work puzzle; determined by the network rules.
-* **Nonce.** ‘Number Used Once’. The nonce is the 4 byte field that is cycled through during the proof-of-work hashing process to find a proof-of-work solution.
+* **Nonce.** ‘Number Used Once’. The nonce is a 4 byte field that is cycled through during the proof-of-work hashing process to find a proof-of-work solution.
 
 ### **Merkle Tree**
 

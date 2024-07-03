@@ -123,6 +123,7 @@
       * [Log File Warnings](network-topology/nodes/sv-node/frequently-asked-questions/log-file-warnings.md)
       * [Safe Mode](network-topology/nodes/sv-node/frequently-asked-questions/safe-mode.md)
       * [Bug Bounty](network-topology/nodes/sv-node/frequently-asked-questions/bug-bounty.md)
+    * [Chronicle Release](network-topology/nodes/sv-node/chronicle-release.md)
   * [Teranode](network-topology/nodes/teranode.md)
 * [Overlay Services](network-topology/overlay-services/README.md)
   * [Overlay Example](network-topology/overlay-services/overlay-example.md)

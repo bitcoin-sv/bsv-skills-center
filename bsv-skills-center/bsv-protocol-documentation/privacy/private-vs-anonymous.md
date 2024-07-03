@@ -18,6 +18,6 @@ In the recent past, some of the blockchains started using mixer services to achi
 \
 
 
-<figure><img src="../../../.gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
 
 To summarise, any system which allows for anonymous money exchanges will always be a magnet for those looking to engage in illegal and criminal activities. This is why the Bitcoin protocol specifically mandates that blockchain integrates a digital signature when dealing with money. All digital signatures will require a system which will be used to create signatures which in turn, will require associated identities. If any system is built either by changing the protocol or by working around it, it will violate the legal requirements of money handling services in most countries where it operates and will be considered illegal.
