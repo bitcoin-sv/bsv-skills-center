@@ -22,9 +22,9 @@ The UTXO is a registration or serial number on the envelope. There is only one s
 That envelope is valid, the tokens exist in a virtual state even before they are recorded on the blockchain by nodes. But, the serial number registering the tokens is only permanently affixed when nodes enter the number in the ledger.
 {% endhint %}
 
-UTXOStorage comprises of set of components which handle storage (short term and long term) of UTXOs. Due to the nature of the storage which would sometime have requirement of some UTXOs being maintained in cache, short term memory or some in long term memory so the storage itself is designed in such a manner that it supports the needed access of these UTXOs based on how active they have been. It also is used by most of the node components to get status of the UTXOs as described in the diagram below.
+UTXO Storage comprises of set of components which handle storage (short term and long term) of UTXOs. Due to the nature of the storage which would sometime have requirement of some UTXOs being maintained in cache, short term memory or some in long term memory so the storage itself is designed in such a manner that it supports the needed access of these UTXOs based on how active they have been. It also is used by most of the node components to get status of the UTXOs as described in the diagram below.
 
-<figure><img src="https://github.com/jonesjBSV/bsv-skills-center/blob/master/bsv-skills-center/bsv-protocol-documentation/.gitbook/assets/NodeAndItsOperations_Slide08.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
 A UTXO can be in various possible states at any point in time in the database. Each of the processes does its own set of interactions with UTXO Storage.
 

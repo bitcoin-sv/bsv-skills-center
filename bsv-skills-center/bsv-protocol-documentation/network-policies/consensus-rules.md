@@ -15,7 +15,7 @@ The Genesis Block is special, as it was created with hardcoded values rather tha
 The 50 coins in the Genesis Coinbase transaction were transferred to a public key which was generated without a private key (ECC or elliptic curve cryptography allows this), making the public key invalid and these coins un-spendable.
 
 {% hint style="info" %}
-it is possible to generate a point on an elliptic curve without directly deriving it from a private key. Such points can be generated mathematically or chosen from predefined points on the curve. However, these points are not associated with a private key in the cryptographic sense and thus cannot be used for typical cryptographic operations like signing or encryption/decryption.
+It is possible to generate a point on an elliptic curve without directly deriving it from a private key. Such points can be generated mathematically or chosen from predefined points on the curve. However, these points are not associated with a private key in the cryptographic sense and thus cannot be used for typical cryptographic operations like signing or encryption/decryption.
 
 Generating a Point on an Elliptic Curve
 

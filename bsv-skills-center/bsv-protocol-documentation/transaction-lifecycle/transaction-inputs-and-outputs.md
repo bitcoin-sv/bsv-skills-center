@@ -18,7 +18,7 @@ A transaction is a standardised data structure encoding an ownership transfer of
 
 Each transaction to be recorded on the blockchain ledger is assigned a unique identifier (a Transaction Identifier or TXID).
 
-<figure><img src="https://github.com/jonesjBSV/bsv-skills-center/blob/master/bsv-skills-center/bsv-protocol-documentation/.gitbook/assets/TransactionLifecycle_Slide01.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
 
 The nature of the unlocking process depends on the locking script used when the output was created in the previous transaction.
 
@@ -26,7 +26,7 @@ There is no practical limit imposed on the number of inputs or outputs a transac
 
 The overall data structure of a transaction is shown in the following diagram.
 
-<figure><img src="https://github.com/jonesjBSV/bsv-skills-center/blob/master/bsv-skills-center/bsv-protocol-documentation/.gitbook/assets/TransactionLifecycle_Slide02.png" alt=""><figcaption><p>Internal data structure of a transaction</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (18).png" alt=""><figcaption><p>Internal data structure of a transaction</p></figcaption></figure>
 
 {% hint style="info" %}
 One of the biggest nuisances in transaction formats used in bitcoin is the usage of little endian and big endian format for different things. Always keep in mind this property as part of debugging process when developing code to build transactions.

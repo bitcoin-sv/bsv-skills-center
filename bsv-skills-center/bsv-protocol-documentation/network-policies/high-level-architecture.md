@@ -4,7 +4,7 @@ description: A high level overview of node software components
 
 # High-Level Architecture
 
-<figure><img src="https://github.com/jonesjBSV/bsv-skills-center/blob/master/bsv-skills-center/bsv-protocol-documentation/.gitbook/assets/NetworkPolicies_Slide01%20(1).png" alt=""><figcaption><p>Node High-Level System Architecture</p></figcaption></figure>
+<figure><img src="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FVf1SsCoTJsr3QLhHUZ1V%2Fuploads%2FZpkEDlb0uO74uHbpEeQm%2FNetworkPolicies_Slide01.png?alt=media&#x26;token=f7e8146b-dd89-4161-a0d6-a79fbf1a6997" alt=""><figcaption><p>Node High-Level System Architecture</p></figcaption></figure>
 
 A node has three major components:
 

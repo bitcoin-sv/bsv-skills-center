@@ -23,12 +23,12 @@ The transaction itself does not have any identifying information associated with
 The first transaction of every block is called a "Coinbase transaction". This transaction does not have an input and has a single output which acts to bring coins into circulation as a reward for the node which won the right to add the relevant block to the blockchain in a process known as Proof of Work. This reward consists of two components: a block subsidy and transaction fees. See [network-policies](../network-policies/ "mention") and [transaction-lifecycle](../transaction-lifecycle/ "mention") for further details.
 
 {% hint style="info" %}
-Blockchain has two distinct chains, the chain of blocks and many chains of coins. While we have already described the chain of blocks, we look at (many)chain of coins. According to the white-paper - "A coin is defined as a chain of digital signatures". At any point, the coin or the UTXO funds can be traced back to its entire history of transactions spending back to the original Coinbase transaction which brought the tokens into distribution.
+Blockchain has two distinct chains, the chain of blocks and many chains of coins. While we have already described the chain of blocks, we look at (many) chain of coins. According to the white-paper - "A coin is defined as a chain of digital signatures". At any point, the coin or the UTXO funds can be traced back to its entire history of transactions spending back to the original Coinbase transaction which brought the tokens into distribution.
 
-The two chains together create an immutable chain of events in time or a Time-chain.
+The two chains together create an immutable chain of events in time or a time-chain.
 {% endhint %}
 
-Transaction outputs that have not been used as inputs, i.e., spent, are called UTXOs (unspent transaction outputs). Just as in a bank where the total account balance of all accounts represents the total funds present in the bank, in a blockchain these UTXOs collectively represent all the tokens that can be used in subsequent transactions in the system at a given point in time.
+Transaction outputs that have not been used as inputs (yet), i.e., spent, are called UTXOs (unspent transaction outputs). Just as in a bank where the total account balance of all accounts represents the total funds present in the bank, in a blockchain these UTXOs collectively represent all the tokens that can be used in subsequent transactions in the system at a given point in time.
 
 The following diagram illustrates this comparison while also describing UTXO creation and end of existence. Blockchains maintain a UTXO database, which stores the current state of all UTXOs that exist at any point in time.
 
@@ -45,19 +45,15 @@ As an analogy, think of a UTXO as being like a banknote; when you have a $100 bi
 In the same way, when you spend a UTXO with 100 satoshis, this will transfer the ownership of 50 satoshis to the new owner, you may perhaps incur 10 satoshis in fees, and a new UTXO of 40 satoshis will be created, which might even be assigned to the same public key that it was spent from originally, but it becomes a new UTXO as the attributes of UTXO change (location of UTXO in a new transaction).
 
 {% hint style="info" %}
-#### **Understanding the concept of the Blockchain with a safe-deposit box analogy**
+#### **Understanding UTXOs with a safe-deposit box analogy**
 
-Unlike account-based systems, in BSV, every individual satoshi token is a separate item -- with 1x10^8 satoshis comprising a BSV. Those tokens are put together into words (BSV coins) which are transcribed in to messages (inputs and outputs) which are put into envelopes (transactions) which are added to safe-deposit boxes (blocks) which are added to a wall of safe deposit boxes where each safe-deposit box linked to the next via a chain, in a large mine run by ruthlessly competitive, greedy, gambling, goblins. Note: a message sitting in a sealed envelope is analogous to a UTXO.
+Unlike system of accounts, every individual satoshi token is a separate item and a Bitcoin is a series of tokens. Those tokens are put together in an envelope that is referred to as a UTXO. The envelope is then locked in a virtual safe-deposit box in a massive room full of safe-deposit boxes. The safe-deposit box number is the equivalent of the identifier for the public address or public-key associated with most locking scripts. This identifier can be used to hold multiple envelopes or as per the above-mentioned reference, multiple UTXO’s where each envelope holds a series of tokens.
 
-Each time an envelope is given from one party to another, the party gives a copy of the envelope and its contents to the Safe-Deposit Box goblins. The goblins verify the contents of the envelope, make a reference slip of it (Transaction ID or TXID), and add the reference slip to a safe-deposit box.
+Thus, the safe-deposit box can be used multiple times. Reusing the safe-deposit box means that people can view you going to it, and you lose privacy. for all practical purposes, as many safe-deposit boxes are available to create as needed inside the room.
 
-Every 10 minutes, one of the goblins hits a jackpot on a row of VLT machines sitting next to the wall of safe-deposit boxes. When a goblin hits a jackpot, they send the safe-deposit box around the room for all the other goblins to look at. If the safe-deposit box has been filled with slips correctly, the goblins show their approval by playing their VLT machine again and the goblin that won the jackpot gets to add the next safe-deposit box to the wall.
+Satoshi tokens are never lost. As a result, the system always has the same number of tokens as when it was first created. Tokens can be replaced. This can be done in a variety of ways as the ledger is updated. If you lose your keys, it is the equivalent of losing your keys to a safe-deposit box. You can gain access to the safe-deposit box, but that costs money, time and effort. For example, if your safe-deposit box contains $5 and when you lose the keys the cost of regaining access to the keys is $5000, it is very unlikely that you will try and regain access. But if the box contains $5.000.000, you will definitely want to spend the cost and effort to regain access to the box.
 
-Whenever an individual wishes to send another message, they open up one of their sealed envelopes, sponge up all the ink from the messages and use the ink to create new messages which they put into one or more new envelopes. They then give the new envelopes to the party or parties that have requested them.
-
-Satoshi tokens are never lost. As a result, the system always has the same number of tokens as when it was first created.
-
-Ink can be reclaimed if the envelope its in can't be opened. This can be done using the Dragon box (Digital Asset Recovery or DAR). As long as you can prove ownership of the ink in the envelope (which can be expensive). The envelope goes into the Dragon Box which opens it, drains the ink, and produces a new envelope that you can open. Since the cost of proving ownership of the envelope can be high (legal fees), it's often not worth using the Dragon Box unless the amount of ink in the locked envelope is substantial.
+Lost tokens don’t break the system. What they do is require people to keep purchase records for larger values/amounts of tokens. The use of the recovery process for small amounts will be impractical, leaving these methods to be only used for the recovery of UTXOs with large amounts. This is because Bitcoin is designed to be cash, and cash is not designed to be a system where you have billions of dollars sitting in a safe-deposit box.
 {% endhint %}
 
 ### Transaction Inputs and Outputs

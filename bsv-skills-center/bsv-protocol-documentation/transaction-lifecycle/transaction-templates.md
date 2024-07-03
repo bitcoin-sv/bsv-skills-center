@@ -32,7 +32,7 @@ Note: The opcode OP_CHECKSIG performs a digital signature verification
 
 When Alice transfers the fund to Bob, she will construct the script that will create the script shown above as the _Current Transaction Input_ which along with the _Previous Transaction Output_ becomes the full script that goes as input to the script engine and its execution is shown in the animation below.
 
-<figure><img src="https://github.com/jonesjBSV/bsv-skills-center/blob/master/bsv-skills-center/bsv-protocol-documentation/.gitbook/assets/TransactionLifecycle_Slide06%20(1)%20(2).gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/TransactionLifecycle_Slide06.gif" alt=""><figcaption></figcaption></figure>
 
 As shown first, the operands, Alice’s signature and the public key to which the funds were locked (present in the current transaction’s input) will be put on a stack.
 
@@ -50,7 +50,7 @@ Another slightly different variation of this is a P2PK or pay to public key wher
 The pubKeyHash in the Locking script is the public key hashed twice: first with SHA-256 and then with RIPEMD-160. A Bitcoin address is actually a pubKeyHash prepended by a version byte number and encoded in Base58Check format. In other words, we can consider a Bitcoin address is a compact representation of a public key hash puzzle.
 {% endhint %}
 
-### Transaction Template example : Multi-Signature Transactions (P2MS or MultSig)
+### Transaction Template example : Multi-Signature Transactions
 
 Also knowns as P2MS - Pay to Multi Sig transactions.
 

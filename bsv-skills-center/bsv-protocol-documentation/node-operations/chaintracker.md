@@ -22,7 +22,7 @@ ChainTracker will query other peers in the network to get headers of the blocks 
 
 An overview of Chain Tracker is provided in the following diagram:
 
-<figure><img src="https://github.com/jonesjBSV/bsv-skills-center/blob/master/bsv-skills-center/bsv-protocol-documentation/.gitbook/assets/NodeAndItsOperations_Slide06.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 It is the central component that interacts with the Tip Manager, which monitors incoming communication from Chain Trackers of other nodes via BSN to receive the TipIds.
 

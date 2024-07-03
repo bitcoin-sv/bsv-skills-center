@@ -1,12 +1,12 @@
 ---
 description: >-
-  mempool is a temporary cache of transactions when they are in the state of
-  being unconfirmed yet accepted
+  Mempool (or memory pool) is a temporary cache of transactions when they are in
+  the state of being unconfirmed yet accepted
 ---
 
 # Mempool
 
-Mempool is an acronym for memory pool, referencing a temporary location where transactions that have been validated are stored for a time. Its purpose is to manage and publish unconfirmed transactions, which entails.
+Mempool references a temporary location where transactions that have been validated are stored for a certain amount of time. Its purpose is to manage and publish unconfirmed transactions, which entails:
 
 1. Keeping the transactions in memory,
 2. Providing information about coins spent by transactions in the mempool,
@@ -14,7 +14,7 @@ Mempool is an acronym for memory pool, referencing a temporary location where tr
 4. Keeping transactions consistent with changes on the blockchain (adding a new block, reorg).
 5. Maintenance, deleting stale un-mined transactions, limiting the total size of all transactions in the mempool.
 
-It also provides the following crucial service to the Block Assembler.
+It also provides the following crucial services to the Block Assembler:
 
 1. Feeding the Block Assembler with topology-sorted mineable transactions.
 2. Notify block assembler to delete removed transaction and make sure that all its children are also removed.
@@ -30,7 +30,7 @@ A transaction is in one of the following mempools:
 
 The following diagram shows the interactions with other components.
 
-<figure><img src="https://github.com/jonesjBSV/bsv-skills-center/blob/master/bsv-skills-center/bsv-protocol-documentation/.gitbook/assets/NodeAndItsOperations_Slide09.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
 The following steps describe the functionality of the Mempool during its usage in various transaction validation, block assembly and validation processes.
 
@@ -53,5 +53,5 @@ New Mempool = Old Mempool - Mined Transaction
 A transaction is removed from the mempool when it reaches its expiry date (default is 2 weeks after entering the mempool). After a new block has been created and propagated to other nodes, the transactions in the mempool, which are also in the new block, are no longer needed in the mempool and can be removed. If the block created by this node is also the winning block, then the transactions not being needed any more are all the transactions in the primary mempool, except those added after the block construction is completed.
 
 {% hint style="info" %}
-Mempool is a much debated topic in terms of weather it shall be considered a distinct component or it is part of transaction storage or UTXO store constructed at runtime. This document currently takes a stand of keeping it as a separate component
+Mempool is a much debated topic in terms of whether it shall be considered a distinct component or it is part of transaction storage or UTXO storage constructed at runtime. This document currently describes it as a separate component.
 {% endhint %}

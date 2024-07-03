@@ -9,6 +9,7 @@
 
 ## Protocol
 
+* [Introduction](protocol/introduction.md)
 * [BSV Blockchain](bsv-skills-center/bsv-protocol-documentation/bsv-blockchain/README.md)
   * [Blocks](bsv-skills-center/bsv-protocol-documentation/bsv-blockchain/blocks.md)
   * [Transactions](bsv-skills-center/bsv-protocol-documentation/bsv-blockchain/transactions.md)
@@ -16,11 +17,10 @@
   * [Capabilities](bsv-skills-center/bsv-protocol-documentation/bsv-blockchain/capabilities.md)
   * [Economic Model of Governance](bsv-skills-center/bsv-protocol-documentation/bsv-blockchain/economic-model-of-governance.md)
   * [Digital Asset Recovery](bsv-skills-center/bsv-protocol-documentation/bsv-blockchain/digital-asset-recovery.md)
-* [Nodes and Network Policies](bsv-skills-center/bsv-protocol-documentation/network-policies/README.md)
-  * [Longest Chain](bsv-skills-center/bsv-protocol-documentation/network-policies/longest-chain.md)
+* [Network Policies](bsv-skills-center/bsv-protocol-documentation/network-policies/README.md)
   * [High-Level Architecture](bsv-skills-center/bsv-protocol-documentation/network-policies/high-level-architecture.md)
   * [Mining](bsv-skills-center/bsv-protocol-documentation/network-policies/mining.md)
-  * [Consensus Rules and Local Policies](bsv-skills-center/bsv-protocol-documentation/network-policies/standard-and-local-policies.md)
+  * [Standard and Local Policies](bsv-skills-center/bsv-protocol-documentation/network-policies/standard-and-local-policies.md)
   * [Consensus Rules](bsv-skills-center/bsv-protocol-documentation/network-policies/consensus-rules.md)
   * [Local Policies](bsv-skills-center/bsv-protocol-documentation/network-policies/local-policies.md)
 * [Node Operations](bsv-skills-center/bsv-protocol-documentation/node-operations/README.md)
@@ -47,7 +47,8 @@
   * [Constructing a transaction](bsv-skills-center/bsv-protocol-documentation/transaction-lifecycle/constructing-a-transaction.md)
   * [Sequence Number and Time Locking](bsv-skills-center/bsv-protocol-documentation/transaction-lifecycle/sequence-number-and-time-locking.md)
   * [Transaction Templates](bsv-skills-center/bsv-protocol-documentation/transaction-lifecycle/transaction-templates.md)
-  * [Op\_codes](bsv-skills-center/bsv-protocol-documentation/transaction-lifecycle/opcodes-used-in-script.md)
+  * [Transaction Processing](protocol/transaction-lifecycle/transaction-processing.md)
+  * [Opcodes used in Script](bsv-skills-center/bsv-protocol-documentation/transaction-lifecycle/opcodes-used-in-script.md)
 * [Privacy](bsv-skills-center/bsv-protocol-documentation/privacy/README.md)
   * [Keys and Identity](bsv-skills-center/bsv-protocol-documentation/privacy/keys-and-identity.md)
   * [Private vs Anonymous](bsv-skills-center/bsv-protocol-documentation/privacy/private-vs-anonymous.md)

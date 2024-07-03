@@ -1,8 +1,8 @@
 ---
 description: >-
-  main function of a node is to ensure transactions are validated against the
-  UTXO set against double spending and propagate them to all the other nodes in
-  the network.
+  The main function of a node is to ensure transactions are validated against
+  the UTXO set against double spending and propagate them to all the other nodes
+  in the network.
 ---
 
 # Transaction Validation
@@ -31,7 +31,7 @@ A logical summary of the validation checks done as part of transaction validatio
 
 These conditions are part of the transaction validation process, and every transaction goes through these validation steps. A high-level view of what happens in the transaction validation process is described in the following diagram.
 
-<figure><img src="https://github.com/jonesjBSV/bsv-skills-center/blob/master/bsv-skills-center/bsv-protocol-documentation/.gitbook/assets/NodeAndItsOperations_Slide07.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
 A new transaction that is received by the BSN is passed on to the transaction manager component, which kick-starts the transaction validation process. There are four components that make up the transaction validation process. Let us look at each one of them.
 
@@ -40,7 +40,7 @@ Nodes do not need to validate every transaction. In fact, the White Paper states
 
 The white paper defines what a node does, if a node receives a transaction, it MUST validate and propagate it.
 
-A node can stop accepting transactions, but they risk losses in terms of their being able to compete with other nodes who accept all transactions.
+A node can stop accepting transactions, but they risk losses in terms of being able to compete with other nodes who accept all transactions.
 {% endhint %}
 
 ### **TxManager**

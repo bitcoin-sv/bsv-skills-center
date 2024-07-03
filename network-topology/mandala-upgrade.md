@@ -26,7 +26,7 @@ Built on a foundation of SPV, enabling p2p edge validation, and integration with
 
 ## The Blockchain Mandala Concept
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Mandala</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (28).png" alt=""><figcaption><p>Mandala</p></figcaption></figure>
 
 ### Ultra-Small-World Network
 

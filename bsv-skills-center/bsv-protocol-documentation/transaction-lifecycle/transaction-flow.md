@@ -10,7 +10,7 @@ Let us look at a more realistic scenario of a transaction which involves spendin
 * Transaction T2 represents a transfer of funds from Bob to Carol; Bob has 50 BSV received from Alice and transfers 49 BSV to Carol.
 * Transaction T3 represents a transfer of funds from Carol to Dave; Carol has 49 BSV received from Bob and transfers 48 BSV to Dave.
 
-<figure><img src="https://github.com/jonesjBSV/bsv-skills-center/blob/master/bsv-skills-center/bsv-protocol-documentation/.gitbook/assets/TransactionLifecycle_Slide04.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Funds are not actually transferred; rather, the ownership which is recorded on the blockchain ledger is transferred by destroying/burning the UTXO owned by one owner and creating a new UTXO with a new ownership associated with it. For simplicity, we will use the abstraction of transferring funds.
@@ -18,7 +18,7 @@ Funds are not actually transferred; rather, the ownership which is recorded on t
 
 Alice, Bob, Carol, and Dave have their private-public key pairs as \[k\_pr A, k\_pub A],\[k\_pr B, k\_pub B], \[k\_pr C, k\_pub C],\[k\_pr D, k\_pub D] respectively.
 
-<figure><img src="https://github.com/jonesjBSV/bsv-skills-center/blob/master/bsv-skills-center/bsv-protocol-documentation/.gitbook/assets/TransactionLifecycle_Slide05.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
 
 The image above includes the following:
 
@@ -37,7 +37,7 @@ For example, to make a payment transaction from one key pair to another. The key
 {% hint style="info" %}
 As such, it is very important to note that identity does exist in bitcoin.
 
-White-paper : Identities are firewalled from the transactions, but it does not say that people are anonymous. The nature of pseudonymous exchanges requires identity. However, what you will see is that the public transaction chain is separated from the identity information. Those exchanging goods and services can also exchange identity.
+As per the whitepaper: Identities are firewalled from the transactions, but it does not say that people are anonymous. The nature of pseudonymous exchanges requires identity. However, what you will see is that the public transaction chain is separated from the identity information. Those exchanging goods and services can also exchange identity.
 
 Additionally, there are methodologies for cryptographic forms of proof that will link identity off-chain and out of the public eye while maintaining the integrity of any information. There is no longer a trusted third-party fiduciary with information about the individuals who were exchanging. There are requirements for identity to be maintained directly, but that is separate from third-party exchanges.
 {% endhint %}

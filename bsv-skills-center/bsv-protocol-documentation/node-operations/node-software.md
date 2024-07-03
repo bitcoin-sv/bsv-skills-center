@@ -6,7 +6,7 @@ description: Looking at the node software from a functional prospective
 
 On a high level, the node software comprises various functional blocks shown in the diagram below. The diagrams do not depict the mining component for illustration of the node software.
 
-<figure><img src="https://github.com/jonesjBSV/bsv-skills-center/blob/master/bsv-skills-center/bsv-protocol-documentation/.gitbook/assets/NodeAndItsOperations_Slide02.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 The P2P system (also known as BSN or Bitcoin Server’s Network) represents the sub-system which handles the network connections and message exchanges between the various nodes in the network. The term P2P refers to Peer to Peer, which signifies that these nodes participating in running the blockchain network are peers. This means that every node that is a peer is performing the exact same function in the network as another peer. It could provide additional services to the users of the network. Still, from the perspective of the network, it is exactly the same as any other node in the network and holds the same responsibility and functionality.
 
@@ -14,7 +14,7 @@ The other sub-systems, i.e., Transaction validator, Block Assembler, Block Valid
 
 A detailed view of these functional blocks’ interaction with each other during the node software operation is shown below.
 
-<figure><img src="https://github.com/jonesjBSV/bsv-skills-center/blob/master/bsv-skills-center/bsv-protocol-documentation/.gitbook/assets/NodeAndItsOperations_Slide03.png" alt=""><figcaption><p>The functional process inside node when processing a new transaction</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption><p>The functional process inside node when processing a new transaction</p></figcaption></figure>
 
 The diagram depicts two main flows, one where it receives new transactions and goes through a validation process to be added to a new proposed block in block assembly. This then is given input to the mining software to perform block hash calculation to find the POW solution. If the solution is found, the proposed block is then propagated to the network via BSN. This flow is highlighted in green. The alternate flow is when another node finds the solution, and this node receives a new proposed block which is then validated by the block validator. The mempool is then flushed out of the transactions that are confirmed by this block, and a new mining candidate block is built with new validated transactions on the top of this chain-tip.
 
@@ -40,7 +40,7 @@ Please note that we are only touching on node software internals on a high level
 
 A more detailed overview of the node software is shown in the diagram below.
 
-<figure><img src="https://github.com/jonesjBSV/bsv-skills-center/blob/master/bsv-skills-center/bsv-protocol-documentation/.gitbook/assets/NodeAndItsOperations_Slide04.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 Based on the diagram, we will look at each functional block individually to understand more about each of the boxes shown in the diagram.
 

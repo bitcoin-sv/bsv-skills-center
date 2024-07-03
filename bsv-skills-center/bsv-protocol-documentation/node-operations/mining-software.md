@@ -8,15 +8,15 @@ description: >-
 
 Even though mining provides one of the most critical components of a Blockchain, its process itself is quite decoupled from rest of the node software functionality. The connection is made by Block assembler, who prepares the Candidate block and its header as part of its work and then feeds what is called as a mining candidate to the mining pool software.
 
-<figure><img src="https://github.com/jonesjBSV/bsv-skills-center/blob/master/bsv-skills-center/bsv-protocol-documentation/.gitbook/assets/NodeAndItsOperations_Slide12.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
 
 The mining pool software controls either a centrally located datacentre of ASIC machines or even, at times, machines that are distributed across the internet. Once the mining pool receives the mining candidate, it will start the proof-of-work calculation process to find the solution for the next block hash.
 
-The mining software currently uses ASICs, specifically designed chips for calculating SHA256 hash values for a proposed block header. They perform a brute force-like calculation constantly to randomly hit the target set for achieving the solution for the proposed block hash. This is ~~approximately~~ explained in the diagram below.
+The mining software currently uses ASICs, specifically designed chips for calculating SHA256 hash values for a proposed block header. They perform a brute force-like calculation constantly to randomly hit the target set for achieving the solution for the proposed block hash. This is approximately explained in the diagram below.
 
-<figure><img src="https://github.com/jonesjBSV/bsv-skills-center/blob/master/bsv-skills-center/bsv-protocol-documentation/.gitbook/assets/NodeAndItsOperations_Slide13.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
 
-The Candidate block header is hashed using a SHA256D (double SHA256 hashing) to calculate a proposed value. This value is then compared with a target. If the calculated value is less than the target value (identified with leading zeros in the value), then a solution is found. If the value is more than the target value, the nonce is incremented to a new value so that the result of SHA256D(Block Header) is a new value. This process is repeated constantly by the mining chips. Once the solution is found, it is passed back to the Block Assembler, which then will inform the ChainTracker and BSN that a new solution is found locally, and this now needs to be propagated to the rest of the mining nodes in the network.
+The candidate block header is hashed using a SHA256D (double SHA256 hashing) to calculate a proposed value. This value is then compared with a target. If the calculated value is less than the target value (identified with leading zeros in the value), then a solution is found. If the value is more than the target value, the nonce is incremented to a new value so that the result of SHA256D(Block Header) is a new value. This process is repeated constantly by the mining chips. Once the solution is found, it is passed back to the Block Assembler, which then will inform the ChainTracker and BSN that a new solution is found locally, and this now needs to be propagated to the rest of the mining nodes in the network.
 
 When other nodes receive an intimation from this node about the proposed block, they will trigger the Block validation process at their end to validate if the proposed block is a valid block. If the block validation is successful, they will then update their chain-tip ID with this proposed block as the most recent block. They then will start building a new block with this Tip ID as the longest chain, and if they find a solution, it follows the same process described above. This is something that is constantly occurring in the blockchain network, making it a very time-bound and hard-to-reverse process for nodes.
 
@@ -40,9 +40,9 @@ In a situation where a node has submitted an invalid block, the block is rejecte
 It is important to understand that nodes on the network are free to accept or reject blocks from any party for any reason. It is upon each node to ensure that they are aware of what the majority of nodes on the network have accepted as the valid chain of events. This is so that they can always be building on the longest valid chain of blocks and minimise resources used working on blocks the network will refuse to accept.
 
 {% hint style="info" %}
-Mining pools were not conceived in the original design and implementation but are a phenomenon that happened later. The exception in the whitepaper was formation of server farms and datacenters which become mining nodes. It was estimated that there will be around ten primary nodes doing the 51% and likely another hundred smaller nodes operating in different areas.
+Mining pools were not conceived in the original design and implementation but are a phenomenon that happened later. The exception in the white paper was formation of server farms and datacenters which become mining nodes. It was estimated that there will be around ten primary nodes doing the 51% and likely another hundred smaller nodes operating in different areas.
 
-So, the creation of mining pools has created a scenario where we have fifteen nodes in total globally eliminating the existence of the mentioned 100s of smaller nodes. If you are running an ASIC that is a member of a mining pool, you are not a miner. Rather, you are simply a part of the pool. You are a supplier to the node operator or pool running an outsourced function for a node.
+So, the creation of mining pools has created a scenario where we have fifteen nodes in total globally eliminating the existence of the mentioned hundreds of smaller nodes. If you are running an ASIC that is a member of a mining pool, you are not a miner. Rather, you are simply a part of the pool. You are a supplier to the node operator or pool running an outsourced function for a node.
 
 Only 3 to 4 of these mining pools control the 51% of the network at any time, with the largest being sufficiently large that any action against that one player impacts the entire network.
 {% endhint %}
