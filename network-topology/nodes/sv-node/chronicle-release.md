@@ -40,156 +40,136 @@ Remove `SCRIPT_VERIFY_CLEANSTACK` and associated logic from the software. 
 
 The current version of the node requires that most opcodes are not allowed in unlocking scripts. The node software automatically reads opcodes as data pushes.
 
-The software must be modified to allow opcodes in the unlocking script. 
-
 ## 2. Opcodes 
 
-The opcodes listed below need to be re-instated.  &#x20;
+The opcodes listed below will be re-instated.  &#x20;
 
-* Implementation should exhibit standard behavior. i.e. If the opcode produces an error, the code should immediately return the result of a call to set\_error with the appropriate error message and code. &#x20;
-* Opcodes do not check if the supplied operands are of the expected type. Rather if an opcode expects a particular data type on top of the stack (tos), it will interpret whatever it finds as that data type.  &#x20;
-* If an opcode expects values on the stack and they are not present, then an error should be returned. I&#x20;
+* Implementation should exhibit standard behavior. i.e. If the opcode produces an error, the code should immediately return the result of a call to set\_error with the appropriate error message and code.
+* Opcodes do not check if the supplied operands are of the expected type. Rather if an opcode expects a particular data type on top of the stack (tos), it will interpret whatever it finds as that data type.
+* If an opcode expects values on the stack and they are not present, then an error should be returned. 
 
 ### OP\_VER &#x20;
 
-Opcode number 98 &#x20;
+Opcode number 98 , hex `0x62`
 
-`OP_VER` pushes the executing transaction’s version onto the stack. The transaction version is the first four bytes of the transaction containing the executing script. &#x20;
+`OP_VER` pushes the executing transaction’s version onto the stack. The transaction version is the first four bytes of the transaction containing the executing script. 
 
-No inputs. &#x20;
-
-Outputs:  &#x20;
-
-`tos` = transaction version. &#x20;
+```
+Inputs: none
+Outputs: tos = transaction version
+```
 
 ### OP\_VERIF &#x20;
 
-Opcode number 101 &#x20;
+Opcode number 101 , hex `0x65`
 
 Compares the `tos` with the executing transaction’s version as part of the following traditional if-then-else expression:  `OP_VERIF [statements] [OP_ELSE [statements]] OP_ENDIF` &#x20;
 
-Logically equivalent to `OP_VER OP_IF`.  &#x20;
+Logically equivalent to `OP_VER OP_IF`.
 
-Inputs:  &#x20;
-
-comparison value → `tos`. &#x20;
+```
+Inputs: comparison value → tos.  
+```
 
 ### OP\_VERNOTIF &#x20;
 
-Opcode number 102 &#x20;
+Opcode number 102, hex `0x66`
 
 Compares the `tos` with the executing transaction’s version as part of the following expression:  \
 `OP_VERNOTIF [statements] [OP_ELSE [statements]] OP_ENDIF`
 
 Logically equivalent to `OP_VER OP_NOTIF`
 
-Inputs:  &#x20;
-
-comparison value → `tos`. &#x20;
+```
+Inputs: comparison value → tos
+```
 
 ### OP\_SUBSTR &#x20;
 
-Originally opcode number 127. Now has value 179 &#x20;
+Originally opcode number 127. Now has value 179, hex `0xb3`
 
-Returns substring defined by start index and length. &#x20;
+Returns substring defined by start index and length.
 
-A zero-length source string generates an error. &#x20;
-
-A negative length generates an error.  \
-If the specified length is greater than the source string, the opcode generates an error.&#x20;
+A zero-length source string generates an error.  A negative length generates an error. If the specified length is greater than the source string, the opcode generates an error.&#x20;
 
 E.g. executing the script below would remove the desired length and start index of the substring. &#x20;
 
-The string “Copyright (c) Santa Claus” would be replaced by “right” on the top of the stack.  \
-“Copyright (c) Santa Claus” `OP_4 OP_5 OP_SUBSTR`  &#x20;
+The string “BSV Blockchain” would be replaced by “Block” on the top of the stack.
 
-Inputs:  &#x20;
+```
+"BSV Blockchain" OP_4 OP_5 OP_SUBSTR   
+```
 
-desired length of substring → `tos` &#x20;
-
-start index of substring → `tos-1` &#x20;
-
-string → `tos-2`. &#x20;
-
-Output: &#x20;
-
-`tos` = string \[start index, size] &#x20;
+```
+Inputs:   
+desired length of substring → tos  
+start index of substring → tos-1  
+string → tos-2.  
+Output: tos = string [start index, size]  
+```
 
 ### OP\_LEFT &#x20;
 
-Originally opcode number 128. Now has value 180 &#x20;
+Originally opcode number 128. Now has value 180, hex `0xb4`
 
 Produces a substring consisting only of the specified number of leftmost characters. &#x20;
 
+E.g. Executing the script below would leave “BSV” on the top of the stack.
+
+```
+"BSV Blockchain" OP_3 OP_LEFT
+```
+
 Zero-length strings are allowed. &#x20;
 
-E.g. Executing the script below would leave “Sant” on the top of the stack.  \
-“Santa Claus” `OP_4 OP_LEFT`
-
-Inputs:  &#x20;
-
-`tos` → desired length of substring. &#x20;
-
-`tos-1`→ string. &#x20;
-
-Output: &#x20;
-
-`tos` = string \[0, substring length - 1] &#x20;
+```
+Inputs:   
+tos → desired length of substring.  
+tos-1 → string.  
+Output: tos = string [0, substring length - 1]  
+```
 
 ### OP\_RIGHT &#x20;
 
-Originally opcode number 129. Now has value 181 &#x20;
+Originally opcode number 129. Now has value 181, hex `0xb5`
 
 Produces a substring consisting only of the specified number of rightmost characters. &#x20;
 
+E.g. Executing the script below would leave “chain” on the top of the stack.
+
+```
+"BSV Blockchain" OP_5 OP_RIGHT
+```
+
 Zero-length strings are allowed. &#x20;
 
-E.g. Executing the script below would leave “laus” on the top of the stack. &#x20;
-
-“Santa Claus” `OP_4 OP_RIGHT`
-
-Inputs:  &#x20;
-
-`tos` → desired length of substring. &#x20;
-
-`tos-1` → string. &#x20;
-
-Output: &#x20;
-
-start index = string.length – desired substring length - 1 &#x20;
-
-`tos` = string \[start index, string length - 1] &#x20;
+```
+Inputs:   
+tos → desired length of substring.  
+tos-1 → string.  
+Output:
+start index = string.length – desired substring length - 1  
+tos = string [start index, string length - 1]  
+```
 
 ### OP\_2MUL &#x20;
 
-Opcode number 141 &#x20;
+Opcode number 141, hex `0x8d`
 
-Multiplies the number on the top of the stack by 2.  &#x20;
+Multiplies the number on the top of the stack by 2.
 
-Inputs:  &#x20;
-
-The number to be multiplied by 2 → `tos` 
-
-Output:  &#x20;
-
-`tos` = input number x 2 &#x20;
-
-`IsOpcodeDisabled(..)` should be updated/removed as part of this work. &#x20;
+```
+Inputs: The number to be multiplied by 2 → tos 
+Output: tos = input number x 2  
+```
 
 ### OP\_2DIV &#x20;
 
-Opcode number 142 &#x20;
+Opcode number 142, `0x8e`
 
-Divides the number on the top of the stack by 2. &#x20;
+Divides the number on the top of the stack by 2.
 
-Inputs: &#x20;
-
-The number to be divided by 2 → `tos`
-
-Output:  &#x20;
-
-`tos` = Input number / 2  &#x20;
-
-`IsOpcodeDisabled(..)` should be updated/removed as part of this work. &#x20;
-
- &#x20;
+```
+Inputs: The number to be divided by 2 → tos
+Output: tos = Input number / 2 
+```
