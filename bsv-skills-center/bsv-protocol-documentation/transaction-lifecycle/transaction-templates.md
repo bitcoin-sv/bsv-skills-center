@@ -12,7 +12,7 @@ The following are useful constituent parts of transactions that can be used to c
 * **Script:** A programming language which allows custom logic to be added to locking scripts.
 * **Hashing and elliptic curve properties:** Keys and hashes can be combined or augmented such as with Type42 (provide link) key derivation trees
 * **nLockTime and nSequence:** Allow payment channels, negotiations, and time locks.
-* **Sighash flags:** Allow certain parts of a transaction to be signed while keeping other parts unsigned so they can be updated without invalidating the transactio (find out more here) (link to sighash flags).
+* **Sighash flags:** Allow certain parts of a transaction to be signed while keeping other parts unsigned so they can be updated without invalidating the transaction (find out more here) (link to sighash flags).
 
 ## Transaction Template example : Pay-to-Public-Key-Hash (P2PKH)
 
