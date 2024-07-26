@@ -20,11 +20,7 @@ The configuration parameter `maxscriptnumlengthpolicy` limits the size of number
 
 The `maxscriptnumlengthpolicy` configuration parameter default will be changed to unlimited (0).
 
-The consensus max script number length is `MAX_SCRIPT_NUM_LENGTH_AFTER_GENESIS` bytes = 750,000 bytes. There is no associated configuration parameter. 
-
-There is to be no restrictions on the max size of script numbers.  &#x20;
-
-All logic associated with `MAX_SCRIPT_NUM_LENGTH_AFTER_GENESIS` is to be removed 
+There is to be no restrictions on the max size of script numbers.
 
 ### Remove Low S requirement for signatures  &#x20;
 
