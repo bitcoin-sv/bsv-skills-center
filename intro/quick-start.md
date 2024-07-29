@@ -45,13 +45,13 @@ Now you should get something in your console which looks like this:
 { address: '1E7ZM72qRDSa0rqUhZoMCMb5MAFYFEaKQp' }
 ```
 
-You can copy and paste the address into any BSV wallet and send a few satoshis to it. If you have zero BSV - go [buy some](https://www.rockwallet.com/), or ask the BSV community on [X](https://x.com/BSVBlockchain) or [discord](https://discord.gg/bsv) to send you a few satoshis.
+> To continue developing and testing, this address will require some funding. This can be done by sending BSV to this wallet, and due the low cost of transactions only a few satoshis will suffice ($0.01 equivalent is recommended). This way, you also ensure that you're not affected if you would lose access to the keys.
+>
+> If you don't have any BSV, you can find out how to buy it [here](https://www.bsvblockchain.org/get-bsv), or ask the BSV community on [X](https://x.com/BSVBlockchain) or [Discord](https://discord.gg/bsv) to send you some funding.
 
-> Make sure you're sending BSV, and only a few satoshis, so that you don't care if you lose access to it. $0.01 equivalent is perfect.
+Once you've sent an initial funding transaction to this address, grab the whole transaction from [Whats On Chain](https://whatsonchain.com) by pasting in the `txid` to the search box.
 
-Once you've sent the funds, grab the whole transaction from [Whats On Chain](https://whatsonchain.com) by pasting in the `txid` to the search box.
-
-There's a green button which says "Raw Tx" which allows you to download the full transaction bytes as a hex string file. That's going to be our sourceTransaction which will fund the transaction we are going to define with the SDK. Copy the hex string into a file in the working directory called `.transactions`. The file contents should look something like this:
+Once mined, a green button which says "Raw Tx" will be visible, which allows you to download the full transaction bytes as a hex string file. That's going to be our sourceTransaction which will fund the transaction we are going to define with the SDK. Copy the hex string into a file in the working directory called `.transactions`. The file contents should look something like this:
 
 ```
 0100000001270ec3f7d507e2593b02297b57f27e8950a7d1df8247efb8203bb4989ef404f0000000006b483045022100a193f3cf1b65910fcf8535318725947fe3d483b80792a7671ca723276aa1999b022039d478124ce96a8bae0fb8da3ed8eeeb8b300b8810407f6665ce7eee8fdf19cb4121030ca32438b798eda7d8a818f108340a85bf77fefe24850979ac5dd7e15000ee1affffffff0310270000000000001976a914d01b0b702ee90e00944342f97c772a8be83e42a288acbc0b0000000000001976a914bc72926a0f5c078fa666bef3105af7a368a8146a88acb81a0000000000001976a914c4bf2c1f5cbc500c38083ca19b99cefba05e583988ac00000000
