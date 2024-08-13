@@ -1,10 +1,10 @@
+package main
+
 # Private Keys and Addresses
 
 Common string formatting for PrivateKeys and Public Key Hashes can be used as below: 
 
 ```go
-package main
-
 import (
 	"log"
 
