@@ -10,7 +10,7 @@ As described earlier, every node in the network competes with other nodes to be 
 
 This process is described in the diagram below. Node A proposes a block. This is done using the Bitcoin server network (BSN) where the node first sends a message informing all the other nodes that a solution to POW has been found and, if they have not found a solution themselves, to take Node A's block. If the validation is successful, nodes can start to build on this block.
 
-<figure><img src="../../.gitbook/assets/TransactionLifecycle_Slide08.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="/.gitbook/assets/TransactionLifecycle_Slide08.gif" alt=""><figcaption></figcaption></figure>
 
 The nodes receiving the message from node A will send a response back intimating that they have not yet found a solution and are willing to receive the full block message from node A. Node A then propagates the full block to these nodes.
 
@@ -28,7 +28,7 @@ The following diagram shows the complete end-to-end flow for this process and si
 
 
 
-<figure><img src="../../.gitbook/assets/TransactionLifecycle_Slide09.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/.gitbook/assets/TransactionLifecycle_Slide09.png" alt=""><figcaption></figcaption></figure>
 
 These server nodes then compete and cooperate with each other to come to a consensus on a common history of accepting a candidate block.
 
@@ -38,7 +38,7 @@ The validation of a transaction can be seen as a set of steps that happen when a
 
 
 
-<figure><img src="../../.gitbook/assets/TransactionLifecycle_Slide10.png" alt=""><figcaption><p>Validation of a Transaction Flow</p></figcaption></figure>
+<figure><img src="/.gitbook/assets/TransactionLifecycle_Slide10.png" alt=""><figcaption><p>Validation of a Transaction Flow</p></figcaption></figure>
 
 ## Transaction Storage
 
@@ -74,7 +74,7 @@ Once the majority of nodes which are building the next block on the chain-tip fi
 
 It's possible that a transaction can be marked as double spent. This happens when the same funds are being spent twice. This should be caught during the transaction validation done by the node and is decided based on the first-seen rule. See the [First Seen Rule ](../../bsv-skills-center/bsv-protocol-documentation/network-policies/consensus-rules.md#first-seen-rule)for further details.
 
-<figure><img src="../../.gitbook/assets/TransactionLifecycle_Slide11.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/.gitbook/assets/TransactionLifecycle_Slide11.png" alt=""><figcaption></figcaption></figure>
 
 As shown in the diagram, the UTXO N-1 is spent in Input, transferring funds to a new owner, in this case, Dave, as shown in Tx3. Dave creates Tx4 to spend the funds he received in Tx3 shown as UTXO N . When Dave submits Tx4 to a node, and the node accepts it, the UTXO N is marked as spent in the UTXO database of every node. So, if Dave tries to spend the same funds (UTXO N) again to Charlie in Tx5, it will fail validation as the UTXO is already marked spent due to Tx4. This is known as First Seen Rule in the network and it means that once a UTXO is spent, any other transaction received by the network spending the same funds again (i.e. double spend) is rejected.&#x20;
 
@@ -84,7 +84,7 @@ Once a block is accepted by the node network, all of the transactions in that bl
 
 This is the last piece in the transaction lifecycle. The diagram shows this process.
 
-<figure><img src="../../.gitbook/assets/TransactionLifecycle_Slide12.png" alt=""><figcaption><p>Block Confirmations and Merkle Proof</p></figcaption></figure>
+<figure><img src="/.gitbook/assets/TransactionLifecycle_Slide12.png" alt=""><figcaption><p>Block Confirmations and Merkle Proof</p></figcaption></figure>
 
 Each transaction has its own Merkle proof. This can be thought of as a Blockchain certificate for that transaction.
 
