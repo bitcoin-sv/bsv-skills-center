@@ -184,9 +184,9 @@ ExecStart=/home/user/bitcoin/bin/bitcoind -conf=/home/user/bitcoin-data/bitcoin.
 ExecStop=/home/user/bitcoin/bin/bitcoin-cli -conf=/home/user/bitcoin-data/bitcoin.conf -datadir=/home/user/bitcoin-data stop
 ExecReload=/bin/kill -s HUP $MAINPID
 Restart=on-abnormal
-TimeoutStopSec=120
-KillMode=none
+TimeoutStopSec=300
 PrivateTmp=true
+LimitNOFILE=65536
 # Make sure to replace username
 User=user
 [Install]
