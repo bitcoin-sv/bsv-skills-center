@@ -1,10 +1,10 @@
-# Example: Building a Pulse Block Headers Client
+# Example: Building a Block Headers Client
 
-When [verifying BEEF structures](EXAMPLE_VERIFYING_BEEF.md), it's necessary to ensure that all transactions are well-anchored: this is to say, that they come from inputs in the honest chain. The SDK doesn't ship with a headers client, but this guide shows an example of how to use it with [Pulse](https://github.com/bitcoin-sv/block-headers-service): a popular client suitable for a wide range of use-cases.
+When [verifying BEEF structures](EXAMPLE_VERIFYING_BEEF.md), it's necessary to ensure that all transactions are well-anchored: this is to say, that they come from inputs in the honest chain. The SDK doesn't ship with a headers client, but this guide shows an example of how to use it with [Block Headers Service](https://github.com/bitcoin-sv/block-headers-service): a popular client suitable for a wide range of use-cases.
 
 ## Pre-requisites
 
-As stated in the README, you will need to be running a Pulse instance. Get it up and running, and configure a level of authentication appropriate for your use-case:
+As stated in the README, you will need to be running a Block Headers Service instance. Get it up and running, and configure a level of authentication appropriate for your use-case:
 
 ```sh
 docker pull bsvb/block-headers-service

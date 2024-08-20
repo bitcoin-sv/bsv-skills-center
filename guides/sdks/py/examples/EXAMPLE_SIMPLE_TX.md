@@ -10,20 +10,24 @@ Transactions in Bitcoin are mechanisms for transferring value and invoking smart
 
 Consider the scenario where you need to create a transaction. The process involves specifying inputs (where the bitcoins are coming from) and outputs (where they're going). Here's a simplified example:
 
-```javascript
-from bsv import PrivateKey, PublicKey, ARC, P2PKH, Transaction
+```python
+import asyncio
+from bsv import PrivateKey, ARC, P2PKH, Transaction, TransactionInput, TransactionOutput
 
-priv_key = PrivateKey.fromWif('...')        # Your P2PKH private key
-change_priv_key = PrivateKey.fromWif('...') # Change private key (never re-use addresses)
-recipient_address = '1Fd5F7XR8LYHPmshLNs8cXSuVAAQzGp7Hc' # Address of the recipient
+priv_key = PrivateKey("...")        # Your P2PKH private key
+change_priv_key = PrivateKey("...") # Change private key (never re-use addresses)
+recipient_address = '...' # Address of the recipient
+source_tx = Transaction.from_hex('...')
+
 
 tx = Transaction()
 
 # Add the input
 tx.add_input(
     TransactionInput(
-        source_transaction=Transaction.from_hex('...'), # The source transaction where the output you are spending was created
-        source_output_index=0,
+        source_transaction=source_tx,
+        source_txid=source_tx.txid(),
+        source_output_index=1,
         unlocking_script_template=P2PKH().unlock(priv_key), # The script template you are using to unlock the output, in this case P2PKH
     )
 )
@@ -32,14 +36,14 @@ tx.add_input(
 tx.add_output(
     TransactionOutput(
         locking_script=P2PKH().lock(recipient_address),
-        satoshis=2500
+        satoshis=1
     )
 )
 
 # Send remainder back the change address
 tx.add_output(
     TransactionOutput(
-        lockingScript=P2PKH().lock(change_priv_key.address()),
+        locking_script=P2PKH().lock(change_priv_key.address()),
         change=True
     )
 )
@@ -47,11 +51,12 @@ tx.add_output(
 # Now we can compute the fee and sign the transaction
 tx.fee()
 tx.sign()
-
+print(tx.hex())
 # Finally, we broadcast it with ARC.
 # get your api key from https://console.taal.com
-api_key = 'mainnet_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' # replace
-await tx.broadcast(ARC('https://api.taal.com/arc', api_key))
+api_key = 'mainnet_...' # replace
+asyncio.run(tx.broadcast(ARC('https://api.taal.com/arc', api_key)))
+
 ```
 
 This code snippet demonstrates creating a transaction, adding an input and an output, setting a change script, configuring the fee, signing the transaction, and broadcasting with the ARC broadcaster. It uses the P2PKH Template, which is a specific type of Bitcoin locking program. To learn more about templates, check out this example (link to be provided once complete).
@@ -60,13 +65,14 @@ This code snippet demonstrates creating a transaction, adding an input and an ou
 
 Moving beyond this basic example into more advanced use-cases enables you to start dealing with custom scripts. If you're provided with a hex-encoded locking script for an output, you can set it directly in the transaction's output as follows:
 
-```py
+```python
 transaction.add_output(
     TransactionOutput(
         locking_script=Script.from_asm('OP_ADD OP_MUL ...'), 
         satoshis=100
     )
 )
+
 ```
 
 The `Transaction` class abstracts the complexity of Bitcoin's transaction structure. It handles inputs, outputs, scripts, and serialization, offering methods to easily modify and interrogate the transaction. Check out the full code-level documentation, refer to other examples, or reach out to the community to learn more.
