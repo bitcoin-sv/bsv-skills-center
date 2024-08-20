@@ -34,7 +34,8 @@ When constructing a Bitcoin transaction, inputs and outputs form the core compon
 
 An input in a Bitcoin transaction represents the bitcoins being spent. It's essentially a reference to a previous transaction's output. Inputs have several key components:
 
-* **`source_transaction` or `source_txid`**: A reference to either the source transaction (another Transaction instance), its TXID. Referencing the transaction itself is always preferred because it exposes more information to the library about the outputs it contains.
+* **`source_transaction`**: A `Transaction` object representing the transaction, which contains the UTXO the input is spending. Note, that this transaction may also only be partialy complete.
+* **`source_txid`**: The TXID of the transaction where our input is spending an UTXO from. It's important to pass this information if the transaction we passed under the `source_transaction` parameter is incomplete, since the SDK in that case has no way of automatically reconstructing the TXID.
 * **`source_output_index`**: A zero-based index indicating which output of the referenced transaction is being spent.
 * **`sequence`**: A sequence number for the input. It allows for the replacement of the input until a transaction is finalized. If omitted, the final sequence number is used.
 * **`unlocking_script`**: This script proves the spender's right to access the bitcoins from the spent output. It typically contains a digital signature and, optionally, other data like public keys.
@@ -51,7 +52,7 @@ k = 1
 unlocking_script_template = puz.unlock(k)
 tx_input = TransactionInput(
     source_transaction=source_transaction,
-    source_output_index=0
+    source_output_index=0,
     unlocking_script_template=unlocking_script_template
 )
 
@@ -96,7 +97,7 @@ my_tx.add_output(tx_output)
 
 ## Change and Fee Computation
 
-The transaction fee is the difference between the total inputs and total outputs of a transaction. Miners collect these fees as a reward for including transactions in a block. The amount of the fee paid will determine the quality of service provided my miners, subject to their policies.
+The transaction fee is the difference between the total inputs and total outputs of a transaction. Miners collect these fees as a reward for including transactions in a block. The amount of the fee paid will determine the quality of service provided by miners, subject to their policies.
 
 If the total value of the inputs exceeds the total value you wish to send (plus the transaction fee), the excess amount is returned to you as "change." Change is sent back to a destination controlled by the sender, ensuring that no value is lost. When you set the `change` property on an output to `true`, you don't need to define a number of satoshis. This is because the library computes the number of satoshis for you, when the `.fee()` method is called.
 
@@ -117,7 +118,7 @@ my_tx.fee()
 Once you've defined your inputs and outputs, and once your change has been computed, the next step is to sign your transaction. There are a few things you should note when signing:
 
 * Only inputs with an unlocking template will be signed. If you provided an unlocking script yourself, the library assumes the signatures are already in place.
-* If you change the inputs or outputs after signing, certain signatures will need to be re-computd, depending on the SIGHASH flags used.
+* If you change the inputs or outputs after signing, certain signatures will need to be re-computed, depending on the SIGHASH flags used.
 * If your templates support it, you can produce partial signatures before serializing and sending to other parties. This is especially useful for multi-signature use-cases.
 
 With these considerations in mind, we can now sign our transaction. The `RPuzzle` unlocking templates we configured earlier will be used in this process.
@@ -154,15 +155,15 @@ When properly linked, you can serialize your transactions in the SPV formats as 
 
 ```py
 # Note: Requires use of source_transaction instead of source_txid for inputs
-my_tx.to_BEEF()
+my_tx.to_beef()
 # or
-my_tx.to_EF()
+my_tx.to_ef()
 ```
 
 This enables the transactions to be verified properly by recipients, using the `.verify()` method:
 
 ```py
-incoming_tx = Transaction.from_BEEF('...')
+incoming_tx = Transaction.from_beef('...')
 incoming_tx.verify(chain_tracker) # Provide a source of BSV block headers to verify
 ```
 

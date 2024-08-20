@@ -10,32 +10,43 @@ Understanding the ins-and-outs of message encryption and decryption is key to im
 
 To get started, you will first want to import the required functions / classes.
 
-``py
-from bsv import PrivateKey
+```py
+from bsv import PrivateKey, EncryptedMessage
 ```
 
 Next, you will want to configure who the sender is, the recipient, and what message you would like to encrypt.
 
-```ts
-sender = PrivateKey()
-recipient = Private()
+```py
+# Create private keys for sender and recipient
+sender = PrivateKey(15)
+recipient = PrivateKey(21)
 
-message = 'The cake is a lie.'
+# Get the public key of the recipient
+recipient_pub = recipient.public_key()
+print(recipient_pub)
+
+# Define the message as a byte string
+message = b'Did you receive the Bitcoin payment?'
 ```
 
-Now you are ready to generate the ciphertext using the `encrypt_text` function.
+Now you are ready to generate the ciphertext using the `encrypt` function.
 
 ```py
-encrypted = sender.public_key().encrypt_text(message)
-print(encrypted)
+# Encrypt the message
+encrypted = EncryptedMessage.encrypt(message, sender, recipient_pub)
+print(encrypted.hex())
 ```
 
 ### Decrypting a Message
 
-To get back your plaintext message, use the `decrypt_text` function and then transform it as needed.
+To get back your plaintext message, use the `decrypt` function and then transform it as needed.
 
 ```py
-print(recipient.decrypt_text(encrypted))
+# Decrypt the message
+decrypted = EncryptedMessage.decrypt(encrypted, recipient)
+
+# Display the decrypted message decoded as UTF-8
+print(decrypted.decode('utf-8'))
 ```
 
 ## Considerations

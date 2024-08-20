@@ -106,7 +106,7 @@ class ExampleFeeModel(FeeModel):
     """
     Represents the "satoshis per kilobyte" transaction fee model.
     Additionally, if the transactions version number is equal to 3301,
-    then no fees are payed to the miner.
+    then no fees are paid to the miner.
     """
 
     def __init__(self, value: int):
@@ -168,4 +168,4 @@ class ExampleFeeModel(FeeModel):
         return fee
 ```
 
-Now. when you create a new transaction and call the `.fee()` method with this fee model, it will follow the rules we have set above!
+Now when you create a new transaction and call the `.fee()` method with this fee model, it will follow the rules we have set above!
