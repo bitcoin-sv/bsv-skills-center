@@ -1,13 +1,13 @@
-# Using AES for the Symmetric Encryption of Data
+# Verification
 
 The goal of this tutorial is to explore the encryption of data using symmetric keys with the Advanced Encryption Standard (AES). We will make use of the functions provided by the SDK in order to encrypt data with a key, and then decrypt it again.
 
-<img src="./images/symmetric_encryption_diagram.png" width="600" alt=""/>
+![](../../../application-development/low-level/images/symmetric\_encryption\_diagram.png)
 
 If you would like to learn more about AES encryption, here are some general resources that may help:
 
-- [AES - Wiki](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)
-- [GCM - Wiki](https://en.wikipedia.org/wiki/Galois/Counter_Mode)
+* [AES - Wiki](https://en.wikipedia.org/wiki/Advanced\_Encryption\_Standard)
+* [GCM - Wiki](https://en.wikipedia.org/wiki/Galois/Counter\_Mode)
 
 The library supports GCM, a specific counter mode of AES that works well in many applications. The library also handles initialization vectors, automatically prepending them to ciphertext and removing them in the decryption process. Now that you know the basics, let's get started!
 
@@ -38,3 +38,4 @@ We will use the `encrypt` and `decrypt` methods of the SymmetricKey class to tra
   // console.log(plaintext) --> 'Hello Alice, this is Bob!'
 
 This is just a basic demonstration of symmetric encryption/decryption using the BSV SDK, however the possibilities of what you can do are endless once you understand these fundamentals.
+```

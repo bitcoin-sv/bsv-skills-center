@@ -1,4 +1,4 @@
-# How are Transactions Built with Inputs and Outputs?
+# Transactions
 
 Transactions are one of the fundamental entities within the blockchain, acting as the mechanism through which value is transferred across the network. Understanding how transactions are built using inputs and outputs is crucial for developers, as this process encompasses the core of creating, signing, and sending transactions within applications.
 
@@ -10,10 +10,10 @@ A **transaction** in BSV is a record that transfers some outputs containing Bitc
 
 Each transaction consists of the following components:
 
-- **Version**: Indicates the ruleset under which the transaction is validated or which overlay it belongs to.
-- **Inputs**: List of references to outputs from previous transactions, showing where the bitcoins being sent were previously stored.
-- **Outputs**: List of allocations of bitcoins, specifying the amount and conditions under which they can be spent in the future.
-- **Lock Time**: An optional setting that specifies the earliest time or block number at which the transaction can be valid.
+* **Version**: Indicates the ruleset under which the transaction is validated or which overlay it belongs to.
+* **Inputs**: List of references to outputs from previous transactions, showing where the bitcoins being sent were previously stored.
+* **Outputs**: List of allocations of bitcoins, specifying the amount and conditions under which they can be spent in the future.
+* **Lock Time**: An optional setting that specifies the earliest time or block number at which the transaction can be valid.
 
 Transactions can also be attached to a **Merkle proof** to provide proof of inclusion in a particular block, after they have been processed.
 
@@ -25,10 +25,10 @@ Inputs and outputs are the essential elements that make up a transaction. Unders
 
 A **Transaction Input** includes the following fields:
 
-- **Source Transaction ID**: The transaction ID (TXID) from which the input bitcoins are derived.
-- **Source Output Index**: Specifies which output from the referenced transaction is to be spent.
-- **Unlocking Script**: Contains signatures or other unlocking solutions that allows referenced previous output to be spent.
-- **Sequence**: A number that can be used to allow transaction inputs to be updated before finalization, if it's less than 0xFFFFFFFF.
+* **Source Transaction ID**: The transaction ID (TXID) from which the input bitcoins are derived.
+* **Source Output Index**: Specifies which output from the referenced transaction is to be spent.
+* **Unlocking Script**: Contains signatures or other unlocking solutions that allows referenced previous output to be spent.
+* **Sequence**: A number that can be used to allow transaction inputs to be updated before finalization, if it's less than 0xFFFFFFFF.
 
 Inputs connect a new transaction back to the point in the blockchain where the bitcoins were previously recorded as outputs.
 
@@ -36,8 +36,8 @@ Inputs connect a new transaction back to the point in the blockchain where the b
 
 A **Transaction Output** consists of:
 
-- **Satoshis**: The amount of BSV being transferred.
-- **Locking Script**: Defines the conditions under which the output can be spent, such as requiring a digital signature from the recipient's public key.
+* **Satoshis**: The amount of BSV being transferred.
+* **Locking Script**: Defines the conditions under which the output can be spent, such as requiring a digital signature from the recipient's public key.
 
 Outputs transfer the ownership of satoshi commodity tokens or colloquially, coins, so their new owner can use them as inputs in future transactions.
 
@@ -57,4 +57,4 @@ Each of these steps is facilitated by the BSV SDK, which provides comprehensive 
 
 ## Conclusion
 
-The BSV SDK empowers developers to build robust applications on the network by abstracting the complexities of transaction creation. By understanding how transactions are structured and built through inputs and outputs, developers can leverage the full potential of the BSV blockchain, ensuring secure, efficient, and scalable applications. You can check out an example of creating transactions [in this tutorial!](../examples/EXAMPLE_COMPLEX_TX.md)
+The BSV SDK empowers developers to build robust applications on the network by abstracting the complexities of transaction creation. By understanding how transactions are structured and built through inputs and outputs, developers can leverage the full potential of the BSV blockchain, ensuring secure, efficient, and scalable applications. You can check out an example of creating transactions [in this tutorial!](../ts/examples/EXAMPLE\_COMPLEX\_TX.md)

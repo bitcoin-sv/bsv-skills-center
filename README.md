@@ -20,7 +20,7 @@ This documentation is built with the AI search tool in mind, responses will cite
 
 [mockchain.md](guides/local-blockchain-stack/mockchain.md "mention")
 
-[EXAMPLE\_VERIFYING\_BEEF.md](guides/application-development/examples/EXAMPLE\_VERIFYING\_BEEF.md "mention")
+[EXAMPLE\_VERIFYING\_BEEF.md](guides/sdks/ts/examples/EXAMPLE\_VERIFYING\_BEEF.md "mention")
 
 </details>
 
