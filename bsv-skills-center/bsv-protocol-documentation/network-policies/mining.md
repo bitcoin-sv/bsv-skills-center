@@ -22,7 +22,7 @@ To understand the network's policies, it is essential to understand the Mining c
 
 Version, hashPrevBlock, hashMerkleRoot, time and Bits are decided by the node software, along with a starting value of the nonce. This data is then passed to the mining component, which performs a brute force-like process to keep calculating the value of the double hash of the candidate block header until a solution is found. This process is illustrated in the following diagram with an example target value. The illustrations show an approximation; in reality, the nonce is part of the candidate block or the challenge. Challange or puzzle here refers to the mining solution.
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption><p>High-level flow for the mining process</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>High-level flow for the mining process</p></figcaption></figure>
 
 The mining process is also called proof of work (PoW). The solution to the mining process will be passed back to the node software, which will then use the BSN to propagate a set of messages to all of the nodes in the network to inform them about the proposed block. These nodes will then request the node to send them details of the block, which, once received, will be validated in terms of the block data and underlying transaction data to be valid.
 
@@ -34,7 +34,7 @@ The nodes compete to find the solution, and only the first one finding it gets t
 
 Two or more nodes may find the solution simultaneously, resulting in a temporary fork with two different chain tips (shown in the following diagram as block 3 and 3’).
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Proof-of-Work of competing nodes</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Proof-of-Work of competing nodes</p></figcaption></figure>
 
 The fork is resolved when a subsequent block is found, building on one of the proposed blocks (block 4 in the previous diagram). This process results in the earlier node abandoning block 3 and building on block 4.
 

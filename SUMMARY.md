@@ -79,6 +79,7 @@
   * [SPV](important-concepts/high-level/simplified-payment-verification-spv.md)
   * [UTXO vs Account Based](important-concepts/high-level/utxo-base-vs-account-based-systems.md)
   * [Linked Keys](important-concepts/high-level/linked-keys-42.md)
+  * [Smart Contracts](important-concepts/high-level/smart-contracts.md)
 * [Details](important-concepts/details/README.md)
   * [Hash Functions](important-concepts/details/cryptographic-hash-functions.md)
   * [Merkle Trees](important-concepts/details/merkle-trees.md)
