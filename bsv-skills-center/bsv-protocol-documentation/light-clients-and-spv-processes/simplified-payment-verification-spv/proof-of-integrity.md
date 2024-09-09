@@ -68,7 +68,5 @@ When the integrity of all three SPV processes are ensured, true peer-to-peer pay
 SPV systems are applications that are quite small and basic and, although this example demonstrates a payment application, similar applications for data transactions can be built using the same concepts and ideas. These applications are called Light Clients and the infrastructure design is referred to as SPV infrastructure.
 
 {% hint style="info" %}
-Reference :
-
-1. Inspired by Work done by nChain Researcher, Wei Zhang [https://medium.com/nchain/simplified-payment-verification-48ac60f1b26c](https://medium.com/nchain/simplified-payment-verification-48ac60f1b26c)
+References: [https://medium.com/nchain/simplified-payment-verification-48ac60f1b26c](https://medium.com/nchain/simplified-payment-verification-48ac60f1b26c)
 {% endhint %}

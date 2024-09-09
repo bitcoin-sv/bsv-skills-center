@@ -20,7 +20,7 @@ The transaction data that Bob receives has the raw payment transaction, the Merk
 
 <figure><img src="https://github.com/jonesjBSV/bsv-skills-center/blob/master/bsv-skills-center/bsv-protocol-documentation/.gitbook/assets/LightClientsandSPVInfastructures_Slide02%20(1).png" alt=""><figcaption></figcaption></figure>
 
-<table><thead><tr><th width="186">Verification Step</th><th>Description</th></tr></thead><tbody><tr><td>Steps 1 and 2</td><td>Bob performs the checks locally</td></tr><tr><td>Step 3</td><td>Bob will interact with BHC as described in <a data-mention href="broken-reference/">broken-reference</a></td></tr><tr><td>Step 4</td><td>Bob uses Node to perform Signature validation</td></tr><tr><td>Step 5</td><td>Bob performs the check locally</td></tr></tbody></table>
+<table><thead><tr><th width="186">Verification Step</th><th>Description</th></tr></thead><tbody><tr><td>Steps 1 and 2</td><td>Bob performs the checks locally</td></tr><tr><td>Step 3</td><td>Bob will interact with BHC as described in <a href="./">the previous section</a></td></tr><tr><td>Step 4</td><td>Bob uses Node to perform Signature validation</td></tr><tr><td>Step 5</td><td>Bob performs the check locally</td></tr></tbody></table>
 
 As described above, steps 1,2,3 and 5 are performed locally by Bob, which means most of the error scenarios for an invalid transaction are performed locally by Bob, effectively making this process independent of any node.
 

@@ -24,8 +24,6 @@ With SPV Wallets and Overlays, there is no need for a business to run a node.
 
 In terms of network topology, P2P interactions coupled with the ability for receivers to do local verifications, pushes the bulk of network activity to the edges which greatly distributes and localizes network load and data storage needs.
 
-You can find out more about the context of application and utility layers with blockchain networks in [https://github.com/jonesjBSV/bsv-skills-center/blob/master/bsv-skills-center/bsv-protocol-documentation/light-clients-and-spv-processes/broken-reference/README.md](https://github.com/jonesjBSV/bsv-skills-center/blob/master/bsv-skills-center/bsv-protocol-documentation/light-clients-and-spv-processes/broken-reference/README.md "mention")
-
 There are no strict definitions of what a light client should be designed as except for the fact that these applications will typically be either running the SPV infrastructure themselves or they will connect to service providers who do it on their behalf. This makes every application that is not a node creating blocks a light client. The term 'client' is analogous to the client role in client-server architecture used in web applications where the central node network acts as a blockchain server, and every other application becomes its client.
 
 The overall view of the blockchain network will show the network having only a small number of nodes at the core. Most of the other applications will function as light clients.
