@@ -3,9 +3,10 @@
 ## Intro
 
 * [Welcome](README.md)
-* [Quick Start](intro/quick-start.md)
-* [What Can I Do?](what-can-i-do/README.md)
 * [The Benefits of BSV Blockchain](bsv-skills-center/the-benefits-of-bsv-blockchain.md)
+* [What Can I Do?](what-can-i-do/README.md)
+* [Overview of GitHub repositories](intro/overview-of-github-repositories.md)
+* [Quick Start](intro/quick-start.md)
 
 ## Protocol
 
