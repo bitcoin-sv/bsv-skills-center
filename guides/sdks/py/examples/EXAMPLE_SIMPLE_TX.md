@@ -10,7 +10,7 @@ Transactions in Bitcoin are mechanisms for transferring value and invoking smart
 
 Consider the scenario where you need to create a transaction. The process involves specifying inputs (where the bitcoins are coming from) and outputs (where they're going). Here's a simplified example:
 
-```javascript
+```py
 from bsv import PrivateKey, PublicKey, ARC, P2PKH, Transaction
 
 priv_key = PrivateKey.fromWif('...')        # Your P2PKH private key
