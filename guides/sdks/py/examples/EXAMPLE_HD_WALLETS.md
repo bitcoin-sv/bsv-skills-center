@@ -18,15 +18,15 @@ entropy = 'cd9b819d9c62f0027116c1849e7d497f'  # Or use some randomly generated s
 # snow swing guess decide congress abuse session subway loyal view false zebra
 mnemonic: str = mnemonic_from_entropy(entropy)
 print(mnemonic)
+```
 
+You can also import an existing key as follows:
+```py
 seed: bytes = seed_from_mnemonic(mnemonic)
 print(seed.hex())
 
 master_xprv: Xprv = master_xprv_from_seed(seed)
 print(master_xprv)
-```
-
-You can also import an existing key as follows:
 ```
 
 Now that you've generated or imported your key, you're ready to derive child keys.
