@@ -12,7 +12,7 @@ Our task will be to create a broadcaster that connects with the What's on Chain 
 
 In order to build a compliant broadcast client, we first need to import the interfaces to implement.
 
-```ts
+```py
 from bsv import (
     Broadcaster,
     BroadcastFailure,
