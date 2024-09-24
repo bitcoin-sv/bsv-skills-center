@@ -10,7 +10,7 @@ Understanding the ins-and-outs of message encryption and decryption is key to im
 
 To get started, you will first want to import the required functions / classes.
 
-``py
+```py
 from bsv import PrivateKey
 ```
 
