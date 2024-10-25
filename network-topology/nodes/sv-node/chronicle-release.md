@@ -4,35 +4,39 @@ The Chronicle release is a follow-up of [the Genesis upgrade in 2020](https://ww
 
 The changes introduced in the Chronicle release are detailed in the sections below, outlining the removal of specific restrictions and requirements within the Bitcoin protocol to allow for greater flexibility and configurability for node operators.
 
-## 1. Remove Restrictions &#x20;
+## 1. Restriction Removal&#x20;
 
-### Remove Minimal Encoding Requirement 
+The restrictions desrbied below will be removed from the protocol. However, to allow users, applications, and developers the opportunity to remain unaffected by any of the changes coming in the Chronicle release in light of possible malleability issues, the BSV Blockchain will continue to support transactions signed using the **BIP143** Transaction Digest Algorithm. If a transaction is signed using the _SIGHASH\_FORKID SIGHASH_ flag, then the node will utilize the **BIP143** Transaction Digest Algorithm when taking the preimage during execution of signature verification opcodes (ex. _OP\_CHECKSIG_).
 
-Update the script processing so that there is no requirement for numbers to be expressed using the minimum number of bytes.
+<table data-header-hidden><thead><tr><th width="199"></th><th></th></tr></thead><tbody><tr><td><strong>SIGHASH_FORKID</strong></td><td><strong>Algorithm to use when executing signature verification</strong></td></tr><tr><td>1</td><td>BIP143 TDA</td></tr><tr><td>0</td><td>Original TDA</td></tr></tbody></table>
+
+### Minimal Encoding Requirement  Removal
+
+Update the script processing so that numbers are not required to be expressed using the minimum number of bytes.
 
 * Remove `SCRIPT_VERIFY_MINIMALDATA` and associated logic from the software
 * Remove `MinimallyEncoded()` and `IsMinimallyEncoded(..)` methods
 * Remove `bsv::MinimallyEncoded()` and `bsv::IsMinimallyEncoded(..)` functions.
 
-### Remove Limits on the size of script numbers
+### Limit on the Size of Script Numbers Removal
 
 The configuration parameter `maxscriptnumlengthpolicy` limits the size of numbers used in scripts. The default is 10,000 bytes with 0 indicating no external limit. &#x20;
 
 The `maxscriptnumlengthpolicy` configuration parameter default will be changed to unlimited (0).
 
-There is to be no restrictions on the max size of script numbers.
+There are to be no restrictions on the max size of script numbers.
 
-### Remove Low S requirement for signatures  &#x20;
+### Low S Requirement for Signatures  Removal&#x20;
 
 Remove the requirement that the signature must be the low “s” value. See [BIP-146](https://github.com/bitcoin/bips/blob/master/bip-0146.mediawiki) 
 
-### Remove Clean Stack Policy &#x20;
+### Clean Stack Policy Removal&#x20;
 
 The script engine should not require that the stack has only a single element on it on completion of the execution of a script.  &#x20;
 
 Remove `SCRIPT_VERIFY_CLEANSTACK` and associated logic from the software. 
 
-### Remove PUSHDATA only requirement in Unlocking Scripts  &#x20;
+### PUSHDATA Only Requirement in Unlocking Scripts Removal  &#x20;
 
 The current version of the node requires that most opcodes are not allowed in unlocking scripts. The node software automatically reads opcodes as data pushes.
 
@@ -169,3 +173,12 @@ Divides the number on the top of the stack by 2.
 Inputs: The number to be divided by 2 → tos
 Output: tos = Input number / 2 
 ```
+
+## Summary
+
+To summarize the Chronicle release, the following points should be outlined:
+
+* **Restoration of Bitcoin's Original Protocol**: The Chronicle release aims to restore the original Bitcoin protocol by re-installing specific opcodes and removing listed restrictions, while also balancing stability for businesses that depend on the current state.
+* **Transaction Digest Algorithms**: To address concerns around transaction malleability, the BSV Blockchain will support both the original TDA and the BIP143 Algorithm (with SIGHASH\_FORKID), allowing flexibility for devs and users.
+* **Selective Malleability Restrictions:** For transactions signed without the SIGHASH\_FORKID flag, the malleability-related restrictions (e.g., Low S value requirement, Clean Stack policy) will be removed.
+* **Business Impact and Flexibility:** Existing users/applications using the **BIP143** digest will remain unaffected by the Chronicle update. However, developers can take advantage of more flexibility with the original algorithm if needed.

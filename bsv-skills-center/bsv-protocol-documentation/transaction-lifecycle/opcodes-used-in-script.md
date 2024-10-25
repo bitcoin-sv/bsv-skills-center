@@ -10,7 +10,7 @@ OP\_NOP1-OP\_NOP10 were originally set aside to be used when HASH and other secu
 
 False is zero or negative zero (using any number of bytes) or an empty array, and True is anything else.
 
-Opcodes that will be activated in the Chronicle Release are indicated by an asterisk (e.g. OP\_VER\*).
+Opcodes that will be activated in the [Chronicle Release](https://docs.bsvblockchain.org/network-topology/nodes/sv-node/chronicle-release#id-2.-opcodes) are indicated by an asterisk (e.g. OP\_VER\*).
 
 #### Constants
 
