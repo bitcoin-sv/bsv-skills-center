@@ -80,3 +80,8 @@ Using NONE allows anyone to add their desired outputs to the transaction to clai
 #### Use Case 3 - Modular Transaction
 
 Using SINGLE | ANYONECANPAY modularises a transaction. Any number of these transactions can be combined into one transaction.
+
+{% hint style="info" %}
+Please note that after the [Chronicle release](https://docs.bsvblockchain.org/network-topology/nodes/sv-node/chronicle-release#id-2.-opcodes), the BSV Blockchain will support both the original TDA and the BIP143 Algorithm (with SIGHASH\_FORKID), allowing flexibility for devs and users. It means that users will be able to decide how to sign transactions
+{% endhint %}
+
