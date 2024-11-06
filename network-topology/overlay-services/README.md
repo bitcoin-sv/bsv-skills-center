@@ -8,8 +8,6 @@ description: What makes them different from any other application infrastructure
 
 An overlay in computer networking refers to a virtual network built on top of an existing physical network. It augments or extends the underlay, providing services like routing, peer-to-peer networking, or distributed computing. In BSV, overlays operate on the BSV Node Network, offering services like transaction lookups, token management, and open predicates.
 
-### Use Case: Timestamping & Lookup of Data
-
 {% embed url="https://www.youtube.com/watch?v=ho1N7w_cD2Y" %}
 
 ## Overlays a Glance
