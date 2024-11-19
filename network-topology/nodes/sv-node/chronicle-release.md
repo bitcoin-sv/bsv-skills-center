@@ -174,6 +174,8 @@ Inputs: The number to be divided by 2 → tos
 Output: tos = Input number / 2 
 ```
 
+The rest of the Opcodes remain intact; their description can be found in the [corresponding document](https://docs.bsvblockchain.org/protocol/transaction-lifecycle/opcodes-used-in-script).&#x20;
+
 ## Summary
 
 To summarize the Chronicle release, the following points should be outlined:
