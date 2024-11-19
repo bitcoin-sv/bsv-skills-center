@@ -4,9 +4,10 @@ The Chronicle release is a follow-up of [the Genesis upgrade in 2020](https://ww
 
 The changes introduced in the Chronicle release are detailed in the sections below, outlining the removal of specific restrictions and requirements within the Bitcoin protocol to allow for greater flexibility and configurability for node operators.
 
-## 1. Restriction Removal&#x20;
+## 1. Removal of Restrictions
 
-The restrictions desrbied below will be removed from the protocol. However, to allow users, applications, and developers the opportunity to remain unaffected by any of the changes coming in the Chronicle release in light of possible malleability issues, the BSV Blockchain will continue to support transactions signed using the **BIP143** Transaction Digest Algorithm. If a transaction is signed using the _SIGHASH\_FORKID SIGHASH_ flag, then the node will utilize the **BIP143** Transaction Digest Algorithm when taking the preimage during execution of signature verification opcodes (ex. _OP\_CHECKSIG_).
+The restrictions described below will be removed by default. If you wish to maintain these restrictions within your own transactions you need only ensure that each input is signed with the sighash fork id set. The nodes will continue to support transactions signed using the **BIP143** Transaction Digest Algorithm. If a transaction is signed using the _SIGHASH\_FORKID_ flag set, then the node will utilize the **BIP143** Transaction Digest Algorithm when taking the preimage during execution of signature verification opcodes (ex. _OP\_CHECKSIG_).\
+
 
 <table data-header-hidden><thead><tr><th width="199"></th><th></th></tr></thead><tbody><tr><td><strong>SIGHASH_FORKID</strong></td><td><strong>Algorithm to use when executing signature verification</strong></td></tr><tr><td>1</td><td>BIP143 TDA</td></tr><tr><td>0</td><td>Original TDA</td></tr></tbody></table>
 
@@ -36,9 +37,13 @@ The script engine should not require that the stack has only a single element on
 
 Remove `SCRIPT_VERIFY_CLEANSTACK` and associated logic from the software. 
 
-### PUSHDATA Only Requirement in Unlocking Scripts Removal  &#x20;
+### Data Only in Unlocking Script Removal  &#x20;
 
-The current version of the node requires that most opcodes are not allowed in unlocking scripts. The node software automatically reads opcodes as data pushes.
+The node will no longer require that unlocking scripts only include data and associated pushdata op codes. Functional Opcodes will be permitted. \
+\
+It should be noted that the unlocking script is evaluated, the resulting main stack is kept, but the conditional and alt stacks are cleared. The locking script is then evaluated. Therefore any OP\_RETURN use in the unlocking script simply leads to the end of unlocking script execution - not script execution as a whole.\
+\
+There are specific use cases for "showing your work" like this in the unlocking script. Typically it is not necessary to include intermediate values, and simply passing the result of any calculation as push data would be sufficient.
 
 ## 2. Opcodes 
 
