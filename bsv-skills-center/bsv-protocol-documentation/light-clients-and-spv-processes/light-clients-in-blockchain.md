@@ -74,8 +74,6 @@ The SPV Wallet and Overlay Services reference implementations provide the necess
 * Paymail (a user readable email like address to simplify public key usage in user experience)
 * A complete library for performing most of the SPV processes and wallet functions
 
-Further details can be found at: https://docs.bsvblockchain.com/ (fix this link)
-
 {% hint style="info" %}
 Blockchain is not decentralised because it has a peer network for miners. It is not decentralised because lots of permission-less running of node. Rather, what made it into a decentralised system of exchange was the fact that you could do SPV and IP to IP transactions.
 
