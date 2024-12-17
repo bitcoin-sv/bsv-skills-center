@@ -132,7 +132,7 @@ When you hand over an xpub to a counterparty service they will be able to derive
 \
 The hardened branch can be anywhere in the derivation path:
 
-If you share the derived xpub at `m/0'/3` then anyone with that xpub can go on to derive the pubkey at `m/0'/3/1` but if you share the xpub of `m`  only - then only you will be able to derive `m/0'/3` since the  hardened step precludes non-xpriv holders from calculating the children thereafter.
+If you share the derived xpub at `m/0'/3` then anyone with that xpub can go on to derive the pubkey at `m/0'/3/1` but if you share the xpub of `m`  only - then only you will be able to derive `m/0'/3/1` since the  hardened step precludes non-xpriv holders from calculating the children thereafter.
 
 ## Disadvantages and Risks
 
