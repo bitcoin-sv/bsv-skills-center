@@ -7,13 +7,17 @@ description: >-
 
 # RPC Interface
 
+{% hint style="info" %}
+It’s important to keep your RPC interface secure, it allows direct control over how your node operates. Use firewalls and the `rpcallowip` setting to limit access to the RPC interface.
+{% endhint %}
+
 ### Overview
 
 The JSON-RPC API provides a way to communicate with the BSV SV Node to perform various operations such as querying blockchain data, managing transactions, and retrieving network information.
 
 JSON-RPC is a remote procedure call (RPC) protocol encoded in JSON. It allows for calling methods on a server from a client and receiving responses in a structured manner.
 
-More information and example apps can be found in the [SV Node RPC documentation](https://github.com/bitcoinsv/bsvd/blob/master/docs/json\_rpc\_api.md).
+More information and example apps can be found in the [SV Node RPC documentation](https://github.com/bitcoinsv/bsvd/blob/master/docs/json_rpc_api.md).
 
 ### Getting Started
 
