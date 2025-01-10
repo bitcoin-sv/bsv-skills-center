@@ -8,7 +8,7 @@ description: 'How to: get access to EKS, get admin keys, read logs'
 
 ### AWS Console
 
-<figure><img src="../../../wallets/spv-wallet/installation/.gitbook/assets/image%20(12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/.gitbook/assets/spv-wallet-aws-maintain-step-1-4.png" alt=""><figcaption><p>Steps 1-4</p></figcaption></figure>
 
 #### Step 1
 
@@ -33,7 +33,7 @@ In the example from picture above the value which you should copy would be:\
 
 #### Step 5
 
-<figure><img src="../../../wallets/spv-wallet/installation/.gitbook/assets/image%20(15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/.gitbook/assets/spv-wallet-aws-maintain-step-5.png" alt=""><figcaption></figcaption></figure>
 
 Open user menu at the right top corner and click `Switch role` button
 
@@ -43,7 +43,7 @@ If you're setting role to switch for the first time, additional view will be dis
 
 #### Step 6
 
-<figure><img src="../../../wallets/spv-wallet/installation/.gitbook/assets/image%20(16).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/.gitbook/assets/spv-wallet-aws-maintain-step-6.png" alt=""><figcaption></figcaption></figure>
 
 Fill the form with:
 
@@ -53,7 +53,9 @@ Fill the form with:
 
 After filling the form, click `Switch Role` button. If everything is correct, you will be switched to that role (otherwise after clicking the button, it looks like nothing happend - so you need to fix the values provided in the form).
 
-<figure><img src="../../../wallets/spv-wallet/installation/.gitbook/assets/image%20(17).png" alt=""><figcaption></figcaption></figure>
+#### Step 6b
+
+<figure><img src="/.gitbook/assets/spv-wallet-aws-maintain-step-6b.png" alt=""><figcaption></figcaption></figure>
 
 After switchin the role the user menu after clicking the role name at the top right should look like on the picture above.
 
@@ -67,7 +69,7 @@ If you want to switch back to your original role (which doesn't have permissions
 Next time when you want to use this EKS Master Role, all you need to do is to open this menu again and click the role name on the Role history list.
 {% endhint %}
 
-#### Step 6
+#### Step 7
 
 Navigate to [Amazon Elastic Kubernetes Service (EKS)](https://eu-central-1.console.aws.amazon.com/eks/home#/clusters)
 
@@ -77,7 +79,7 @@ Now in the tab Resources you can see all the pods, deployments, config maps that
 
 <div align="left">
 
-<figure><img src="../../../wallets/spv-wallet/installation/.gitbook/assets/image%20(18).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/.gitbook/assets/spv-wallet-aws-maintain-step-7.png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -101,7 +103,7 @@ Now you need to obtain "update kubeconfig command" from outputs of the installed
 
 {% tabs %}
 {% tab title="AWS Console" %}
-<figure><img src="../../../wallets/spv-wallet/installation/.gitbook/assets/image%20(13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/.gitbook/assets/spv-wallet-aws-maintain-kubectl-step-1-3.png" alt=""><figcaption><p>Steps 1-3e</p></figcaption></figure>
 
 **Step 3a**
 
@@ -207,7 +209,7 @@ You need to have ability to Switch Role in AWS Console like in the instruction i
 
 Ensure that you switched the role to the "EKS Master" role.
 
-<figure><img src="../../../wallets/spv-wallet/installation/.gitbook/assets/image%20(19).png" alt=""><figcaption><p>Steps 2 - 4</p></figcaption></figure>
+<figure><img src="/.gitbook/assets/spv-wallet-aws-get-admin-keys-1.png" alt=""><figcaption><p>Steps 2 - 4</p></figcaption></figure>
 
 #### Step 1
 
@@ -227,7 +229,7 @@ Find `spv-wallet-keys` on the list and click the name to see details
 
 #### Step 5
 
-<figure><img src="../../../wallets/spv-wallet/installation/.gitbook/assets/image%20(21).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/.gitbook/assets/spv-wallet-aws-get-admin-keys-2.png" alt=""><figcaption></figcaption></figure>
 
 Check the options to decode the values. And then you can copy admin xpriv and xpub values.
 {% endtab %}
@@ -256,7 +258,7 @@ In order to maintain or query Block Headers Service you may need to retrieve API
 
 {% tabs %}
 {% tab title="AWS Console" %}
-<figure><img src="../../../wallets/spv-wallet/installation/.gitbook/assets/image%20(22).png" alt=""><figcaption><p>Steps 2-4</p></figcaption></figure>
+<figure><img src="/.gitbook/assets/spv-wallet-aws-get-bhs-1.png" alt=""><figcaption><p>Steps 2-4</p></figcaption></figure>
 
 #### Step 1
 
@@ -276,7 +278,7 @@ Find `block-headers-service-secret` on the list and click the name to see detail
 
 #### Step 5
 
-<figure><img src="../../../wallets/spv-wallet/installation/.gitbook/assets/image%20(23).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/.gitbook/assets/spv-wallet-aws-get-bhs-2.png" alt=""><figcaption></figcaption></figure>
 
 Check the options to decode the values. And then you can copy value of block-headers-service-auth-token.
 {% endtab %}
