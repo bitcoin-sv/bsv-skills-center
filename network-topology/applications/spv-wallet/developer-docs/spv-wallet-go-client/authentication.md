@@ -15,25 +15,6 @@
 
 ## How message signing works in spv-wallet-go-client library?
 
-### SetSignature method
-
-Signing process is a part of `SetSignature`:
-
-```go
-func SetSignature(header *http.Header, xPriv *bip32.ExtendedKey, bodyString string) error {
-	// Create the signature
-	authData, err := createSignature(xPriv, bodyString)
-	if err != nil {
-		return err
-	}
-
-	// Set the auth header
-	header.Set(models.AuthHeader, authData.XPub)
-
-	return setSignatureHeaders(header, authData)
-}
-```
-
 #### Algorithm Overview
 
 The algorithm is presented below:

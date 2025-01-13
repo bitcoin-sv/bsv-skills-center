@@ -2,7 +2,7 @@
 description: What it does today and what it will do as we continue development.
 ---
 
-# 🏎 Functionality & Roadmap
+# Functionality & Roadmap
 
 {% tabs %}
 {% tab title="Features" %}

@@ -4,7 +4,7 @@ description: >-
   transactions
 ---
 
-# 👥 Who is it for?
+# Who is it for?
 
 {% tabs %}
 {% tab title="Exchanges" %}

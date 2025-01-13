@@ -2,7 +2,7 @@
 description: Send and Receive funds using SPV Wallet
 ---
 
-# 💸 User Guide
+# User Guide
 
 ### Account Setup
 

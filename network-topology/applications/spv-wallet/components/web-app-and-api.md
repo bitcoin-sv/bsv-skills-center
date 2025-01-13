@@ -2,7 +2,9 @@
 description: Example application
 ---
 
-# 👆 Web App & API
+# Web App & API
+
+## Example Application integrated with SPV Wallet
 
 The frontend web wallet application allows users to register, make transactions, and see their balance. This is what we'd expect you to replace with your own application front end, but is included in the deployment to provide a working demo for basic payment functionality.
 
@@ -18,14 +20,14 @@ The backend API is coupled with the web wallet, and demonstrates use of the Wall
 
 {% embed url="https://github.com/bitcoin-sv/spv-wallet-web-backend" %}
 
-### Clients
+## Clients
 
 The client libraries themselves are available separately such that integrating with your own front end should be straightforward.
 
-#### Golang
+### Golang
 
 {% embed url="https://github.com/bitcoin-sv/spv-wallet-go-client" %}
 
-#### JavaScript
+### JavaScript
 
 {% embed url="https://github.com/bitcoin-sv/spv-wallet-js-client" %}

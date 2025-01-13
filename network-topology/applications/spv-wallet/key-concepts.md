@@ -2,7 +2,7 @@
 description: How SPV works in a practical sense.
 ---
 
-# 💡 Key Concepts
+# Key Concepts
 
 ## General Idea
 
