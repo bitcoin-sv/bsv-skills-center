@@ -4,7 +4,7 @@ description: >-
   script.
 ---
 
-# ⚡ Quickstart
+# Quickstart
 
 {% hint style="info" %}
 Using the start script is not recommended for production environments. It is designed for development and testing purposes only.
@@ -74,7 +74,7 @@ Do you want to run spv-wallet-admin? [Y/n]
 > # Choose if you want to start SPV Wallet Admin. (Defaults to yes, so just press Enter)
 ```
 
-> Note: You can read more about SPV Wallet Admin [here](../spv-wallet-admin.md)
+> Note: You can read more about SPV Wallet Admin [here](components/web-admin.md) and [here](developer-docs/spv-wallet-admin.md)
 
 ```bash
 Do you want to run block-headers-service? [Y/n]
@@ -82,7 +82,7 @@ Do you want to run block-headers-service? [Y/n]
 # (Defaults to yes, so just press Enter)
 ```
 
-> Note: If you want to read about Block Headers Service role in SPV -> [go here](../block-headers-service.md)
+> Note: If you want to read about Block Headers Service role in SPV -> go [here](components/block-headers-service.md) and [here](developer-docs/block-headers-service/README.md)
 
 ```bash
 # The following two questions are about running referential custodial web wallet (its frontend and backend) 
@@ -213,7 +213,7 @@ For example, if you want to use `example.com` as your main domain, you should ad
 
 ### How to configure Paymail on different domain then spv-wallet?
 
-Before starting SPV Wallet you need to have a [paymail](../../../../wallets/spv-wallet/paymail/) domain properly configured.\
+Before starting SPV Wallet you need to have a [paymail](https://tsc.bsvblockchain.org/standards/paymail/) domain properly configured.\
 At first it is necessary to add SRV record to domain which you want to use as paymail domain. This record will be used for service discovery by Paymail clients - pointing them to your host.
 
 Example of SRV record:

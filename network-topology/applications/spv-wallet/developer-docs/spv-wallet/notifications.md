@@ -44,7 +44,7 @@ Based on that you can determine if this is `outgoing (negative)` or `incomming (
 
 ## Subscribing to Webhooks
 
-To receive HTTP-based notifications on a specified URL, clients need to make request with `admin-key` [authentication](./authentication.md#authenticate-with-admin-xpub):
+To receive HTTP-based notifications on a specified URL, clients need to make request with `admin-key` [authentication](authentication.md#authenticate-as-admin):
 
 ```http
 POST {{spv-wallet-url}}/v1/admin/webhooks/subscriptions
@@ -73,7 +73,7 @@ If these are defined, for each request, spv-wallet will include such header (`<t
 
 Subscriptions are stored in the spv-wallet's database and persist until the client unsubscribes.
 
-To unsubscribe, the client should make a request authenticated with `admin-key` [authentication](./authentication.md#authenticate-with-admin-xpub):
+To unsubscribe, the client should make a request authenticated with `admin-key` [authentication](authentication.md#authenticate-as-admin):
 
 ```http
 DELETE {{spv-wallet-url}}/v1/admin/webhooks/subscriptions
