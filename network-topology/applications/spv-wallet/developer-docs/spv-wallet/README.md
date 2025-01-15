@@ -8,6 +8,7 @@ Complete stand-alone server using the SPV Wallet engine to manage xpubs, utxos, 
 2. [SPV and BEEF](#spv-and-beef)
 3. [Authentication](authentication.md)
 4. [Configuration](configuration.md)
+5. [Notifications (Webhooks)](notifications.md)
 5. [Client Libraries](#spv-wallet-clients)
    1. [Go Client](../spv-wallet-go-client/README.md)
    2. [JS Client](../spv-wallet-js-client/README.md)
