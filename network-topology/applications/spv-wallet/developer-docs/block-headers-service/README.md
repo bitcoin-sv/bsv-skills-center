@@ -4,9 +4,10 @@ The Block Headers Service is a standalone service that communicates with the Bit
 
 ## Table of Contents
 
-* [How it is used in the SPV Wallet ecosystem](block-headers-service.md#how-it-is-used-in-the-spv-wallet-ecosystem)
-* [How merkle roots are verified](block-headers-service.md#how-merkle-roots-are-verified)
-* [Authentication](block-headers-service.md#authentication)
+* [How it is used in the SPV Wallet ecosystem](#how-it-is-used-in-the-spv-wallet-ecosystem)
+* [How merkle roots are verified](#how-merkle-roots-are-verified)
+* [Authentication](authentication.md)
+* [Configuration](configuration.md)
 
 ## How it is used in the SPV Wallet ecosystem
 
@@ -54,9 +55,3 @@ Confirmation passes only if both - blockHeight and merkleRoot are valid pair.
 > :warning: **Note**: BHS only checks for merkle roots in Longest Chain. It does not check for merkle roots in Side Chains.
 >
 > :warning: **Note**: There might be a case that merkle root is valid but BHS does not have it in its database. It happens when the block is freshly mined and BHS did not receive it yet.
-
-## Authentication
-
-Block Headers Service API needs a valid Bearer token to be used. You can set the token in `config.yaml` file.
-
-When running this service from `start.sh` script, the token would be default and properly set on both `spv-wallet` and `block-headers-service`.
