@@ -18,14 +18,14 @@ as it would then be possible for anyone to prune your headers at will.
 ## Authenticate with admin token
 
 After the setup of authentication you can use provided token to authenticate.
-To do it, just add the following header to all the requests to block-headers-service.
+To do it, just add the following header to all the requests to Block Headers Service.
 ```
 Authorization: Bearer replace_me_with_token_you_want_to_use_as_admin_token
 ```
 
 ## Additional tokens
 
-If you have a need for additional tokens to authenticate in block-headers-service.
+If you have a need for additional tokens to authenticate in Block Headers Service.
 you can generate such with the following request:
 ```http request
 POST https://{{block-headers-service_url}}/api/v1/access
@@ -49,4 +49,4 @@ If at some point you want to revoke this additional token you can make a request
 DELETE https://{{block-headers-service_url}}/api/v1/access/{{some_token_created_by_server}}
 Authorization: Bearer replace_me_with_token_you_want_to_use_as_admin_token
 ```
-After this request succeeded the token can't be used to authenticate in block-headers-service.
+After this request succeeded the token can't be used to authenticate in Block Headers Service.
