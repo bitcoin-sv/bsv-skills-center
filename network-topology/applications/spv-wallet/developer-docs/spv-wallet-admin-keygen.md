@@ -12,7 +12,7 @@
 
 ## Overview
 
-This tool generates public and private key pairs for SPV Wallet applications. It can just print those keys or by default store it in the Kubernetes secret.
+This tool generates public and private key pairs for SPV Wallet applications. It can just print those keys or (by default) store it in the Kubernetes secret.
 
 ## Usage
 
@@ -28,11 +28,11 @@ docker run bsvb/spv-wallet-admin-keygen:latest --print --no-k8s
 
 #### Kubernetes Secret Creation
 
-##### connect to kubernetes cluster
+##### Connect to Kubernetes cluster
 To set the keys in kubernetes secret, you need to setup the image to have access to the namespace kubernetes cluster.
 
-You can do this for example by creating a dedicated kubeconfig file and mounting it to the container.
-Simplest way to do this is to mount your .kube/config file to the container.
+You can do this, for example, by creating a dedicated `kubeconfig` file and mounting it to the container.
+Simplest way to do this is to mount your `.kube/config` file to the container.
 
 ```bash
 docker run -v {my/kube/config/file}:/kubeconfig -e KUBECONFIG=/kubeconfig bsvb/spv-wallet-admin-keygen:latest
@@ -40,7 +40,7 @@ docker run -v {my/kube/config/file}:/kubeconfig -e KUBECONFIG=/kubeconfig bsvb/s
 
 ##### Configure the secret name
 By default the secret name is `spv-wallet-keys`.
-You can change it by using argument -s or --secret
+You can change it by using argument `-s` or `--secret`
 
 ℹ️ To configure k8s connection look at the section [connect to kubernetes cluster](#connect-to-kubernetes-cluster)
 
@@ -55,7 +55,7 @@ docker run -e SECRET_NAME=my-secret-name bsvb/spv-wallet-admin-keygen:latest
 ```
 
 ##### Configure the key names
-By default the key names are `admin_xpub` and `admin_xpriv`.
+By default, the key names are `admin_xpub` and `admin_xpriv`.
 You can change it by using arguments -pb and -pv or --xpub-key and --xprv-key respectively.
 
 ℹ️ To configure k8s connection look at the section [connect to kubernetes cluster](#connect-to-kubernetes-cluster)
@@ -80,4 +80,4 @@ To use the tool, simply run the following command:
 go run main.go
 ```
 
-and it will generate a new key pair for you stored in two files: `xpub_key.txt` and `xpriv_key.txt`.
+and it will generate a new key pair for you and store it in two files: `xpub_key.txt` and `xpriv_key.txt`.

@@ -11,7 +11,7 @@
 ## Overview
 
 This is TypeScript / JavaScript library used to communicate with SPV Wallet.
-It allows us to create an admin or normal user client and then call methods to work with transactions, xpubs, paymails and access keys.
+It allows to create an admin or normal user client and then call methods to work with transactions, xpubs, paymails and access keys.
 
 ## Installation
 
@@ -29,8 +29,8 @@ yarn add @bsv/spv-wallet-js-client
 
 ## User / Wallet / Account creation
 
-To create a new user (by some people also understand as creation of wallet or account), you need to register a new xPub.
-You can found example of how to do that [here](authentication.md#register-users-xpub).
+To create a new user (which some may also interpret as creating a wallet or account), you need to register a new xPub.
+You can find example of how to do that [here](authentication.md#register-users-xpub).
 
 ## Authentication
 

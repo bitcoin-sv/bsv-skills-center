@@ -109,9 +109,9 @@ func main() {
 
 #### Revoke
 
-Whenever a user fills that access key is compromised, or it wouldn't be needed anymore, it is possible to revoke such access key, so it can't be used to authenticate.
+Whenever a user believes that a particular access key has been compromised or is no longer needed, it can be revoked to prevent any further use.
 
-To revoke an access key user need to make a following call:
+To revoke an access key, a user needs to make the following call:
 
 ```go
 import (

@@ -17,13 +17,13 @@ async function main() {
 
 ## User
 
-### Authentication using HD keys of user
+### Authentication using HD keys of a user
 
-#### Register users xpub
+#### Register the user's xpub
 
-To authenticate as user, first user and his xpub must be added by admin to SPV Wallet.
+Note that, to authenticate as a user, the user and their xPub must first be added by an admin to the SPV Wallet - in other words, the "user" must already exist.
 
-To register user, admin need to make a following request to SPV Wallet:
+To register a user, the admin needs to make the following request to the SPV Wallet:
 ```typescript
 import {SpvWalletClient} from "@bsv/spv-wallet-js-client";
 
@@ -35,9 +35,9 @@ async function main() {
 }
 ```
 
-#### Authenticate with users xpub
+#### Authenticate with user's xpub
 
-To authenticate within the SPV Wallet as a user, you simply need to create a new SPV Wallet Client for users API.
+To authenticate within the SPV Wallet as a user, simply create a new SPV Wallet client for the Users API.
 
 ```typescript
 import {SpvWalletClient} from "@bsv/spv-wallet-js-client";
@@ -48,13 +48,13 @@ async function main() {
 }
 ```
 
-### Authentication using Access key
+### Authentication using an Access key
 
-Another way of authenticate as a user is by use of access key.
+Another way to authenticate as a user is via access keys.
 
 #### Create
 
-To authenticate as user with access key, first user must create an access key by making a following call:
+To authenticate as a user with an access key, the user must first create the access key by making the following call:
 
 ```typescript
 import {SpvWalletClient} from "@bsv/spv-wallet-js-client";
@@ -87,9 +87,9 @@ async function main() {
 
 #### Revoke
 
-Whenever a user fills that access key is compromised, or it wouldn't be needed anymore, it is possible to revoke such access key, so it can't be used to authenticate.
+Whenever a user fills that an access key is compromised, or it wouldn't be needed anymore, it is possible to revoke such access key, so it can't be used to authenticate.
 
-To revoke an access key user need to make a following call:
+To revoke an access key, user needs to make a following call:
 
 ```typescript
 import {SpvWalletClient} from "@bsv/spv-wallet-js-client";

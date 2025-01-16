@@ -85,7 +85,8 @@ x-auth-signature: {{signature}}
 Content-Type: application/json
 
 {
-  "url": "http://your-webhook-url.com",
+  "url": "http://your-webhook-url.com"
+
 }
 ```
 

@@ -2,7 +2,7 @@
 
 ## Enabled by Default
 
-The default assumes you want to use Authentication. This requires a single environment variable.
+By default, it is assumed that you want to use Authentication, which requires a single environment variable.
 
 `BHS_HTTP_AUTH_TOKEN=replace_me_with_token_you_want_to_use_as_admin_token`
 

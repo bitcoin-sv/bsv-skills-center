@@ -14,7 +14,7 @@ Using the start script is not recommended for production environments. It is des
 
 `spv-wallet` provides a `start.sh` script which significantly speeds up the startup of the entire environment. This bash script is designed to facilitate the setup and configuration of an environment for running an SPV Wallet application and its associated components. It is structured to handle various scenarios such as selecting database and cache storage options, running specific components like the SPV wallet, block headers service, wallet frontend and backend, configuring PayMail domains, exposing services, and managing background execution.
 
-Application which can be selected are run by `docker compose` command and its configuration file `docker-compose.yml` should not be edited. It is adapted specifically to the `start.sh` script.
+Applications that can be selected are run by the `docker compose` command, and their configuration file `docker-compose.yml` should not be edited. It is adapted specifically to the start.sh script.
 
 ## Prerequisites
 

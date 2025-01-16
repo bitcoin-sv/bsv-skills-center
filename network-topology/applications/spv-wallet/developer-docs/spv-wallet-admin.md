@@ -91,7 +91,7 @@ docker-compose up -d
     * View access key data
 3. Paymails
     * View paymails
-    * Add and removing paymails from users
+    * Add and remove paymails from users
 4. Transactions
     * Viewing transaction data such as timestamp, sender, receiver, hash, etc.
 5. Contacts
