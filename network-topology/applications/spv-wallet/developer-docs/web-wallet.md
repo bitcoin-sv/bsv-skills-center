@@ -1,8 +1,12 @@
 ---
-description: Send and Receive funds using SPV Wallet
+description: Send and Receive funds using Web Wallet integrated with SPV Wallet
 ---
 
-# 💸 User Guide
+# Web wallet (example app)
+
+{% hint style="info" %}
+Web wallet is not recommended for production environments. It is designed for demonstration purposes, but can be extended and adjusted to suit your production needs.
+{% endhint %}
 
 ### Account Setup
 
@@ -14,19 +18,19 @@ The simplest way to set up a new account is with the example Wallet App. Technic
 {% tab title="Wallet" %}
 To begin, navigate to **https://wallet.**_**yourdomain.tld**_ replacing the latter part with your own domain, keeping only the subdomain `wallet`. Hit the "Sign up now!" link to create a new account.
 
-<figure><img src="../../../.gitbook/assets/Untitled 2.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="/.gitbook/assets/spv-web-wallet-login.jpg" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Signup" %}
 Here you must fill in all of the fields as instructed. Use any email address, and a strong password. Agree to the terms and conditions and privacy policy, these are nonsense placeholder documents for demonstration purposes only. Hit the Sign up button.
 
-<figure><img src="../../../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/.gitbook/assets/spv-web-wallet-signup.png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Backup" %}
 Then you will be shown the instructions for securely storing your mnemonic, and given a paymail which will allow you to receive funds.
 
-<figure><img src="../../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/.gitbook/assets/spv-web-wallet-registration-success.png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
@@ -48,18 +52,18 @@ You can send to counterparty wallets using the Wallet App.
 {% tab title="Set Up Payment" %}
 Defining a counterparty by paymail, and setting the amount to send is the first step to define a draft transaction.
 
-<figure><img src="../../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/.gitbook/assets/spv-web-wallet-send.png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Approve" %}
 Filling in your password is required to generate a local private key which can spend the BSV in the draft transaction. Thereafter it is sent to the counterparty Wallet server.
 
-<figure><img src="../../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/.gitbook/assets/spv-web-wallet-send-confirmation.png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Confirmation" %}
 Transaction history is displayed capturing both inbound and outbound payments. One of the details included is the confirmation status. When the transaction is mined the status will turn green which confirms the wallet's ability to form valid BEEF encoded transactions using the outputs contained therein.
 
-<figure><img src="../../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/.gitbook/assets/spv-web-wallet-transactions.png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}

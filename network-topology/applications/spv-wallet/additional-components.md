@@ -2,7 +2,7 @@
 description: Not used in the SPV Wallet
 ---
 
-# ⛏ Additional Components
+# Additional Components
 
 The journey towards the current reference implementation for the SPV Wallet has not been an easy one. A few attempts have been made to put forward a standard wallet for SPV transactions.
 

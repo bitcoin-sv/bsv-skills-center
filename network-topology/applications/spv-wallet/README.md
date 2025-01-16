@@ -13,7 +13,7 @@ layout:
     visible: true
 ---
 
-# 📖 SPV Wallet
+# SPV Wallet
 
 ## What is it?
 

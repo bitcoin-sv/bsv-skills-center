@@ -2,7 +2,7 @@
 description: Overview of the implementation
 ---
 
-# 🍡 Components
+# Components
 
 Deploying the SPV Wallet will spin up a number of containerized services to create something which at a high level looks like the diagram below.
 

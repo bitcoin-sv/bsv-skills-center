@@ -2,7 +2,7 @@
 description: Getting into the code for developing your own products and services.
 ---
 
-# 💻 Fork It
+# Fork It
 
 Anyone interested in developing their own wallet can use this as a starting point. **This is not only relevant for developers, but also for governments, enterprises and exchanges.** The alignment of your software with this reference implementation will enable adoption of the latest industry standards, adapting to new BSV infrastructure as the network scales.&#x20;
 

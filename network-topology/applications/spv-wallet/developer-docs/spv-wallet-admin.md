@@ -3,11 +3,10 @@
 ## Table of Contents
 
   - [Overview](#overview)
-  - [Usage](#usage)
+  - [Run](#running-spv-wallet-admin)
     - [Locally](#locally)
     - [Docker-compose](#docker-compose)
   - [What it offers](#what-it-offers)
-  - [Project structure](#project-structure)
 
 🔗 [GitHub URL](https://github.com/bitcoin-sv/spv-wallet-admin)
 
@@ -15,7 +14,9 @@
 
 SPV Wallet Admin console is an admin panel that allows for viewing (and in some parts integrating with) SPV Wallet data.
 
-## Usage
+
+
+## Running SPV Wallet Admin
 
 ### Locally
 
@@ -80,43 +81,26 @@ docker-compose up -d
 
 ## What it offers
 
-1. Admin Dashboard
-    * You can quickly jump to useful links from here (like xpubs, transactions, destinations, paymails)
-    * Viewing transactions and UTXOS (not implemented yet)
-2. Registering an xPub
-    * From xPriv
-    * Or just by pasting an xPub key
-    * Added xPubs are shown in XPubs list
-3. Access Keys
+1. xPubs
+    * Register xPubs (create user)
+      * From xPriv
+      * Or just by paste an xPub key
+      * Added xPubs are shown in XPubs list
+    * View registered xPubs
+2. Access Keys
     * View access key data
-    * Revoke access key (not working - probably a frontend problem)
-4. Destinations
-    * Viewing addresses and locking scripts of destinations
-    * Seems to be creating a new destination every minute
-5. Paymails
-    * Allows for viewing paymails
-    * Revoking paymails (not working on local env because of CORS and some other errors)
-6. Transactions
-    * Viewing transaction data such as timestamp, sender, receiver, hash, etc.
-7. +Transactions
-    * Recording a transaction by passing Transaction ID or Hex string
-    * Generic error messages, but looks like it's working fine
-8. UTXOS
-    * Showing spent and unspent UTXOS data
-9. XPubs
-    * Viewing xpubs
-
+3. Paymails
+    * View paymails
+    * Add and remove paymails from users
+4. Transactions
+    * View transaction data such as timestamp, sender, receiver, hash, etc.
+5. Contacts
+    * View users contacts
+    * Remove contacts
+    * Accept/reject contacts invitations
+6. Webhooks
+   * View registered webhooks
+   * Remove registered webhooks
 ---
 
-## Project structure
 
-* App.js -  entry point with all Providers
-* route.js - routes to pages
-* .env - env for specifing some titles and SPV Wallet URL
-* src
-  * components - js components like dashboard, listing, etc
-  * hooks - some useful hooks
-  * icons - icons used in the dashboard
-  * pages - explained [here](#what-it-offers)
-  * theme - MUI Themes
-  * utils - simple js functions

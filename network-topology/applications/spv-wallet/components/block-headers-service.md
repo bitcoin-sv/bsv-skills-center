@@ -1,4 +1,4 @@
-# 💥 Block Headers Service
+# Block Headers Service
 
 Block Headers Service runs as part of the SPV Wallet, you do not need to deploy it separately. If you want to run it without the rest of the stack, deployment instructions can be found in the README of the repository in Github.
 

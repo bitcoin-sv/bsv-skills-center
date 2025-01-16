@@ -2,9 +2,9 @@
 description: Wraps the core functionality together.
 ---
 
-# 🌐 SPV Wallet Server
+# SPV Wallet Server
 
-This component does the heavy lifting. It exposes the secure Client API, and public [Paymail](https://github.com/bitcoin-sv/ts-paymail) Endpoints; runs [SPV](../../../../network-topology/applications/spv-wallet/key-concepts.md) on inbound transactions; stores transactions and metadata; and broadcasts valid transactions, exposing a callback for Merkle paths.
+This component does the heavy lifting. It exposes the secure Client API, and public [Paymail](https://tsc.bsvblockchain.org/standards/paymail/) Endpoints; runs [SPV](../../../../network-topology/applications/spv-wallet/key-concepts.md) on inbound transactions; stores transactions and metadata; and broadcasts valid transactions, exposing a callback for Merkle paths.
 
 At a high level there are admin functionalities exposed like creating a new alias, adding a new xpub, deleting things.
 
