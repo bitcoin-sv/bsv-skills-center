@@ -3,7 +3,7 @@
 ## Table of Contents
 
   - [Overview](#overview)
-  - [Run](#usage)
+  - [Run](#running-spv-wallet-admin)
     - [Locally](#locally)
     - [Docker-compose](#docker-compose)
   - [What it offers](#what-it-offers)
@@ -84,23 +84,23 @@ docker-compose up -d
 1. xPubs
     * Register xPubs (create user)
       * From xPriv
-      * Or just by pasting an xPub key
+      * Or just by paste an xPub key
       * Added xPubs are shown in XPubs list
-    * Viewing registered xPubs
+    * View registered xPubs
 2. Access Keys
     * View access key data
 3. Paymails
     * View paymails
     * Add and remove paymails from users
 4. Transactions
-    * Viewing transaction data such as timestamp, sender, receiver, hash, etc.
+    * View transaction data such as timestamp, sender, receiver, hash, etc.
 5. Contacts
-    * Viewing users contacts
-    * removing contacts
-    * accepting/rejecting contacts invitiations
+    * View users contacts
+    * Remove contacts
+    * Accept/reject contacts invitations
 6. Webhooks
-   * Viewing registered webhooks
-   * Removing registered webhooks
+   * View registered webhooks
+   * Remove registered webhooks
 ---
 
 

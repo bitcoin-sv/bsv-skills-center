@@ -7,7 +7,7 @@ This guide will help you to know the most important configuration options for th
 ### The configuration is resolved in the following priority
 
 1. Environment variables - the environment variables are prefixed with `BHS_` and are in uppercase. They have the highest priority when resolving the configuration. You can override any of the configuration options by setting the environment variable with the same name as the configuration option. For example, to override the `http.port` configuration option, you can set the `BHS_HTTP_PORT` environment variable.
-2. Configuration file - the configuration file is resolved next. The default configuration file is `config.yaml` in the root of the project. You can also specify custom configuration file path using the `-C` flag in the command line.
+2. Configuration file - the configuration file is resolved next. The default configuration file is `config.yaml` in the working directory. You can also specify custom configuration file path using the `-C` flag in the command line.
 3. If you don't specify the configuration file and environment variables, the default configuration will be used - it's resolved in `defaults.go` file in the `config` package. Default configuration from `defaults.go` is the same as the configuration from `config.example.yaml`.
 
 ## Configuration File
