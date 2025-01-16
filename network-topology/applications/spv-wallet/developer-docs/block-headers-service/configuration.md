@@ -30,7 +30,7 @@ db:
   # Path to prepared database file
   prepared_db_file_path: "./data/blockheaders.csv.gz"
 
-  #sqlite engine cofiguration
+  #sqlite engine configuration
   sqlite:
     file_path: "./data/blockheaders.db"
   #postgres engine configuration, required when engine=postgres

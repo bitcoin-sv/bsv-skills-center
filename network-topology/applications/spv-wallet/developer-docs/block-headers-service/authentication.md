@@ -8,7 +8,7 @@ By default, it is assumed that you want to use Authentication, which requires a 
 
 ## Disabling Auth Requirement
 
-To disable authentication exposing all endpoints openly, set the following environment variable.
+To disable authentication and expose all endpoints openly, set the following environment variable.
 This is available if you prefer to use your own authentication in a separate proxy or similar.
 We do not recommend you expose the server to the internet without authentication,
 as it would then be possible for anyone to prune your headers at will.
@@ -20,7 +20,7 @@ as it would then be possible for anyone to prune your headers at will.
 After the setup of authentication you can use provided token to authenticate.
 To do it, just add the following header to all the requests to block-headers-service.
 ```
-Authorization Bearer replace_me_with_token_you_want_to_use_as_admin_token
+Authorization: Bearer replace_me_with_token_you_want_to_use_as_admin_token
 ```
 
 ## Additional tokens
@@ -31,7 +31,7 @@ you can generate such with the following request:
 POST https://{{block-headers-service_url}}/api/v1/access
 Authorization: Bearer replace_me_with_token_you_want_to_use_as_admin_token
 ```
-In response you should receive something like
+In response, you should receive something similar to the following:
 ```json
 {
   "token": "some_token_created_by_server",
@@ -39,7 +39,7 @@ In response you should receive something like
   "isAdmin": false
 }
 ```
-Now you can put a value from "token" property from the response and use it in all requests to server by setting header:
+Now, you can take the value from the 'token' property in the response and use it in all requests to the server by setting it as a header.
 ```http header
 Authorization: Bearer some_token_created_by_server
 ```
