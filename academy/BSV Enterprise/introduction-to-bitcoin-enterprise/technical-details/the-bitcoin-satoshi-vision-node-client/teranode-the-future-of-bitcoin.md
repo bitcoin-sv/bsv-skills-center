@@ -1,0 +1,11 @@
+# Teranode - The Future of Bitcoin
+
+The BSV Association also funds development of the Teranode project which is a next generation SV node client. In stark contrast to Satoshi's original client which was built by a very small team with no funding, this project is fully funded and managed by a large team of highly experienced engineers, software developers and computer security professionals. In addition, the team overseeing the project have the added advantage of years of working with and around Bitcoin to frame the design intent. Teranode's design leverages microservices to create a highly extensible cluster-based system.
+
+{% embed url="https://player.vimeo.com/video/732125502" %}
+
+It has become abundantly clear that demand for transaction validation and timestamping will continue to grow exponentially for many years, thus needing a strong plan for the future. The Bitcoin Association has taken a leadership role in undertaking the development of next generation node clients for node operators as we transition to a future where millions of transactions per second are submitted to the network.
+
+The Teranode project is being designed to manage multi-terabyte-sized blocks which will allow the network to process tens of millions of transactions per second. A single terabyte block produced every ten minutes can contain up to 4 billion transactions, giving the network a daily capacity of over 500 billion transactions. This will allow BSV to accommodate more than just monetary transactions to support machine-to-machine data exchange, smart contracts, enterprise applications and more with ease.
+
+Teranode has been designed to achieve linear increases in efficiency through both vertical and horizontal scaling. Efficiency in processing the billions of transactions that are to occur on the network can be increased through dedicating more powerful clustered machines that specialise in a specific aspect of building and validating blocks. This type of architecture also lends itself extremely well to modular services that can support enterprise applications with minimal overhead and cost. The ability to scale any part of the node infrastructure horizontally across a compute cluster will ensure that the network's transaction processing capacity and ability to manage enterprise application demand can grow with the most rapacious demand.

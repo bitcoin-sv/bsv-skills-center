@@ -1,0 +1,3 @@
+# Building a Working Blockchain from a List of Block Headers
+
+For users interfacing with the network, Simplified Payment Verification, or SPV, provides a means by which a user can start from a list of block headers and add individual transactions with their corresponding Merkle path, effectively reconstructing a partial Merkle tree. Storing transactions in this way gives users the ability to prove to anyone that records presented have been accepted by the network without having to manage even a tiny fraction of the network's total throughput. Users simply hold what they need and no more. When they no longer need the information, it can be pruned in the same manner used by miners to reclaim disk space.

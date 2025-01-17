@@ -1,0 +1,25 @@
+# The Coinbase Transaction
+
+
+
+![](https://bitcoinsv.academy/storage/photos/8381/BSVA-MerkleTrees_Ch4Less2_VA2.jpg)
+
+As we can see the first transaction in each block is called the Coinbase transaction. It is through this transaction that a node pays themselves the block reward which is a combination of the block subsidy and the fees from transactions that the node processes. This transaction will be unique to each node referencing their PublicKeyHash to receive the funds and only gets recorded to the chain if it is accepted as a valid block and becomes part of the longest chain of proof of work.
+
+![](https://bitcoinsv.academy/storage/photos/8381/BSVA-MerkleTrees_Ch4Less2_VA3.jpg)
+
+Since the coinbase awards coins that do not arise from other unspent outputs, there is no need to provide a previous hash or unlocking script to have these coins spendable. The previous hash field has in the past been used to provide some kind of identification of the node though this can easily be spoofed; see [minerID](https://wiki.bitcoinsv.io/index.php/MinerID). In order to assess the validity of the Coinbase transaction, other nodes will check whether the 'value' field does not exceed the aggregate the block subsidy and transaction fees. If either amount exceeds the maximum possible value, then it can be said the node is effectively trying to issue new tokens on the network and is violating the ruleset. In this case this coinbase transaction must be deemed invalid by the rest of the network. If the node fails to capture all the possible tokens that can be collected from the subsidy or fees within the block, then those tokens are effectively lost from circulation.\
+&#x20;\
+The extranonce fields in the image above are available for modulating if all 4.3 billion nonce iterations have been executed against a Merkle root in the block header. Once this extranonce value has been changed, the Merkle root will need to be recalculated as the serialised string of the coinbase transaction will have changed and therefore all interior node values along the left-hand edge as well. This parameter is also used to delegate a range of values for the extranonce to hashing machines operating under a pooled mining operation so as not to have separate machines duplicating their proof of work upon a particular transaction set summarised by a Merkle root.
+
+![](https://bitcoinsv.academy/storage/photos/8381/BSVA-MerkleTrees_Ch4Less2_VA4.jpg)
+
+The block subsidy was programmed to decrease algorithmically over specific block intervals in order to bootstrap the network and incentivise nodes to dedicate their computational resources to the proof of work process until use increases and transaction fees become the dominant reimbursement. The transaction fees that are collected in conjunction with the block subsidy are the aggregate difference in bitcoin tokens between the inputs and outputs of the transactions included in the Merkle tree that made it into the block. The fees are usually calculated as a specific amount of bitcoin tokens per byte of data in the transaction scripts that are to be validated by the node as well as a generally smaller fee per byte for relaying the transaction.\
+&#x20;\
+The block subsidy is what incentivises the nodes to continue to perform proof of work on the transaction set until the network throughput generates significant volume in fees. This arrangement highlights the role of a bitcoin node in the algorithmic distribution of the bitcoin tokens on to the network and the importance of transaction fees in the incentive structure to compensate for the workload of validating transactions and generating their larger and larger Merkle trees.\
+&#x20;\
+As these bitcoin tokens enter into circulation from the coinbase transaction, the double SHA256 hash of the coinbase script is the first leaf node of the Merkle tree whose root is to be recorded in the block header. As the nodes now commence applying their proof of work against the new block header candidates of the growing transaction set, one can see how the Merkle roots and the hash of the previous block within the new block’s header candidates create a linking of one block with a successfully verified set of transactions from the previous block.
+
+![](<../.gitbook/assets/Asset4-5 (1).gif>)
+
+If you consider that as each new transaction is appended to the Merkle tree, the fees are collected by the node and awarded to themselves via the coinbase transaction. This means that although there are substructures within the Merkle tree that preserved as it is being constructed, the leaf node value for the coinbase transaction (transaction index=0) will also need to be recalculated as each transaction is appended, as the string of the raw transaction data for the coinbase transaction will change to include the extra fees to be collected. In this way as the coinbase leaf node value changes (index 0), the left most interior nodes and Merkle root will change simultaneous to the rightmost free edge values that are also being calculated as new transactions are appended.
