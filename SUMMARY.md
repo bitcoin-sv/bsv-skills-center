@@ -146,7 +146,7 @@
   * [Who is it for?](network-topology/applications/spv-wallet/who-is-it-for.md)
   * [Functionality & Roadmap](network-topology/applications/spv-wallet/functionality-and-roadmap.md)
   * [Contribute](network-topology/applications/spv-wallet/contribute.md)
-  * [Developers Guide](network-topology/applications/spv-wallet/developer-docs/spv-wallet/README.md)
+  * [Developers Guide](network-topology/applications/spv-wallet/developer-docs/README.md)
     * [SPV Wallet](network-topology/applications/spv-wallet/developer-docs/spv-wallet/README.md)
       * [Authentication](network-topology/applications/spv-wallet/developer-docs/spv-wallet/authentication.md)
       * [Configuration](network-topology/applications/spv-wallet/developer-docs/spv-wallet/configuration.md)
