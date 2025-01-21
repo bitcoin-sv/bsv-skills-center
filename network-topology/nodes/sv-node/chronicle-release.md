@@ -1,15 +1,28 @@
 # Chronicle Release
 
+
+
+## Background
+
 The Chronicle release is a follow-up of [the Genesis upgrade in 2020](https://www.bsvblockchain.org/releases/changes-for-the-genesis-upgrade) which restored many aspects of the Bitcoin protocol that had been modified in previous software updates, including the removal of most limit-based consensus rules, replacing them with miner configurable settings that give node operators the autonomy needed to set their limits as they determine practical.
 
 The changes introduced in the Chronicle release are detailed in the sections below, outlining the removal of specific restrictions and requirements within the Bitcoin protocol to allow for greater flexibility and configurability for node operators.
 
-## 1. Removal of Restrictions
+## Release Summary
 
-The restrictions described below will be removed by default. If you wish to maintain these restrictions within your own transactions you need only ensure that each input is signed with the sighash fork id set. The nodes will continue to support transactions signed using the **BIP143** Transaction Digest Algorithm. If a transaction is signed using the _SIGHASH\_FORKID_ flag set, then the node will utilize the **BIP143** Transaction Digest Algorithm when taking the preimage during execution of signature verification opcodes (ex. _OP\_CHECKSIG_).\
+To summarize the Chronicle release, the following points should be outlined:
+
+* **Restoration of Bitcoin's Original Protocol**: The Chronicle release aims to restore the original Bitcoin protocol by re-installing specific opcodes and removing listed restrictions, while also balancing stability for businesses that depend on the current state.
+* **Transaction Digest Algorithms**: To address concerns around transaction malleability, the BSV Blockchain will support both the original OTDA (Original Transaction Digest Algorithm) and the BIP143 algorithm (with SIGHASH\_FORKID), ensuring compatibility and flexibility for developers and users. The OTDA algorithm remains sufficient to reintroduce relaxed malleability rules as needed.
+* **Selective Malleability Restrictions:** The application of malleability restrictions will depend on the interaction of the FORKID and RELAX sighash bits. Transactions signed without SIGHASH\_FORKID (or with RELAX enabled) will allow relaxed rules, removing strict enforcement of malleability-related constraints. This flexibility is agnostic to the number of signatures in a transaction.
+* **Business Impact and Flexibility:** Existing users and applications using the BIP143 digest (with SIGHASH\_FORKID) will remain unaffected by the Chronicle update. For developers aiming to leverage the protocol's original behavior, the Chronicle release offers the option to adopt relaxed malleability rules via the OTDA algorithm or the RELAX sighash bit. These changes ensure minimal disruption while enhancing flexibility.
+
+## Removal of Restrictions
+
+As mentioned above, in the Chronicle release, malleability rules are being adjusted under the concept of "Relax." These changes depend on the interplay of the `FORKID` and `RELAX` Sighash bits. By default, users who do nothing will retain the current behavior (with `FORKID` active and `RELAX` disabled). To align with the original protocol philosophy, the OTDA digest algorithm will reintroduce relaxed rules where needed. It is also important to mention that It doesn't matter if the transaction configuration involves multi-signatures within a script or across multiple inputs. This approach ensures the protocol integrity while enabling optional adoption of relaxed malleability constraints. The table below describes all possible scenarios and their expected results: \
 
 
-<table data-header-hidden><thead><tr><th width="199"></th><th></th></tr></thead><tbody><tr><td><strong>SIGHASH_FORKID</strong></td><td><strong>Algorithm to use when executing signature verification</strong></td></tr><tr><td>1</td><td>BIP143 TDA</td></tr><tr><td>0</td><td>Original TDA</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="199">Input/Transaction Config</th><th>FORK_ID</th><th>RELAX</th><th>TDA</th><th>Malleability Rules Enforcement</th></tr></thead><tbody><tr><td>Single input, single signature</td><td>0</td><td>0</td><td>OTDA</td><td>Relaxed</td></tr><tr><td>Single input, single signature</td><td>0</td><td>1</td><td>OTDA</td><td>Relaxed</td></tr><tr><td>Single input, single signature</td><td>1</td><td>0</td><td>NTDA</td><td>Strict</td></tr><tr><td>Single input, single signature</td><td>1</td><td>1</td><td>NTDA</td><td>Relaxed</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>All 0</td><td>All 0</td><td>OTDA</td><td>Relaxed</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>All 0</td><td>All 1</td><td>OTDA</td><td>Relaxed</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>All 1</td><td>All 0</td><td>NTDA</td><td>Strict</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>All 1</td><td>All 1</td><td>NTDA</td><td>Relaxed</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>All 0</td><td>Mixed</td><td>OTDA</td><td>Relaxed</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>All 1</td><td>Mixed</td><td>NTDA</td><td>Strict</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>Mixed</td><td>All 0</td><td>Mixed</td><td>Strict</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>Mixed</td><td>All 1</td><td>Mixed</td><td>Relaxed</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>Mixed</td><td>Mixed</td><td>Mixed</td><td>Strict</td></tr></tbody></table>
 
 ### Minimal Encoding Requirement  Removal
 
@@ -181,11 +194,3 @@ Output: tos = Input number / 2 
 
 The rest of the Opcodes remain intact; their description can be found in the [corresponding document](https://docs.bsvblockchain.org/protocol/transaction-lifecycle/opcodes-used-in-script).&#x20;
 
-## Summary
-
-To summarize the Chronicle release, the following points should be outlined:
-
-* **Restoration of Bitcoin's Original Protocol**: The Chronicle release aims to restore the original Bitcoin protocol by re-installing specific opcodes and removing listed restrictions, while also balancing stability for businesses that depend on the current state.
-* **Transaction Digest Algorithms**: To address concerns around transaction malleability, the BSV Blockchain will support both the original TDA and the BIP143 Algorithm (with SIGHASH\_FORKID), allowing flexibility for devs and users.
-* **Selective Malleability Restrictions:** For transactions signed without the SIGHASH\_FORKID flag, the malleability-related restrictions (e.g., Low S value requirement, Clean Stack policy) will be removed.
-* **Business Impact and Flexibility:** Existing users/applications using the **BIP143** digest will remain unaffected by the Chronicle update. However, developers can take advantage of more flexibility with the original algorithm if needed.
