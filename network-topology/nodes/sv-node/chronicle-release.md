@@ -14,12 +14,18 @@ To summarize the Chronicle release, the following points should be outlined:
 
 * **Restoration of Bitcoin's Original Protocol**: The Chronicle release aims to restore the original Bitcoin protocol by re-installing specific opcodes and removing listed restrictions, while also balancing stability for businesses that depend on the current state.
 * **Transaction Digest Algorithms**: The BSV Blockchain will now support both the Original Transaction Digest Algorithm (OTDA) and the BIP143 digest algorithm (with SIGHASH\_FORKID), ensuring compatibility and flexibility for developers and users. This restores the original Bitcoin transaction digest algorithm, enabling developers to have greater flexibilty in utilizing Bitcoin Script.
-* **Selective Malleability Restrictions:** To address concerns about the OTDA's reintroduction of sources of transaction malleability, the application of malleability restrictions will depend on the interaction of the FORKID and RELAX sighash bits. Transactions signed without SIGHASH\_FORKID (or with RELAX enabled) will allow relaxed rules, removing strict enforcement of malleability-related constraints. This flexibility is agnostic to the number of signatures in a transaction.
+* **Selective Malleability Restrictions:** The Chronicle Release removes restrictions that were put in place to prevent transaction malleability. To address concerns about the reintroduction of sources of transaction malleability, the application of malleability restrictions will depend on the interaction of the FORKID [`0x40`] and RELAX [`0x20`] sighash bits. Transactions signed without SIGHASH\_FORKID (or with RELAX enabled) will allow relaxed rules, removing strict enforcement of malleability-related constraints. This flexibility is agnostic to the number of signatures in a transaction. The restrictions relevant to the RELAX flag are:
+    * Minimal Encoding Requirement
+    * Low S Requirement for Signatures
+    * Clean Stack Requirement
+    * Data Only in Unlocking Script Requirement
 * **Business Impact and Flexibility:** In line with the BSV Blockchain's commitment to stability, existing users and applications using the BIP143 digest (with SIGHASH\_FORKID) will remain unaffected by the Chronicle update. For developers aiming to leverage the original protocol's behavior, the Chronicle release offers the option to utilize the Original Transaction Digest Algorithm (OTDA) and the flexibility to determine malleability-related restrictions for transactions.
 
-## Transaction Digest Algorithms and Selective Malleability Restrictions
+## 1. Transaction Digest Algorithms and Selective Malleability Restrictions
 
-As mentioned above, in the Chronicle release, malleability rules are being adjusted under the concept of "Relax." These changes depend on the interplay of the `FORKID` and `RELAX` Sighash bits. By default, users who do nothing will retain the current behavior (with `FORKID` active and `RELAX` disabled). The OTDA will reintroduce relaxed rules where needed. It is also important to mention that it doesn't matter if the transaction configuration involves multiple signatures within a script or across multiple inputs. This approach enables optional adoption of relaxed malleability constraints. The table below describes all possible scenarios and their expected results: \
+As mentioned above, in the Chronicle release, malleability rules are being adjusted under the concept of "Relax." 
+
+These changes depend on the interplay of the `FORKID` [`0x40`] and `RELAX` [`0x20`] Sighash bits. By default, users who do nothing will retain the current behavior (with `FORKID` active and `RELAX` disabled). The OTDA will reintroduce relaxed rules where needed. It is also important to mention that it doesn't matter if the transaction configuration involves multiple signatures within a script or across multiple inputs. This approach enables optional adoption of relaxed malleability constraints. The table below describes all possible scenarios and their expected results: 
 
 
 <table data-header-hidden><thead><tr><th width="199">Input/Transaction Config</th><th>FORK_ID</th><th>RELAX</th><th>TDA</th><th>Malleability Rules Enforcement</th></tr></thead><tbody><tr><td>Single input, single signature</td><td>0</td><td>0</td><td>OTDA</td><td>Relaxed</td></tr><tr><td>Single input, single signature</td><td>0</td><td>1</td><td>OTDA</td><td>Relaxed</td></tr><tr><td>Single input, single signature</td><td>1</td><td>0</td><td>BIP143</td><td>Strict</td></tr><tr><td>Single input, single signature</td><td>1</td><td>1</td><td>BIP143</td><td>Relaxed</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>All 0</td><td>All 0</td><td>OTDA</td><td>Relaxed</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>All 0</td><td>All 1</td><td>OTDA</td><td>Relaxed</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>All 1</td><td>All 0</td><td>BIP143</td><td>Strict</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>All 1</td><td>All 1</td><td>BIP143</td><td>Relaxed</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>All 0</td><td>Mixed</td><td>OTDA</td><td>Relaxed</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>All 1</td><td>Mixed</td><td>BIP143</td><td>Strict</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>Mixed</td><td>All 0</td><td>Mixed</td><td>Strict</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>Mixed</td><td>All 1</td><td>Mixed</td><td>Relaxed</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>Mixed</td><td>Mixed</td><td>Mixed</td><td>Strict</td></tr></tbody></table>
@@ -52,21 +58,21 @@ Remove `SCRIPT_VERIFY_CLEANSTACK` and associated logic from the software. 
 
 ### Data Only in Unlocking Script Removal  &#x20;
 
-The node will no longer require that unlocking scripts only include data and associated pushdata op codes. Functional Opcodes will be permitted. \
-\
-It should be noted that the unlocking script is evaluated, the resulting main stack is kept, but the conditional and alt stacks are cleared. The locking script is then evaluated. Therefore any OP\_RETURN use in the unlocking script simply leads to the end of unlocking script execution - not script execution as a whole.\
-\
+The node will no longer require that unlocking scripts only include data and associated pushdata op codes. Functional Opcodes will be permitted. 
+
+It should be noted that the unlocking script is evaluated, the resulting main stack is kept, but the conditional and alt stacks are cleared. The locking script is then evaluated. Therefore any OP_RETURN use in the unlocking script simply leads to the end of unlocking script execution - not script execution as a whole.
+
 There are specific use cases for "showing your work" like this in the unlocking script. Typically it is not necessary to include intermediate values, and simply passing the result of any calculation as push data would be sufficient.
 
 ## 2. Opcodes 
 
 The opcodes listed below will be re-instated.  &#x20;
 
-* Implementation should exhibit standard behavior. i.e. If the opcode produces an error, the code should immediately return the result of a call to set\_error with the appropriate error message and code.
+* Implementation should exhibit standard behavior. i.e. If the opcode produces an error, the code should immediately return the result of a call to set_error with the appropriate error message and code.
 * Opcodes do not check if the supplied operands are of the expected type. Rather if an opcode expects a particular data type on top of the stack (tos), it will interpret whatever it finds as that data type.
 * If an opcode expects values on the stack and they are not present, then an error should be returned. 
 
-### OP\_VER &#x20;
+### OP_VER &#x20;
 
 Opcode number 98 , hex `0x62`
 
