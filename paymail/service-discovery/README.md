@@ -9,6 +9,6 @@ Service discovery is separated into two phases:
 * [Host Discovery](host-discovery.md) is a DNS based lookup of the responsible host for a given paymail alias
 * [Capability Discovery](capability-discovery.md) resolves the paymail service endpoint URIs from the responsible DNS host and describes the capabilities supported by a given paymail service instance
 
-### Service Discovery Process
+## Service Discovery Process
 
 <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>

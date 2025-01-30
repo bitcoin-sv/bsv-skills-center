@@ -18,7 +18,7 @@ The goals of the paymail protocol are:
 * Security and policy management
 * Capability extensibility and discovery
 
-### bsvalias
+## bsvalias
 
 The family of related protocols are collectively referred to as the `bsvalias` protocols. At the time of writing, these include:
 
@@ -27,7 +27,7 @@ The family of related protocols are collectively referred to as the `bsvalias` p
 * [Public Key Infrastructure](public-key-infrastructure.md)
 * [Payment Addressing](payment-addressing/)
 
-### paymail
+## paymail
 
 **paymail** is the name for the implementation of the following protocols:
 
@@ -37,7 +37,7 @@ The family of related protocols are collectively referred to as the `bsvalias` p
 
 The **paymail** brand is reserved for products and services that, at a minimum, implement each of the above.
 
-### Extension Protocols
+## Extension Protocols
 
 As defined in the [BRFC Specifications](brfc-specifications/), anybody can propose an extension to the `bsvalias` and paymail protocols, and as per the [Capability Discovery](service-discovery/capability-discovery.md) section of the [Service Discovery](service-discovery/) protocol, implementations can declare support for extensions to allow for cross-wallet processes.
 

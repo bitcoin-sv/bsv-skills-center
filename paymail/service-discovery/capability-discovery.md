@@ -6,7 +6,7 @@ Capability Discovery is the process by which a paymail client learns the support
 
 Drawing inspiration from [RFC 5785](http://tools.ietf.org/html/rfc5785) and IANA's [Well-Known URIs](https://www.iana.org/assignments/well-known-uris/well-known-uris.xhtml) resource, the Capability Discovery protocol dictates that a machine-readable document is placed in a predictable location on a web server.
 
-### Setup
+## Setup
 
 A paymail service operator creates a JSON formatted text file at the following location:
 
@@ -46,13 +46,13 @@ A paymail service operator creates a JSON formatted text file at the following l
 
 Note that the capabilities `pki` and `paymentDestination` are not named for their BRFC IDs, as these are the minimum set of capabilities required for a service to qualify as a paymail service and are treated as special cases.
 
-### Client Queries
+## Client Queries
 
 Having retrieved a `Target`:`Port` pair using Host Discovery, a paymail client constructs an HTTP GET request to `https://<target>:<port>/.well-known/bsvalias`, including caching hints from previous requests (if any).
 
 Following a successful request, clients have now discovered all configuration information required for interacting with a paymail service and are aware of all supported extension protocols offered by the remote.
 
-### Changes from previous versions
+## Changes from previous versions
 
 In the original drafts, the `bsvalias` file was a text based, tab-delimited list of `<domain>.<tld> \tab https://<base-uri>` pairs.
 
@@ -61,22 +61,22 @@ In the original drafts, the `bsvalias` file was a text based, tab-delimited list
 * Capability Discovery was merged into the previous Address Discovery base URI approach
 * A paymail (`bsvalias`) version field was added for forward compatibility, although its interpretation is unspecified at this time
 
-### Design Considerations
+## Design Considerations
 
 In a previous version of this specification, this step of the service discovery returned a base URI from which all request URIs would be built. It was suggested that the `.well-known/bsvalias` document merge a separate capability discovery which was originally planned to exist at `<base-uri>/capabilities`. In doing so, the following points were considered:
 
-#### Capabilities differ by domain and by user within a domain
+### Capabilities differ by domain and by user within a domain
 
 * Service providers hosting multiple domains may offer different capabilities at different price points
 * Administrators may enable or disable capabilities on a per-user bases
 
 A single `.well-known/bsvalias` document cannot describe the per-alias/per-domain capabilities. Instead it describes the services supported by the implementation, regardless of account-level availability. Where a paymail implementation supports a particular protocol but it is not enabled for a given account, upon receiving a request that will not be fulfilled, a `404` (Not Found) response should be given. This is (deliberately) indistinguishable from `{alias}`/`{domain.tld}` not found.
 
-#### Simplified client/request flow
+### Simplified client/request flow
 
 Merging capability discovery reduces the amount of requests made in order to locate a given service endpoint, and simplifies client implementations.
 
-#### More complicated deployment
+### More complicated deployment
 
 One drawback of merging the two phases of discovery is that `.well-known/bsvalias` is no longer _set-and-forget_.
 

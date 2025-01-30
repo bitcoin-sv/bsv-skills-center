@@ -21,11 +21,11 @@ The template values `{alias}` and `{domain.tld}` refer to the components of the 
 
 The sender will receive a Bitcoin output script, which should be used in the construction of the payment transaction to the receiver.
 
-### Flow
+## Flow
 
 <figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
-### Sender Request
+## Sender Request
 
 The `capabilities.paymentDestination` path returns a URI template. Senders should replace the `{alias}` and `{domain.tld}` template parameters with the values from the receiver's paymail handle and then make an HTTP POST request against this URI.
 
@@ -51,7 +51,7 @@ The body of the POST request _MUST_ have a content type of `application/json` an
 | `purpose`      |          | Human-readable description of the purpose of the payment                          |
 | `signature`    |          | Compact Bitcoin message signature; see notes                                      |
 
-#### Timestamp field (dt)
+### Timestamp field (dt)
 
 The timestamp field should contain the [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) formatted current time at the point the receiver initiates a payment destination request. From JavaScript this can be constructed using `JSON.stringify()`:
 
@@ -67,7 +67,7 @@ Which yields:
 }
 ```
 
-#### Signature field
+### Signature field
 
 The Bitcoin client has long offered the ability to sign messages and verify message signatures. The Bitcoin functionality is essentially an implementation of standard ECDSA, however along with the (_r_, _s_) signature pair there is additional information to allow the Bitcoin client to verify a message signature against a P2PKH _address_ (a hash of a public key) rather than directly against a public key.
 
@@ -81,11 +81,11 @@ The message to be signed begins with the Bitcoin signature scheme's traditional 
 * If `amount` is not present, the string `"0"` is used
 * If purpose is not present, an empty string `""` is used (effectively purpose is not included in the message)
 
-### Receiver Response
+## Receiver Response
 
 Below are the responses that have meaning to this protocol. A server may return other status codes, for example `5xx` indicating some sort of server failure. Clients should treat status codes not specified as part of this specification as some sort of transient error and may retry at their leisure.
 
-#### 200 OK
+### 200 OK
 
 Returned when a valid request for a known paymail handle has been received. The return message _MUST_ have a content type of `application/json`. The response body _MUST_ conform to the following schema:
 
@@ -134,11 +134,11 @@ The service response body would be:
 }
 ```
 
-#### 404 Not Found
+### 404 Not Found
 
 The paymail handle was not found by this service.
 
-### Extensions to this Specification
+## Extensions to this Specification
 
 * [Sender Validation](sender-validation.md) which performs a reverse PKI lookup on the sender then verifies the message signature
 * [Receiver Approvals](receiver-approvals.md) extends the payment destination process with asynchronous approvals by the receiver before yielding a payment destination script

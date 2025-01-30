@@ -17,21 +17,21 @@ Each paymail handle `<alias>@<domain>.<tld>` _MUST_ be issued a stable ECDSA pub
 
 The template values `{alias}` and `{domain.tld}` refer to the components of target paymail handle `<alias>@<domain>.<tld>` and must be substituted by the client before issuing a request.
 
-### PKI Flow
+## PKI Flow
 
 <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
-### Client Request
+## Client Request
 
 The `capabilities.pki` path returns a URI template. Clients should replace the `{alias}` and `{domain.tld}` template parameters and then make an HTTP GET request against this URI.
 
 Standard HTTP caching headers _SHOULD_ be supported, and clients that have previously requested the public key _SHOULD NOT_ re-request information within any server-advertised caching window.
 
-### Server Responses
+## Server Responses
 
 Below are the responses that have meaning to this protocol. A server may return other status codes, for example `5xx` indicating some sort of server failure. Clients should treat status codes not specified as part of this specification as some sort of transient error and may retry at their leisure.
 
-#### 200 OK
+### 200 OK
 
 Returned when a valid request for a known paymail handle has been received. The return message _MUST_ have a content type of `application/json`. The response body _MUST_ conform to the following schema:
 
@@ -50,10 +50,10 @@ The public key _MUST_ be a valid point on the secp256k1 curve, compressed, and h
 | `00`  | `02`   | "Odd/even" indicator, must be either `02` or `03` |
 | `02`  | `64`   | Elliptic curve point x-coordinate                 |
 
-#### 304 Not Modified
+### 304 Not Modified
 
 No public key rotation has taken place since the previous request, based on caching headers supplied.
 
-#### 404 Not Found
+### 404 Not Found
 
 The paymail handle was not found by this service.

@@ -8,7 +8,7 @@ The PayTo Protocol Prefix specification defines the URI prefix `payto:` to mean 
 
 paymail client implementers _SHOULD_ ensure that their application is registered with the target device operating system as a protocol/deeplink handler for the `payto:` protocol prefix.
 
-### Full Specification
+## Full Specification
 
 ```
 payto:<receiver>?amount=<amount>&purpose=<purpose>
@@ -20,6 +20,6 @@ payto:<receiver>?amount=<amount>&purpose=<purpose>
 | `amount`   |          | Integer number of satoshis to be paid.                                                |
 | `purpose`  |          | Human-readable description of the purpose of the payment                              |
 
-### Capability Discovery
+## Capability Discovery
 
 This specification governs client-side behaviour. No specific capabilities are delivered by paymail implementations.

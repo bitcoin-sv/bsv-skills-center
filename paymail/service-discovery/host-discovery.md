@@ -9,7 +9,7 @@ The use of an `SRV` record was chosen for the following reasons:
 * As an optional step, if the canonical Capability Discovery host is the same as the domain found in the paymail alias, the DNS record can be omitted entirely.
 * DNS records (including `SRV`) feature a TTL, which clients can use for caching responses. All common DNS clients implement this caching _out-of-the-box_, meaning implementers do not have to roll this themselves.
 
-### Setup
+## Setup
 
 A domain owner may create an `SRV` record with the following parameters:
 
@@ -33,11 +33,11 @@ See [https://en.wikipedia.org/wiki/SRV\_record](https://web.archive.org/web/2024
 
 `SRV` records **must** be served with a valid [DNSSEC](https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions) signature chain with the exception that if the `SRV` record points to `<domain>.<tld>` or `www.<domain>.<tld>`, then the `SRV` records **should** be served with a valid DNSSEC signature chain.
 
-### Client Queries
+## Client Queries
 
 Given a paymail alias `<alias>@<domain>.<tld>`, a paymail client would perform a DNS lookup for an `SRV` record matching `_bsvalias._tcp.<domain>.<tld>`. The combination of `Target` and `Port` fields are then used for Capability Discovery. Should no record be returned, a paymail client should assume a host of `<domain>.<tld>` and a port of `443`.
 
-#### Security and SRV Records
+### Security and SRV Records
 
 In its legacy form, that is, without DNSSEC, DNS is not a secure mechanism. It is susceptible to a range of attacks, the most serious for the purposes of the BSV Alias protocol being an intercept or man-in-the-middle (MITM) attack. In this scenario an attacker intercepts DNS queries and responds with their own data. This would allow an attacker to direct a client to a paymail implementation of their choosing, which would further allow for them to control all further communications with a client.
 
