@@ -230,7 +230,7 @@ Port        443
 Target      <endpoint-discovery-host>
 ```
 
-> More information about setting up SRV record [here](https://bsvalias.org/02-01-host-discovery.html)\\
+> More information about setting up SRV record [here](https://web.archive.org/web/20240302191112/https://bsvalias.org/02-01-host-discovery.html).
 
 After setting up SRV record you need to activate DNSSEC for your domain. DNSSEC, short for Domain Name System Security Extensions, is a set of security measures designed to add cryptographic integrity to the Domain Name System (DNS). DNSSEC aims to provide authentication and data integrity to DNS responses, protecting against various types of attacks such as DNS spoofing and cache poisoning.
 
