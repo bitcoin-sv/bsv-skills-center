@@ -6,12 +6,10 @@ As we now have a high-level conceptual understanding of Bitcoin transactions, we
 
 Recall that the first step of the Digital Signing protocol is generating the public and private keys. The equation below gives the relationship between private and public keys, and the same applies to bitcoin.
 
+> $$Public \ key = Private \ key * Base \ Point$$ **;** ---------------------(1)
 >
->
-> $$Public \ key = Private \ key * Base \ Point$$ **;**      ---------------------(1)&#x20;
->
-> * The private key is an integer&#x20;
-> * The base point is element on the curve to which when group operation is applied repeatedly. It generates all the other elements of the cyclic group. In this case, the elements are points on the curve&#x20;
+> * The private key is an integer
+> * The base point is element on the curve to which when group operation is applied repeatedly. It generates all the other elements of the cyclic group. In this case, the elements are points on the curve
 > * A public key is one such point on curve and has an $$x$$ and $$y$$ co-ordinate
 
 _While we explain the generation of private-public keys from a consumer/end-user perspective, when building enterprise applications, organizations may choose to implement this functionality by themselves depending on their use case._
@@ -42,11 +40,11 @@ Though there are no protocol restrictions, currently, most Bitcoin transactions 
 * Bitcoin transactions are committed using the Distinguished Encoding Rules \[**DER, sighash**] format, which we shall discuss later
 * The signature verification is done by combining and comparing the unlocking script and locking script and evaluating whether that yields a true or false result. This has already been covered under Script evaluation.
 
-_Note_ - The above understanding provides an abstraction of how a transaction works in Bitcoin. There may be a requirement to verify the signature against a public key for enterprise applications before the transaction reaches the nodes. The general practice used by applications is to not share a public key but rather a bitcoin address; which is a public key double hashed as Address = RIPEMD-160(SHA-256$$(K_{pub)}$$)  and this output is then encoded as a base58 string of 20 bytes.
+_Note_ - The above understanding provides an abstraction of how a transaction works in Bitcoin. There may be a requirement to verify the signature against a public key for enterprise applications before the transaction reaches the nodes. The general practice used by applications is to not share a public key but rather a bitcoin address; which is a public key double hashed as Address = RIPEMD-160(SHA-256$$(K_{pub)}$$) and this output is then encoded as a base58 string of 20 bytes.
 
 ### Signature Format
 
-Recall from the ECDSA chapter that signature consists of pair of integers $$(r, s)$$. Bitcoin transactions use a format **\[DER, SIGHASH]**. We shall now elaborate on the DER and SIGHASH parts.&#x20;
+Recall from the ECDSA chapter that signature consists of pair of integers $$(r, s)$$. Bitcoin transactions use a format **\[DER, SIGHASH]**. We shall now elaborate on the DER and SIGHASH parts.
 
 1.  **DER** - Distinguished Encoding Rules (DER) specify digital signatures in binary format and standardized by OpenSSL. In essence it is a way to serialize the signatures for transmission or storage. The format for DER is \[header, length, rheader, rlength, r, sheader, slength, s]
 
@@ -59,8 +57,7 @@ Recall from the ECDSA chapter that signature consists of pair of integers $$(r, 
     7. slength - Length of s, after encoding as a big-endian integer
     8. s - s encoded as a big-endian integer
 
-    _**Note**_ - _big-endian is an encoding format that provides a more human readable array of binary bytes when serializing and storing numbers bigger than 256, i.e., 2^8._\
-
+    _**Note**_ - _big-endian is an encoding format that provides a more human readable array of binary bytes when serializing and storing numbers bigger than 256, i.e., 2^8._\\
 2.  **SIGHASH** - The purpose of this flag is to provide flexibility in constructing transactions by specifying which part of the transaction is expected to be signed. SIGHASH is analogous to an enumeration and is set to either of six values provided below. Also, while we generally say transaction inputs or output to be signed, technically, the corresponding unlocking script should have the signature / public key.
 
     Recall transactions can have multiple inputs and outputs.
@@ -72,14 +69,12 @@ Recall from the ECDSA chapter that signature consists of pair of integers $$(r, 
     5. SIGHASH\_NONE | ANYONECANPAY - sign its own input, and no outputs; value = 0x82
     6. SIGHASH\_SINGLE | ANYONECANPAY - sign its own input and outputs with the same index; value = 0x83
 
-    Generally, most transactions use SIGHASH\_ALL; for beginner level, it is sufficient to know the same.&#x20;
+    Generally, most transactions use SIGHASH\_ALL; for beginner level, it is sufficient to know the same.
 
     \
-    &#xNAN;_**Note**_\
-    &#xNAN;_-_ _Before signing the transaction input or output, it is hashed using SHA-256._\
-    _- Currently, all the BSV transactions require an additional SIGHASH flag which is SIGHASH\_FORKID, and it adds the value 0x40 to SIGHASH value. So value 0x01 for SIGHASH\_ALL becomes 0x41 and so on._
+    \&#xNAN;_**Note**_\
+    \&#xNAN;_-_ _Before signing the transaction input or output, it is hashed using SHA-256._\
+    &#xNAN;_- Currently, all the BSV transactions require an additional SIGHASH flag which is SIGHASH\_FORKID, and it adds the value 0x40 to SIGHASH value. So value 0x01 for SIGHASH\_ALL becomes 0x41 and so on._
 
 \
-\
-
-
+\\

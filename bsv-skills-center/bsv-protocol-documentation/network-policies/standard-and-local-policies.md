@@ -8,7 +8,7 @@ description: >-
 
 When a new transaction arrives at a node, it goes through a set of checks and validation rules. These are the consensus rules a node is mandated to enforce for the network's operations. Most of them are standard across all nodes and are part of the Bitcoin protocol (shown as Standard Policies in the diagram below). Node’s also apply local policies which are specific to their own infrastructure and preferences.
 
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Standard and Local Policies - Transaction Storage</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Standard and Local Policies - Transaction Storage</p></figcaption></figure>
 
 Generally, the rules for Local Policies are only checked for transactions before they are accepted into the mempool or included in the block candidate. In contrast, Standard Policies or consensus rules are always checked.
 

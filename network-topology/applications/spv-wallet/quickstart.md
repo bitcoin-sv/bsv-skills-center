@@ -82,7 +82,7 @@ Do you want to run block-headers-service? [Y/n]
 # (Defaults to yes, so just press Enter)
 ```
 
-> Note: If you want to read about Block Headers Service role in SPV -> go [here](components/block-headers-service.md) and [here](developer-docs/block-headers-service/README.md)
+> Note: If you want to read about Block Headers Service role in SPV -> go [here](components/block-headers-service.md) and [here](developer-docs/block-headers-service/)
 
 ```bash
 # The following two questions are about running referential custodial web wallet (its frontend and backend) 
@@ -230,7 +230,7 @@ Port        443
 Target      <endpoint-discovery-host>
 ```
 
-> More information about setting up SRV record [here](https://web.archive.org/web/20240302191112/https://bsvalias.org/02-01-host-discovery.html).
+> More information about setting up SRV record [here](../../../paymail/service-discovery/host-discovery.md).
 
 After setting up SRV record you need to activate DNSSEC for your domain. DNSSEC, short for Domain Name System Security Extensions, is a set of security measures designed to add cryptographic integrity to the Domain Name System (DNS). DNSSEC aims to provide authentication and data integrity to DNS responses, protecting against various types of attacks such as DNS spoofing and cache poisoning.
 

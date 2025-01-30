@@ -162,6 +162,24 @@
       * [Configuration](network-topology/applications/spv-wallet/developer-docs/block-headers-service/configuration.md)
   * [Additional Components](network-topology/applications/spv-wallet/additional-components.md)
 
+## paymail
+
+* [Overview](paymail/overview.md)
+* [BRFC Specifications](paymail/brfc-specifications/README.md)
+  * [Specification Documents](paymail/brfc-specifications/specification-documents.md)
+  * [BRFC ID Assignment](paymail/brfc-specifications/brfc-id-assignment.md)
+* [Service Discovery](paymail/service-discovery/README.md)
+  * [Host Discovery](paymail/service-discovery/host-discovery.md)
+  * [Capability Discovery](paymail/service-discovery/capability-discovery.md)
+* [Public Key Infrastructure](paymail/public-key-infrastructure.md)
+* [Payment Addressing](paymail/payment-addressing/README.md)
+  * [Basic Address Resolution](paymail/payment-addressing/basic-address-resolution.md)
+  * [Sender Validation](paymail/payment-addressing/sender-validation.md)
+  * [Receiver Approvals](paymail/payment-addressing/receiver-approvals.md)
+  * [PayTo Protocol Prefix](paymail/payment-addressing/payto-protocol-prefix.md)
+* [Verify Public Key Owner](paymail/verify-public-key-owner.md)
+* [Recommendations](paymail/recommendations.md)
+
 ## Guides
 
 * [Local Blockchain Stack](guides/local-blockchain-stack/README.md)

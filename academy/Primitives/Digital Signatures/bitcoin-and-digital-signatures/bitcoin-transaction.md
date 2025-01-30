@@ -14,8 +14,6 @@ GIF
 
 ### Scenario Setup
 
-
-
 We now elaborate on Transaction Input, Output, and specifically the locking and unlocking scripts. To do so, we demonstrate a basic example of a fund transfer.
 
 ![](https://bitcoinsv.academy/storage/photos/4318/BSVA-DigitalSignatures-Chapter4-Image002.gif)
@@ -38,12 +36,12 @@ _Please keep in mind that only the required concepts and terms have been include
 
 ![](https://bitcoinsv.academy/storage/photos/4318/BSVA-DigitalSignatures-Chapter4-Image003.gif)
 
-<mark style="color:blue;">All Transaction Inputs are inextricably associated with the previous transaction, and all Transaction Outputs will contain details of the conditions which need to be satisfied for future spending</mark>.&#x20;
+<mark style="color:blue;">All Transaction Inputs are inextricably associated with the previous transaction, and all Transaction Outputs will contain details of the conditions which need to be satisfied for future spending</mark>.
 
 An easier way to understand this would be to view it as analogous to transferring fiat currency in the current financial ecosystem. When a conventional currency transfer occurs, there are two parts - the amount is debited from a payers' account and credited to a payee's account. In bitcoin, '_debited from_' (payer) details are contained in the _Transaction Input_, and the details of '_credited to_' (payee) are included in the _Transaction Output_. The difference here is the Transaction Inputs have the information of the source of the funds. For example, consider transaction T2, where Bob transfers funds to Carol. Transaction Input of T2 will be associated with previous transaction T1, i.e., transaction via Bob received funds from Alice.
 
 \
-&#x20;
+
 
 ![](https://bitcoinsv.academy/storage/photos/4318/BSVA-DigitalSignatures-Chapter4-Image004.gif)
 
@@ -80,9 +78,9 @@ To spend the funds further, it becomes imperative to sign the funds using a priv
 Generally, transactions are standardized using templates in Bitcoin. This implies that a standard script is used in a transaction input and transaction output. For example, one of the most widely used transaction templates is the "Pay-to-Public Key Hash (P2PKH)." To provide some insight into what the script looks like, below is the unlocking and locking script of a P2PKH script -
 
 > _`Unlocking Script - <Signature> <Public Key>`_\
-> &#xNAN;_`Locking Script - OP_DUP OP_HASH160 <Public Key Hash> OP_EQUALVERIFY OP_CHECKSIG`_
+> \&#xNAN;_`Locking Script - OP_DUP OP_HASH160 <Public Key Hash> OP_EQUALVERIFY OP_CHECKSIG`_
 >
 > \
-> &#xNAN;_`<Signature>, <Public Key>, <Public Key Hash> are operands and the remaining are opcodes`_
+> \&#xNAN;_`<Signature>, <Public Key>, <Public Key Hash> are operands and the remaining are opcodes`_
 
 _Note_: _The opcode OP\_CHECKSIG is relevant for digital signatures, as it is used for verifying digital signatures._

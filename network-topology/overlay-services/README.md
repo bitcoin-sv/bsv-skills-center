@@ -14,12 +14,12 @@ An overlay in computer networking refers to a virtual network built on top of an
 
 Global Listening is the typical historical way Blockchains have gathered transactions so that they can be indexed and read back by client applications.
 
-<figure><img src="../../.gitbook/assets/image (3) (1).png" alt="" width="375"><figcaption><p>Global Listening</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt="" width="375"><figcaption><p>Global Listening</p></figcaption></figure>
 
 Overlays encapsulate a different approach. They rely on [SPV](../../bsv-skills-center/bsv-protocol-documentation/light-clients-and-spv-processes/simplified-payment-verification-spv/) to validate transactions they receive from clients, and allow users to read transaction data back without having to index all block data.\
 
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt="" width="367"><figcaption><p>Overlay SPV</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt="" width="367"><figcaption><p>Overlay SPV</p></figcaption></figure>
 
 ## Business Context
 
@@ -109,6 +109,6 @@ The future of overlay networks includes advancements in scalability, security, a
 
 ### Technical Changes
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 We expect there to be a scaled Merkle Service which will replace ARC's microservice BlockTx as the component which calculates Merkle paths. This change is anticipated because Teranode blocks can get siginificantly bigger, and BlockTx is not built for anything larger than 4GB blocks. Teranode announces subtrees while constructing its own block, so the work can start early and propagation can be executed on block discovery without there being a massive spike in computational effort at that moment only to be left unused until a new block is found. The work is instead distributed over the duration of the block assembly process. More on that as alpha versions are released.

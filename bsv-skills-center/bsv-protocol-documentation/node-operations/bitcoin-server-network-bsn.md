@@ -20,7 +20,7 @@ Bitcoin Server Network is the name given to the subsystem in the node software, 
 
 A high-level component diagram is show below
 
-<figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## **Peer Connector**
 
