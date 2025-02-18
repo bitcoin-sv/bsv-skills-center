@@ -6,8 +6,6 @@ Although it's not required in order to gain an understanding of how BSV works, e
 
 Note: This implementation is for informational purposes only. It has not been optimized or rigorously tested and should therefore not be used in a production environment. As a general rule, you should only ever use a rigorously tested and widely accepted implementation of any hash function.
 
-Source Code can be found here: [https://github.com/jakeBitcoinAssociation/hash-functions](https://github.com/jakeBitcoinAssociation/hash-functions)
-
 ## Example Implementation of SHA-256 in GoLang
 
 Our implementation of SHA-256 follows this design:
@@ -26,4 +24,4 @@ Our implementation of SHA-256 follows this design:
 
 **3. Final value construction and output**
 
-\
+\\

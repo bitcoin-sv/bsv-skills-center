@@ -100,5 +100,3 @@ All spendable outputs from previous transactions are held by all nodes in their 
 As transactions are broadcast to the BSV network to be added to the blockchain, each node validates them against the block consensus rules, then against their local policies. If received transactions pass validation, their TXIDs are added to the node's working Merkle Tree.
 
 Nodes then send **block header templates** to their **hashing pools** with a range of nonce values to be iterated through with the aim of finding a proof-of-work solution. Once a proof-of-work solution is found, the block ID is finalized, and the resulting ‘proposed’ block is distributed to the rest of the nodes on the network. Once the majority of other network nodes have signalled acceptance of the newly found block by starting to build a block template using its block ID as the previous block hash, the block is considered won, and after 99 more blocks are added on top of it, its block reward UTXO becomes spendable.
-
-[Find out more about node infrastructure in our Introduction to Bitcoin Infrastructure course.](https://bitcoinsv.academy/course/introduction-to-bitcoin-infrastructure)

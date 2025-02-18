@@ -416,7 +416,7 @@
     * [Signed Messages](bsv-academy/digital-signatures/bsv-and-digital-signatures/signed-messages.md)
     * [Miner Identification and Digital Signatures](bsv-academy/digital-signatures/bsv-and-digital-signatures/miner-identification-and-digital-signatures.md)
   * [Final Assessment](<academy/Primitives/Digital Signatures/final-assessment/assessment.md>)
-* [Bitcoin Theory](<academy/BSV Theory/README.md>)
+* [BSV Theory](<academy/BSV Theory/README.md>)
   * [Abstract](<academy/BSV Theory/abstract/abstract.md>)
     * [Peer-to-Peer Cash](<academy/BSV Theory/abstract/peer-to-peer-cash.md>)
     * [Digital Signatures and Trusted Third Parties](<academy/BSV Theory/abstract/digital-signatures-and-trusted-third-parties.md>)
