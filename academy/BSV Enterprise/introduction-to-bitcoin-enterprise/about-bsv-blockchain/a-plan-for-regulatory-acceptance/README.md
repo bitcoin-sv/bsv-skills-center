@@ -5,6 +5,3 @@ In so much of the cryptocurrency and blockchain landscape, there is evidence of 
 Bitcoin was never created to subvert the legal system or destroy central banks, but rather as a tool to be used to build new platforms and services in ways that are far more efficient, scalable and profitable. Micropayment based business models are only possible with efficient, ultra-low-cost, payments.
 
 Each satoshi issued on the ledger can be used to carry data or items of far higher value than just themselves, providing an effective substrate system for all manner of products and services to operate in ways that are compliant with any legal requirement.
-
-{% embed url="https://player.vimeo.com/video/732121348" %}
-

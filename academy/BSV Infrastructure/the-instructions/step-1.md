@@ -4,15 +4,13 @@ description: New transactions are broadcast to all nodes
 
 # Step 1
 
-{% embed url="https://youtu.be/1RXyiCbs05c" %}
-
 This instruction states that “New transactions are broadcast to all nodes”. This instruction translates to the following main behaviours:
 
 * If the transaction came from one node, it should not be sent back to that same node.
 * If a node is aware that the node it received the transaction from would have sent it to other nodes already, there is no reason to send it to those nodes either; however
 * If a node is aware that another node has not received a transaction it has, the node will send it.
 
-Nodes operate in a very dense ‘small world’ configuration which constitutes the centre of the Bitcoin network. As a result they have awareness of which peers represent other active block building nodes.
+Nodes operate in a very dense ‘small world’ configuration which constitutes the centre of the BSV network. As a result they have awareness of which peers represent other active block building nodes.
 
 <figure><img src="../.gitbook/assets/CHAPTER 1 GIF 1.gif" alt=""><figcaption></figcaption></figure>
 

@@ -43,13 +43,13 @@ I'm a short string
 
 ## HASH-160: RIPEMD-160(SHA-256)
 
-HASH-160 is the Bitcoin specific double hash function of RIPEMD-160(SHA-256)).
+HASH-160 is the BSV specific double hash function of RIPEMD-160(SHA-256)).
 
 In BSV, HASH-160 is used to:
 
 * Generate a BSV address by hashing the compressed x coordinate of a public key of an ECDSA public-private key-pair and converting the result to Base58 then Base58Check.
 
-#### &#x20;Activity – Generate a HASH-160 message digest
+#### Activity – Generate a HASH-160 message digest
 
 Using the [hash calculator](https://bitcoinsv.academy/hash-calculator), generate a HASH-160 message digest in hexadecimal (HEX) for each of the following ASCII input strings:
 

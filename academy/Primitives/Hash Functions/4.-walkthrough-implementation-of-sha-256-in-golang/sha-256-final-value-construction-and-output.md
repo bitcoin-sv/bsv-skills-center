@@ -1,10 +1,8 @@
 # SHA-256 Final Value Construction and Output
 
-{% embed url="https://youtu.be/wSYgdp4X90Q" %}
-
 ## Final Value Construction and Output
 
-The last step of our SHA-256 GoLang implementation is to take the final chaining variable values we computed using the compression function in the previous step, concatenate them into a single hexadecimal string, and output the result. Since our program is a CLI program, our result can simply be printed to STDOUT using a print statement:&#x20;
+The last step of our SHA-256 GoLang implementation is to take the final chaining variable values we computed using the compression function in the previous step, concatenate them into a single hexadecimal string, and output the result. Since our program is a CLI program, our result can simply be printed to STDOUT using a print statement:
 
 PrintFinalHashValues takes the computed chaining variable hash values as an input array and returns them concatenated as a single hexadecimal string:
 

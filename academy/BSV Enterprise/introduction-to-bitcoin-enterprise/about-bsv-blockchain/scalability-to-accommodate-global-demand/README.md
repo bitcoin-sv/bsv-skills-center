@@ -7,8 +7,3 @@ In addition to its unbounded incentive structure, Bitcoin script also comes with
 By way of micro-transactions, BSV blockchain will be the global validation and timestamping service providing an effective way to clean data and communications, maintaining integrity and supercharging AI & Machine Learning.
 
 As the ideas of the Metaverse and Web3 are turned into real products and services, a dedicated technological substrate capable of processing hundreds of transactions per user each hour will be critical. Realising these products and services will be otherwise impractical or maybe impossible due to the inefficiency of legacy data and payment networks which aren't designed from the ground up with these usage conditions in mind.
-
-{% embed url="https://player.vimeo.com/video/732120526" %}
-
-
-

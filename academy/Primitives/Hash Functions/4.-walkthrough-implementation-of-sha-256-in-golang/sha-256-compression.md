@@ -1,7 +1,5 @@
 # SHA-256 Compression
 
-{% embed url="https://youtu.be/ZgeUVdthits" %}
-
 ## Compression
 
 The compression step consists of 3 sub steps: initialization of registers, i.e. working variables; computation of temporary words, and register mutation and computation; and resulting hash value computation:
@@ -192,5 +190,3 @@ hv7 := h + initialValues[7]
 fmt.Printf("Output: [%x, %x, %x, %x, %x, %x, %x, %x]\n", hv0, hv1, hv2, hv3, hv4, hv5, hv6, hv7) 
 //Output: [ba7816bf, 8f01cfea, 414140de, 5dae2223, b00361a3, 96177a9c, b410ff61, f20015ad] 
 ```
-
-&#x20;

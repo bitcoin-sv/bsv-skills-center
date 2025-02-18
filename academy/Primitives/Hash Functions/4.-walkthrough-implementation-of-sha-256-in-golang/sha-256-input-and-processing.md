@@ -1,7 +1,5 @@
 # SHA-256 Input and Processing
 
-{% embed url="https://youtu.be/ejPXni35fJE" %}
-
 ## Input
 
 Hash functions aren't very useful unless there's a way to give them an input value. In our GoLang implementation which is a command-line-interface (CLI) program, we can simply take in some input as a string and then represent that input as an array of bytes:
@@ -326,4 +324,4 @@ fmt.Printf("Output: %b\n", messageSchedule)
 Now that we have our message schedule, we can move on to the hash computation or compression function of the SHA-256 hash function.
 
 Note: the message block creation step is performed once, and for each of the 512 bit sections of the message block, a message schedule is created and is compressed in the following steps with the result being passed between each step using 'chaining variables'.\
-\
+\\

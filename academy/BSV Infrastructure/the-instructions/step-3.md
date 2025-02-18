@@ -4,8 +4,6 @@ description: Each node works on finding a difficult proof-of-work block
 
 # Step 3
 
-{% embed url="https://youtu.be/I_WgNuGfbAg" %}
-
 The process of finding a proof-of-work is done by specialised machines called ASIC miners (Application Specific Integrated Circuit) or ‘hashers’, and is typically governed by an intermediate control system called a ‘Pool Miner’. Nodes distribute key information about the incomplete block to the pool miners who use it to manage one or more hashers in the search for a valid proof-of-work.
 
 Hashers attempt to solve a puzzle by performing the process of ‘hashing’ a provided block header -- modifying and iterating through nonce (number used once) values within the block header -- until they find a block header that hashes to a number less than a specified target number (difficulty target). The block templates to which have been hashed the most have the highest probability of being valid.
@@ -20,7 +18,7 @@ Read more about orphan blocks here: [https://wiki.bitcoinsv.io/index.php/Orphan\
 
 The valid hash puzzle is a type of impediment that makes it impossible to generate valid block proposals for anyone without access to hashers providing an extremely simple means by which nodes can determine whether they are talking to another node. A node wants to know who the other nodes in the network are so that they can efficiently share transactions and block announcements. The act of winning a block shows that a particular node is a valid competitor. In the not too distant future, it's likely nodes will establish high bandwidth, low latency communications with each other to optimise communication.
 
-Proof of Work (PoW) is designed to ensure that only node operators who have  invested significant time and money in equipment and infrastructure can participate in the network. This significant investment also ensures node operators are easily identifiable enterprise level actors who are required to process transactions as a corporate activity under law.
+Proof of Work (PoW) is designed to ensure that only node operators who have invested significant time and money in equipment and infrastructure can participate in the network. This significant investment also ensures node operators are easily identifiable enterprise level actors who are required to process transactions as a corporate activity under law.
 
 The Bitcoin network is considered financial infrastructure, and as such the maintainers and operators of that infrastructure will be accountable for how it is managed and used. Finding a valid solution for the hash puzzle as part of PoW is indeed an energy intensive process; however, this energy expenditure is independent from the overhead needed to gather and validate the transactions in each block. This means that as Bitcoin scales, its per-transaction efficiency increases.
 

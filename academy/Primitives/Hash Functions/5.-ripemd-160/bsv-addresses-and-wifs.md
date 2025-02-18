@@ -92,8 +92,6 @@ ECDH and ECDSA use pretty much the same process as standard Diffie-Hellman and D
   4. $$v = (g * w_1) + (A * w_2)$$
   5. $$v_x == r \ mod \ q$$
 
-To take a deeper dive into the math behind elliptic curves in Bitcoin, check out our [Bitcoin Primitives: Digital Signatures](https://bitcoinsv.academy/course/bitcoin-primitives-digital-signatures) course.
-
 Although BSV's UTXO model takes a different approach than full end-to-end encryption of all communications, it's still fundamentally based on the two ideas of a shared secret and digital signatures.
 
 ![](../.gitbook/assets/BSVA-HashFunctions_Ch5L2_DA1.gif)
@@ -306,9 +304,9 @@ w := base58.Encode(pKey)
 fmt.Printf("WIF: %s\n", wif) 
 ```
 
-#### Activity – Generate a Bitcoin WIF from a serialised private key
+#### Activity – Generate a BSV WIF from a serialised private key
 
-Using the [hash calculator](https://bitcoinsv.academy/hash-calculator), generate a Bitcoin WIF for the following private key 'd' value:
+Using the [hash calculator](https://bitcoinsv.academy/hash-calculator), generate a BSV WIF for the following private key 'd' value:
 
 ```markup
 02e4f3975f6985c3cc20167fa0b38e649a67a66149844acc68b14eb361f510c2

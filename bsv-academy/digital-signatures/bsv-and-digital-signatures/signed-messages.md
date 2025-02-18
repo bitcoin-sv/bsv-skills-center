@@ -1,6 +1,6 @@
 # Signed Messages
 
-The Bitcoin protocol provides a standard way to sign arbitrary non-transaction data with a Bitcoin private key. The primary use for message signing is for message authentication, such as signing a message to demonstrate access to a particular Bitcoin address. The authentication demonstrates that the party signing the message is in possession of the private key at the specific time of signing.
+The BSV protocol provides a standard way to sign arbitrary non-transaction data with a BSV private key. The primary use for message signing is for message authentication, such as signing a message to demonstrate access to a particular BSV address. The authentication demonstrates that the party signing the message is in possession of the private key at the specific time of signing.
 
 **Private / Public Key Generation**
 

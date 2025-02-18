@@ -4,8 +4,6 @@ Below is the raw data for the fields of the block header from block 550204 that 
 
 ![](<../.gitbook/assets/Screen Shot 2022-08-11 at 3.20.44 pm.png>)
 
-
-
 | DATA FIELD               | BYTES | Hexadecimal Value (Little Endian)                                                                                                                                |
 | ------------------------ | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Version                  | 4     | 00000020                                                                                                                                                         |
@@ -23,19 +21,15 @@ Let's see what happens to the block hash as we try to add an additional transact
 
 ![](<../.gitbook/assets/Screen Shot 2022-08-11 at 3.21.45 pm.png>)
 
-
-
-| TXID                                                             | Branch Value                                                     | Merkle Root                                                                     |
-| ---------------------------------------------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| e50678410aa59b1c7a8c715021f8d42a0b41886a0c433f278e42242ff091360f | 44049cf6ea2d2f283dc824cf7d47ca23b0dfe457e7496806a1162c74a32d6eaa | <p>1f1a58c745ac25247dc2640f9b482a1ac746620f91051f9db10301395f289b33</p><p> </p> |
-| 55a4705deb52a8aabb702e36141a65ff163f68899a349535aa5424706ace3ee9 |                                                                  |                                                                                 |
-| 2ee4bba80d9cce70c45fe145beb52d9a1d7c0dbe08f15d123b80f612d8e05b31 | b3e53c6855a4011ae49326bf688707e52122e858d4bcaee869af1699aa5c489c |                                                                                 |
+| TXID                                                             | Branch Value                                                     | Merkle Root                                                      |
+| ---------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- |
+| e50678410aa59b1c7a8c715021f8d42a0b41886a0c433f278e42242ff091360f | 44049cf6ea2d2f283dc824cf7d47ca23b0dfe457e7496806a1162c74a32d6eaa | 1f1a58c745ac25247dc2640f9b482a1ac746620f91051f9db10301395f289b33 |
+| 55a4705deb52a8aabb702e36141a65ff163f68899a349535aa5424706ace3ee9 |                                                                  |                                                                  |
+| 2ee4bba80d9cce70c45fe145beb52d9a1d7c0dbe08f15d123b80f612d8e05b31 | b3e53c6855a4011ae49326bf688707e52122e858d4bcaee869af1699aa5c489c |                                                                  |
 
 Now the New Merkle root that has been calculated has been added to the Merkle root data field of the new block header candidate and serialised to generate the 80-byte string.
 
 ![](<../.gitbook/assets/Screen Shot 2022-08-11 at 3.23.42 pm.png>)
-
-
 
 | DATA FIELD              | BYTES  | Hexadecimal Value (Little Endian)                                                                                                                                    |
 | ----------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -63,4 +57,4 @@ This means in order for an attacker to introduce a new version of a block's tran
 
 If they wish to introduce a double spend transaction from more than one block ago, they must redo the proof of work of all subsequent blocks and then catch up to the legitimate chain tip and win the next block to be successful in their attack. This has the effect of making transactions that occurred deeper than a certain amount of blocks practically impossible to change.
 
-It is the efficiency of the Merkle tree as a data verification process that allows a bitcoin node to check that the transactions in a block generate the same Merkle root as fast as possible to know whether they should dedicate their resources to building upon the solved block broadcast by another node or continue to execute proof of work on the current block. As the bitcoin network is completing trillions of hashes per second, every moment counts in creating a node's competitive advantage for finding a solution to the next block's hash puzzle and having that block built upon by other nodes.
+It is the efficiency of the Merkle tree as a data verification process that allows a node to check that the transactions in a block generate the same Merkle root as fast as possible to know whether they should dedicate their resources to building upon the solved block broadcast by another node or continue to execute proof of work on the current block. As the BSV network is completing trillions of hashes per second, every moment counts in creating a node's competitive advantage for finding a solution to the next block's hash puzzle and having that block built upon by other nodes.

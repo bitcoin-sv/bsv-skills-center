@@ -6,10 +6,9 @@
 
 Over the years there has been a lot of confusion about the consequences of growing the ledger to a size of giga- or terabytes. Detractors argued it makes it burdensome for casual users to download and sync their copy of the ledger for generating and receiving transactions. Due to the fact the creator outwardly took their leave from the bitcoin ecosystem, it was left for individuals to interpret how Bitcoin was designed to work and as such many developers configured node and wallet software in ways that didn’t make full use of the efficiency of the Merkle trees in Bitcoin as a data verification process. Bitcoin was always intended to handle an extremely large volume of transactions in unbounded blocks, validated by enterprise grade hardware at highly networked locations.
 
-As a transaction is generated on the Bitcoin network, the solution to a locking script for unspent transaction outputs (UTXOs) from either a coinbase or earlier transaction is consumed as an input, and the locking scripts for the balance to be transferred are generated and passed on to the new recipients as fresh UTXOs. In addition to this, locking scripts are generated for any change from the inputs and returned to the person who made the payment as fresh UTXOs as well. The difference between the inputs and outputs being collected as fees by the node who produces the block the transactions are recorded in.
+As a transaction is generated on the BSV network, the solution to a locking script for unspent transaction outputs (UTXOs) from either a coinbase or earlier transaction is consumed as an input, and the locking scripts for the balance to be transferred are generated and passed on to the new recipients as fresh UTXOs. In addition to this, locking scripts are generated for any change from the inputs and returned to the person who made the payment as fresh UTXOs as well. The difference between the inputs and outputs being collected as fees by the node who produces the block the transactions are recorded in.
 
-\
-
+\\
 
 ![](https://bitcoinsv.academy/storage/photos/8381/BSVA-MerkleTrees_Ch4Less4_VA10%20\(1\).jpg)
 
@@ -26,8 +25,8 @@ Despite the prominent narratives within the community of other digital assets, f
 | 2,048 transactions         | 512 kilobytes             | 11 hashes              | 352 bytes             |
 | 65,535 transactions        | 16 megabytes              | 16 hashes              | 512 bytes             |
 
-Even in a dataset that had a Merkle tree of a thousand layers, the fact you only need a 32-byte value from each level to perform a verification proof means the sum of the node values for the Merkle paths of UTXOs that came from enormous blocks (2^1000 transactions) would still only be around 32KB to recalculate the target Merkle root for transaction verification.&#x20;
+Even in a dataset that had a Merkle tree of a thousand layers, the fact you only need a 32-byte value from each level to perform a verification proof means the sum of the node values for the Merkle paths of UTXOs that came from enormous blocks (2^1000 transactions) would still only be around 32KB to recalculate the target Merkle root for transaction verification.
 
-As we saw in chapter 1, as the Merkle tree grows to include new transaction leaf nodes, there are substructures within the tree that are preserved as the right-hand branch grows and the new root value is calculated. This also means that these data structures are very well suited to parallel processing by the nodes to increase their competitive advantage in validating transaction sets, which again further illustrates their essential efficiency in allowing Bitcoin to scale to a global payment network.\
-&#x20;\
-Were bitcoin designed to store transactions in other data structures such as linked lists, then there would be substantially greater computational overhead that would have to be performed by nodes to validate transactions recorded in a block, and the simplified payment mechanism would be unable to work due to there being no efficient process to relay a condensed envelope of node values which could allow verification of an entry within the data set.
+As we saw in chapter 1, as the Merkle tree grows to include new transaction leaf nodes, there are substructures within the tree that are preserved as the right-hand branch grows and the new root value is calculated. This also means that these data structures are very well suited to parallel processing by the nodes to increase their competitive advantage in validating transaction sets, which again further illustrates their essential efficiency in allowing BSV to scale to a global payment network.\
+\
+Were BSV designed to store transactions in other data structures such as linked lists, then there would be substantially greater computational overhead that would have to be performed by nodes to validate transactions recorded in a block, and the simplified payment mechanism would be unable to work due to there being no efficient process to relay a condensed envelope of node values which could allow verification of an entry within the data set.

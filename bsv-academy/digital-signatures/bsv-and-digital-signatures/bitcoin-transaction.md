@@ -1,10 +1,10 @@
-# Bitcoin Transaction
+# BSV Transaction
 
 Bitcoin is a fusion of data (Bit) and money (Coin). While the monetary token, i.e., the coin, is the most notable feature of Bitcoin, the real potential lies in its data capabilities. Thus, an abstract way to describe Bitcoin is as a global, immutable record of events. Some examples of these type of events are payment processing, e-KYC, tracking shipment in supply chain management, or an e-commerce app.
 
-The events are recorded or persisted on the public Bitcoin ledger as transactions. The transactions are organized in blocks; which are a group of events that occurred during a certain time interval, timestamped together.
+The events are recorded or persisted on the public BSV ledger as transactions. The transactions are organized in blocks; which are a group of events that occurred during a certain time interval, timestamped together.
 
-A transaction in bitcoin is a data structure with fields such as Version Number, nLockTime, Transaction Inputs, and Transaction Outputs. For the scope of the discussion, our area of focus is on the Transaction Inputs & Outputs. A transaction can contain multiple inputs and outputs.
+A transaction in BSV is a data structure with fields such as Version Number, nLockTime, Transaction Inputs, and Transaction Outputs. For the scope of the discussion, our area of focus is on the Transaction Inputs & Outputs. A transaction can contain multiple inputs and outputs.
 
 Transaction Inputs include fields that refer to the previous transactions which designated the funds which are now being spent and an unlocking script to allow them to be spent. The Transaction Outputs are relatively straightforward and only have two fields, namely the amount and the locking script.
 
@@ -24,7 +24,7 @@ Consider a timeline with three timestamps, t1, t2, t3, where transactions T1, T2
 * Transaction T2 represents a transfer of funds from Bob to Carol; Bob has 50 BSV received from Alice and transfers 49 BSV to Carol.
 * Transaction T3 represents a transfer of funds from Carol to Dave; Carol has 49 BSV received from Bob and transfers 48BSV to Dave.
 
-_Note_ - _In Bitcoin, funds are not transferred; rather, the ownership is transferred. For simplicity however, we will use the abstraction of transferring funds interchangeably_.
+_Note_ - _In BSV, funds are not transferred; rather, the ownership is transferred. For simplicity however, we will use the abstraction of transferring funds interchangeably_.
 
 Alice, Bob, Carol, and Dave have their private-public key pairs as $$[k_{pr A}, k _{pub A}]$$,$$[k_{pr B}, k_{pub B}]$$, $$[k_{pr C}, k_{pub C}]$$,$$[k_{pr D}, k_{pub D}]$$ respectively.
 
@@ -75,12 +75,12 @@ To spend the funds further, it becomes imperative to sign the funds using a priv
 
 ### Transaction Templates
 
-Generally, transactions are standardized using templates in Bitcoin. This implies that a standard script is used in a transaction input and transaction output. For example, one of the most widely used transaction templates is the "Pay-to-Public Key Hash (P2PKH)." To provide some insight into what the script looks like, below is the unlocking and locking script of a P2PKH script -
+Generally, transactions are standardized using templates in BSV. This implies that a standard script is used in a transaction input and transaction output. For example, one of the most widely used transaction templates is the "Pay-to-Public Key Hash (P2PKH)." To provide some insight into what the script looks like, below is the unlocking and locking script of a P2PKH script -
 
 > _`Unlocking Script - <Signature> <Public Key>`_\
-> \&#xNAN;_`Locking Script - OP_DUP OP_HASH160 <Public Key Hash> OP_EQUALVERIFY OP_CHECKSIG`_
+> &#xNAN;_`Locking Script - OP_DUP OP_HASH160 <Public Key Hash> OP_EQUALVERIFY OP_CHECKSIG`_
 >
 > \
-> \&#xNAN;_`<Signature>, <Public Key>, <Public Key Hash> are operands and the remaining are opcodes`_
+> &#xNAN;_`<Signature>, <Public Key>, <Public Key Hash> are operands and the remaining are opcodes`_
 
 _Note_: _The opcode OP\_CHECKSIG is relevant for digital signatures, as it is used for verifying digital signatures._

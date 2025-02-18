@@ -1,8 +1,8 @@
 # Simple and Composite Proofs
 
-#### **Introduction to Composite Proofs with BUMP**
+####
 
-The BSV Unified Merkle Path (BUMP) format revolutionizes the way composite proofs are constructed and interpreted within the BSV ecosystem. By enabling the consolidation of multiple transaction verifications into a singular, coherent format, BUMP significantly enhances data efficiency and minimizes redundancy across the network.
+The BSV Unified Merkle Path (BUMP) format changes the way composite proofs are constructed and interpreted within the BSV ecosystem. By enabling the consolidation of multiple transaction verifications into a singular, coherent format, BUMP significantly enhances data efficiency and minimizes redundancy across the network.
 
 #### **Efficiency Through Consolidation**
 

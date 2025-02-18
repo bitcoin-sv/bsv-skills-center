@@ -2,13 +2,13 @@
 
 Section 5 of the Bitcoin white paper defines the network's protocol specifications stipulating the one and only type of node found in Bitcoin. These nodes are often referred to as miners, and are characterised by an ability to produce blocks, distribute blocks to peers (other nodes), and validate received blocks.
 
-Merely running the open source BitcoinSV node software does not make a machine a Bitcoin node. If the system is not upholding the consensus mechanism of the network based on block publication and proof-of-work, it’s not a node.&#x20;
+Merely running the open source BSV node software does not make a machine a BSV node. If the system is not upholding the consensus mechanism of the network based on block publication and proof-of-work, it’s not a node.
 
 In Bitcoin’s initial stages, a home computer could act as a node producing valid blocks by performing the Proof of Work (PoW) process using a desktop grade CPU. As the difficulty of the PoW increased, GPUs and then Application Specific Integrated Circuits (ASICs) became necessary equipment to remain competitive.
 
-As bitcoin scales, the difficulty of the PoW and transaction throughput of the network increases. This makes it necessary to invest in specialised hardware and systems including server grade systems and high bandwidth network interfaces to validate the transactions that are included in each block, as well as large numbers of networked ASIC hashing machines to perform the energy intensive process of Proof of Work process.
+As BSV scales, the difficulty of the PoW and transaction throughput of the network increases. This makes it necessary to invest in specialised hardware and systems including server grade systems and high bandwidth network interfaces to validate the transactions that are included in each block, as well as large numbers of networked ASIC hashing machines to perform the energy intensive process of Proof of Work process.
 
-Most nodes typically run software called "bitcoind" however there is no requirement to use any specific software. Nodes can run whatever software allows them to participate in the network by producing valid blocks. More details about the system architecture of the Bitcoin SV node can be found here: [https://bitcoinsv.io/documentation/miners/system-architecture/](https://wiki.bitcoinsv.io/index.php/The_Bitcoin_Network)
+Most nodes typically run software called "bitcoind" however there is no requirement to use any specific software. Nodes can run whatever software allows them to participate in the network by producing valid blocks.&#x20;
 
 Read more about the Bitcoin network here: [https://wiki.bitcoinsv.io/index.php/The\_Bitcoin\_Network](https://wiki.bitcoinsv.io/index.php/The_Bitcoin_Network)
 

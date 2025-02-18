@@ -2,7 +2,7 @@
 
 ![](../.gitbook/assets/BSVA-HashFunctions_Ch1L1_DA1.gif)
 
-A hash function is a mathematical process that maps a **bitstring** of any length to a bitstring of a defined length. This process must also be easy to compute. A _one-way hash function_ must be **preimage resistant** and **second preimage** **resistant** while a _secure cryptographic_ or _ideal hash function_ must be preimage resistant, second preimage resistant, and **collision resistant** – we'll cover what these terms mean in the following lessons of this chapter. The hash functions we'll be looking at in this course are the secure ideal hash functions found in the Bitcoin system: **SHA-256** and **RIPEMD-160**. For the remainder of this course, when you see the term _hash function_, it means _secure cryptographic_ or _ideal hash function_.
+A hash function is a mathematical process that maps a **bitstring** of any length to a bitstring of a defined length. This process must also be easy to compute. A _one-way hash function_ must be **preimage resistant** and **second preimage** **resistant** while a _secure cryptographic_ or _ideal hash function_ must be preimage resistant, second preimage resistant, and **collision resistant** – we'll cover what these terms mean in the following lessons of this chapter. The hash functions we'll be looking at in this course are the secure ideal hash functions found in the BSV system: **SHA-256** and **RIPEMD-160**. For the remainder of this course, when you see the term _hash function_, it means _secure cryptographic_ or _ideal hash function_.
 
 The output values of hash functions are often referred to as message digests, hash values, checksums, or hashes. We will use these terms interchangeably throughout this course.
 
@@ -225,4 +225,3 @@ In BSV, digital signatures are most commonly used for Pay-to-Public-Key-Hash (P2
 
 With that said, it's helpful to recognize that even though hash functions and cryptographic digital signatures are used in BSV, it is **not** a cryptographic system, and it's actually incorrect to use the term “cryptocurrency” when referring to Bitcoin or a system that follows the Bitcoin architectural design like BSV. This is a really important distinction to be aware of because as we'll see in chapter 7, it's fundamental to how the BSV system operates and how it's secured.
 
-[See our course Bitcoin Primitives: Digital Signatures](https://bitcoinsv.academy/course/bitcoin-primitives-digital-signatures)
