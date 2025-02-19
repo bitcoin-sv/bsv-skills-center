@@ -571,7 +571,6 @@
     * [Introduction](<academy/BSV Infrastructure/the-small-world-network/introduction.md>)
     * [The Decentralisation of Power](<academy/BSV Infrastructure/the-small-world-network/the-decentralisation-of-power.md>)
     * [Incentive Driven Behaviour](<academy/BSV Infrastructure/the-small-world-network/incentive-driven-behaviour.md>)
-    * [Assessment 1](<academy/BSV Infrastructure/the-small-world-network/assessment-1.md>)
     * [Lightspeed Propagation of Transactions](<academy/BSV Infrastructure/the-small-world-network/lightspeed-propagation-of-transactions.md>)
     * [Ensuring Rapid Receipt and Propagation of New Blocks](<academy/BSV Infrastructure/the-small-world-network/ensuring-rapid-receipt-and-propagation-of-new-blocks.md>)
     * [Hardware Developments to Meet User Demand](<academy/BSV Infrastructure/the-small-world-network/hardware-developments-to-meet-user-demand.md>)
