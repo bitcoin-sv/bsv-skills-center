@@ -1,7 +1,5 @@
 # Steps to Run the Network
 
-{% embed url="https://youtu.be/L3CaMJShEVY" %}
-
 Section 5 of the Bitcoin white paper, tilted ‘Network’, outlines a list of instructions that nodes must follow to correctly operate the Bitcoin network.
 
 The steps to run the network are as follows:

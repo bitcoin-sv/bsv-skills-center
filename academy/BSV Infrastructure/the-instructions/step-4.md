@@ -4,8 +4,6 @@ description: When a node finds a proof-of-work, it broadcasts the block to all n
 
 # Step 4
 
-{% embed url="https://youtu.be/1nKV8Swskq8" %}
-
 When a node solves the puzzle, it must also propagate the solution to all other nodes on the network as quickly as possible. This is to minimise the chance that a competing node will also find their own valid proof-of-work and propagate it to the network; sparking what is known as an ‘Orphan Race’.
 
 Read about the first see rule and orphan race here: [https://wiki.bitcoinsv.io/index.php/First\_seen\_rule](https://wiki.bitcoinsv.io/index.php/First_seen_rule)

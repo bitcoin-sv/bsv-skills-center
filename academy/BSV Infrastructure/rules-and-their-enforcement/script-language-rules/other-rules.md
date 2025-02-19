@@ -1,3 +1,0 @@
-# Other Rules
-
-There are some other less important, but equally set-in-stone rules which are checked. These include the sunsetting of Pay to Script Hash (P2SH), the return of the original OP\_RETURN functionality and the removal of many limits and restrictions that have previously been applied at the protocol level. Where required, node limits have been tuned to numbers only bounded by the hardware/software implementation of the node client, with configuration settings allowing each node operator to manage the in-use settings themselves. This is generally in loose agreement with the rest of the network. Node operators are free to use their own configurations, and to reach out to other known node enterprise organisations to ensure their blocks can be managed.

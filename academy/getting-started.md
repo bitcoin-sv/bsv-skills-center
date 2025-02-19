@@ -23,8 +23,8 @@ BSV Essentials will give students new to BSV a more introductory perspective on 
 
 #### BSV Basics: Protocol and Design
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="../bsv-academy/bsv-basics-protocol-and-design/" %}
+[bsv-basics-protocol-and-design](../bsv-academy/bsv-basics-protocol-and-design/)
 {% endcontent-ref %}
 
 BSV Basics: Protocol and Design will introduce students to the BSV Ledger, Coins and Transactions and a high level overview of the general theory behind the system.
@@ -73,8 +73,8 @@ Introduction to Bitcoin Script provides a detailed exploration of the Forth-base
 
 ### BSV Infrastructure
 
-{% content-ref url="BSV Infrastructure/" %}
-[BSV Infrastructure](<BSV Infrastructure/>)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
 The BSV Infrastructure stream starts with the Introduction to BSV Infrastructure which will be fundamental foundational knowledge for anyone seeking to operate in bitcoin mining or leveraging the network capabilities of BSV to serve as information technology infrastructure. The course takes students through the bitcoin protocol rules to ensure they understand which parameters of the node client they can configure and which are immutable consensus rules that need to be upheld to allow you to operate within the small world network of miners.

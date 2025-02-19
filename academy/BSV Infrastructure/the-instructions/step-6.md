@@ -6,8 +6,6 @@ description: >-
 
 # Step 6
 
-{% embed url="https://youtu.be/1Hqpnzd7Wtw" %}
-
 As soon as a node has received and validated a new block from one of its competitors, it is incentivised to build its new block template using that block’s hash. This has the effect of each subsequent block being added into a chain of valid proof of work.
 
 This means beginning the process of clearing validated transactions out of the mempool\* and preparing the next block’s Merkle tree. Doing any form of work on a superseded block becomes wasted effort as soon as with another node's block proposal is disseminated and validated; creating the incentive to be hyper aware of other nodes and any blocks they discover.
@@ -22,4 +20,4 @@ Nodes follow Nakamoto Consensus ([https://wiki.bitcoinsv.io/index.php/Nakamoto\_
 
 _\*The mempool is a data structure containing the set of valid transactions that the node accepted but which have not yet been timestamped in a block_
 
-\
+\\

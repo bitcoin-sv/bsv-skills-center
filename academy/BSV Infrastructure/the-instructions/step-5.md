@@ -6,8 +6,6 @@ description: >-
 
 # Step 5
 
-{% embed url="https://youtu.be/HvxjlEjNmAo" %}
-
 This is a big part of the user security model. Allowing Bitcoin users to accept a node’s confirmation that a transaction they have broadcast has been accepted and is considered valid by a majority of block producers, removes any need for users to wait on block confirmation for the transaction’s timestamp to be officially recorded; enabling almost instant transaction clearing and settlement.
 
 This instruction clearly outlines the node’s need to validate the contents of the block against its own knowledge of what exists on the ledger and the rules in place governing the protocol. If a node receives a block that contains an invalid transaction, the block cannot be accepted as valid. For example, if the node receives a block that contains a transaction that spends an already used output, the transaction is invalid and the block must be rejected because spendable outputs on the ledger can only be used once.

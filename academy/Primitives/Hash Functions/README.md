@@ -28,5 +28,5 @@ go get github.com/libsv/go-bk
 ​​​​​​​go get github.com/libsv/go-bc
 ```
 
-The GoLang code used in this course can be found here: [https://github.com/jakeBitcoinAssociation/hash-functions](https://github.com/jakeBitcoinAssociation/hash-functions)
+
 
