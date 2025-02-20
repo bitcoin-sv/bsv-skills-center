@@ -568,7 +568,6 @@
   * [Transactions, Payment Channels and Mempools](bsv-academy/bsv-infrastructure/transactions-payment-channels-and-mempools.md)
   * [Block Assembly](bsv-academy/bsv-infrastructure/block-assembly.md)
   * [The Small World Network](bsv-academy/bsv-infrastructure/the-small-world-network/README.md)
-    * [Introduction](<academy/BSV Infrastructure/the-small-world-network/introduction.md>)
     * [The Decentralisation of Power](<academy/BSV Infrastructure/the-small-world-network/the-decentralisation-of-power.md>)
     * [Incentive Driven Behaviour](<academy/BSV Infrastructure/the-small-world-network/incentive-driven-behaviour.md>)
     * [Lightspeed Propagation of Transactions](<academy/BSV Infrastructure/the-small-world-network/lightspeed-propagation-of-transactions.md>)
@@ -576,8 +575,6 @@
     * [Hardware Developments to Meet User Demand](<academy/BSV Infrastructure/the-small-world-network/hardware-developments-to-meet-user-demand.md>)
     * [Novel Service Delivery Methods](<academy/BSV Infrastructure/the-small-world-network/novel-service-delivery-methods.md>)
     * [MinerID](<academy/BSV Infrastructure/the-small-world-network/minerid.md>)
-    * [Merchant API (mAPI)](<academy/BSV Infrastructure/the-small-world-network/merchant-api-mapi.md>)
-    * [Assessment 2](<academy/BSV Infrastructure/the-small-world-network/assessment-2.md>)
   * [Conclusion](bsv-academy/bsv-infrastructure/conclusion.md)
 
 ## Research and Development

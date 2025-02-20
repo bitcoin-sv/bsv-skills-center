@@ -16,7 +16,7 @@ The section covers the requirements of building a block template and competing f
 
 <figure><img src="../../.gitbook/assets/Chapter 4 GIF 1.gif" alt=""><figcaption></figcaption></figure>
 
-Each time a Bitcoin transaction is created, transaction outputs are generated. Each one contains an amount of bitcoin, expressed as a quantity of satoshis, locked in its locking script, or scriptPubKey. Outputs that haven’t been spent are called Unspent Transaction Outputs, or UTXOs. All of the bitcoins on the ledger are held live in UTXOs, making it important for nodes to keep them in a rapid access memory (RAM) database. This record of all spendable BSV forms a database referred to as ‘The UTXO set’. The global UTXO set holds every spendable transaction output which has not been used as an input to a transaction.
+Each time a BSV transaction is created, transaction outputs are generated. Each one contains an amount of BSV, expressed as a quantity of satoshis, locked in its lockScript, (or scriptPubKey). Outputs that haven’t been spent are called Unspent Transaction Outputs, or UTXOs. All of the coins on the ledger are held live in UTXOs, making it important for nodes to keep them in a rapid access memory (RAM) database. This record of all spendable BSV forms a database referred to as ‘The UTXO set’. The global UTXO set holds every spendable transaction output which has not been used as an input to a transaction.
 
 The management of this set will become an increasingly complex task. Nodes already make strategic eliminations from the set including transaction outputs that are provably unspendable - e.g. [FALSE RETURN](https://wiki.bitcoinsv.io/index.php/False_Return) scripts.
 
@@ -32,7 +32,7 @@ Nodes can minimise storage requirements by pruning elements that have a low chan
 
 The working blockchain consists of all of the block headers in the chain (block headers are covered in depth in a later lesson entitled (“The block header”), with each connected to a pruned Merkle tree. In blocks where the node has discarded every transaction, only the block header itself needs to be kept. In this way the data storage requirement can be optimised by the node to manage cost.
 
-Users accessing services anchored to transactions in the blockchain create their own working blockchain by starting from an empty set. Section 8 of the Bitcoin white paper defines the use of Merkle path data as a method of validating transactions. Starting with only the block headers, a service can receive transactions and their corresponding Merkle proofs, using them to create a database of information controlled by or otherwise available to the user. This is immutably anchored in Bitcoin’s proof of work.
+Users accessing services anchored to transactions in the blockchain create their own working blockchain by starting from an empty set. Section 8 of the Bitcoin white paper defines the use of Merkle path data as a method of validating transactions. Starting with only the block headers, a service can receive transactions and their corresponding Merkle proofs, using them to create a database of information controlled by or otherwise available to the user. This is immutably anchored in BSV's proof of work.
 
 These techniques can help users of the system to optimise the information they carry for their own needs, while having access to the necessary provenance data.
 
@@ -85,7 +85,7 @@ Every time a node generates a new block template, it must create a new coinbase 
 
 In 2010 a standard rule was added to the node client software which requires that the bytes of the string must be a varInt containing the block height. This came about because nodes had been generating identical coinbase transactions creating the issue of having multiple transactions with identical hashes/TXIDs. The remainder of the input string (up to 96 bytes) can be configured however the miner decides, and is often used to advertise the identity of the node to the rest of the network. At times this input has also been used to signal a node's intent to uphold new consensus rules being introduced to the protocol. However new, more administrative procedures have been implemented which remove the need for this type of communication.
 
-While only a single input is allowed, each coinbase transaction can create as many outputs as the node operator wants, within the rules of the Bitcoin protocol. Because the transaction doesn’t need to be propagated outside of the node until the block is found, it is not subject to rules which would exclude it from transaction pools such as dust limits and must only adhere to Bitcoin’s immutable ruleset. The coinbase transaction can include FALSE RETURN outputs in the same way as normal transactions. The current implementation of MinerID allows nodes to identify themselves cryptographically by inserting a signature into a FALSE RETURN output in the Coinbase.
+While only a single input is allowed, each coinbase transaction can create as many outputs as the node operator wants, within the rules of the BSV protocol. Because the transaction doesn’t need to be propagated outside of the node until the block is found, it is not subject to rules which would exclude it from transaction pools such as dust limits and must only adhere to BSV's immutable ruleset. The coinbase transaction can include FALSE RETURN outputs in the same way as normal transactions. The current implementation of MinerID allows nodes to identify themselves cryptographically by inserting a signature into a FALSE RETURN output in the Coinbase.
 
 Importantly, outputs from the Coinbase transaction cannot be spent until there have been a further 100 blocks built on top of its containing block. This both acts as an incentive for miners to continue building blocks and ensures that a node operator cannot spend funds which might be involved in an orphan race. Most races are won within 2 or 3 blocks so 100 provides strong security for fund receivers without placing an undue burden upon the operators themselves.
 
@@ -103,7 +103,7 @@ In order to get a transaction recorded on the ledger, users pay a small fee to m
 
 1. The Block Subsidy
 
-The Block Subsidy is the algorithmically defined distribution of BSV to nodes over time. The schedule at which the subsidy would allocate the BSV supply to miners was set when the Bitcoin network began operating in 2009. The subsidy started at 50 BSV, or 5,000,000,000 Satoshis, and reduces by 50% every 210,000 blocks, or approximately every 4 years. This schedule steadily decreases until it reaches zero after 32 ‘halving’ events, estimated to end in approximately 2140.
+The Block Subsidy is the algorithmically defined distribution of BSV to nodes over time. The schedule at which the subsidy would allocate the BSV supply to miners was set when the BSV network began operating in 2009. The subsidy started at 50 BSV, or 5,000,000,000 Satoshis, and reduces by 50% every 210,000 blocks, or approximately every 4 years. This schedule steadily decreases until it reaches zero after 32 ‘halving’ events, estimated to end in approximately 2140.
 
 The subsidy gives BSV nodes something to compete for during the early phases of the network’s growth. At this point within the network, the cumulative transaction fees do not amount to much due to the low fees and very low traffic on the network. However as stated in the whitepaper, transaction fees are the longer term incentive:
 
@@ -137,13 +137,11 @@ With these values, the pool-miner has all of the information it needs to perform
 
 <figure><img src="../../.gitbook/assets/Chapter 4 GIF 9.gif" alt=""><figcaption></figcaption></figure>
 
-
-
 To perform this proof-of-work function, each node distributes the mining candidate to one or more pool-miners, which will typically manage a set of ASIC-based (Application Specific Integrated Circuit) hashing machines. These so-called ‘ASIC-miners' take a supplied block header and cycle through nonce values. Each time the nonce is changed, the resultant serialised string of the block header is put through a double SHA256 hash function. If the resultant hash is less than or equal to the difficulty target, the block header is valid and can be added to the chain.
 
 <figure><img src="../../.gitbook/assets/Chapter 4 GIF 9A.gif" alt=""><figcaption></figcaption></figure>
 
-Because pool miners know how much Bitcoin is awarded in the Coinbase transaction, they can also calculate the proportional rewards they will receive per hash operation performed. This allows them to determine the profitability of operating certain hash machinery at any given moment. This can be calculated based on instantaneous energy costs, energy consumption of ASIC-miners and the operational and capital expenditure of their enterprise. This allows the best pool miners to make the most economically sensible decision available to them at any given moment.
+Because pool miners know how much BSV is awarded in the Coinbase transaction, they can also calculate the proportional rewards they will receive per hash operation performed. This allows them to determine the profitability of operating certain hash machinery at any given moment. This can be calculated based on instantaneous energy costs, energy consumption of ASIC-miners and the operational and capital expenditure of their enterprise. This allows the best pool miners to make the most economically sensible decision available to them at any given moment.
 
 <figure><img src="../../.gitbook/assets/Chapter 4 GIF 9B.gif" alt=""><figcaption></figcaption></figure>
 
