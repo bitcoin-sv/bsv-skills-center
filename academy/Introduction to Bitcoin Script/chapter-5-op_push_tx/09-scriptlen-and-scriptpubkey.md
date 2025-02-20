@@ -1,16 +1,16 @@
 # 09 - scriptLen and scriptPubKey
 
-Part of the transaction pre-image is the scriptPubKey held in the UTXO being spent in the input. This is broken down as two fields as follows:
+Part of the transaction pre-image is the lockScript held in the UTXO being spent in the input. This is broken down as two fields as follows:
 
-1. scriptLen - the locking script length, a [VarInt](https://wiki.bitcoinsv.io/index.php/VarInt) (1, 3, 5 or 9 bytes depending on script length)
-2. scriptPubKey - the locking script for the UTXO being spent (Length as defined by previous parameter)
+1. lockScriptLength - the locking script length, a [VarInt](https://wiki.bitcoinsv.io/index.php/VarInt) (1, 3, 5 or 9 bytes depending on script length)
+2. lockScript - the locking script for the UTXO being spent (Length as defined by previous parameter)
 
 To extract the locking script, we must first extract the length. There are 4 possible sizes for the VarInt, depending on the length of the script. The size of this field can be inferred from the value in its first byte:
 
-* If the value is equal to or less than 0xFC, the varInt is a 1 byte integer value containing the integer value of scriptLen.
-* If the first byte is 0xFD, the varInt is 3 bytes long, with the last 2 bytes containing the integer value of scriptLen.
-* If the first byte is 0xFE, the varInt is 5 bytes long, with the last 4 bytes containing the integer value of scriptLen.
-* If the first byte is 0xFF, the varInt is 9 bytes long, with the last 8 bytes containing the integer value of scriptLen.
+* If the value is equal to or less than 0xFC, the varInt is a 1 byte integer value containing the integer value of lockScriptLength.
+* If the first byte is 0xFD, the varInt is 3 bytes long, with the last 2 bytes containing the integer value of lockScriptLength.
+* If the first byte is 0xFE, the varInt is 5 bytes long, with the last 4 bytes containing the integer value of lockScriptLength.
+* If the first byte is 0xFF, the varInt is 9 bytes long, with the last 8 bytes containing the integer value of lockScriptLength.
 
 <figure><img src="../.gitbook/assets/BSVA-BitcoinScript_Chapter5-Animation08.gif" alt=""><figcaption></figcaption></figure>
 

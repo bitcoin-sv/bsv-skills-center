@@ -1,10 +1,8 @@
 # 03 - From FORTH to Bitcoin Script
 
-FORTH is the parent of Bitcoin Script, which adds some grammar changes and removes capabilities such as jump instructions and loops.&#x20;
+FORTH is the parent of Bitcoin Script, which adds some grammar changes and removes capabilities such as jump instructions and loops.
 
-In transactions on the Bitcoin ledger, each output contains a predicate called a scriptPubKey. This predicate is written in Bitcoin script and evaluates an input against a set of conditions. When a transaction output is spent, the user provides a set of input data called the scriptSig which is loaded onto the stack before the scriptPubKey processes it. If the evaluation finishes with a single non-zero value on the stack, the scriptSig is valid and the tokens contained in the output can be spent in the transaction. For a transaction to be valid, every input must have a valid scriptSig and every new scriptPubKey must meet the Bitcoin grammar rules we will cover in chapter 2.&#x20;
-
-{% file src="../.gitbook/assets/BA_BSVA_EDUC_BITCOIN-SCRIPT-CH1VID2_BASICS-BITCOIN-TRANSACTIONS_V1_072023_compressed.mp4" %}
+In transactions on the Bitcoin ledger, each output contains a predicate called a lockScript. This predicate is written in Bitcoin script and evaluates an input against a set of conditions. When a transaction output is spent, the user provides a set of input data called the unlockScript which is loaded onto the stack before the lockScript processes it. If the evaluation finishes with a single non-zero value on the stack, the unlockScript is valid and the tokens contained in the output can be spent in the transaction. For a transaction to be valid, every input must have a valid unlockScript and every new lockScript must meet the Bitcoin grammar rules we will cover in chapter 2.
 
 Bitcoin script predicates can only contain opcodes defined within the Bitcoin protocol itself. The evaluation ends when any of the following conditions are met:
 

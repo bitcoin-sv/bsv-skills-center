@@ -6,9 +6,9 @@ During this process, the transaction is broken down into its separate component 
 
 As discussed previously, Bitcoin Scripts are processed when a transaction output is being spent as an input to a new transaction. The transaction input that spends the script must contain a valid solution to the predicate contained in the referenced output. Depending on the script used, the input can be very simple, or highly complex.
 
-#### Insert new transaction validator animation (use Infrastructure one as example)&#x20;
 
-The transaction processing system must first retrieve the output being spent from the ledger. This is specified by using the TXID and index which are provided as the first part of the input. Once the output's scriptPubKey has been retrieved, the processing system appends the scriptPubKey which makes up the second part of the transaction input to the front of the scriptSig, and inserts an OP\_CODESEPARATOR to demark the boundary between scriptSig and scriptPubKey. This opcode can also be used in the scriptPubKey to segregate elements of the script from parts being signed, offering novel ways to manage contracts and exchange.
+
+The transaction processing system must first retrieve the output being spent from the ledger. This is specified by using the TXID and index which are provided as the first part of the input. Once the output's lockScript has been retrieved, the processing system appends the lockScript which makes up the second part of the transaction input to the front of the unlockScript, and inserts an OP\_CODESEPARATOR to demark the boundary between unlockScript and lockScript. This opcode can also be used in the lockScript to segregate elements of the script from parts being signed, offering novel ways to manage contracts and exchange.
 
 The script evaluator evaluates the script from start to finish against a set of rules which are part of the Bitcoin protocol. This means that all nodes must process each script in the exact same manner for consensus to be achieved, or network forks can occur.
 

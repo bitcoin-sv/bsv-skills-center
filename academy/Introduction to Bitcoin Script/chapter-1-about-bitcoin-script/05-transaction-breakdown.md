@@ -10,9 +10,9 @@ The first 4 bytes are the version number recorded in little endian:
 
 `01000000`
 
-This indicates that the transaction follows the version 01 of the transaction evaluation format.&#x20;
+This indicates that the transaction follows the version 01 of the transaction evaluation format.
 
-As usage increases, it is expected this field will be used to signal a variety of different transaction templates which may each be processed by different subsets of the mining network.&#x20;
+As usage increases, it is expected this field will be used to signal a variety of different transaction templates which may each be processed by different subsets of the mining network.
 
 <figure><img src="../.gitbook/assets/Tx Version Number.gif" alt=""><figcaption></figcaption></figure>
 
@@ -20,11 +20,11 @@ As usage increases, it is expected this field will be used to signal a variety o
 
 `01`
 
-This indicates that there is just 1 input being spent in this transaction.&#x20;
+This indicates that there is just 1 input being spent in this transaction.
 
 <figure><img src="../.gitbook/assets/Input Counter.gif" alt=""><figcaption></figcaption></figure>
 
-This value is a 4-byte integer in Little Endian format. This means that if a transaction has more than 0xFFFFFFFF outputs (approx 4.3 billion) those that are created at index locations outside the range are practically unspendable.&#x20;
+This value is a 4-byte integer in Little Endian format. This means that if a transaction has more than 0xFFFFFFFF outputs (approx 4.3 billion) those that are created at index locations outside the range are practically unspendable.
 
 ### The Input <a href="#the-input" id="the-input"></a>
 
@@ -46,25 +46,25 @@ This indicates that the spender is using the 'zeroth' output of the transaction.
 
 Extra detail:
 
-The scriptPubKey contained in this output is the following simple Pay to Public Key script:
+The lockScript contained in this output is the following simple Pay to Public Key script:
 
 `0411db93e1dcdb8a016b49840f8c53bc1eb68a382e97b1482ecad7b148a6909a5cb2e0eaddfb84ccf9744464f82e160bfa9b8b64f9d4c03f999b8643f656b412a3 OP_CHECKSIG`
 
 The first part of this output is a public key controlled by the output's owner, and the second part is a Bitcoin Script OPCODE that checks the transaction's signature.
 
-#### Length of the scriptSig <a href="#length-of-the-scriptsig" id="length-of-the-scriptsig"></a>
+#### Length of the unlockScript <a href="#length-of-the-scriptsig" id="length-of-the-scriptsig"></a>
 
 `48`
 
 This value is the length of the scriptSig represented as a hexadecimal value. In this case, 0x48 is the equivalent of 72 in base 10.
 
-#### scriptSig <a href="#scriptsig" id="scriptsig"></a>
+#### unlockScript <a href="#scriptsig" id="scriptsig"></a>
 
 `47304402204e45e16932b8af514961a1d3a1a25fdf3f4f7732e9d624c6c61548ab5fb8cd410220181522ec8eca07de4860a4acdd12909d831cc56cbbac4622082221a8768d1d0901`
 
-The scriptSig in this case is a single pushdata opcode (0x47) which pushes 71 bytes to the stack. These are a single bytevector containing the 70 byte long ECDSA signature in DER format concatenated with the 1 byte SIGHASH flag on the end. In some cases the DER signature is 71 bytes with an additional 1 byte for the SIGHASH flag. To gain a better understanding of the DER signature format and its application to Bitcoin, please consider doing the Bitcoin Primitives course on 'Digital Signatures'.
+The unlockScript in this case is a single pushdata opcode (0x47) which pushes 71 bytes to the stack. These are a single bytevector containing the 70 byte long ECDSA signature in DER format concatenated with the 1 byte SIGHASH flag on the end. In some cases the DER signature is 71 bytes with an additional 1 byte for the SIGHASH flag. To gain a better understanding of the DER signature format and its application to BSV, please consider doing the BSV Primitives course on 'Digital Signatures'.
 
-When the evaluation engine validates this transaction, this signature is loaded onto the processing stack first, and then followed with the scriptPubKey contained in the output being spent. In this case, the signature can be shown to have been generated with a private key that corresponds to the public key in the scriptPubKey, meaning the coin could be spent.
+When the evaluation engine validates this transaction, this signature is loaded onto the processing stack first, and then followed with the lockScript for the output being spent. In this case, the signature can be shown to have been generated with a private key that corresponds to the public key in the lockScript, meaning the coin could be spent.
 
 #### nSequence <a href="#nsequence" id="nsequence"></a>
 
@@ -76,17 +76,15 @@ If the nSequence value is not UINT\_MAX then the transaction cannot be processed
 
 <figure><img src="../.gitbook/assets/nlocktimensequence (1).gif" alt=""><figcaption></figcaption></figure>
 
-
-
 ### Number of Outputs <a href="#number-of-outputs" id="number-of-outputs"></a>
 
 `02`
 
-This tells us that there are two outputs in this transaction.&#x20;
+This tells us that there are two outputs in this transaction.
 
 <figure><img src="../.gitbook/assets/Output Counter.gif" alt=""><figcaption></figcaption></figure>
 
-This value is a Variable Integer (VarInt) of 1-9 bytes meaning that a transaction can have 1.8 x 10^19  outputs. Remember though, only the first 4.3 billion can be referenced as inputs.
+This value is a Variable Integer (VarInt) of 1-9 bytes meaning that a transaction can have 1.8 x 10^19 outputs. Remember though, only the first 4.3 billion can be referenced as inputs.
 
 A VarInt is most commonly a 1 byte [hexadecimal](https://learnmeabitcoin.com/technical/hexadecimal) value:
 
@@ -106,21 +104,21 @@ As explained previously, the first output is broken down into 3 elements as foll
 
 `00ca9a3b00000000`
 
-This value is a little endian integer representing the satoshi value of the first transaction output. In this case it can be expressed in Hexadecimal as 0x000000003b9aca00 which is 1,000,000,000 in decimal. This shows that the first output was sending 10 Bitcoins (each 100,000,000 satoshis) to a new scriptPubKey. In this case, we know that this was a scriptPubKey given to Hal Finney by Satoshi Nakamoto, who sent him the 10 Bitcoins.
+This value is a little endian integer representing the satoshi value of the first transaction output. In this case it can be expressed in Hexadecimal as 0x000000003b9aca00 which is 1,000,000,000 in decimal. This shows that the first output was sending 10 Bitcoins (each 100,000,000 satoshis) to a new lockScript. In this case, we know that this was a lockScript given to Hal Finney by Satoshi Nakamoto, who sent him the 10 Bitcoins.
 
-#### Length of the scriptPubKey <a href="#length-of-the-scriptpubkey" id="length-of-the-scriptpubkey"></a>
+#### Length of the lockScript <a href="#length-of-the-scriptpubkey" id="length-of-the-scriptpubkey"></a>
 
 `43`
 
-This value is a hexadecimal representation of the length of the scriptPubKey, indicating that it is 0x43, or 67 bytes long.
+This value is a hexadecimal representation of the length of the lockScript, indicating that it is 0x43, or 67 bytes long.
 
-#### scriptPubKey <a href="#scriptpubkey" id="scriptpubkey"></a>
+#### lockScript <a href="#scriptpubkey" id="scriptpubkey"></a>
 
 `4104ae1a62fe09c5f51b13905f07f06b99a2f7159b2225f374cd378d71302fa28414e7aab37397f554a7df5f142c21c1b7303b8a0626f1baded5c72a704f7e6cd84cac`
 
-This scriptPubKey represents a predicate expressed in Bitcoin Script. The predicate is broken down as follows:
+This lockScript represents a predicate expressed in Bitcoin Script. The predicate is broken down as follows:
 
-The first byte (0x41) is a pushdata OPCODE which pushes Hal Finney's 65 byte long public key onto the stack.&#x20;
+The first byte (0x41) is a pushdata OPCODE which pushes Hal Finney's 65 byte long public key onto the stack.
 
 The next 65 bytes are Hal Finney's public key as follows:
 
@@ -130,4 +128,4 @@ The final byte (0xac) is the opcode OP\_CHECKSIG.
 
 This represents the most simple application of an ECDSA signature check in Bitcoin.
 
-This scriptPubKey locks the 1,000,000,000 satoshis contained in this output until someone who controls the public key provides the needed signature as an input's scriptSig.
+This lockScript locks the 1,000,000,000 satoshis contained in this output until someone who controls the public key provides the needed signature as an input's unlockScript.
