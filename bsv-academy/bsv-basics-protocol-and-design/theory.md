@@ -2,7 +2,7 @@
 
 Now that we’ve covered the basics of Bitcoin, we can go into the original Bitcoin whitepaper and get an understanding for it easily.
 
-The Bitcoin whitepaper is divided into 12 sections, and only spans nine pages including references. Despite its relative brevity, the paper is packed full of information. We will cover the sections in brief here, but note that the Bitcoin Theory course dives into these topics in much greater depth.
+The Bitcoin whitepaper is divided into 12 sections, and only spans nine pages including references. Despite its relative brevity, the paper is packed full of information. We will cover the sections in brief here, but note that the BSV Theory course dives into these topics in much greater depth.
 
 ## Introduction
 
@@ -39,7 +39,7 @@ All nodes in the network are required to follow a clearly defined set of rules g
 
 ## Incentive
 
-We are introduced to the block subsidy and how coins are distributed in the system. This is the first place we see the analogy to mining mentioned. We are also introduced to Satoshi’s vision for how the system can be maintained when the block subsidy fades away and the 21 million bitcoins are distributed: the incentive will transition entirely to transaction fees and the system will be completely inflation free. Satoshi also discusses the incentives for nodes to remain honest. He posits that it is more profitable for nodes to be honest and generate new coins instead of attacking the system.
+We are introduced to the block subsidy and how coins are distributed in the system. This is the first place we see the analogy to mining mentioned. We are also introduced to Satoshi’s vision for how the system can be maintained when the block subsidy fades away and the 21 million coins are distributed: the incentive will transition entirely to transaction fees and the system will be completely inflation free. Satoshi also discusses the incentives for nodes to remain honest. He posits that it is more profitable for nodes to be honest and generate new coins instead of attacking the system.
 
 ## Reclaiming Disk Space
 

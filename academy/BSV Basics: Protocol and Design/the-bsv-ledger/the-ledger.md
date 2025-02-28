@@ -18,8 +18,8 @@ The Bitcoin Ledger is a **WORM database**—Write Once, Read Many. This means th
 
 In popular media, the Bitcoin Ledger is often referred to as the “blockchain,” with batches of transactions labeled as “blocks.” These blocks are sequentially added to form a continuous chain—the blockchain.
 
-**The Transparency of the Bitcoin Ledger**
+**The Transparency of the BSV Ledger**
 
-One of the Bitcoin Ledger’s most critical properties is its **public and transparent nature**. Unlike traditional ledgers that require trust in the honesty of the ledger keeper, Bitcoin removes this requirement by making the ledger accessible to all participants. This public transparency ensures that no single entity can manipulate the ledger or “cook the books.”
+One of the BSV Ledger’s most critical properties is its **public and transparent nature**. Unlike traditional ledgers that require trust in the honesty of the ledger keeper, Bitcoin removes this requirement by making the ledger accessible to all participants. This public transparency ensures that no single entity can manipulate the ledger or “cook the books.”
 
 The **BSV blockchain** preserves this transparency while scaling unboundedly, ensuring it can handle millions of transactions daily with low fees and unparalleled efficiency. While other blockchain implementations have deviated from Bitcoin’s original design, BSV stays true to its intended purpose as a global ledger for both payments and data.

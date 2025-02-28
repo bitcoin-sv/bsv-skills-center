@@ -1,6 +1,6 @@
 # Getting Started
 
-Bitcoin is a revolutionary technology and can be quite complex; for most people, it’s a steep learning curve - but it doesn’t have to be. As part of the BSV Association, BSV Academy has curated a range of educational information and resources to establish a curriculum, from which training modules and courses have been developed to best serve the needs of the BSV community.
+BSV is a revolutionary technology and can be quite complex; for most people, it’s a steep learning curve - but it doesn’t have to be. As part of the BSV Association, BSV Academy has curated a range of educational information and resources to establish a curriculum, from which training modules and courses have been developed to best serve the needs of the BSV community.
 
 Our goal is to:
 
@@ -61,15 +61,15 @@ The BSV Primitives courses are to be considered akin to bridging courses for stu
 
 The BSV Theory stream starts by taking students through the Bitcoin Whitepaper line by line and elaborating on the deeper meanings to ensure a thorough understanding of the Bitcoin system. This course should be considered as a compulsory prerequisite for all deeper study of the Bitcoin protocol as it ensures that everyone who passes the course will have a standardised understanding of the Whitepaper as the technical manifesto of the Bitcoin protocol.
 
-### BSV Development
+### Introduction to Bitcoin Script
 
-The BSV Development stream use to start with the Introduction to Bitcoin Development which is currently being reworked to reflect the state of the art approach to development and future proof it as a tool agnostic framework. The reworked course will equip students with the proper conceptualisation and approach to developing with Bitcoin such that whatever you build can be sure to scale and interoperate with other services in the ecosystem.
+Introduction to Bitcoin Script provides a detailed exploration of the Forth-based scripting language used in the Bitcoin Virtual Machine (Bitcoin VM) during transaction validation. This course guides learners through the functional groups of opcodes in the language, demonstrating how to construct basic script templates and simulate recursive-like behaviors using innovative techniques such as the OP\_PUSHTX methodology.
 
 {% content-ref url="Introduction to Bitcoin Script/" %}
 [Introduction to Bitcoin Script](<Introduction to Bitcoin Script/>)
 {% endcontent-ref %}
 
-Introduction to Bitcoin Script provides a detailed exploration of the Forth-based scripting language used in the Bitcoin Virtual Machine (Bitcoin VM) during transaction validation. This course guides learners through the functional groups of opcodes in the language, demonstrating how to construct basic script templates and simulate recursive-like behaviors using innovative techniques such as the OP\_PUSHTX methodology.
+
 
 ### BSV Infrastructure
 

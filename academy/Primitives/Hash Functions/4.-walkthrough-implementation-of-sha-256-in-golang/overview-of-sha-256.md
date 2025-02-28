@@ -24,4 +24,3 @@ Our implementation of SHA-256 follows this design:
 
 **3. Final value construction and output**
 
-\\

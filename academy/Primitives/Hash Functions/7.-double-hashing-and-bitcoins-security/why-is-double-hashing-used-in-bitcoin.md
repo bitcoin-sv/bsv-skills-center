@@ -1,16 +1,16 @@
-# Why is Double Hashing Used in Bitcoin
+# Why is Double Hashing Used in BSV
 
 ![](../.gitbook/assets/BSVA-HashFunctions_Ch7L1_DA1.gif)
 
-When it was released in 2009, the initial Bitcoin code base had many features which at first glance didn't make a lot of sense. Over time, the intention behind these features has slowly come to light. One of these features is the usage of double hash functions as opposed to single hash functions throughout the Bitcoin system. Instead of simply using a single hash function like SHA-256 or RIPEMD-160, Bitcoin uses double hash functions: HASH-256 and HASH-160.
+When it was released in 2009, the initial Bitcoin code base had many features which at first glance didn't make a lot of sense. Over time, the intention behind these features has slowly come to light. One of these features is the usage of double hash functions as opposed to single hash functions throughout the BSV system. Instead of simply using a single hash function like SHA-256 or RIPEMD-160, BSV uses double hash functions: HASH-256 and HASH-160.
 
-Up until recently, it was largely accepted that the intention behind using double hash functions in Bitcoin was to add additional security against **birthday attacks**. However, we now know this isn't true.
+Up until recently, it was largely accepted that the intention behind using double hash functions in BSV was to add additional security against **birthday attacks**. However, we now know this isn't true.
 
 Since the use of double hash functions actually increases the probability of finding a collision as opposed to only using one, using double hash functions is less secure than using a single hash function. And it's even worse if the same hash function is used twice like HASH-256.
 
 Put in a very simplified way, every time a hash function is hashed again by another hash function, it more or less doubles the likelihood of a collision.
 
-## What is the True Intent Behind Double Hashing in Bitcoin?
+## What is the True Intent Behind Double Hashing in BSV?
 
 BSV uses double hash functions to facilitate a **separation of concerns** within the BSV system and add usability and extensibility.
 

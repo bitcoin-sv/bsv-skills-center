@@ -4,7 +4,7 @@ The BSV protocol provides a standard way to sign arbitrary non-transaction data 
 
 **Private / Public Key Generation**
 
-Generating private and public keys remains the same as described in bitcoin transactions, and there are few wallets which provide the feature of signing messages using the private keys.
+Generating private and public keys remains the same as described in BSV transactions, and there are few wallets which provide the feature of signing messages using the private keys.
 
 **Signing the message**
 

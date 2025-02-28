@@ -2,7 +2,7 @@
 
 When batches of transactions are bundled into a block, the block is considered “mined” and added to the blockchain. Mining a block unlocks a fixed number of coins, known as the **block subsidy**, which is rewarded to the node that successfully mines the block. This subsidy decreases over time, halving approximately every four years. Currently, the block subsidy is fixed at **3.125 coins per block**.
 
-When Satoshi Nakamoto launched the Bitcoin network, he designed it with a fixed supply of **21 million bitcoins**, each divisible into **100 million units** called satoshis. A satoshi, the smallest denomination of Bitcoin, represents the smallest amount that can be transferred.
+When Satoshi Nakamoto launched the Bitcoin network, he designed it with a fixed supply of **21 million coins**, each divisible into **100 million units** called satoshis. A satoshi, the smallest denomination of BSV, represents the smallest amount that can be transferred.
 
 At the network's launch, all 21 hundred million million satoshis were issued, but Satoshi implemented a gradual distribution mechanism using a **block subsidy**.
 
@@ -10,9 +10,9 @@ At the network's launch, all 21 hundred million million satoshis were issued, bu
 
 **The Block Subsidy and Mining**
 
-When batches of transactions are bundled into a block, the block is considered “mined” and added to the blockchain. Mining a block unlocks a fixed number of bitcoins, known as the **block subsidy**, which is rewarded to the node that successfully mines the block. This subsidy decreases over time, halving approximately every four years. Currently, the block subsidy is fixed at **3.125 bitcoins per block**.
+When batches of transactions are bundled into a block, the block is considered “mined” and added to the blockchain. Mining a block unlocks a fixed number of coins, known as the **block subsidy**, which is rewarded to the node that successfully mines the block. This subsidy decreases over time, halving approximately every four years. Currently, the block subsidy is fixed at **3.125 coins per block**.
 
-Although all bitcoins were issued at Bitcoin’s genesis, the mining process ensures their gradual introduction into the economy. This design was essential for bootstrapping the network, as the block subsidy incentivizes nodes to participate in mining and maintain the ledger.
+Although all coins were issued at Bitcoin’s genesis, the mining process ensures their gradual introduction into the economy. This design was essential for bootstrapping the network, as the block subsidy incentivizes nodes to participate in mining and maintain the ledger.
 
 ***
 

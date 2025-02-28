@@ -2,7 +2,7 @@
 
 ![](../.gitbook/assets/BSVA-HashFunctions_Ch7L2_DA1.gif)
 
-To understand the role hash functions play in BSV's security, it's important to understand the overall approach to security BSV takes first. Although BSV uses the same primitives as current Public Key Infrastructure (PKI), it employs them in a much more granular and effective way. In all current information systems in use today, whenever any type of information is transferred, it’s sent from one account to another, and its most often fully end-to-end encrypted. By using UTXOs, Bitcoin firewalls identity from network activity.
+To understand the role hash functions play in BSV's security, it's important to understand the overall approach to security BSV takes first. Although BSV uses the same primitives as current Public Key Infrastructure (PKI), it employs them in a much more granular and effective way. In all current information systems in use today, whenever any type of information is transferred, it’s sent from one account to another, and its most often fully end-to-end encrypted. By using UTXOs, BSV firewalls identity from network activity.
 
 ## What is PKI?
 

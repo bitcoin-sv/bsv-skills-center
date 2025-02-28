@@ -4,4 +4,4 @@ With new standards being added, and standards that are being worked on moving th
 
 To see a list of the currently published and in-progress standards, please visit this website:
 
-[https://tsc.bitcoinassociation.net/standards.](https://tsc.bitcoinassociation.net/standards.)
+[https://tsc.bsvblockchain.org/standards.](https://tsc.bitcoinassociation.net/standards.)

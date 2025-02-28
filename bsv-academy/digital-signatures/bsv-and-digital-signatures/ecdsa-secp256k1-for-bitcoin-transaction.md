@@ -4,7 +4,7 @@ As we now have a high-level conceptual understanding of BSV transactions, we wil
 
 ### Private/Public Key Generation
 
-Recall that the first step of the Digital Signing protocol is generating the public and private keys. The equation below gives the relationship between private and public keys, and the same applies to bitcoin.
+Recall that the first step of the Digital Signing protocol is generating the public and private keys. The equation below gives the relationship between private and public keys, and the same applies to BSV.
 
 > $$Public \ key = Private \ key * Base \ Point$$ **;** ---------------------(1)
 >
@@ -40,7 +40,7 @@ Though there are no protocol restrictions, currently, most BSV transactions use 
 * BSV transactions are committed using the Distinguished Encoding Rules \[**DER, sighash**] format, which we shall discuss later
 * The signature verification is done by combining and comparing the unlocking script and locking script and evaluating whether that yields a true or false result. This has already been covered under Script evaluation.
 
-_Note_ - The above understanding provides an abstraction of how a transaction works in BSV. There may be a requirement to verify the signature against a public key for enterprise applications before the transaction reaches the nodes. The general practice used by applications is to not share a public key but rather a bitcoin address; which is a public key double hashed as Address = RIPEMD-160(SHA-256$$(K_{pub)}$$) and this output is then encoded as a base58 string of 20 bytes.
+_Note_ - The above understanding provides an abstraction of how a transaction works in BSV. There may be a requirement to verify the signature against a public key for enterprise applications before the transaction reaches the nodes. The general practice used by applications is to not share a public key but rather a BSV address; which is a public key double hashed as Address = RIPEMD-160(SHA-256$$(K_{pub)}$$) and this output is then encoded as a base58 string of 20 bytes.
 
 ### Signature Format
 
