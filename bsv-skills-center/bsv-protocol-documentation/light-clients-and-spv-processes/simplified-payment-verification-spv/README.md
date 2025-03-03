@@ -11,8 +11,6 @@ SPV is a process to verify the presence of transaction in a block. The 'payment'
 
 To illustrate this process, we'll use a hypothetical scenario where Alice pays Bob for her coffee. Bob owns a coffee shop and accepts payment using CBDCs.
 
-To illustrate this process, we'll use a hypothetical scenario where Alice pays Bob for her coffee. Bob owns a coffee shop and accepts CBDCs.
-
 1. Alice orders her coffee at the counter.
 2. Bob provides Alice with an invoice that includes a template transaction where Bob has pre-filled at least one output (including a value) to accept payment.
 3. Alice fills in at least one input of the transaction template using one or more UTXOs she owns or controls to cover the cost specified by Bob in the output.
