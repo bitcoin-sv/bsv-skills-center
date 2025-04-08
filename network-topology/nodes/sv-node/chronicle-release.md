@@ -11,7 +11,7 @@ The changes introduced in the Chronicle release are detailed in the sections bel
 To summarize the Chronicle release, the following points should be outlined:
 
 * **Restoration of Bitcoin's Original Protocol**: The Chronicle release aims to restore the original Bitcoin protocol by re-installing specific opcodes and removing listed restrictions, while also balancing stability for businesses that depend on the current state.
-* **Transaction Digest Algorithms**: The BSV Blockchain will now support both the Original Transaction Digest Algorithm (OTDA) and the BIP143 digest algorithm, ensuring compatibility and flexibility for developers and users. This restores the original Bitcoin transaction digest algorithm, enabling developers to have greater flexibilty in utilizing Bitcoin Script. Usage of the OTDA will depend on hte usage of the new CHRONICLE \[`0x20`] sighash bit.
+* **Transaction Digest Algorithms**: The BSV Blockchain will now support both the Original Transaction Digest Algorithm (OTDA) and the BIP143 digest algorithm, ensuring compatibility and flexibility for developers and users. This restores the original Bitcoin transaction digest algorithm, enabling developers to have greater flexibilty in utilizing Bitcoin Script. Usage of the OTDA will depend on the usage of the new CHRONICLE \[`0x20`] sighash bit.
 * **Selective Malleability Restrictions:** The Chronicle Release removes restrictions that were put in place to prevent transaction malleability. To address concerns about the reintroduction of sources of transaction malleability, the application of malleability restrictions will depend on the usage of the new CHRONICLE \[`0x20`] sighash bit. Transactions signed with CHRONICLE enabled will allow relaxed rules, removing strict enforcement of malleability-related constraints. This flexibility is agnostic to the number of signatures in a transaction. The restrictions relevant to the CHRONICLE flag are:
   * Minimal Encoding Requirement
   * Low S Requirement for Signatures
@@ -50,7 +50,7 @@ Remove the requirement that the signature must be the low “s” value. See [BI
 
 ### NULLFAIL check for `OP_CHECKSIG` and `OP_CHECKMULTISIG` Removal
 
-Remove the requirement that if an `OP_CHECKSIG` is trying to return a `FALSE<` value to the stack, that the relevant signature must be an empty byte array. Also remove the requirement that if an `OP_CHECKMULTISIG` is trying to return a `FALSE` value to the stack, that all signatures passing to this `OP_CHECKMULTISIG` must be empty byte arrays.
+Remove the requirement that if an `OP_CHECKSIG` is trying to return a `FALSE` value to the stack, that the relevant signature must be an empty byte array. Also remove the requirement that if an `OP_CHECKMULTISIG` is trying to return a `FALSE` value to the stack, that all signatures passing to this `OP_CHECKMULTISIG` must be empty byte arrays.
 
 The following examples are the combined results of the removal of the LOW_S and NULLFAIL rules.
 
