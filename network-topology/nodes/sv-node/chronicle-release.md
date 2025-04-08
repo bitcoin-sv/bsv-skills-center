@@ -11,21 +11,22 @@ The changes introduced in the Chronicle release are detailed in the sections bel
 To summarize the Chronicle release, the following points should be outlined:
 
 * **Restoration of Bitcoin's Original Protocol**: The Chronicle release aims to restore the original Bitcoin protocol by re-installing specific opcodes and removing listed restrictions, while also balancing stability for businesses that depend on the current state.
-* **Transaction Digest Algorithms**: The BSV Blockchain will now support both the Original Transaction Digest Algorithm (OTDA) and the BIP143 digest algorithm (with SIGHASH\_FORKID), ensuring compatibility and flexibility for developers and users. This restores the original Bitcoin transaction digest algorithm, enabling developers to have greater flexibilty in utilizing Bitcoin Script.
-* **Selective Malleability Restrictions:** The Chronicle Release removes restrictions that were put in place to prevent transaction malleability. To address concerns about the reintroduction of sources of transaction malleability, the application of malleability restrictions will depend on the interaction of the FORKID \[`0x40`] and RELAX \[`0x20`] sighash bits. Transactions signed without SIGHASH\_FORKID (or with RELAX enabled) will allow relaxed rules, removing strict enforcement of malleability-related constraints. This flexibility is agnostic to the number of signatures in a transaction. The restrictions relevant to the RELAX flag are:
+* **Transaction Digest Algorithms**: The BSV Blockchain will now support both the Original Transaction Digest Algorithm (OTDA) and the BIP143 digest algorithm, ensuring compatibility and flexibility for developers and users. This restores the original Bitcoin transaction digest algorithm, enabling developers to have greater flexibilty in utilizing Bitcoin Script. Usage of the OTDA will depend on hte usage of the new CHRONICLE \[`0x20`] sighash bit.
+* **Selective Malleability Restrictions:** The Chronicle Release removes restrictions that were put in place to prevent transaction malleability. To address concerns about the reintroduction of sources of transaction malleability, the application of malleability restrictions will depend on the usage of the new CHRONICLE \[`0x20`] sighash bit. Transactions signed with CHRONICLE enabled will allow relaxed rules, removing strict enforcement of malleability-related constraints. This flexibility is agnostic to the number of signatures in a transaction. The restrictions relevant to the CHRONICLE flag are:
   * Minimal Encoding Requirement
   * Low S Requirement for Signatures
+  * NULLFAIL check for `OP_CHECKSIG` and `OP_CHECKMULTISIG`
   * Clean Stack Requirement
   * Data Only in Unlocking Script Requirement
-* **Business Impact and Flexibility:** In line with the BSV Blockchain's commitment to stability, existing users and applications using the BIP143 digest (with SIGHASH\_FORKID) will remain unaffected by the Chronicle update. For developers aiming to leverage the original protocol's behavior, the Chronicle release offers the option to utilize the Original Transaction Digest Algorithm (OTDA) and the flexibility to determine malleability-related restrictions for transactions.
+* **Business Impact and Flexibility:** In line with the BSV Blockchain's commitment to stability, existing users and applications using the BIP143 digest (without CHRONICLE) will remain unaffected by the Chronicle update. For developers aiming to leverage the original protocol's behavior, the Chronicle release offers the option to utilize the Original Transaction Digest Algorithm (OTDA) and the flexibility to determine malleability-related restrictions for transactions.
 
 ## 1. Transaction Digest Algorithms and Selective Malleability Restrictions
 
-As mentioned above, in the Chronicle release, malleability rules are being adjusted under the concept of "Relax."
+As mentioned above, in the Chronicle release, malleability-related rules are being adjusted dependent on how transactions are signed.
 
-These changes depend on the interplay of the `FORKID` \[`0x40`] and `RELAX` \[`0x20`] Sighash bits. By default, users who do nothing will retain the current behavior (with `FORKID` active and `RELAX` disabled). The OTDA will reintroduce relaxed rules where needed. It is also important to mention that it doesn't matter if the transaction configuration involves multiple signatures within a script or across multiple inputs. This approach enables optional adoption of relaxed malleability constraints. The table below describes all possible scenarios and their expected results:
+These changes depend on the usage of the new `CHRONICLE` \[`0x20`] Sighash bit. By default, users who do nothing will retain the current behavior (with `CHRONICLE` disabled). The OTDA will reintroduce relaxed rules where needed. It is also important to mention that it doesn't matter if the transaction configuration involves multiple signatures within a script or across multiple inputs. This approach enables optional adoption of relaxed malleability constraints. The table below describes all possible scenarios and their expected results:
 
-<table><thead><tr><th width="199">Input/Transaction Config</th><th>FORK_ID</th><th>RELAX</th><th>TDA</th><th>Malleability Rules Enforcement</th></tr></thead><tbody><tr><td>Single input, single signature</td><td>0</td><td>0</td><td>OTDA</td><td>Relaxed</td></tr><tr><td>Single input, single signature</td><td>0</td><td>1</td><td>OTDA</td><td>Relaxed</td></tr><tr><td>Single input, single signature</td><td>1</td><td>0</td><td>BIP143</td><td>Strict</td></tr><tr><td>Single input, single signature</td><td>1</td><td>1</td><td>BIP143</td><td>Relaxed</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>All 0</td><td>All 0</td><td>OTDA</td><td>Relaxed</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>All 0</td><td>All 1</td><td>OTDA</td><td>Relaxed</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>All 1</td><td>All 0</td><td>BIP143</td><td>Strict</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>All 1</td><td>All 1</td><td>BIP143</td><td>Relaxed</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>All 0</td><td>Mixed</td><td>OTDA</td><td>Relaxed</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>All 1</td><td>Mixed</td><td>BIP143</td><td>Strict</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>Mixed</td><td>All 0</td><td>Mixed</td><td>Strict</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>Mixed</td><td>All 1</td><td>Mixed</td><td>Relaxed</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>Mixed</td><td>Mixed</td><td>Mixed</td><td>Strict</td></tr></tbody></table>
+<table><thead><tr><th width="199">Input/Transaction Config</th><th>CHRONICLE</th><th>TDA</th><th>Malleability Rules Enforcement</th></tr></thead><tbody><tr><td>Single input, single signature</td><td>0</td><td>BIP143</td><td>Strict</td></tr><tr><td>Single input, single signature</td><td>1</td><td>OTDA</td><td>Relaxed</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>All 0</td><td>BIP143</td><td>Strict</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>All 1</td><td>OTDA</td><td>Relaxed</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>Mixed</td><td>Mixed</td><td>Strict</td></tr></tbody></table>
 
 ### Minimal Encoding Requirement  Removal
 
@@ -46,6 +47,59 @@ There are to be no restrictions on the max size of script numbers.
 ### Low S Requirement for Signatures  Removal
 
 Remove the requirement that the signature must be the low “s” value. See [BIP-146](https://github.com/bitcoin/bips/blob/master/bip-0146.mediawiki) 
+
+### NULLFAIL check for `OP_CHECKSIG` and `OP_CHECKMULTISIG` Removal
+
+Remove the requirement that if an `OP_CHECKSIG` is trying to return a `FALSE<` value to the stack, that the relevant signature must be an empty byte array. Also remove the requirement that if an `OP_CHECKMULTISIG` is trying to return a `FALSE` value to the stack, that all signatures passing to this `OP_CHECKMULTISIG` must be empty byte arrays.
+
+The following examples are the combined results of the removal of the LOW_S and NULLFAIL rules.
+
+Notation:
+
+```
+  CO       : curve order = 0xFFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFE BAAEDCE6 AF48A03B BFD25E8C D0364141
+  HCO      : half curve order = CO / 2 = 0x7FFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF 5D576E73 57A4501D DFE92F46 681B20A0
+  P1, P2   : valid, serialized, public keys
+  S1L, S2L : low S value signatures using respective keys P1 and P2 (1 ≤ S ≤ HCO)
+  S1H, S2H : signatures with high S value  using respective keys P1 and P2 (HCO < S < CO)
+  F        : any BIP66-compliant non-empty byte array but not a valid signature
+```
+
+These scripts will return a `TRUE` to the stack as before:
+
+```
+  S1L P1 CHECKSIG
+  0 S1L S2L 2 P1 P2 2 CHECKMULTISIG
+```
+
+These scripts will return a `FALSE` to the stack as before:
+
+```
+  0 P1 CHECKSIG
+  0 0 0 2 P1 P2 2 CHECKMULTISIG
+```
+
+These scripts that previously failed immediately will return `TRUE` under the Chronicle rules:
+
+```
+  S1H P1 CHECKSIG
+  0 S1H S2L 2 P1 P2 2 CHECKMULTISIG
+  0 S1L S2H 2 P1 P2 2 CHECKMULTISIG
+  0 S1H S2H 2 P1 P2 2 CHECKMULTISIG
+```
+
+These scripts that previously failed immediately will return `FALSE` under the Chronicle rules:
+
+```
+  F P1 CHECKSIG
+  0 S2L S1L 2 P1 P2 2 CHECKMULTISIG
+  0 S1L F   2 P1 P2 2 CHECKMULTISIG
+  0 F   S2L 2 P1 P2 2 CHECKMULTISIG
+  0 S1L 0   2 P1 P2 2 CHECKMULTISIG
+  0 0   S2L 2 P1 P2 2 CHECKMULTISIG
+  0 F   0   2 P1 P2 2 CHECKMULTISIG
+  0 0   F   2 P1 P2 2 CHECKMULTISIG
+```
 
 ### Clean Stack Policy Removal
 
