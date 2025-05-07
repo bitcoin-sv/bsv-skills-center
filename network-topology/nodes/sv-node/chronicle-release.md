@@ -15,7 +15,8 @@ To summarize the Chronicle release, the following points should be outlined:
 * **Selective Malleability Restrictions:** The Chronicle Release removes restrictions that were put in place to prevent transaction malleability. To address concerns about the reintroduction of sources of transaction malleability, the application of malleability restrictions will depend on the usage of the new CHRONICLE \[`0x20`] sighash flag. Transactions signed with CHRONICLE enabled will allow relaxed rules, removing strict enforcement of malleability-related constraints. This flexibility is agnostic to the number of signatures in a transaction. The restrictions relevant to the CHRONICLE flag are:
   * Minimal Encoding Requirement
   * Low S Requirement for Signatures
-  * NULLFAIL check for `OP_CHECKSIG` and `OP_CHECKMULTISIG`
+  * NULLFAIL and NULLDUMMY check for `OP_CHECKSIG` and `OP_CHECKMULTISIG`
+  * MINIMALIF Requirement for `OP_IF` and `OP_NOTIF`
   * Clean Stack Requirement
   * Data Only in Unlocking Script Requirement
 * **Business Impact and Flexibility:** In line with the BSV Blockchain's commitment to stability, existing users and applications using the BIP143 digest (without CHRONICLE) will remain unaffected by the Chronicle update. For developers aiming to leverage the original protocol's behavior, the Chronicle release offers the option to utilize the Original Transaction Digest Algorithm (OTDA) and the flexibility to determine malleability-related restrictions for transactions.
@@ -28,7 +29,7 @@ These changes depend on the usage of the new `CHRONICLE` \[`0x20`] Sighash bit. 
 
 <table><thead><tr><th width="199">Input/Transaction Config</th><th>CHRONICLE</th><th>TDA</th><th>Malleability Rules Enforcement</th></tr></thead><tbody><tr><td>Single input, single signature</td><td>0</td><td>BIP143</td><td>Strict</td></tr><tr><td>Single input, single signature</td><td>1</td><td>OTDA</td><td>Relaxed</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>All 0</td><td>BIP143</td><td>Strict</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>All 1</td><td>OTDA</td><td>Relaxed</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>Mixed</td><td>Mixed</td><td>Strict</td></tr></tbody></table>
 
-### Minimal Encoding Requirement  Removal
+### Minimal Encoding Requirement Removal
 
 Update the script processing so that numbers are not required to be expressed using the minimum number of bytes.
 
@@ -44,13 +45,15 @@ The `maxscriptnumlengthpolicy` configuration parameter default will be changed t
 
 There are to be no restrictions on the max size of script numbers.
 
-### Low S Requirement for Signatures  Removal
+### Low S Requirement for Signatures Removal
 
 Remove the requirement that the signature must be the low “s” value. See [BIP-146](https://github.com/bitcoin/bips/blob/master/bip-0146.mediawiki) 
 
-### NULLFAIL check for `OP_CHECKSIG` and `OP_CHECKMULTISIG` Removal
+### NULLFAIL and NULLDUMMY check for `OP_CHECKSIG` and `OP_CHECKMULTISIG` Removal
 
 Remove the requirement that if an `OP_CHECKSIG` is trying to return a `FALSE` value to the stack, that the relevant signature must be an empty byte array. Also remove the requirement that if an `OP_CHECKMULTISIG` is trying to return a `FALSE` value to the stack, that all signatures passing to this `OP_CHECKMULTISIG` must be empty byte arrays.
+
+Remove the requirement that the dummy stack item used in `OP_CHECKMULTISIG` is an empty byte array. 
 
 The following examples are the combined results of the removal of the LOW_S and NULLFAIL rules.
 
@@ -86,6 +89,7 @@ These scripts that previously failed immediately will return `TRUE` under the Ch
   0 S1H S2L 2 P1 P2 2 CHECKMULTISIG
   0 S1L S2H 2 P1 P2 2 CHECKMULTISIG
   0 S1H S2H 2 P1 P2 2 CHECKMULTISIG
+  F S1H S2H 2 P1 P2 2 CHECKMULTISIG
 ```
 
 These scripts that previously failed immediately will return `FALSE` under the Chronicle rules:
@@ -99,7 +103,11 @@ These scripts that previously failed immediately will return `FALSE` under the C
   0 0   S2L 2 P1 P2 2 CHECKMULTISIG
   0 F   0   2 P1 P2 2 CHECKMULTISIG
   0 0   F   2 P1 P2 2 CHECKMULTISIG
+  F 0   F   2 P1 P2 2 CHECKMULTISIG
 ```
+### MINIMALIF Requirement Removal
+
+The input argument to the `OP_IF` and `OP_NOTIF` opcodes is no longer required to be exactly 1 (the one-byte vector with value 1) to be evaluated as TRUE. 
 
 ### Clean Stack Policy Removal
 
