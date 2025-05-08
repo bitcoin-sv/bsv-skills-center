@@ -107,7 +107,7 @@ These scripts that previously failed immediately will return `FALSE` under the C
 ```
 ### MINIMALIF Requirement Removal
 
-The input argument to the `OP_IF` and `OP_NOTIF` opcodes is no longer required to be exactly 1 (the one-byte vector with value 1) to be evaluated as TRUE. 
+The input argument to the `OP_IF` and `OP_NOTIF` opcodes is no longer required to be exactly 1 (the one-byte vector with value 1) to be evaluated as TRUE. Similarly, the input argument to the `OP_IF` and `OP_NOTIF` opcodes is no longer required to be exactly 0 (the empty vector) to be evaluated as FALSE.
 
 ### Clean Stack Policy Removal
 
