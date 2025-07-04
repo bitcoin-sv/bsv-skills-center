@@ -257,11 +257,11 @@
 
 * [Getting Started](academy/getting-started.md)
 * [BSV Basics: Protocol and Design](bsv-academy/bsv-basics-protocol-and-design/README.md)
-* [BSV Enterprise](bsv-academy/bsv-enterprise/README.md)
-* [Hash Functions](bsv-academy/hash-functions/README.md)
-* [Merkle Trees](bsv-academy/merkle-trees/README.md)
-* [Digital Signatures](bsv-academy/digital-signatures/README.md)
-* [BSV Theory](academy/BSV%20Theory/README.md)
+* [BSV Enterprise](bsv-academy/bsv-enterprise.md)
+* [Hash Functions](bsv-academy/hash-functions.md)
+* [Merkle Trees](bsv-academy/merkle-trees.md)
+* [Digital Signatures](bsv-academy/digital-signatures.md)
+* [BSV Theory](<academy/BSV Theory/README.md>)
 * [Introduction to Bitcoin Script](bsv-academy/introduction-to-bitcoin-script/README.md)
 
 ## Onboarding Content
@@ -271,18 +271,18 @@
 * [Code Examples](onboarding/01-getting-started/examples.md)
 * [Live Demos](onboarding/01-getting-started/live-demos.md)
 
-### Quick Actions
+## Quick Actions
 
 * [Live Demos](onboarding/01-getting-started/live-demos.md)
 * [Metanet Wallet](onboarding/01-getting-started/metanet-desktop.md)
 * [Hackathon Kit](onboarding/05-hackathon-essentials/quick-start-guide.md)
 * [Documentation Hub](onboarding/03-resources/README.md)
 
-### Foundations
+## Foundations
 
 * [BSV Evolution and Paradigm](onboarding/01-foundations/bsv-evolution.md)
 
-### Technical Pathway: Distributed BSV Applications
+## Technical Pathway: Distributed BSV Applications
 
 * [Technical Overview](onboarding/02-pathways/technical/README.md)
 * [Developer FAQ - Atomic Transactions + Identity](onboarding/02-pathways/technical/developer-faq.md)
@@ -297,7 +297,7 @@
 * [Module 5: Production Deployment](onboarding/02-pathways/technical/05-production-deployment/README.md)
 * [Module 6: Advanced Patterns](onboarding/02-pathways/technical/06-advanced-patterns/README.md)
 
-### Business Pathway
+## Business Pathway
 
 * [Business Overview](onboarding/02-pathways/business/README.md)
 * [Live Demos - Business Applications](onboarding/02-pathways/business/live-demos-business.md)
@@ -324,14 +324,14 @@
   * [Module 3: STOs as Digital Workflow Containers](onboarding/02-pathways/business/05-advanced-business-stos/table-of-contents/module-3-stos-as-digital-workflow-containers-in-sectorial-contexts.md)
   * [Module 4: Transactions as Registered Mailboxes](onboarding/02-pathways/business/05-advanced-business-stos/table-of-contents/module-4-transactions-as-registered-mailboxes-a-business-lens-on-digital-workflows.md)
   * [Module 5: STOs in P2P Business Models](onboarding/02-pathways/business/05-advanced-business-stos/table-of-contents/module-5-unlocking-the-potential-of-stos-in-peer-to-peer-business-models.md)
-  * [Module 6: Micropayments and Digital Monetization](onboarding/02-pathways/business/05-advanced-business-stos/table-of-contents/module-6-micropayments-and-digital-monetization.md)
+  * [Module 6: Micropayments and Digital Monetization](table-of-contents/module-6-micropayments-and-digital-monetization.md)
 
-### Academic Pathway
+## Academic Pathway
 
 * [Academic Overview](onboarding/02-pathways/academic/README.md)
 * [Web3 and Blockchain for STEM](onboarding/02-pathways/academic/web3-and-blockchain/README.md)
 
-### Enterprise Pathway
+## Enterprise Pathway
 
 * [Enterprise Risk Management and Compliance](onboarding/02-pathways/enterprise/README.md)
 
@@ -344,26 +344,26 @@
 * [Step 5: Regulatory Compliance](onboarding/02-pathways/enterprise/regulatory-compliance.md)
 * [Step 6: Security & Audit](onboarding/02-pathways/enterprise/security-audit.md)
 
-### System Overview
+## System Overview
 
 * [Complete System Guide](onboarding/00-system-overview/README.md)
 
-### Resources
+## Resources
 
 * [Community](onboarding/03-resources/community.md)
 * [Critical Documentation](onboarding/03-resources/critical-docs.md)
 * [Tools Reference](onboarding/03-resources/tools-reference.md)
 * [Troubleshooting](onboarding/03-resources/troubleshooting.md)
 
-### Assessments
+## Assessments
 
 * [Assessment Framework](onboarding/assessments/assessment-framework.md)
 
-### sCrypt Documentation
+## sCrypt Documentation
 
 * [How to Debug a Contract](onboarding/scrypt-documentation/how-to-debug-a-contract-scrypt-documentation-docs.scrypt.io-how-to-debug-a-contract.html.md)
 * [How to Deploy and Call a Contract](onboarding/scrypt-documentation/how-to-deploy-and-call-a-contract-scrypt-documentation-docs.scrypt.io-how-to-deploy-and-call-a-contr.md)
 * [How to Test a Contract](onboarding/scrypt-documentation/how-to-test-a-contract-scrypt-documentation-docs.scrypt.io-how-to-test-a-contract.html.md)
 * [Bitcoin Basics](onboarding/scrypt-documentation/bitcoin-basics-scrypt-documentation-docs.scrypt.io-bitcoin-basics-index.html.md)
 * [BitcoinJS Library](onboarding/scrypt-documentation/bitcoinjs-library-scrypt-documentation-docs.scrypt.io-bitcoin-basics-bitcoinjs-lib.html.md)
-* [Frontend Integration](onboarding/scrypt-documentation/frontend-integration-scrypt-documentation-docs.scrypt.io-how-to-integrate-a-contract-in-a-fr.md)
+* [Frontend Integration](scrypt-documentation/frontend-integration.md)
