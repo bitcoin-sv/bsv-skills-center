@@ -23,8 +23,8 @@ BSV Essentials will give students new to BSV a more introductory perspective on 
 
 #### BSV Basics: Protocol and Design
 
-{% content-ref url="../bsv-academy/bsv-basics-protocol-and-design/" %}
-[bsv-basics-protocol-and-design](../bsv-academy/bsv-basics-protocol-and-design/)
+{% content-ref url="BSV Basics: Protocol and Design/" %}
+[BSV Basics: Protocol and Design](<BSV Basics: Protocol and Design/>)
 {% endcontent-ref %}
 
 BSV Basics: Protocol and Design will introduce students to the BSV Ledger, Coins and Transactions and a high level overview of the general theory behind the system.
@@ -65,11 +65,9 @@ The BSV Theory stream starts by taking students through the Bitcoin Whitepaper l
 
 Introduction to Bitcoin Script provides a detailed exploration of the Forth-based scripting language used in the Bitcoin Virtual Machine (Bitcoin VM) during transaction validation. This course guides learners through the functional groups of opcodes in the language, demonstrating how to construct basic script templates and simulate recursive-like behaviors using innovative techniques such as the OP\_PUSHTX methodology.
 
-{% content-ref url="Introduction to Bitcoin Script/" %}
-[Introduction to Bitcoin Script](<Introduction to Bitcoin Script/>)
+{% content-ref url="../bsv-academy/introduction-to-bitcoin-script/" %}
+[introduction-to-bitcoin-script](../bsv-academy/introduction-to-bitcoin-script/)
 {% endcontent-ref %}
-
-
 
 ### BSV Infrastructure
 
