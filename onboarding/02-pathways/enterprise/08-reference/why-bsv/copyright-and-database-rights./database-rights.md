@@ -1,0 +1,17 @@
+# Database Rights
+
+**The Bitcoin Database, File Format, and Property Rights**
+
+The Bitcoin database and its file format are at the heart of the legal and technological discussions surrounding Bitcoin. Understanding the initial block download (IBD) process is crucial. During the IBD, miners and users sync their systems with the original Bitcoin blockchain, essentially receiving a copy of the database and adhering to its established file format. This process linked every participant directly to the database created by Satoshi Nakamoto.
+
+**Bitcoin’s Database Rights and the MIT License:** The database, comprising the blockchain and its unique file format, is a distinct intellectual creation. The MIT License, under which Bitcoin’s software was released, granted freedom for using and modifying the software but did not extend to the database rights of the Bitcoin blockchain. These rights are rooted in the creation and maintenance of the database, a process requiring substantial investment and intellectual effort.
+
+**Precedents in Database Rights:** Legal precedents in database rights emphasize that such rights are not relinquished merely by releasing associated software under an open-source license like the MIT License. The creator’s rights over the database remain intact, protecting the substantial investment in its compilation and maintenance.
+
+**BTC Core Group’s Fork and Protocol Modifications:** The BTC Core group, by forking the Bitcoin database and implementing modifications such as SegWit, RBF, Taproot, and Schnorr, fundamentally altered the protocol. These changes diverged from the original “set in stone” protocol as stated by Satoshi on forums, impacting the blockchain’s integrity and the validity of certain transactions. For example, transactions utilizing nLockTime might no longer be valid on the BTC network due to these protocol changes.
+
+**Legal Implications of Forking and Token Airdrops:** The act of forking the Bitcoin database and airdropping tokens designed to be perceived as the legitimate tokens of the original protocol raises significant legal questions. If copyright and database rights are upheld, the BTC Core developers, potentially viewed as an unlimited liability partnership, could face legal repercussions for these actions. These may include court orders demanding reparation for damages caused by the unauthorized modifications and misrepresentation of the original Bitcoin protocol.
+
+**Mainstream Misconceptions and Potential Legal Actions:** There is a prevalent misconception that BTC is synonymous with Bitcoin. However, legal enforcement of copyright and database rights could challenge this narrative. Such enforcement might lead to court orders mandating the BTC Core group, exchanges, and enterprises to cease passing off their tokens as the original Bitcoin. This could result in demands for renaming, or even removal from the internet, similar to actions taken against other copyright offenders.
+
+**Conclusion:** The legal landscape surrounding Bitcoin’s database rights is intricate, woven with technological complexities, historical developments, and legal nuances. The outcome of ongoing and future legal battles could redefine the understanding and operation of blockchain technology, emphasizing the importance of adhering to the original creator’s rights and the legal frameworks governing databases and intellectual property.

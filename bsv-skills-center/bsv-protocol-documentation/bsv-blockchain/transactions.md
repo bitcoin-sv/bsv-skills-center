@@ -60,7 +60,7 @@ Lost tokens don’t break the system. What they do is require people to keep pur
 
 In traditional payment systems, a transaction will have a single input and single output due to the usage of account-based ledgers (Credit, Debit). Bitcoin's UTXO-based ledger allows a transaction to have many inputs and outputs.
 
-Each output contains a predicate (evaluates to true or false) locking script that that must receive the correct missing information in order to evaluate to true when being included as an input in a new transaction. This property makes every transaction an electronic contract when used in conjunction with the public ledger. Locking scripts use a native programming language called Script (colloquially Bitcoin Script), allowing a large variety of electronic contracts to be supported natively.
+Each output contains a predicate (evaluates to true or false) locking script that must receive the correct missing information in order to evaluate to true when being included as an input in a new transaction. This property makes every transaction an electronic contract when used in conjunction with the public ledger. Locking scripts use a native programming language called Script (colloquially Bitcoin Script), allowing a large variety of electronic contracts to be supported natively.
 
 <figure><img src="../../../.gitbook/assets/WhatIsBlockchain_Slide19.png" alt=""><figcaption><p>Transaction Inputs and Outputs</p></figcaption></figure>
 
