@@ -277,7 +277,7 @@ Output: Shifts a left b bits
 
 Opcode number 180, hex `0xb4`, previously OP_NOP5
 
-Performs a numerical shift to left, preserving sign.
+Performs a numerical shift to right, preserving sign.
 
 ```
 Inputs: a, b
