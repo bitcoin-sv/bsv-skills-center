@@ -17,11 +17,11 @@ This documentation is built with the AI search tool in mind, responses will cite
 <summary>Application Developers</summary>
 
 \
-[quick-start.md](intro/quick-start.md "mention")
+[Quick Start](intro/quick-start.md)
 
-[mockchain.md](guides/local-blockchain-stack/mockchain.md "mention")
+[Mockchain](guides/local-blockchain-stack/mockchain.md)
 
-[EXAMPLE\_VERIFYING\_BEEF.md](guides/sdks/ts/examples/EXAMPLE\_VERIFYING\_BEEF.md "mention")
+[Example Verifying Beef.md](guides/sdks/ts/examples/EXAMPLE_VERIFYING_BEEF.md)
 
 </details>
 
@@ -29,11 +29,11 @@ This documentation is built with the AI search tool in mind, responses will cite
 
 <summary>Entrepreneurs</summary>
 
-[what-can-i-do](what-can-i-do/ "mention")
+[What Can I do?](what-can-i-do/README.md)
 
-[the-benefits-of-bsv-blockchain.md](bsv-skills-center/the-benefits-of-bsv-blockchain.md "mention")
+[The benefits of BSV Blockchain](bsv-skills-center/the-benefits-of-bsv-blockchain.md)
 
-[event\_tickets.md](guides/business-use-cases/event\_tickets.md "mention")
+[Event tickets](guides/business-use-cases/event_tickets.md)
 
 </details>
 
@@ -41,11 +41,7 @@ This documentation is built with the AI search tool in mind, responses will cite
 
 <summary>Lawyers</summary>
 
-[Broken link](broken-reference "mention")
-
-[Broken link](broken-reference "mention")
-
-[digital-signatures.md](bsv-skills-center/bsv-protocol-documentation/privacy/digital-signatures.md "mention")
+[Digital Signatures](bsv-skills-center/bsv-protocol-documentation/privacy/digital-signatures.md)
 
 </details>
 
@@ -53,6 +49,6 @@ This documentation is built with the AI search tool in mind, responses will cite
 
 <summary>Miners</summary>
 
-[sv-node](network-topology/nodes/sv-node/installation/sv-node/ "mention")
+[SV Node](network-topology/nodes/sv-node/installation/sv-node/README.md)
 
 </details>
