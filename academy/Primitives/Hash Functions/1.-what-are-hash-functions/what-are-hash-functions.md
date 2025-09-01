@@ -215,8 +215,6 @@ Notice the output of the hash table is not in order like the array was, and that
 
 BSV Blockchain makes extensive use of Merkle Trees. A Merkle Tree is a binary tree structure (meaning its branches terminate in two nodes) that's made entirely of hashes. For example, the leaf nodes at the bottom layer of the Merkle trees used in BSV are the hash values of the raw data from bitcoin transactions. And the successive layers of the tree leading back to the root node are constructed by concatenating the two hashes from the previous layer, and hashing them together to form a new hash. This has the effect of connecting the tree together to be represented securely by one single root node value. This structure makes it very easy to find data at the bottom of the tree, as well as to prove specific data exists in the tree - which is particularly important for scaling the BSV system efficiently.
 
-[See our course Bitcoin Primitives: Merkle Trees](https://bitcoinsv.academy/course/bitcoin-primitives-merkle-trees)
-
 ### Digital Signatures
 
 Although hash tables and data structures like Merkle Trees are where hash functions find their greatest use, the most widely recognized use of hash functions is in cryptography. In addition to encryption and key-exchanges, digital signatures make extensive use of hash functions. Like a physical signature, a digital signature associates an identity to a document or message. To ensure the security of digital signatures, well tested algorithms are used to both construct and verify them.
@@ -224,4 +222,3 @@ Although hash tables and data structures like Merkle Trees are where hash functi
 In BSV, digital signatures are most commonly used for Pay-to-Public-Key-Hash (P2PKH) transactions – the most common type of transaction template -- where the ownership of funds are transferred from the sending party to the receiving party. The two other common uses of digital signatures in BSV are for signing arbitrary messages and using an address as part of the verification process, and MinerID which is a message included in the first transaction of a block that acts as an authentication mechanism in case another miner (node) tries to act dishonestly while using the ID of a competing miner.
 
 With that said, it's helpful to recognize that even though hash functions and cryptographic digital signatures are used in BSV, it is **not** a cryptographic system, and it's actually incorrect to use the term “cryptocurrency” when referring to Bitcoin or a system that follows the Bitcoin architectural design like BSV. This is a really important distinction to be aware of because as we'll see in chapter 7, it's fundamental to how the BSV system operates and how it's secured.
-
