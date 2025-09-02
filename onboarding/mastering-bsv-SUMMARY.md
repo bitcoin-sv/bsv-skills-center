@@ -1,0 +1,55 @@
+# Mastering BSV Summary
+
+## TRUNK
+
+* [Table of Contents](broken-reference)
+  * [Module 1: Introduction to BSV and the Concept of Spendable Transaction Outputs (STOs)](trunk/table-of-contents/module-1-introduction-to-bsv-and-the-concept-of-spendable-transaction-outputs-stos/)
+    * [Module 1 Hands-On Exercises](trunk/table-of-contents/module-1-introduction-to-bsv-and-the-concept-of-spendable-transaction-outputs-stos/module-1-hands-on-exercises.md)
+  * [Module 2: Simplified Payment Verification (SPV) and Network Trust](trunk/table-of-contents/module-2-simplified-payment-verification-spv-and-network-trust/)
+    * [Module 2 Hands-On Exercises](trunk/table-of-contents/module-2-simplified-payment-verification-spv-and-network-trust/module-2-hands-on-exercises.md)
+  * [Module 3: Spendable Transaction Outputs (STOs) as Workflow Envelopes](trunk/table-of-contents/module-3-spendable-transaction-outputs-stos-as-workflow-envelopes/)
+    * [Module 3 Hands-On Exercises: Building on the Digital Envelopes and Ordered Mail Bag Analogy](trunk/table-of-contents/module-3-spendable-transaction-outputs-stos-as-workflow-envelopes/module-3-hands-on-exercises-building-on-the-digital-envelopes-and-ordered-mail-bag-analogy.md)
+  * [Module 4: Transactions as Registered Mail Bags and STOs as Envelopes in Digital Workflows](trunk/table-of-contents/module-4-transactions-as-registered-mail-bags-and-stos-as-envelopes-in-digital-workflows.md)
+  * [Module 5: Basic Locking and Unlocking Concepts for STO Security](trunk/table-of-contents/module-5-basic-locking-and-unlocking-concepts-for-sto-security.md)
+  * [Module 6: Practical Applications of STOs and Payment Channels](trunk/table-of-contents/module-6-practical-applications-of-stos-and-payment-channels.md)
+  * [Module 7: Overlay Services – Managing STOs in Dedicated Business Environments](trunk/table-of-contents/module-7-overlay-services-managing-stos-in-dedicated-business-environments.md)
+  * [Module 8: The Future of STOs in Distributed Systems and Peer-to-Peer Networks](trunk/table-of-contents/module-8-the-future-of-stos-in-distributed-systems-and-peer-to-peer-networks.md)
+
+## PROFESSIONAL
+
+* [Table of Contents](professional/table-of-contents/)
+  * [Module 1: Introduction to Bitcoin SV, Spendable Transaction Outputs (STOs), and Core Principles](professional/table-of-contents/module-1-introduction-to-bitcoin-sv-spendable-transaction-outputs-stos-and-core-principles.md)
+  * [Module 2: Simplified Payment Verification (SPV) and Trust in Business Transactions](professional/table-of-contents/module-2-simplified-payment-verification-spv-and-trust-in-business-transactions.md)
+  * [Module 3: STOs as Digital Workflow Containers in Sectorial Contexts](professional/table-of-contents/module-3-stos-as-digital-workflow-containers-in-sectorial-contexts.md)
+  * [Module 4: Transactions as Registered Mailboxes – A Business Lens on Digital Workflows](professional/table-of-contents/module-4-transactions-as-registered-mailboxes-a-business-lens-on-digital-workflows.md)
+  * [Module 5: Unlocking the Potential of STOs in Peer-to-Peer Business Models](professional/table-of-contents/module-5-unlocking-the-potential-of-stos-in-peer-to-peer-business-models.md)
+  * [Module 6: Micropayments and Digital Service Monetization](professional/table-of-contents/module-6-micropayments-and-digital-service-monetization.md)
+  * [Module 7: Overlay Services – Tailoring Secure and Scalable BSV Payment Solutions for Enterprises](professional/table-of-contents/module-7-overlay-services-tailoring-secure-and-scalable-bsv-payment-solutions-for-enterprises.md)
+
+## TECHNICAL
+
+* [Table of Contents](technical/table-of-contents/)
+  * [Module 1: Introduction to BSV, Spendable Transaction Outputs (STOs), and Micropayments](technical/table-of-contents/module-1-introduction-to-bsv-spendable-transaction-outputs-stos-and-micropayments.md)
+  * [Module 2: Simplified Payment Verification (SPV) and Merkle Proofs](technical/table-of-contents/module-2-simplified-payment-verification-spv-and-merkle-proofs.md)
+  * [Module 3: STO Lifecycle and Workflow Management](technical/table-of-contents/module-3-sto-lifecycle-and-workflow-management.md)
+  * [Module 4: Transactions as Registered Mail Bags and STOs as Digital Envelopes](technical/table-of-contents/module-4-transactions-as-registered-mail-bags-and-stos-as-digital-envelopes.md)
+  * [Module 5: Wallet and Identity Management in BSV](technical/table-of-contents/module-5-wallet-and-identity-management-in-bsv/)
+    * [Lesson 1: Fundamentals of Identity-Based Key Management in BSV](technical/table-of-contents/module-5-wallet-and-identity-management-in-bsv/lesson-1-fundamentals-of-identity-based-key-management-in-bsv.md)
+    * [Lesson 2: Master Key Generation and Authentication for Decentralized Services](technical/table-of-contents/module-5-wallet-and-identity-management-in-bsv/lesson-2-master-key-generation-and-authentication-for-decentralized-services.md)
+    * [Lesson 3: STO Management and Security Protocols](technical/table-of-contents/module-5-wallet-and-identity-management-in-bsv/lesson-3-sto-management-and-security-protocols.md)
+    * [Lesson 4: Peer-to-Peer Communication and ECDHA in Decentralized Wallets](technical/table-of-contents/module-5-wallet-and-identity-management-in-bsv/lesson-4-peer-to-peer-communication-and-ecdha-in-decentralized-wallets.md)
+    * [Lesson 5: Advanced Key Management and Recovery Mechanisms](technical/table-of-contents/module-5-wallet-and-identity-management-in-bsv/lesson-5-advanced-key-management-and-recovery-mechanisms.md)
+  * [Module 6: Advanced Locking and Unlocking in Bitcoin Transactions](technical/table-of-contents/module-6-advanced-locking-and-unlocking-in-bitcoin-transactions.md)
+  * [Module 7: Extending Locking and Unlocking with sCrypt for Advanced Applications](technical/table-of-contents/module-7-extending-locking-and-unlocking-with-scrypt-for-advanced-applications.md)
+  * [Module 8: Overlay Services – Tailoring Secure and Scalable BSV Payment Solutions for Enterprises](technical/table-of-contents/module-8-overlay-services-tailoring-secure-and-scalable-bsv-payment-solutions-for-enterprises/)
+    * [Module 1: Introduction to Overlay Networks and BSV Protocols](technical/table-of-contents/module-8-overlay-services-tailoring-secure-and-scalable-bsv-payment-solutions-for-enterprises/module-1-introduction-to-overlay-networks-and-bsv-protocols.md)
+    * [Module 2: Implementing SHIP Protocol (Service Host Interconnect Protocol)](technical/table-of-contents/module-8-overlay-services-tailoring-secure-and-scalable-bsv-payment-solutions-for-enterprises/module-2-implementing-ship-protocol-service-host-interconnect-protocol.md)
+    * [Module 3: SLAP Protocol (Service Lookup Availability Protocol) for Service Discovery](technical/table-of-contents/module-8-overlay-services-tailoring-secure-and-scalable-bsv-payment-solutions-for-enterprises/module-3-slap-protocol-service-lookup-availability-protocol-for-service-discovery.md)
+    * [Lesson 1: Introduction to STOstore Architecture for Overlay Networks](technical/table-of-contents/module-8-overlay-services-tailoring-secure-and-scalable-bsv-payment-solutions-for-enterprises/lesson-1-introduction-to-stostore-architecture-for-overlay-networks.md)
+    * [Module 5: UHRP (Universal Hash Resolution Protocol) for Decentralized Data Retrieval](technical/table-of-contents/module-8-overlay-services-tailoring-secure-and-scalable-bsv-payment-solutions-for-enterprises/module-5-uhrp-universal-hash-resolution-protocol-for-decentralized-data-retrieval.md)
+    * [Module 6: BRC-31 for Mutual Authentication in Overlay Services](technical/table-of-contents/module-8-overlay-services-tailoring-secure-and-scalable-bsv-payment-solutions-for-enterprises/module-6-brc-31-for-mutual-authentication-in-overlay-services.md)
+  * [Module 9: Advanced Payment Channels in Bitcoin SV](technical/table-of-contents/module-9-advanced-payment-channels-in-bitcoin-sv.md)
+  * [Module 10: Mastering Sighash Schemes for Transaction Flexibility and Security](technical/table-of-contents/module-10-mastering-sighash-schemes-for-transaction-flexibility-and-security.md)
+  * [Module 11: Advanced SPV Techniques for Distributed Applications](technical/table-of-contents/module-11-advanced-spv-techniques-for-distributed-applications.md)
+  * [Module 12: Privacy-Preserving Transaction Techniques](technical/table-of-contents/module-12-privacy-preserving-transaction-techniques.md)
+  * [Module 13: Merkle-Based Data Structures and Efficient Data Retrieval and Selective Disclosure](technical/table-of-contents/module-13-merkle-based-data-structures-and-efficient-data-retrieval-and-selective-disclosure.md)
