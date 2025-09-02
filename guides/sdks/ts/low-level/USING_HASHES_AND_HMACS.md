@@ -1,6 +1,6 @@
 # Using Hashes and HMACs
 
-Hashes allow you to check the integrity of a message, by providing a deterministic one-way function that ransforms the input data. Hashes are widely useful, especially within Bitcoin. The BSV SDK provides first-class support for the hashing functions used within Bitcoin and its scripting language.
+Hashes allow you to check the integrity of a message, by providing a deterministic one-way function that transforms the input data. Hashes are widely useful, especially within Bitcoin. The BSV SDK provides first-class support for the hashing functions used within Bitcoin and its scripting language.
 
 In this tutorial, we will learn how to use hashes and HMACs (Hash-based Message Authentication Codes) to verify the integrity of information, ensuring it has not been changed.
 
