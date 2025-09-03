@@ -20,11 +20,10 @@ The node disk storage requirements can be reduced by enabling pruning via the `-
 
 The following points need to be considered:
 
-* The node will keep at least 6 blocks no matter what the pruning settings is.
-* Pruning is incompatible with configuration `-`_`txindex`_`=1` and `-`_`rescan`_.
-* Reverting `-`_`txindex`_`=1` or `-`_`rescan`_ will only take effect after restarting the node which in this case will repeat the whole IBD process from scratch.
+* The node will keep at least 288 blocks no matter what the pruning settings is.
+* _`txindex=1`_ on a pruned node is only possible in release 1.1.1+. If you attempt to request the details for a transaction that is in a block that has been pruned, then the node will simply return an error indicating that the transaction cannot be found.
 * Pruning is disabled by default.
-* There is no recommended value for _`prune`_. Node operator should assume that blocks may exceed 4GB in size when choosing a value for _`prune.`_ The possible settings for pruning are:&#x20;
+* There is no recommended value for _`prune`_. Node operator should assume that blocks may exceed 4GB in size when choosing a value for _`prune.`_ The possible settings for pruning are:
 
 <pre><code><strong>-prune=&#x3C;n>
 </strong><strong>    0 = disable pruning blocks,
@@ -32,7 +31,7 @@ The following points need to be considered:
     n = automatically prune block files to stay under the specified target size in MB
 </code></pre>
 
-* If pruning is enabled, _`getdata`_ and _`getblock`_ RPC may fail as they may attempt to access a block that is no longer available.  In that case, the error message looks like:
+* If pruning is enabled, _`getdata`_ and _`getblock`_ RPC may fail as they may attempt to access a block that is no longer available. In that case, the error message looks like:
 
 ```
 **'ERROR: GetDiskBlockStreamReader(CDiskBlockPos&): OpenBlockFile failed for
@@ -43,7 +42,7 @@ CBlockDiskPos(nFile=-1, nPos=0)'
 
 ## Arrival of New Blocks can make Node Unresponsive
 
-The validation of a new arrived block is a high priority task since miners need to know if the new block is valid and whether they should continue to attempt to build on the current blockchain head or switch their resources to building on the new block. If the node mempools are in sync, then the node has already seen and validated the transactions in the new block and block validation can be very quick. If the node mempools are not in sync, which can happen if there is heavy traffic, the node will need to validate all the transactions it was not seen before. That can take some time (up to a minute). During that time the main SV node lock (cs\_main) is held by block validation; without access to cs\_main much of the other node functionality including the RPC interface is unavailable.&#x20;
+The validation of a new arrived block is a high priority task since miners need to know if the new block is valid and whether they should continue to attempt to build on the current blockchain head or switch their resources to building on the new block. If the node mempools are in sync, then the node has already seen and validated the transactions in the new block and block validation can be very quick. If the node mempools are not in sync, which can happen if there is heavy traffic, the node will need to validate all the transactions it was not seen before. That can take some time (up to a minute). During that time the main SV node lock (cs\_main) is held by block validation; without access to cs\_main much of the other node functionality including the RPC interface is unavailable.
 
 ## BCH and BTC Blocks
 

@@ -4,29 +4,29 @@ The following instructions describe installing Bitcoin SV Node using tools avail
 
 To start the install of Bitcoin, make sure you use an account that can use `su` or `sudo` to install software into directories owned by the root user.
 
-Download the zipped release of your choosing, for this example we are using 1.0.16 which is the latest release at the time of writing:
+Download the zipped release of your choosing, for this example we are using 1.1.1 which is the latest release at the time of writing:
 
-<pre class="language-sh"><code class="lang-sh"><strong>wget https://download.bitcoinsv.io/bitcoinsv/1.1.0/bitcoin-sv-1.1.0-x86_64-linux-gnu.tar.gz
+<pre class="language-sh"><code class="lang-sh"><strong>wget https://download.bitcoinsv.io/bitcoinsv/1.1.1/bitcoin-sv-1.1.1-x86_64-linux-gnu.tar.gz
 </strong></code></pre>
 
 Confirm downloaded file sha hash matches those provided at [download.bitcoinsv.io](https://download.bitcoinsv.io/bitcoinsv/) for the version you have downloaded.
 
 ```sh
-sha256sum bitcoin-sv-1.1.0-x86_64-linux-gnu.tar.gz
+sha256sum bitcoin-sv-1.1.1-x86_64-linux-gnu.tar.gz
 # Expected Output 
-# ec0470ee43224be4f1fe9315b96a72c14efdccac82416263916f3c1576719ad3  bitcoin-sv-1.1.0-x86_64-linux-gnu.tar.gz
+# da336914e512ed568b94496cd83c89a53e281b944cf08c5c01ddf06beb836705  bitcoin-sv-1.1.1-x86_64-linux-gnu.tar.gz
 ```
 
 Locate the file you downloaded and extract it using the `tar` command followed by the argument `xzf` followed by the file name. The argument `xzf` means eXtract the gZipped tar archive file. For example, for a 64-bit tar archive in your current directory, the command is:
 
 ```bash
-tar xvf bitcoin-sv-1.1.0-x86_64-linux-gnu.tar.gz
+tar xvf bitcoin-sv-1.1.1-x86_64-linux-gnu.tar.gz
 ```
 
 Create a symbolic link from a new directory called `bitcoin` to the `bitcoin-sv-1.0.16` directory you just made by unzipping for easier use and updates:
 
 ```bash
-ln -s bitcoin-sv-1.1.0 bitcoin
+ln -s bitcoin-sv-1.1.1 bitcoin
 ```
 
 Create a `bitcoin-data` directory to put bitcoin data in (or else Bitcoin will put data in `~/.bitcoin` by default):
@@ -132,7 +132,7 @@ preferredblockfilesize=2GB
 # Mining, biggest block size you want to mine
 blockmaxsize=4GB 
 # When mining, consider switching to a pruned node
-# Using prune is incompatible with txindex
+# Using prune and txindex is only possible in 1.1.1+
 #prune=100000 # Keep only last ~100GB of blocks
 #txindex=0
 
