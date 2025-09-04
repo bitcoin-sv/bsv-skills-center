@@ -1,6 +1,6 @@
 # Tokenisation of Digital Assets
 
-<figure><img src="../../../../.gitbook/assets/Slide8.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Slide8 (2).jpg" alt=""><figcaption></figcaption></figure>
 
 Before moving on it is worth understanding what tokenization is.&#x20;
 

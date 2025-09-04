@@ -1,6 +1,6 @@
 # Blockchain: An immutable, decentralised and transparent data system
 
-<figure><img src="../../../.gitbook/assets/Slide6.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Slide6 (1).jpg" alt=""><figcaption></figcaption></figure>
 
 But there is a system that aims to solve the problems just described. Before moving forward it is important to clarify the key points of this system.&#x20;
 

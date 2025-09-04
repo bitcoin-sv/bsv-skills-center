@@ -1,6 +1,6 @@
 # Data hashing
 
-<figure><img src="../../../../.gitbook/assets/Slide10.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Slide10 (1).jpg" alt=""><figcaption></figcaption></figure>
 
 Before moving on, it is important to understand an essential concept not only in blockchain but in technology in general. **This is hashing.**&#x20;
 

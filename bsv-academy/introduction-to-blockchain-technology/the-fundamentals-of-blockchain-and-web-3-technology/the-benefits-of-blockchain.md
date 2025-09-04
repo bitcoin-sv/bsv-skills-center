@@ -1,6 +1,6 @@
 # The Benefits of Blockchain
 
-<figure><img src="../../../.gitbook/assets/Slide7.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Slide7 (1).jpg" alt=""><figcaption></figcaption></figure>
 
 This technology has 3 major advantages that address the problems mentioned earlier.&#x20;
 
