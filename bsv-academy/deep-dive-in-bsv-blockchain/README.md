@@ -1,6 +1,6 @@
 # Deep Dive in BSV Blockchain
 
-This path provides an in-depth exploration of the BSV blockchain, covering its technical foundations, governance, real-world applications, and the role of the BSV Association in enabling adoption. Learners will gain both theoretical understanding and practical insight into how BSV supports enterprise-grade, scalable, and regulatory-compliant solutions.
+This Education path provides an in-depth exploration of the BSV blockchain, covering its technical foundations, governance, real-world applications, and the role of the BSV Association in enabling adoption. Learners will gain both theoretical understanding and practical insight into how BSV supports enterprise-grade, scalable, and regulatory-compliant solutions.
 
 #### Key Takeaways
 
