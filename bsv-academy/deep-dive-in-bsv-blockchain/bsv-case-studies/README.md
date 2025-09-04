@@ -1,9 +1,9 @@
 ---
-cover: ../../../.gitbook/assets/360 Course banner  - case studies.png
+cover: ../../../.gitbook/assets/360 Course banner  - case studies (1).png
 coverY: 0
 ---
 
-# BSV Use Cases
+# BSV Case Studies
 
 In this course, you will learn about **Blockchain Applications** and their transformative impact across various industries. We will explore how blockchain technology is revolutionizing sectors such as finance, trade, and cybersecurity, while also delving into emerging use cases that address sustainability and digital identity. This comprehensive overview will equip you with the knowledge to understand and leverage blockchain innovations effectively.
 
