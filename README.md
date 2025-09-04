@@ -16,7 +16,8 @@ This documentation is built with the AI search tool in mind, responses will cite
 
 <summary>Application Developers</summary>
 
-\
+[Demo Catalogue](https://hub.bsvblockchain.org/demos-and-onboardings/demo-solutions/demos)
+
 [Quick Start](intro/quick-start.md)
 
 [Mockchain](guides/local-blockchain-stack/mockchain.md)
@@ -51,6 +52,8 @@ This documentation is built with the AI search tool in mind, responses will cite
 <summary>Entrepreneurs</summary>
 
 [What Can I do?](what-can-i-do/)
+
+[Demo Catalogue](https://hub.bsvblockchain.org/demos-and-onboardings/demo-solutions/demos)
 
 [The benefits of BSV Blockchain](bsv-skills-center/the-benefits-of-bsv-blockchain.md)
 
@@ -143,6 +146,8 @@ Academy: Identity and Privacy Foundations (coming soon)
 <details>
 
 <summary>Executives</summary>
+
+[Demo Catalogue](https://hub.bsvblockchain.org/demos-and-onboardings/demo-solutions/demos)
 
 [Academy: Introduction to blockchain technology](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/introduction-to-blockchain-technology)
 
