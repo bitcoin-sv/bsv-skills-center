@@ -49,7 +49,7 @@ Academy: Deep Dive into the BSV blockchain (coming soon)
 
 Academy: Deep Dive into the BSV blockchain (coming soon)
 
-Academy: Introduction to blockchain technology (coming soon)
+[Academy: Introduction to blockchain technology](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/introduction-to-blockchain-technology)
 
 </details>
 
@@ -58,6 +58,8 @@ Academy: Introduction to blockchain technology (coming soon)
 <summary>Lawyers</summary>
 
 [Digital Signatures](bsv-skills-center/bsv-protocol-documentation/privacy/digital-signatures.md)
+
+[Academy: Introduction to blockchain technology](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/introduction-to-blockchain-technology)
 
 Academy: Identity and Privacy Foundations (coming soon)
 
@@ -77,6 +79,8 @@ Academy: Identity and Privacy Foundations (coming soon)
 
 <summary>Academics</summary>
 
+[Academy: Introduction to blockchain technology](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/introduction-to-blockchain-technology)
+
 [Bitcoin as Historical Phenomenon](https://hub.bsvblockchain.org/bsv-skills-center/~/changes/149/bsv-academy/bitcoin-as-historical-phenomenon)
 
 Academy: Identity and Privacy Foundations (coming soon)
@@ -89,7 +93,7 @@ Academy: Identity and Privacy Foundations (coming soon)
 
 <summary>Executives</summary>
 
-Academy: Introduction to blockchain technology (coming soon)
+[Academy: Introduction to blockchain technology](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/introduction-to-blockchain-technology)
 
 Academy: Deep Dive into the BSV blockchain (coming soon)
 
@@ -105,12 +109,12 @@ Academy: Data, Information, and Knowledge in the Digital Age - ICT (coming soon)
 
 <summary>ICT Students &#x26; Professionals</summary>
 
-Academy: Blockchain Fundamentals - ICT (coming soon)
+[Academy: Introduction to blockchain technology](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/introduction-to-blockchain-technology)
 
-Academy: Deep Dive into the BSV blockchain (coming soon)
+Academy: Blockchain Fundamentals - ICT (coming soon)
 
 Academy: Data, Information, and Knowledge in the Digital Age - ICT (coming soon)
 
-
+Academy: Deep Dive into the BSV blockchain (coming soon)
 
 </details>
