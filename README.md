@@ -31,9 +31,18 @@ This documentation is built with the AI search tool in mind, responses will cite
 
 [Academy: Digital Signatures](https://hub.bsvblockchain.org/bsv-skills-center/~/changes/149/bsv-academy/digital-signatures)
 
-Academy: Deep Dive into the BSV blockchain (coming soon)
+[Academy: Deep Dive into the BSV blockchain](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain)&#x20;
 
-
+* [Who is the BSV Association](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/the-bsv-associations-mission-and-impact)
+* [Overview of BSV: Stability, Scalability, and Security for Business Success](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/the-bsv-blockchain-unlock-stability-scalability-and-security-for-business-success)
+* [BSV: Network Topology and Teranode Dynamics](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/bsv-blockchain-network-topology-and-teranode-dynamics)
+* [BSV Consensus Model](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/bsv-blockchain-network-topology-and-teranode-dynamics)
+* [Supply Policies and Reward Mechanisms](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/supply-policies-and-reward-mechanisms)
+* [UTXO Model](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/utxo-model-unlock-transaction-efficiency-and-privacy)
+* [Data Storage on BSV](bsv-academy/deep-dive-in-bsv-blockchain/the-hybrid-approach-optimize-data-storage-on-the-bsv-blockchain/data-storage-on-bsv-blockchain.md)
+* [Identity on BSV](bsv-academy/deep-dive-in-bsv-blockchain/identity-unlocking-the-power-of-bsv-blockchain/identity-on-the-bsv-blockchain.md)
+* [Tokens & Smart Contracts](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/the-power-of-tokens-and-smart-contracts)
+* [Case studies](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/bsv-case-studies)
 
 </details>
 
@@ -47,9 +56,16 @@ Academy: Deep Dive into the BSV blockchain (coming soon)
 
 [Event tickets](guides/business-use-cases/event_tickets.md)
 
-Academy: Deep Dive into the BSV blockchain (coming soon)
-
 [Academy: Introduction to blockchain technology](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/introduction-to-blockchain-technology)
+
+[Academy: Deep Dive into the BSV blockchain](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain)&#x20;
+
+* [Who is the BSV Association](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/the-bsv-associations-mission-and-impact)
+* [Overview of BSV: Stability, Scalability, and Security for Business Success](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/the-bsv-blockchain-unlock-stability-scalability-and-security-for-business-success)
+
+- [Case studies](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/bsv-case-studies)
+
+
 
 </details>
 
@@ -63,6 +79,16 @@ Academy: Deep Dive into the BSV blockchain (coming soon)
 
 Academy: Identity and Privacy Foundations (coming soon)
 
+[Academy: Deep Dive into the BSV blockchain](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain)&#x20;
+
+* [Who is the BSV Association](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/the-bsv-associations-mission-and-impact)
+* [Overview of BSV: Stability, Scalability, and Security for Business Success](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/the-bsv-blockchain-unlock-stability-scalability-and-security-for-business-success)
+
+- [Data Storage on BSV](bsv-academy/deep-dive-in-bsv-blockchain/the-hybrid-approach-optimize-data-storage-on-the-bsv-blockchain/data-storage-on-bsv-blockchain.md)
+- [Identity on BSV](bsv-academy/deep-dive-in-bsv-blockchain/identity-unlocking-the-power-of-bsv-blockchain/identity-on-the-bsv-blockchain.md)
+- [Tokens & Smart Contracts](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/the-power-of-tokens-and-smart-contracts)
+- [Case studies](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/bsv-case-studies)
+
 </details>
 
 <details>
@@ -73,6 +99,18 @@ Academy: Identity and Privacy Foundations (coming soon)
 
 [Academy: Bitcoin Infrastructure](https://hub.bsvblockchain.org/bsv-skills-center/~/changes/149/bsv-academy/bsv-infrastructure)
 
+[Academy: Deep Dive into the BSV blockchain](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain)&#x20;
+
+* [Who is the BSV Association](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/the-bsv-associations-mission-and-impact)
+* [Overview of BSV: Stability, Scalability, and Security for Business Success](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/the-bsv-blockchain-unlock-stability-scalability-and-security-for-business-success)
+
+- [BSV: Network Topology and Teranode Dynamics](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/bsv-blockchain-network-topology-and-teranode-dynamics)
+- [BSV Consensus Model](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/bsv-blockchain-network-topology-and-teranode-dynamics)
+
+* [Data Storage on BSV](bsv-academy/deep-dive-in-bsv-blockchain/the-hybrid-approach-optimize-data-storage-on-the-bsv-blockchain/data-storage-on-bsv-blockchain.md)
+
+- [Tokens & Smart Contracts](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/the-power-of-tokens-and-smart-contracts)
+
 </details>
 
 <details>
@@ -81,7 +119,20 @@ Academy: Identity and Privacy Foundations (coming soon)
 
 [Academy: Introduction to blockchain technology](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/introduction-to-blockchain-technology)
 
-[Bitcoin as Historical Phenomenon](https://hub.bsvblockchain.org/bsv-skills-center/~/changes/149/bsv-academy/bitcoin-as-historical-phenomenon)
+Academy: [Bitcoin as Historical Phenomenon](https://hub.bsvblockchain.org/bsv-skills-center/~/changes/149/bsv-academy/bitcoin-as-historical-phenomenon)
+
+[Academy: Deep Dive into the BSV blockchain](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain)&#x20;
+
+* [Who is the BSV Association](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/the-bsv-associations-mission-and-impact)
+* [Overview of BSV: Stability, Scalability, and Security for Business Success](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/the-bsv-blockchain-unlock-stability-scalability-and-security-for-business-success)
+* [BSV: Network Topology and Teranode Dynamics](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/bsv-blockchain-network-topology-and-teranode-dynamics)
+* [BSV Consensus Model](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/bsv-blockchain-network-topology-and-teranode-dynamics)
+* [Supply Policies and Reward Mechanisms](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/supply-policies-and-reward-mechanisms)
+* [UTXO Model](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/utxo-model-unlock-transaction-efficiency-and-privacy)
+* [Data Storage on BSV](bsv-academy/deep-dive-in-bsv-blockchain/the-hybrid-approach-optimize-data-storage-on-the-bsv-blockchain/data-storage-on-bsv-blockchain.md)
+* [Identity on BSV](bsv-academy/deep-dive-in-bsv-blockchain/identity-unlocking-the-power-of-bsv-blockchain/identity-on-the-bsv-blockchain.md)
+* [Tokens & Smart Contracts](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/the-power-of-tokens-and-smart-contracts)
+* [Case studies](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/bsv-case-studies)
 
 Academy: Identity and Privacy Foundations (coming soon)
 
@@ -95,7 +146,12 @@ Academy: Identity and Privacy Foundations (coming soon)
 
 [Academy: Introduction to blockchain technology](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/introduction-to-blockchain-technology)
 
-Academy: Deep Dive into the BSV blockchain (coming soon)
+[Academy: Deep Dive into the BSV blockchain](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain)&#x20;
+
+* [Who is the BSV Association](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/the-bsv-associations-mission-and-impact)
+* [Overview of BSV: Stability, Scalability, and Security for Business Success](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/the-bsv-blockchain-unlock-stability-scalability-and-security-for-business-success)
+
+- [Case studies](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/bsv-case-studies)
 
 Academy: Beginner Blockchain for Executives (coming soon)
 
@@ -115,6 +171,17 @@ Academy: Blockchain Fundamentals - ICT (coming soon)
 
 Academy: Data, Information, and Knowledge in the Digital Age - ICT (coming soon)
 
-Academy: Deep Dive into the BSV blockchain (coming soon)
+[Academy: Deep Dive into the BSV blockchain](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain)&#x20;
+
+* [Who is the BSV Association](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/the-bsv-associations-mission-and-impact)
+* [Overview of BSV: Stability, Scalability, and Security for Business Success](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/the-bsv-blockchain-unlock-stability-scalability-and-security-for-business-success)
+* [BSV: Network Topology and Teranode Dynamics](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/bsv-blockchain-network-topology-and-teranode-dynamics)
+* [BSV Consensus Model](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/bsv-blockchain-network-topology-and-teranode-dynamics)
+* [Supply Policies and Reward Mechanisms](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/supply-policies-and-reward-mechanisms)
+* [UTXO Model](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/utxo-model-unlock-transaction-efficiency-and-privacy)
+* [Data Storage on BSV](bsv-academy/deep-dive-in-bsv-blockchain/the-hybrid-approach-optimize-data-storage-on-the-bsv-blockchain/data-storage-on-bsv-blockchain.md)
+* [Identity on BSV](bsv-academy/deep-dive-in-bsv-blockchain/identity-unlocking-the-power-of-bsv-blockchain/identity-on-the-bsv-blockchain.md)
+* [Tokens & Smart Contracts](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/the-power-of-tokens-and-smart-contracts)
+* [Case studies](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/bsv-case-studies)
 
 </details>
