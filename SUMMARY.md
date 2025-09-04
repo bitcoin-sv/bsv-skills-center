@@ -353,7 +353,7 @@
     * [The Network](<academy/BSV Enterprise/introduction-to-bitcoin-enterprise/technical-details/the-network/README.md>)
       * [The Small World Network](<academy/BSV Enterprise/introduction-to-bitcoin-enterprise/technical-details/the-network/the-small-world-network.md>)
       * [Robust In Its Unstructured Simplicity](<academy/BSV Enterprise/introduction-to-bitcoin-enterprise/technical-details/the-network/robust-in-its-unstructured-simplicity.md>)
-    * [The Bitcoin SV Node Client](<academy/BSV Enterprise/introduction-to-bitcoin-enterprise/technical-details/the-bitcoin-satoshi-vision-node-client/README.md>)
+    * [The BSV Node Client](<academy/BSV Enterprise/introduction-to-bitcoin-enterprise/technical-details/the-bitcoin-satoshi-vision-node-client/README.md>)
       * [Teranode - The Future of BSV](<academy/BSV Enterprise/introduction-to-bitcoin-enterprise/technical-details/the-bitcoin-satoshi-vision-node-client/teranode-the-future-of-bitcoin.md>)
     * [The Protocol - Simple, Robust and Unbounded](<academy/BSV Enterprise/introduction-to-bitcoin-enterprise/technical-details/the-protocol-simple-robust-and-unbounded/README.md>)
       * [What is the BSV Protocol?](bsv-academy/bsv-enterprise/technical-details/the-protocol-simple-robust-and-unbounded/what-is-the-bitcoin-protocol.md)

@@ -44,6 +44,7 @@ This documentation is built with the AI search tool in mind, responses will cite
 * [Identity on BSV](bsv-academy/deep-dive-in-bsv-blockchain/identity-unlocking-the-power-of-bsv-blockchain/identity-on-the-bsv-blockchain.md)
 * [Tokens & Smart Contracts](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/the-power-of-tokens-and-smart-contracts)
 * [Case studies](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/bsv-case-studies)
+* [Intern or Collab on a POC](bsv-academy/deep-dive-in-bsv-blockchain/innovate-and-collaborate-on-the-bsv-blockchain/build-your-project-on-the-bsv-blockchain.md)
 
 </details>
 
@@ -67,6 +68,7 @@ This documentation is built with the AI search tool in mind, responses will cite
 * [Overview of BSV: Stability, Scalability, and Security for Business Success](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/the-bsv-blockchain-unlock-stability-scalability-and-security-for-business-success)
 
 - [Case studies](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/bsv-case-studies)
+- [Collaborate on a POC](bsv-academy/deep-dive-in-bsv-blockchain/innovate-and-collaborate-on-the-bsv-blockchain/build-your-project-on-the-bsv-blockchain.md)
 
 
 
@@ -157,6 +159,7 @@ Academy: Identity and Privacy Foundations (coming soon)
 * [Overview of BSV: Stability, Scalability, and Security for Business Success](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/the-bsv-blockchain-unlock-stability-scalability-and-security-for-business-success)
 
 - [Case studies](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/bsv-case-studies)
+- [Collaborate on a POC](bsv-academy/deep-dive-in-bsv-blockchain/innovate-and-collaborate-on-the-bsv-blockchain/build-your-project-on-the-bsv-blockchain.md)
 
 Academy: Beginner Blockchain for Executives (coming soon)
 
