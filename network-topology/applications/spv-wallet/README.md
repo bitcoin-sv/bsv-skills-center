@@ -1,16 +1,5 @@
 ---
 description: Open-source non-custodial hosted wallet for the BSV Blockchain
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # SPV Wallet

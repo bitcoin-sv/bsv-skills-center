@@ -10,13 +10,6 @@ Our goal is to:
 * Make it easier to on-board staff for businesses, enterprise and all other industry participants.
 * Reinforce blockchain development expertise as a unique and self-regulating profession.
 
-Our courses are broken up into four key streams:
-
-* BSV Essentials
-* BSV Theory
-* BSV Development
-* BSV Infrastructure
-
 ### BSV Essentials
 
 BSV Essentials will give students new to BSV a more introductory perspective on some of the design features, the application of BSV to legacy enterprise and three bridging courses for students to better understand some of the computer science techniques deployed in the system.

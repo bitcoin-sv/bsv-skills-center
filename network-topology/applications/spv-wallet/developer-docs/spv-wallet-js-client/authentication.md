@@ -2,10 +2,11 @@
 
 ## Authenticate as admin
 
-To authenticate within the SPV Wallet as an admin, you need to use admin HD key pair.
+To authenticate within the SPV Wallet as an admin, you need to use admin HD key pair.\
 At the SPV Wallet side the admin key pair is recognized by the admin xpub which need to be configured ([see configuration docs](../spv-wallet/configuration.md)).
 
 When you have the admin xpriv, you can now create SPV Wallet Client for admin API:
+
 ```typescript
 import {SpvWalletClient} from "@bsv/spv-wallet-js-client";
 
@@ -24,6 +25,7 @@ async function main() {
 Note that, to authenticate as a user, the user and their xPub must first be added by an admin to the SPV Wallet - in other words, the "user" must already exist.
 
 To register a user, the admin needs to make the following request to the SPV Wallet:
+
 ```typescript
 import {SpvWalletClient} from "@bsv/spv-wallet-js-client";
 
@@ -68,9 +70,9 @@ async function main() {
 ```
 
 In response, you can find the following important properties:
+
 * `key` - which is actually an additional private key and is not stored on the SPV Wallet side, so it is displayed to user only once and user is responsible for storing it
 * `id` - which actually can be used for checking the state of the access key (if it was revoked or when it was created) or revoking it.
-
 
 #### Use
 
@@ -101,4 +103,3 @@ async function main() {
     // ...
 }
 ```
-

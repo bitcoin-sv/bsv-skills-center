@@ -1,22 +1,20 @@
 # Authentication
 
-<!-- TOC -->
-* [Authentication](#authentication)
-  * [Authenticate with client libraries](#authenticate-with-client-libraries)
-  * [HTTP Authentication](#http-authentication)
-    * [Authentication headers](#authentication-headers)
-      * [Auth headers](#auth-headers)
-    * [Signing Message Algorithm Overview](#signing-message-algorithm-overview)
-  * [Authenticate as admin](#authenticate-as-admin)
-  * [User](#user)
-    * [Authentication using HD keys of user](#authentication-using-hd-keys-of-user)
-      * [Register users xpub](#register-users-xpub)
-      * [Authenticate with users xpub](#authenticate-with-users-xpub)
-    * [Authentication using Access key](#authentication-using-access-key)
-      * [Create](#create)
-      * [Use](#use)
-      * [Revoke](#revoke)
-<!-- TOC -->
+* [Authentication](authentication.md#authentication)
+  * [Authenticate with client libraries](authentication.md#authenticate-with-client-libraries)
+  * [HTTP Authentication](authentication.md#http-authentication)
+    * [Authentication headers](authentication.md#authentication-headers)
+      * [Auth headers](authentication.md#auth-headers)
+    * [Signing Message Algorithm Overview](authentication.md#signing-message-algorithm-overview)
+  * [Authenticate as admin](authentication.md#authenticate-as-admin)
+  * [User](authentication.md#user)
+    * [Authentication using HD keys of user](authentication.md#authentication-using-hd-keys-of-user)
+      * [Register users xpub](authentication.md#register-users-xpub)
+      * [Authenticate with users xpub](authentication.md#authenticate-with-users-xpub)
+    * [Authentication using Access key](authentication.md#authentication-using-access-key)
+      * [Create](authentication.md#create)
+      * [Use](authentication.md#use)
+      * [Revoke](authentication.md#revoke)
 
 ## Authenticate with client libraries
 
@@ -33,11 +31,11 @@ To authenticate against the SPV Wallet, one need to sign the request and provide
 
 #### Auth headers
 
-- `x-auth-key` -> xpub
-- `x-auth-hash` -> sha256 hash of the body string
-- `x-auth-nonce` -> random string
-- `x-auth-time` -> timestamp in milliseconds
-- `x-auth-signature` -> signature
+* `x-auth-key` -> xpub
+* `x-auth-hash` -> sha256 hash of the body string
+* `x-auth-nonce` -> random string
+* `x-auth-time` -> timestamp in milliseconds
+* `x-auth-signature` -> signature
 
 ### Signing Message Algorithm Overview
 
@@ -48,7 +46,7 @@ The algorithm is presented below:
 3. Set the xPub in `x-auth-xpub` header.
 4. Generate a random and unique number and encode it as hex, this is the authentication nonce (AuthNonce).
 5. Set the AuthNonce in `x-auth-nonce` header.
-6. Hash request body with SHA-256 algorithm and 
+6. Hash request body with SHA-256 algorithm and
 7. Set the hash of the body in `x-auth-hash` header.
 8. Get the current timestamp in milliseconds and set it in `x-auth-time` header.
 9. Derive a child extended key from the xPriv using AuthNonce.
@@ -58,8 +56,8 @@ The algorithm is presented below:
 
 ## Authenticate as admin
 
-To authenticate within the SPV Wallet as an admin, you need to use admin HD key pair.
-At the SPV Wallet side the admin key pair is recognized by the admin xpub which need to be configured ([see configuration docs](./configuration.md)).
+To authenticate within the SPV Wallet as an admin, you need to use admin HD key pair.\
+At the SPV Wallet side the admin key pair is recognized by the admin xpub which need to be configured ([see configuration docs](configuration.md)).
 
 ```http
 GET {{spv-wallet-url}}/api/v1/admin/status
@@ -124,9 +122,10 @@ x-auth-time: {{timestamp_in_milliseconds}}
 x-auth-signature: {{signature}}
 ```
 
-In response, you will receive a json with the following properties: 
+In response, you will receive a json with the following properties:
+
 * `key` - which is actually an additional private key and is not stored on the SPV Wallet side, so it is displayed to user only once and user is responsible for storing it
-* `id` - which actually can be used only on endpoints that can be used for checking the state of the access key (if it was revoked or when it was created) 
+* `id` - which actually can be used only on endpoints that can be used for checking the state of the access key (if it was revoked or when it was created)
 
 #### Use
 

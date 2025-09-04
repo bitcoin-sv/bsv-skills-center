@@ -2,10 +2,11 @@
 
 ## Authenticate as admin
 
-To authenticate within the SPV Wallet as an admin, you need to use admin HD key pair.
+To authenticate within the SPV Wallet as an admin, you need to use admin HD key pair.\
 At the SPV Wallet side the admin key pair is recognized by the admin xpub which need to be configured ([see configuration docs](../spv-wallet/configuration.md)).
 
 When you have the admin xpriv, you can now create SPV Wallet Client for admin API:
+
 ```go
 import (
 	wallet "github.com/bitcoin-sv/spv-wallet-go-client"
@@ -27,6 +28,7 @@ func main() {
 To authenticate as user, first user and his xpub must be added by admin to SPV Wallet.
 
 To register user, admin need to make a following request to SPV Wallet:
+
 ```go
 import (
     "context"
@@ -87,9 +89,9 @@ func main() {
 ```
 
 In response, you can find the following important properties:
+
 * `Key` - which is actually an additional private key and is not stored on the SPV Wallet side, so it is displayed to user only once and user is responsible for storing it
 * `ID` - which actually can be used for checking the state of the access key (if it was revoked or when it was created) or revoking it.
-
 
 #### Use
 
@@ -129,4 +131,3 @@ func main() {
 	// ...
 }
 ```
-

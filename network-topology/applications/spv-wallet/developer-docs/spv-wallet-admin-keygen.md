@@ -1,13 +1,13 @@
-# SPV Wallet Admin Keygen
+# Keygen
 
 ## Table of Contents
 
-  - [Overview](#overview)
-  - [Usage](#usage)
-    - [Running Locally in command line](#running-locally-in-command-line)
-    - [Running in Docker](#running-in-docker)
-  - [Example](#example)
-  
+* [Overview](spv-wallet-admin-keygen.md#overview)
+* [Usage](spv-wallet-admin-keygen.md#usage)
+  * [Running Locally in command line](spv-wallet-admin-keygen.md#running-locally-in-command-line)
+  * [Running in Docker](spv-wallet-admin-keygen.md#running-in-docker)
+* [Example](spv-wallet-admin-keygen.md#example)
+
 🔗 [GitHub URL](https://github.com/bitcoin-sv/spv-wallet-admin-keygen)
 
 ## Overview
@@ -28,21 +28,23 @@ docker run bsvb/spv-wallet-admin-keygen:latest --print --no-k8s
 
 #### Kubernetes Secret Creation
 
-##### Connect to Kubernetes cluster
+**Connect to Kubernetes cluster**
+
 To set the keys in kubernetes secret, you need to setup the image to have access to the namespace kubernetes cluster.
 
-You can do this, for example, by creating a dedicated `kubeconfig` file and mounting it to the container.
+You can do this, for example, by creating a dedicated `kubeconfig` file and mounting it to the container.\
 Simplest way to do this is to mount your `.kube/config` file to the container.
 
 ```bash
 docker run -v {my/kube/config/file}:/kubeconfig -e KUBECONFIG=/kubeconfig bsvb/spv-wallet-admin-keygen:latest
 ```
 
-##### Configure the secret name
-By default the secret name is `spv-wallet-keys`.
+**Configure the secret name**
+
+By default the secret name is `spv-wallet-keys`.\
 You can change it by using argument `-s` or `--secret`
 
-ℹ️ To configure k8s connection look at the section [connect to kubernetes cluster](#connect-to-kubernetes-cluster)
+ℹ️ To configure k8s connection look at the section [connect to kubernetes cluster](spv-wallet-admin-keygen.md#connect-to-kubernetes-cluster)
 
 ```bash
 docker run bsvb/spv-wallet-admin-keygen:latest --secret my-secret-name
@@ -54,11 +56,12 @@ If you prefer to use environment variables, you can set the `SECRET_NAME` enviro
 docker run -e SECRET_NAME=my-secret-name bsvb/spv-wallet-admin-keygen:latest
 ```
 
-##### Configure the key names
-By default, the key names are `admin_xpub` and `admin_xpriv`.
+**Configure the key names**
+
+By default, the key names are `admin_xpub` and `admin_xpriv`.\
 You can change it by using arguments -pb and -pv or --xpub-key and --xprv-key respectively.
 
-ℹ️ To configure k8s connection look at the section [connect to kubernetes cluster](#connect-to-kubernetes-cluster)
+ℹ️ To configure k8s connection look at the section [connect to kubernetes cluster](spv-wallet-admin-keygen.md#connect-to-kubernetes-cluster)
 
 ```bash
 docker run bsvb/spv-wallet-admin-keygen:latest --xpub-key my-xpub-key-name --xprv-key my-xpriv-key-name
@@ -70,10 +73,9 @@ If you prefer to use environment variables, you can set the `XPUB_KEY_NAME` and 
 docker run -e XPUB_KEY_NAME=my-xpub-key-name -e XPRV_KEY_NAME=my-xpriv-key-name bsvb/spv-wallet-admin-keygen:latest
 ```
 
-
 ### Running from source code
 
-Alternatively, you can generate a key pair directly from the source code.
+Alternatively, you can generate a key pair directly from the source code.\
 To use the tool, simply run the following command:
 
 ```bash

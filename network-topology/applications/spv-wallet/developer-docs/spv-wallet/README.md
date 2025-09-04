@@ -5,13 +5,13 @@ Complete stand-alone server using the SPV Wallet engine to manage xpubs, utxos, 
 ## Table of Contents
 
 1. [Quick Start](../../quickstart.md)
-2. [SPV and BEEF](#spv-and-beef)
+2. [SPV and BEEF](./#spv-and-beef)
 3. [Authentication](authentication.md)
 4. [Configuration](configuration.md)
 5. [Notifications (Webhooks)](notifications.md)
-6. [Client Libraries](#spv-wallet-clients)
-   1. [Go Client](../spv-wallet-go-client/README.md)
-   2. [JS Client](../spv-wallet-js-client/README.md)
+6. [Client Libraries](./#spv-wallet-clients)
+   1. [Go Client](../spv-wallet-go-client/)
+   2. [JS Client](../spv-wallet-js-client/)
 
 ## SPV and BEEF
 
@@ -33,7 +33,7 @@ To verify merkleroots we need to have a block headers service running. More abou
 
 [BUMP](https://bsv.brc.dev/transactions/0074)\
 [BEEF](https://bsv.brc.dev/transactions/0062)\
-[SPV](/network-topology/applications/spv-wallet/key-concepts.md)
+[SPV](../../key-concepts.md)
 
 ### SPV Wallet HTTP Server
 
@@ -42,8 +42,9 @@ SPV Wallet exposes an HTTP server which allows you to interact with database, ma
 API Documentation can be found in swagger - you can access it by running SPV Wallet and going to `http://localhost:3003/swagger/index.html`.
 
 ### SPV Wallet Clients
-We strongly encourage you to use one of the SPV Wallet client libraries provided for different languages, 
+
+We strongly encourage you to use one of the SPV Wallet client libraries provided for different languages,\
 which are abstracting out http connection and handle authentication for you:
 
-* [spv-wallet-go-client](../spv-wallet-go-client/README.md)
-* [spv-wallet-js-client](../spv-wallet-js-client/README.md)
+* [spv-wallet-go-client](../spv-wallet-go-client/)
+* [spv-wallet-js-client](../spv-wallet-js-client/)
