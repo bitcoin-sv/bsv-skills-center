@@ -17,3 +17,5 @@ The BSV Association offers various **collaboration opportunities** designed to f
 * Businesses can partner with the Association's **technology, policy, and education teams** to co-develop POCs and case studies that demonstrate **real-world applications** of blockchain.
 * Universities and students are encouraged to engage in **collaborative research projects** that can lead to applied learning experiences and valuable insights into blockchain technology.
 * These partnerships not only enhance the **learning experience** but also contribute to the broader ecosystem of **blockchain innovation**.
+
+[**R**](mailto:d.kellenschwiler@bsvassociation.org,%20mohammad.jaber@bsvassociation.org?subject=Collab%20on%20POC)[**each out to work directly with us on proofs-of-concept and pilots tailored to your challenges and opportunities.**](mailto:marcin.rzetecki@bsvassociation.org,%20mohammad.jaber@bsvassociation.org?subject=Collab%20on%20POC)
