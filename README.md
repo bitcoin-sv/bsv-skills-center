@@ -10,7 +10,7 @@ The BSV Skills Center is a comprehensive collection of documents covering all as
 This documentation is built with the AI search tool in mind, responses will cite pages from within this documentation repository to answer your questions.
 {% endhint %}
 
-### How should I begin?
+### Where should I begin?
 
 <details>
 
