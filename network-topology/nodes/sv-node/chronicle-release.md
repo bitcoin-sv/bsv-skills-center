@@ -29,12 +29,20 @@ This change will depend on the usage of the new `CHRONICLE` \[`0x20`] Sighash bi
 
 <table><thead><tr><th width="199">Input/Transaction Config</th><th>CHRONICLE</th><th>TDA</th></tr></thead><tbody><tr><td>Single input, single signature</td><td>0</td><td>BIP143</td></tr><tr><td>Single input, single signature</td><td>1</td><td>OTDA</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>All 0</td><td>BIP143</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>All 1</td><td>OTDA</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>Mixed</td><td>Mixed</td></tr></tbody></table>
 
-## 2. Selective Malleability Restrictions
+## 2. Limit on the Size of Script Numbers Removal
+
+The configuration parameter `maxscriptnumlengthpolicy` limits the size of numbers used in scripts. The default is 10,000 bytes with 0 indicating no external limit.
+
+The `maxscriptnumlengthpolicy` configuration parameter default will be changed to unlimited (0).
+
+There are to be no restrictions on the max size of script numbers.
+
+## 3. Selective Malleability Restrictions
 
 The Chronicle Release will remove malleability-related restrictions during script evaluation. For any transactions signed with a version field greater than 1 [`0x00000001`], the restrictions below will no longer apply to the transaction. This behavior requires users and developers to "opt-in", as any transactions that continue to use a version field of 1 [`0x00000001`] will keep these restrictions. The malleability-related restrictions being removed are:
 
 
-### Minimal Encoding RequirementRemoval
+### Minimal Encoding Requirement Removal
 
 Update the script processing so that numbers are not required to be expressed using the minimum number of bytes.
 
@@ -42,13 +50,6 @@ Update the script processing so that numbers are not required to be expressed us
 * Remove `MinimallyEncoded()` and `IsMinimallyEncoded(..)` methods
 * Remove `bsv::MinimallyEncoded()` and `bsv::IsMinimallyEncoded(..)` functions.
 
-### Limit on the Size of Script Numbers Removal
-
-The configuration parameter `maxscriptnumlengthpolicy` limits the size of numbers used in scripts. The default is 10,000 bytes with 0 indicating no external limit.
-
-The `maxscriptnumlengthpolicy` configuration parameter default will be changed to unlimited (0).
-
-There are to be no restrictions on the max size of script numbers.
 
 ### Low S Requirement for SignaturesRemoval
 
@@ -128,7 +129,7 @@ It should be noted that the unlocking script is evaluated, the resulting main st
 
 There are specific use cases for "showing your work" like this in the unlocking script. Typically it is not necessary to include intermediate values, and simply passing the result of any calculation as push data would be sufficient.
 
-## 2. Opcodes
+## 4. Opcodes
 
 The opcodes listed below will be re-instated. 
 
