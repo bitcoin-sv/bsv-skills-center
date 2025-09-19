@@ -1,6 +1,6 @@
 # Overview of GitHub repositories
 
-The main BSV GitHub is available [here](https://github.com/bitcoin-sv), showcasing all public repositories, enabling developers to contribute directly or use as the foundation for their own needs.
+The main BSV GitHub is available [here](https://github.com/orgs/bsv-blockchain/repositories), showcasing all public repositories, enabling developers to contribute directly or use as the foundation for their own needs.
 
 This page highlights the main repositories currently available on GitHub:
 
