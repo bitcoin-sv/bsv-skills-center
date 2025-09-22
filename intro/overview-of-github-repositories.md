@@ -10,18 +10,18 @@ The BSV Blockchain Libraries Project aims to structure and maintain a middleware
 
 Three core libraries have been developed and made available:
 
-* GO SDK: [https://github.com/bitcoin-sv/go-sdk](https://github.com/bitcoin-sv/go-sdk)
-  * Script templates: [https://github.com/bitcoin-sv/go-templates](https://github.com/bitcoin-sv/go-templates)
-* TypeScript SDK: [https://github.com/bitcoin-sv/ts-sdk](https://github.com/bitcoin-sv/ts-sdk)
-* Python SDK: [https://github.com/bitcoin-sv/py-sdk](https://github.com/bitcoin-sv/py-sdk)
+* GO SDK: [https://github.com/bsv-blockchain/go-sdk](https://github.com/bsv-blockchain/go-sdk)
+  * Script templates: [https://github.com/bsv-blockchain/go-template](https://github.com/bsv-blockchain/go-template)
+* TypeScript SDK: [https://github.com/bsv-blockchain/ts-sdk](https://github.com/bsv-blockchain/ts-sdk)
+* Python SDK: [https://github.com/bsv-blockchain/py-sdk](https://github.com/bsv-blockchain/py-sdk)
 
 More information available [here](../guides/sdks/)
 
 ## SPV Wallet
 
-The SPV Wallet is a comprehensive non-custodial wallet for BSV, enabling Simplified Payment Verification (as described in the Bitcoin White Paper section 8).&#x20;
+The SPV Wallet is a comprehensive non-custodial wallet for BSV, enabling Simplified Payment Verification (as described in the Bitcoin White Paper section 8).
 
-The main repository is available under this link: [https://github.com/bitcoin-sv/spv-wallet](https://github.com/bitcoin-sv/spv-wallet).&#x20;
+The main repository is available under this link: [https://github.com/bitcoin-sv/spv-wallet](https://github.com/bitcoin-sv/spv-wallet).
 
 ### Add-ons
 
@@ -41,7 +41,7 @@ More in-depth information and guidance about SPV Wallets is available [here](../
 
 ### Block Headers Service
 
-The Block Headers Service is a Go application used to collect and return information about blockchain headers.&#x20;
+The Block Headers Service is a Go application used to collect and return information about blockchain headers.
 
 [https://github.com/bitcoin-sv/block-headers-client](https://github.com/bitcoin-sv/block-headers-client)
 
@@ -59,7 +59,7 @@ Full details on ARC are not yet available in this BSV Skills Center, but can be 
 \
 For more details, see [Node Operations](../bsv-skills-center/bsv-protocol-documentation/node-operations/) and the [SV Node installation guide](../network-topology/nodes/sv-node/installation/).
 
-There is ongoing work for an improved and scalable microservice implementation of the node software (Teranode) to support a much larger network throughput of transaction processing. For more information, visit [bsvblockchain.org/teranode](https://www.bsvblockchain.org/teranode)&#x20;
+There is ongoing work for an improved and scalable microservice implementation of the node software (Teranode) to support a much larger network throughput of transaction processing. For more information, visit [bsvblockchain.org/teranode](https://www.bsvblockchain.org/teranode)
 
 ### Alert System
 
