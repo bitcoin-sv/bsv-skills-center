@@ -193,3 +193,5 @@ Academy: Data, Information, and Knowledge in the Digital Age - ICT (coming soon)
 * [Case studies](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/bsv-case-studies)
 
 </details>
+
+[Terms and Conditions](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FfVclCmeRPossA1a4BKh5%2Fuploads%2FjrLiRFSSc78VORRVpyOT%2FTerms%20of%20Use%20BSVA%20Blockchain.pdf?alt=media&token=95fa409e-2017-4503-9b38-f4951b4960df)
