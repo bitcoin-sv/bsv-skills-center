@@ -82,7 +82,7 @@ This documentation is built with the AI search tool in mind, responses will cite
 
 [Academy: Introduction to blockchain technology](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/introduction-to-blockchain-technology)
 
-Academy: Identity and Privacy Foundations (coming soon)
+[Academy: Identity and Privacy Foundations](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/identity-and-privacy-foundations)
 
 [Academy: Deep Dive into the BSV blockchain](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain)&#x20;
 
@@ -139,7 +139,7 @@ Academy: [Bitcoin as Historical Phenomenon](https://hub.bsvblockchain.org/bsv-sk
 * [Tokens & Smart Contracts](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/the-power-of-tokens-and-smart-contracts)
 * [Case studies](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/bsv-case-studies)
 
-Academy: Identity and Privacy Foundations (coming soon)
+[Academy: Identity and Privacy Foundations](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/identity-and-privacy-foundations)
 
 
 
