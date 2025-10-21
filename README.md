@@ -26,7 +26,7 @@ This documentation is built with the AI search tool in mind, responses will cite
 
 [Academy: BSV Basics - Protocol and Design](https://hub.bsvblockchain.org/bsv-skills-center/~/changes/149/bsv-academy/bsv-basics-protocol-and-design)
 
-[Academy: Hash Functions](https://hub.bsvblockchain.org/bsv-skills-center/~/changes/149/bsv-academy/hash-functions)
+[Academy: Hash Functions](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bitcoin-primitives-hash-functions)
 
 [Academy: Merkle Trees](https://hub.bsvblockchain.org/bsv-skills-center/~/changes/149/bsv-academy/merkle-trees)
 
