@@ -66,9 +66,8 @@ This documentation is built with the AI search tool in mind, responses will cite
 
 * [Who is the BSV Association](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/the-bsv-associations-mission-and-impact)
 * [Overview of BSV: Stability, Scalability, and Security for Business Success](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/the-bsv-blockchain-unlock-stability-scalability-and-security-for-business-success)
-
-- [Case studies](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/bsv-case-studies)
-- [Collaborate on a POC](bsv-academy/deep-dive-in-bsv-blockchain/innovate-and-collaborate-on-the-bsv-blockchain/build-your-project-on-the-bsv-blockchain.md)
+* [Case studies](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/bsv-case-studies)
+* [Collaborate on a POC](bsv-academy/deep-dive-in-bsv-blockchain/innovate-and-collaborate-on-the-bsv-blockchain/build-your-project-on-the-bsv-blockchain.md)
 
 
 
@@ -88,11 +87,10 @@ This documentation is built with the AI search tool in mind, responses will cite
 
 * [Who is the BSV Association](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/the-bsv-associations-mission-and-impact)
 * [Overview of BSV: Stability, Scalability, and Security for Business Success](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/the-bsv-blockchain-unlock-stability-scalability-and-security-for-business-success)
-
-- [Data Storage on BSV](bsv-academy/deep-dive-in-bsv-blockchain/the-hybrid-approach-optimize-data-storage-on-the-bsv-blockchain/data-storage-on-bsv-blockchain.md)
-- [Identity on BSV](bsv-academy/deep-dive-in-bsv-blockchain/identity-unlocking-the-power-of-bsv-blockchain/identity-on-the-bsv-blockchain.md)
-- [Tokens & Smart Contracts](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/the-power-of-tokens-and-smart-contracts)
-- [Case studies](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/bsv-case-studies)
+* [Data Storage on BSV](bsv-academy/deep-dive-in-bsv-blockchain/the-hybrid-approach-optimize-data-storage-on-the-bsv-blockchain/data-storage-on-bsv-blockchain.md)
+* [Identity on BSV](bsv-academy/deep-dive-in-bsv-blockchain/identity-unlocking-the-power-of-bsv-blockchain/identity-on-the-bsv-blockchain.md)
+* [Tokens & Smart Contracts](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/the-power-of-tokens-and-smart-contracts)
+* [Case studies](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/bsv-case-studies)
 
 </details>
 
@@ -108,13 +106,10 @@ This documentation is built with the AI search tool in mind, responses will cite
 
 * [Who is the BSV Association](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/the-bsv-associations-mission-and-impact)
 * [Overview of BSV: Stability, Scalability, and Security for Business Success](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/the-bsv-blockchain-unlock-stability-scalability-and-security-for-business-success)
-
-- [BSV: Network Topology and Teranode Dynamics](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/bsv-blockchain-network-topology-and-teranode-dynamics)
-- [BSV Consensus Model](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/bsv-blockchain-network-topology-and-teranode-dynamics)
-
+* [BSV: Network Topology and Teranode Dynamics](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/bsv-blockchain-network-topology-and-teranode-dynamics)
+* [BSV Consensus Model](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/bsv-blockchain-network-topology-and-teranode-dynamics)
 * [Data Storage on BSV](bsv-academy/deep-dive-in-bsv-blockchain/the-hybrid-approach-optimize-data-storage-on-the-bsv-blockchain/data-storage-on-bsv-blockchain.md)
-
-- [Tokens & Smart Contracts](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/the-power-of-tokens-and-smart-contracts)
+* [Tokens & Smart Contracts](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/the-power-of-tokens-and-smart-contracts)
 
 </details>
 
@@ -124,7 +119,7 @@ This documentation is built with the AI search tool in mind, responses will cite
 
 [Academy: Introduction to blockchain technology](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/introduction-to-blockchain-technology)
 
-Academy: [Bitcoin as Historical Phenomenon](https://hub.bsvblockchain.org/bsv-skills-center/~/changes/149/bsv-academy/bitcoin-as-historical-phenomenon)
+[Academy: Bitcoin as Historical Phenomenon](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bitcoin-as-historical-phenomenon)
 
 [Academy: Deep Dive into the BSV blockchain](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain)&#x20;
 
@@ -157,9 +152,8 @@ Academy: [Bitcoin as Historical Phenomenon](https://hub.bsvblockchain.org/bsv-sk
 
 * [Who is the BSV Association](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/the-bsv-associations-mission-and-impact)
 * [Overview of BSV: Stability, Scalability, and Security for Business Success](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/the-bsv-blockchain-unlock-stability-scalability-and-security-for-business-success)
-
-- [Case studies](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/bsv-case-studies)
-- [Collaborate on a POC](bsv-academy/deep-dive-in-bsv-blockchain/innovate-and-collaborate-on-the-bsv-blockchain/build-your-project-on-the-bsv-blockchain.md)
+* [Case studies](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/bsv-case-studies)
+* [Collaborate on a POC](bsv-academy/deep-dive-in-bsv-blockchain/innovate-and-collaborate-on-the-bsv-blockchain/build-your-project-on-the-bsv-blockchain.md)
 
 Academy: Beginner Blockchain for Executives (coming soon)
 
