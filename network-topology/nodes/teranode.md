@@ -24,7 +24,7 @@ For more technical information, visit the official documentation at https://bsv-
 
 If you should experience any issues, or have a query, please do not hesitate to contact us via one of the methods listed below:
 
+* #Official discussion channel: https://github.com/bsv-blockchain/teranode/discussions 
 * #General-dev or Questions channel on the BSV Discord: https://discord.com/invite/bsv
-* Contact: contact@teranode.group
 
 More information on security, bug bounties and responsible disclosure for Teranode can be found at the Immunefi BSV Bounty Program.
