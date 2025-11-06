@@ -30,7 +30,7 @@ This documentation is built with the AI search tool in mind, responses will cite
 
 [Academy: Merkle Trees](https://hub.bsvblockchain.org/bsv-skills-center/~/changes/149/bsv-academy/merkle-trees)
 
-[Academy: Digital Signatures](https://hub.bsvblockchain.org/bsv-skills-center/~/changes/149/bsv-academy/digital-signatures)
+[Academy: Digital Signatures](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bitcoin-primitives-digital-signatures)
 
 [Academy: Deep Dive into the BSV blockchain](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain)&#x20;
 
