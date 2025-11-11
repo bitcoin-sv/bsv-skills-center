@@ -115,7 +115,7 @@ These scripts that previously failed immediately will return `FALSE` under the C
 
 The input argument to the `OP_IF` and `OP_NOTIF` opcodes is no longer required to be exactly 1 (the one-byte vector with value 1) to be evaluated as TRUE. Similarly, the input argument to the `OP_IF` and `OP_NOTIF` opcodes is no longer required to be exactly 0 (the empty vector) to be evaluated as FALSE.
 
-### Clean Stack PolicyRemoval
+### Clean Stack Policy Removal
 
 The script engine should not require that the stack has only a single element on it on completion of the execution of a script. 
 
@@ -128,6 +128,32 @@ The node will no longer require that unlocking scripts only include data and ass
 It should be noted that the unlocking script is evaluated, the resulting main stack is kept, but the conditional and alt stacks are cleared. The locking script is then evaluated. Therefore any OP\_RETURN use in the unlocking script simply leads to the end of unlocking script execution - not script execution as a whole.
 
 There are specific use cases for "showing your work" like this in the unlocking script. Typically it is not necessary to include intermediate values, and simply passing the result of any calculation as push data would be sufficient.
+
+The scriptCode signed and verified by OP\_CHECKSIG in the unlocking script will be from the last seen OP\_CODESEPARATOR to the end of the locking script and includes the virtual OP\_OPCODESEPARATOR inserted between the locking script and unlocking script. 
+
+For a transaction containing the following unlocking script:
+
+```
+S0 S1 OP_CODESEPARATOR P1 OP_CHECKSIG 
+```
+
+And the following locking script:
+
+```
+P0 OP_CHECKSIG
+```
+
+The full scriptCode that is generated is:
+
+```
+S0 S1 OP_CODESEPARATOR P1 OP_CHECKSIG (Virtual)OP_CODESEPARATOR P0 OP_CHECKSIG
+```
+
+Where the OP_CHECKSIG in the unlocking script uses the following scriptCode when verifying S1:
+
+```
+P1 OP_CHECKSIG (Virtual)OP_CODESEPARATOR P0 OP_CHECKSIG
+```
 
 ## 4. Opcodes
 
