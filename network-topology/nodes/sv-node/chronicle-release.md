@@ -29,13 +29,11 @@ This change will depend on the usage of the new `CHRONICLE` \[`0x20`] Sighash bi
 
 <table><thead><tr><th width="199">Input/Transaction Config</th><th>CHRONICLE</th><th>TDA</th></tr></thead><tbody><tr><td>Single input, single signature</td><td>0</td><td>BIP143</td></tr><tr><td>Single input, single signature</td><td>1</td><td>OTDA</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>All 0</td><td>BIP143</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>All 1</td><td>OTDA</td></tr><tr><td>Multiple signatures across one or more inputs.</td><td>Mixed</td><td>Mixed</td></tr></tbody></table>
 
-## 2. Limit on the Size of Script Numbers Removal
+## 2. Increase the Limit on the Size of Script Numbers 
 
-The configuration parameter `maxscriptnumlengthpolicy` limits the size of numbers used in scripts. The default is 10,000 bytes with 0 indicating no external limit.
+The consensus limit `MAX_SCRIPT_NUM_LENGTH_AFTER_GENESIS` will be increased from 750KB to 32MB. Node operators can set their policy limit for the size of script numbers using the `maxscriptnumlengthpolicy` configuration parameter.
 
-The `maxscriptnumlengthpolicy` configuration parameter default will be changed to unlimited (0).
-
-There are to be no restrictions on the max size of script numbers.
+This limit is enforced during script execution.
 
 ## 3. Selective Malleability Restrictions
 
