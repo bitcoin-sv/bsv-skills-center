@@ -129,7 +129,7 @@ It should be noted that the unlocking script is evaluated, the resulting main st
 
 There are specific use cases for "showing your work" like this in the unlocking script. Typically it is not necessary to include intermediate values, and simply passing the result of any calculation as push data would be sufficient.
 
-The scriptCode signed and verified by OP\_CHECKSIG in the unlocking script will be from the last seen OP\_CODESEPARATOR to the end of the locking script and includes the virtual OP\_OPCODESEPARATOR inserted between the locking script and unlocking script. 
+The scriptCode verified by OP\_CHECKSIG in the unlocking script will be from the last seen OP\_CODESEPARATOR to the end of the locking script.
 
 For a transaction containing the following unlocking script:
 
@@ -143,16 +143,16 @@ And the following locking script:
 P0 OP_CHECKSIG
 ```
 
-The full scriptCode that is generated is:
+Where the combined script is:
 
 ```
-S0 S1 OP_CODESEPARATOR P1 OP_CHECKSIG (Virtual)OP_CODESEPARATOR P0 OP_CHECKSIG
+S0 S1 OP_CODESEPARATOR P1 OP_CHECKSIG P0 OP_CHECKSIG
 ```
 
 Where the OP_CHECKSIG in the unlocking script uses the following scriptCode when verifying S1:
 
 ```
-P1 OP_CHECKSIG (Virtual)OP_CODESEPARATOR P0 OP_CHECKSIG
+P1 OP_CHECKSIG P0 OP_CHECKSIG
 ```
 
 ## 4. Opcodes
