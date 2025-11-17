@@ -230,7 +230,7 @@ Produces a substring consisting only of the specified number of leftmost charact
 E.g. Executing the script below would leave "BSV" on the top of the stack.
 
 ```
-"BSV Blockchain" OP_3OP_LEFT
+"BSV Blockchain" OP_3 OP_LEFT
 ```
 
 Zero-length strings are allowed.
@@ -251,7 +251,7 @@ Produces a substring consisting only of the specified number of rightmost charac
 E.g. Executing the script below would leave "chain" on the top of the stack.
 
 ```
-"BSV Blockchain" OP_5OP_RIGHT
+"BSV Blockchain" OP_5 OP_RIGHT
 ```
 
 Zero-length strings are allowed.
