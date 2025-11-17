@@ -1,12 +1,20 @@
 # SV Node
 
-The following instructions describe installing Bitcoin SV Node using tools available in most mainstream Linux distributions. The assumption has been made that you are using a Bourne-like shell such as `bash`.
+## Quick start
 
-To start the install of Bitcoin, make sure you use an account that can use `su` or `sudo` to install software into directories owned by the root user.
+The [`svnode-quickstart`](https://github.com/bsv-blockchain/svnode-quickstart) scripts offer a streamlined way to set up a BSV Blockchain SV Node. These helper scripts automate various steps of the installation process, significantly reducing the time and effort required compared to manual setup. They provide an efficient solution for quickly getting an SVNode operational, while the detailed manual installation instructions outlined below offer a comprehensive guide for those who prefer or require a thorough understanding of each step.
+
+The `svnode-quickstart` scripts also provide an option to sync a snapshot, which can significantly expedite getting your setup operational. However, users should carefully read the snapshots disclaimer regarding trust and security considerations [here](https://github.com/bsv-blockchain/svnode-quickstart/tree/main?tab=readme-ov-file#snapshot-trust-and-security-considerations) before proceeding.
+
+## Manual installation
+
+The following instructions describe installing BSV Blockchain SV Node using tools available in most mainstream Linux distributions. The assumption has been made that you are using a Bourne-like shell such as `bash`.
+
+To start the install of SV Node, make sure you use an account that can use `su` or `sudo` to install software into directories owned by the root user.
 
 Download the zipped release of your choosing, for this example we are using 1.1.1 which is the latest release at the time of writing:
 
-<pre class="language-sh"><code class="lang-sh"><strong>wget https://download.bitcoinsv.io/bitcoinsv/1.1.1/bitcoin-sv-1.1.1-x86_64-linux-gnu.tar.gz
+<pre class="language-sh"><code class="lang-sh"><strong>wget https://github.com/bitcoin-sv/bitcoin-sv/releases/download/v1.1.1/bitcoin-sv-1.1.1-x86_64-linux-gnu.tar.gz
 </strong></code></pre>
 
 Confirm downloaded file sha hash matches those provided at [download.bitcoinsv.io](https://download.bitcoinsv.io/bitcoinsv/) for the version you have downloaded.
