@@ -12,7 +12,7 @@ To summarize the Chronicle release, the following points should be outlined:
 
 * **Restoration of Bitcoin's Original Protocol**: The Chronicle release aims to restore the original Bitcoin protocol by re-installing specific opcodes and removing listed restrictions, while also balancing stability for businesses that depend on the current state.
 * **Transaction Digest Algorithms**: The BSV Blockchain will now support the Original Transaction Digest Algorithm (OTDA), in addition to the current BIP143 digest algorithm, ensuring compatibility and flexibility for developers and users. This restores the original Bitcoin transaction digest algorithm, enabling developers to have greater flexibility in utilizing Bitcoin Script. Usage of the OTDA will require setting the new CHRONICLE \[`0x20`] sighash flag.
-* **Selective Malleability Restrictions:** The Chronicle Release removes restrictions that were put in place to prevent transaction malleability. To address concerns about the reintroduction of sources of transaction malleability, the application of malleability restrictions will depend on the transaction version field. Transactions signed with with a version number higher than 1 [`0x00000001`] will allow relaxed rules, removing strict enforcement of malleability-related constraints. The restrictions relevant are:
+* **Selective Malleability Restrictions:** The Chronicle Release removes restrictions that were put in place to prevent transaction malleability. To address concerns about the reintroduction of sources of transaction malleability, the application of malleability restrictions will depend on the transaction version field. Transactions signed with with a version number higher than 1 [`0x01000000`] will allow relaxed rules, removing strict enforcement of malleability-related constraints. The restrictions relevant are:
   * Minimal Encoding Requirement
   * Low S Requirement for Signatures
   * NULLFAIL and NULLDUMMY check for `OP_CHECKSIG` and `OP_CHECKMULTISIG`
@@ -37,7 +37,7 @@ This limit is enforced during script execution.
 
 ## 3. Selective Malleability Restrictions
 
-The Chronicle Release will remove malleability-related restrictions during script evaluation. For any transactions signed with a version field greater than 1 [`0x00000001`], the restrictions below will no longer apply to the transaction. This behavior requires users and developers to "opt-in", as any transactions that continue to use a version field of 1 [`0x00000001`] will keep these restrictions. The malleability-related restrictions being removed are:
+The Chronicle Release will remove malleability-related restrictions during script evaluation. For any transactions signed with a version field greater than 1 [`0x01000000`], the restrictions below will no longer apply to the transaction. This behavior requires users and developers to "opt-in", as any transactions that continue to use a version field of 1 [`0x01000000`] will keep these restrictions. The malleability-related restrictions being removed are:
 
 
 ### Minimal Encoding Requirement Removal
