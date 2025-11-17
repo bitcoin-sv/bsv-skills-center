@@ -129,28 +129,28 @@ There are specific use cases for "showing your work" like this in the unlocking 
 
 The scriptCode verified by OP\_CHECKSIG in the unlocking script will be from the last seen OP\_CODESEPARATOR to the end of the locking script.
 
-For a transaction containing the following unlocking script:
+For a transaction containing the unlocking script:
 
 ```
 S0 S1 OP_CODESEPARATOR P1 OP_CHECKSIG 
 ```
 
-And the following locking script:
+And locking script:
 
 ```
 P0 OP_CHECKSIG
 ```
 
-Where the combined script is:
-
-```
-S0 S1 OP_CODESEPARATOR P1 OP_CHECKSIG P0 OP_CHECKSIG
-```
-
-Where the OP_CHECKSIG in the unlocking script uses the following scriptCode when verifying S1:
+The scriptCode used when verifying S1 during execution of the OP_CHECKSIG in the unlocking script would be:
 
 ```
 P1 OP_CHECKSIG P0 OP_CHECKSIG
+```
+
+Whereas the scriptCode used when evaluating S0 with the OP_CHECKSIG in the locking script would be:
+
+```
+P0 OP_CHECKSIG
 ```
 
 ## 4. Opcodes
