@@ -12,7 +12,7 @@ To summarize the Chronicle release, the following points should be outlined:
 
 * **Restoration of Bitcoin's Original Protocol**: The Chronicle release aims to restore the original Bitcoin protocol by re-installing specific opcodes and removing listed restrictions, while also balancing stability for businesses that depend on the current state.
 * **Transaction Digest Algorithms**: The BSV Blockchain will now support the Original Transaction Digest Algorithm (OTDA), in addition to the current BIP143 digest algorithm, ensuring compatibility and flexibility for developers and users. This restores the original Bitcoin transaction digest algorithm, enabling developers to have greater flexibility in utilizing Bitcoin Script. Usage of the OTDA will require setting the new CHRONICLE \[`0x20`] sighash flag.
-* **Selective Malleability Restrictions:** The Chronicle Release removes restrictions that were put in place to prevent transaction malleability. To address concerns about the reintroduction of sources of transaction malleability, the application of malleability restrictions will depend on the transaction version field. Transactions signed with a version number higher than 1 [`0x00000001`] will allow relaxed rules, removing strict enforcement of malleability-related constraints. The restrictions relevant are:
+* **Selective Malleability Restrictions:** The Chronicle Release removes restrictions that were put in place to prevent transaction malleability. To address concerns about the reintroduction of sources of transaction malleability, the application of malleability restrictions will depend on the transaction version field. Transactions signed with with a version number higher than 1 [`0x01000000`] will allow relaxed rules, removing strict enforcement of malleability-related constraints. The restrictions relevant are:
   * Minimal Encoding Requirement
   * Low S Requirement for Signatures
   * NULLFAIL and NULLDUMMY check for `OP_CHECKSIG` and `OP_CHECKMULTISIG`
@@ -37,7 +37,7 @@ This limit is enforced during script execution.
 
 ## 3. Selective Malleability Restrictions
 
-The Chronicle Release will remove malleability-related restrictions during script evaluation. For any transactions signed with a version field greater than 1 [`0x00000001`], the restrictions below will no longer apply to the transaction. This behavior requires users and developers to "opt-in", as any transactions that continue to use a version field of 1 [`0x00000001`] will keep these restrictions. The malleability-related restrictions being removed are:
+The Chronicle Release will remove malleability-related restrictions during script evaluation. For any transactions signed with a version field greater than 1 [`0x01000000`], the restrictions below will no longer apply to the transaction. This behavior requires users and developers to "opt-in", as any transactions that continue to use a version field of 1 [`0x01000000`] will keep these restrictions. The malleability-related restrictions being removed are:
 
 
 ### Minimal Encoding Requirement Removal
@@ -129,28 +129,28 @@ There are specific use cases for "showing your work" like this in the unlocking 
 
 The scriptCode verified by OP\_CHECKSIG in the unlocking script will be from the last seen OP\_CODESEPARATOR to the end of the locking script.
 
-For a transaction containing the following unlocking script:
+For a transaction containing the unlocking script:
 
 ```
 S0 S1 OP_CODESEPARATOR P1 OP_CHECKSIG 
 ```
 
-And the following locking script:
+And locking script:
 
 ```
 P0 OP_CHECKSIG
 ```
 
-Where the combined script is:
-
-```
-S0 S1 OP_CODESEPARATOR P1 OP_CHECKSIG P0 OP_CHECKSIG
-```
-
-Where the OP_CHECKSIG in the unlocking script uses the following scriptCode when verifying S1:
+The scriptCode used when verifying S1 during execution of the OP_CHECKSIG in the unlocking script would be:
 
 ```
 P1 OP_CHECKSIG P0 OP_CHECKSIG
+```
+
+Whereas the scriptCode used when evaluating S0 with the OP_CHECKSIG in the locking script would be:
+
+```
+P0 OP_CHECKSIG
 ```
 
 ## 4. Opcodes
@@ -230,7 +230,7 @@ Produces a substring consisting only of the specified number of leftmost charact
 E.g. Executing the script below would leave "BSV" on the top of the stack.
 
 ```
-"BSV Blockchain" OP_3OP_LEFT
+"BSV Blockchain" OP_3 OP_LEFT
 ```
 
 Zero-length strings are allowed.
@@ -251,7 +251,7 @@ Produces a substring consisting only of the specified number of rightmost charac
 E.g. Executing the script below would leave "chain" on the top of the stack.
 
 ```
-"BSV Blockchain" OP_5OP_RIGHT
+"BSV Blockchain" OP_5 OP_RIGHT
 ```
 
 Zero-length strings are allowed.
