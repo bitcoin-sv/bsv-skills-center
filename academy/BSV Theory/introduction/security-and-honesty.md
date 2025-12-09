@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Introduction - Security and Honesty.gif>)
+![](<../../../.gitbook/assets/Theory - Introduction - Security and Honesty.gif>)
 
 As long as there is a pool of nodes who are competing to collect and append new transactions to the longest chain of proof of work, the system’s security is maintained. This system works against fraudulent actors both in the payments system, and at the node level by allowing honest systems to reject blocks which include transactions that double spend inputs they have already seen used in validated transactions or which violate the established rules of the network.
 

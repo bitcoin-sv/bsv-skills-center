@@ -1,6 +1,6 @@
 # BSV Blocks and SHA-256
 
-![](../.gitbook/assets/BSVA-HashFunctions_Ch3L3_DA1.gif)
+![](../../../../.gitbook/assets/BSVA-HashFunctions_Ch3L3_DA1.gif)
 
 ## What is a BSV Block?
 

@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Abstract - p2p network - 1.gif>)
+![](<../../../.gitbook/assets/Theory - Abstract - p2p network - 1.gif>)
 
 Double spending refers to the act of signing a coin to create a transaction and submitting that transaction to the network before using the same coin to create a different transaction which pays to a different recipient, effectively spending the same coin twice.
 

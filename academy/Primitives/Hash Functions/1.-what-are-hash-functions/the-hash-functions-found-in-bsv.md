@@ -1,6 +1,6 @@
 # The Hash Functions Found in BSV
 
-![](../.gitbook/assets/BSVA-HashFunctions_Ch1L4_DA1.gif)
+![](../../../../.gitbook/assets/BSVA-HashFunctions_Ch1L4_DA1.gif)
 
 ## Merkle-Damgård Hash Functions
 
@@ -24,8 +24,7 @@ Even so, the groundwork laid by MD4 and MD5 provided a practical framework for n
 
 As already mentioned, the two hash functions found in the BSV system are SHA-256 and RIPEMD-160. For reasons explored further in Chapter 7, Bitcoin uses SHA-256 and RIPEMD-160 in double hash forms: SHA-256(SHA-256) and RIPEMD-160(SHA-256) – often abstracted and referred to as HASH-256 and HASH-160, respectively, following the convention set out in the [original bitcoin code](https://github.com/trottier/original-bitcoin).
 
-However, the following table displays the full range of hash functions commonly found in the greater BSV ecosystem; including SHA-512 and the HMACs of SHA-256 and SHA-512 which are often utilized by wallet implementations:\
-
+However, the following table displays the full range of hash functions commonly found in the greater BSV ecosystem; including SHA-512 and the HMACs of SHA-256 and SHA-512 which are often utilized by wallet implementations:\\
 
 | Hash Function         | Output Length | Description                                                                   | Example Application in BSV                               |
 | --------------------- | ------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------- |

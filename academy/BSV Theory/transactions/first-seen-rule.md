@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Transactions - First Seen Rule.gif>)
+![](<../../../.gitbook/assets/Theory - Transactions - First Seen Rule.gif>)
 
 Bitcoin is a solution that solves the double spending problem without the need for a centralised decision making system through the use of the ‘First Seen Rule’. This rule states that the first seen transaction that validly spends a given UTXO is the transaction which is accepted by the node.
 
@@ -12,4 +12,4 @@ In a case where two conflicting transactions are introduced simultaneously onto 
 
 Additional protections can be implemented such as ‘Double Spend Notifications’ which detect and announce double spend attempts to peers on the network including merchants handling the double spends. Because a double spend must occur within a very short window (less than 5 seconds) it is very simple for online and physical merchants to reject transactions that are double spent or even attempted.
 
-Learn more about Double spending here:  [http://wiki.bitcoinsv.io/index.php/Double-spending](http://wiki.bitcoinsv.io/index.php/Double-spending)
+Learn more about Double spending here: [http://wiki.bitcoinsv.io/index.php/Double-spending](http://wiki.bitcoinsv.io/index.php/Double-spending)

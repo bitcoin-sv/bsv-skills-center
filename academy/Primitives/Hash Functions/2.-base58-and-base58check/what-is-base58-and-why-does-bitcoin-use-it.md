@@ -1,6 +1,6 @@
-# What is Base58 and Why Does Bitcoin Use It?
+# What is Base58 and Why Does Bitcoin use it?
 
-![](../.gitbook/assets/BSVA-HashFunctions_Ch2L1_DA1.gif)
+![](../../../../.gitbook/assets/BSVA-HashFunctions_Ch2L1_DA1.gif)
 
 While Base58 & Base58Check are not hash functions, they are important topics to cover.
 
@@ -35,4 +35,4 @@ Using the [hash calculator](https://bitcoinsv.academy/hash-calculator), encode t
 094d77441cfead50daa8e9ce893698962dbcbbce
 ```
 
-\
+\\

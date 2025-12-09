@@ -10,4 +10,4 @@ There are different versions of the `OP_PUSH_TX` technique, but for the purposes
 
 To simplify the calculation process, Optimised OP\_PUSH\_TX uses pre-set values for both the private key and ephemeral key, allowing OP\_PUSH\_TX to be executed with a script of less than 100 bytes.
 
-<figure><img src="../.gitbook/assets/BSVA-BitcoinScript_Chapter5-Animation02.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/BSVA-BitcoinScript_Chapter5-Animation02.gif" alt=""><figcaption></figcaption></figure>

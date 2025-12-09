@@ -1,6 +1,6 @@
 # Proof-of-Work and HASH-256
 
-![](../.gitbook/assets/BSVA-HashFunctions_Ch3L4_DA1.gif)
+![](../../../../.gitbook/assets/BSVA-HashFunctions_Ch3L4_DA1.gif)
 
 ## What is Proof-of-Work?
 

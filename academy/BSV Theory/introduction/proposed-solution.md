@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Introduction - Proposed Solution.gif>)
+![](<../../../.gitbook/assets/Theory - Introduction - Proposed Solution.gif>)
 
 One of the core innovations of the Bitcoin system is the way in which it prevents users from taking digital coins which have been used in a transaction and double spending them to a different party as a means to commit fraud by snatching the allocated funds from the Merchant’s wallet and re-allocating them back to their own wallet. Transactions are recorded as plaintext on the ledger and are readable by all parties.
 
@@ -14,4 +14,4 @@ This means each valid block represents a consensus driven agreement on the order
 
 Learn more about Proof-of-Work here: [http://wiki.bitcoinsv.io/index.php/Proof\_of\_Work](http://wiki.bitcoinsv.io/index.php/Proof_of_Work)
 
-\
+\\

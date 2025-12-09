@@ -11,7 +11,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Network - Running the Network.gif>)
+![](<../../../.gitbook/assets/Theory - Network - Running the Network.gif>)
 
 These listed steps are the way by which nodes running on the network compete to secure the contents of the ledger by storing it in blocks. The steps are broken down as follows:
 

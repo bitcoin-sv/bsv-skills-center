@@ -43,8 +43,7 @@ The two processes of signing a message '$$m$$', and verifying the signature, the
 * Computing the signature:
   1. Generate a random number '$$k$$'
   2. $$r = (g^k \ mod \ p) \ mod \ q$$
-  3. $$s = (k^{-1} m + ar) \ mod \ q$$\
-
+  3. $$s = (k^{-1} m + ar) \ mod \ q$$\\
 * Verifying the signature:
   1. $$z = s^{-1} \ mod \ q$$
   2. $$w_1 = m * z \ mod \ q$$
@@ -52,39 +51,34 @@ The two processes of signing a message '$$m$$', and verifying the signature, the
   4. $$v= (g^{w_1}A^{w_2} \ mod \ p) \ mod \ q$$
   5. $$v == r$$
 
-![](../.gitbook/assets/image.png)
+![](<../../../../.gitbook/assets/image (5).png>)
 
 ## Elliptic Curve Diffie-Hellman (ECDH) and the Elliptic Curve Digital Signature Algorithm (ECDSA)
 
 ECDH and ECDSA use pretty much the same process as standard Diffie-Hellman and DSA; again, the major difference being multiplication is used instead of exponentiation. For example, say Alice and Bob have decided to upgrade their system from standard Diffie-Hellman and DSA using a 3,072 bit key-size to ECDH and ECDSA, and they want to maintain the same level of security they currently enjoy:
 
 * Standard Diffie-Hellman:
-  * $$sv = (g^a)^b \ mod \ 2^{3072} = (g^b)^a \ mod\ 2^{3072}$$\
-
+  * $$sv = (g^a)^b \ mod \ 2^{3072} = (g^b)^a \ mod\ 2^{3072}$$\\
 * ECDHA:
-  * $$sv = g * b * a \ mod \ 2^{256} = g * a * b \ mod \ 2^{256}$$\
-
+  * $$sv = g * b * a \ mod \ 2^{256} = g * a * b \ mod \ 2^{256}$$\\
 * Standard DSA signature computation for a hash of a message '$$m$$' using private-public key-pair $$a, A$$:
   1. $$a$$ = random integer between 0 and 23072
   2. $$A = g * a$$
   3. Generate a random, 1-time use, key '$$k$$'
   4. $$r = (g^k \ mod \ p) \ mod \ q$$
-  5. $$s = (k^{-1} m + ar) \ mod \ q$$\
-
+  5. $$s = (k^{-1} m + ar) \ mod \ q$$\\
 * ECDSA signature computation for a hash of a message '$$m$$' using private-public key-pair $$a, A$$:
   1. $$a$$ = random integer between 0 and $$2^{256}$$
   2. $$A = g*a$$
   3. Generate a random, 1-time use, key '$$k$$'
   4. $$R = k * g$$
   5. $$r = R_x \ mod \ q$$
-  6. $$s = (m + a * r)k^{-1} \ mod \ q$$\
-
+  6. $$s = (m + a * r)k^{-1} \ mod \ q$$\\
 * Standard DSA signature verification:
   1. $$z = s^{-1} \ mod \ q$$
   2. $$w_1 = m * z \ mod \ q$$
   3. $$w_2 = r * z \ mod \ q$$
-  4. $$v = (g^{w_1}A^{w_2} \ mod \ p) \ mod \ q$$\
-
+  4. $$v = (g^{w_1}A^{w_2} \ mod \ p) \ mod \ q$$\\
 * ECDSA signature verification:
   1. $$z = s^{-1} \ mod \ q$$
   2. $$w_1 = m * z \ mod \ q$$
@@ -94,7 +88,7 @@ ECDH and ECDSA use pretty much the same process as standard Diffie-Hellman and D
 
 Although BSV's UTXO model takes a different approach than full end-to-end encryption of all communications, it's still fundamentally based on the two ideas of a shared secret and digital signatures.
 
-![](../.gitbook/assets/BSVA-HashFunctions_Ch5L2_DA1.gif)
+![](../../../../.gitbook/assets/BSVA-HashFunctions_Ch5L2_DA1.gif)
 
 ## What is a BSV Address?
 

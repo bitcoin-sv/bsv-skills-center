@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Incentives - The end of inflation.gif>)
+![](<../../../.gitbook/assets/Theory - Incentives - The end of inflation.gif>)
 
 Over time, the amount of coins distributed to node operators through the block subsidy reduces. The first blocks found each awarded the winning blocks 50 Bitcoins, however every 210,000 blocks, or approximately every four years, the amount is cut in half, eventually reaching 1 Satoshi per block and then going to zero in around 2140 or after 32 ‘halvening’ events. From this moment there will be no further inflation in the number of Satoshis that enter the network.
 

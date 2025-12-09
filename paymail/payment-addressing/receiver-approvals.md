@@ -31,7 +31,7 @@ The `capabilities.3d7c2ca83a46` object contains a `callback` property with a tem
 
 ### Flow
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (3).png" alt=""><figcaption></figcaption></figure>
 
 The Receiver Approval flow diagram detailed below does not include the Sender Validation steps in order to reduce diagrammatic complexity. These steps are mandatory and the flow is detailed in the Sender Validation specification.
 

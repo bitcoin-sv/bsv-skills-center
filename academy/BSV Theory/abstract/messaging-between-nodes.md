@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Abstract - Messaging Between Nodes.gif>)
+![](<../../../.gitbook/assets/Theory - Abstract - Messaging Between Nodes.gif>)
 
 Messages that are broadcasted on the network are limited to new transactions and new block discovery announcements. When a node receives a new transaction, it automatically broadcasts it to all the nodes with which it has a peer connection. By ensuring all other nodes have the transaction, the node reduces the time those nodes will need to validate a block found which includes this transaction, giving them the best chance of their block being validated quickly.
 

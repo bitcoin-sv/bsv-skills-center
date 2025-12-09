@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Timestamp Server - Timestamped Hashes (1).gif>)
+![](<../../../.gitbook/assets/Theory - Timestamp Server - Timestamped Hashes (1).gif>)
 
 A block’s header must include the hash of the block upon which it is built. This ‘link’ forms a single chain of valid blocks leading all the way back to the very first block (the Genesis block) ever created using the system. A single block can have multiple child blocks which are built upon it, however only one of those children can become part of the permanent ‘longest chain’ of proof of work, further incentivising a strong connection between nodes who always want their own valid blocks to become part of the chain.
 

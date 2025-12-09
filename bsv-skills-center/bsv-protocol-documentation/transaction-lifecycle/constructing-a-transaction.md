@@ -8,14 +8,14 @@ We have already looked at the composition of a transaction. Now, let's dig a bit
 
 ### Data structure of a transaction:
 
-| Field                                                                                | Description                                                                                                      | Size                                               |
-| ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
-| Version no                                                                           | currently 2                                                                                                      | 4 bytes                                            |
-| In-counter                                                                           | positive integer VI = [VarInt](https://wiki.bitcoinsv.io/index.php/VarInt)                                       | 1 - 9 bytes                                        |
-| list of inputs                                                                       | [Input Structure](https://wiki.bitcoinsv.io/index.php/Bitcoin\_Transactions#Format\_of\_a\_Transaction\_Input)   | \<in-counter> qty with variable length per input   |
-| Out-counter                                                                          | positive integer VI = [VarInt](https://wiki.bitcoinsv.io/index.php/VarInt)                                       | 1 - 9 bytes                                        |
-| list of outputs                                                                      | [Output Structure](https://wiki.bitcoinsv.io/index.php/Bitcoin\_Transactions#Format\_of\_a\_Transaction\_Output) | \<out-counter> qty with variable length per output |
-| [nLocktime](https://wiki.bitcoinsv.io/index.php/NLocktime\_and\_nSequence#nLockTime) | if non-zero and sequence numbers are < 0xFFFFFFFF: block height or timestamp when transaction is final           | 4 bytes                                            |
+| Field                                                                              | Description                                                                                                 | Size                                               |
+| ---------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| Version no                                                                         | currently 2                                                                                                 | 4 bytes                                            |
+| In-counter                                                                         | positive integer VI = [VarInt](https://wiki.bitcoinsv.io/index.php/VarInt)                                  | 1 - 9 bytes                                        |
+| list of inputs                                                                     | [Input Structure](https://wiki.bitcoinsv.io/index.php/Bitcoin_Transactions#Format_of_a_Transaction_Input)   | \<in-counter> qty with variable length per input   |
+| Out-counter                                                                        | positive integer VI = [VarInt](https://wiki.bitcoinsv.io/index.php/VarInt)                                  | 1 - 9 bytes                                        |
+| list of outputs                                                                    | [Output Structure](https://wiki.bitcoinsv.io/index.php/Bitcoin_Transactions#Format_of_a_Transaction_Output) | \<out-counter> qty with variable length per output |
+| [nLocktime](https://wiki.bitcoinsv.io/index.php/NLocktime_and_nSequence#nLockTime) | if non-zero and sequence numbers are < 0xFFFFFFFF: block height or timestamp when transaction is final      | 4 bytes                                            |
 
 ### Data Structure of a BEEF formatted transaction:
 
@@ -39,6 +39,6 @@ Each field in the transaction is modularised i.e. you can build a raw transactio
 
 There will often be visualisation tools which will present the transaction details in a much more readable format; for example, below is the translated version of the input and output scripts for the raw transactions in discussion.
 
-<figure><img src="../../../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (23) (1).png" alt=""><figcaption></figcaption></figure>
 
 Once the transaction is constructed, it is submitted for timestamping. This can be done via an Overlay Service or directly to the node network. Currently, nodes provide an RPC endpoint (called bitcoind), which is made available for transactions to be submitted, but the [ARC service](https://bitcoin-sv.github.io/arc/#/) provides an easy to use abstraction.

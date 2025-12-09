@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Abstract - DS - 1.gif>)
+![](<../../../.gitbook/assets/Theory - Abstract - DS - 1.gif>)
 
 Digital signatures are a means for the owner of a coin on the ledger to establish their intent to use that coin in a transaction. Digital signatures work by generating a unique hash of the message and signing it using the sender’s private key. The hash generated is unique to the message, and changing any part of the message will completely change the hash thus rendering the digital signature invalid.
 

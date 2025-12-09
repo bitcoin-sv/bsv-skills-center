@@ -4,15 +4,15 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Conclusion - 1.gif>)
+![](<../../../.gitbook/assets/Theory - Conclusion - 1.gif>)
 
 > To solve this, we proposed a peer-to-peer network using proof-of-work to record a public history of transactions that quickly becomes computationally impractical for an attacker to change if honest nodes control a majority of CPU power.
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Conclusion - 2.gif>)
+![](<../../../.gitbook/assets/Theory - Conclusion - 2.gif>)
 
-> The network is robust in its unstructured simplicity. Nodes work all at once with little coordination. They do not need to be identified, since messages are not routed to any particular place and only need to be delivered on a best effort basis.      .
+> The network is robust in its unstructured simplicity. Nodes work all at once with little coordination. They do not need to be identified, since messages are not routed to any particular place and only need to be delivered on a best effort basis. .
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
@@ -22,13 +22,13 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Conclusion - 4.gif>)
+![](<../../../.gitbook/assets/Theory - Conclusion - 4.gif>)
 
 > They vote with their CPU power, expressing their acceptance of valid blocks by working on extending them and rejecting invalid blocks by refusing to work on them. Any needed rules and incentives can be enforced with this consensus mechanism.
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Conclusion - 5.gif>)
+![](<../../../.gitbook/assets/Theory - Conclusion - 5.gif>)
 
 In this whitepaper, Satoshi has proposed a system that creates a system for managing control of custody via a global ledger which is stored as a series of time-stamped blocks that group valid transaction records together. The nodes who build the ledger compete in an honest competition where the highest performing nodes represent investments of several hundred million dollars at this point in time, this investment has a demonstrated history of exponential growth, and can be expected to grow much larger in the future.
 

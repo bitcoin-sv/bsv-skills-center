@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory- Abstract - Network.gif>)
+![](<../../../.gitbook/assets/Theory- Abstract - Network.gif>)
 
 The network forms naturally through the incentive structure that drives participation in usage of the ledger, and the corporate activity that revolves around processing transactions from the ledger into blocks.
 

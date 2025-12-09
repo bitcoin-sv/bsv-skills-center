@@ -6,7 +6,7 @@ Transaction consensus rules are the rules that define how transactions are inter
 
 This is an economic limit imposed by miners in consensus.
 
-<figure><img src="../../../academy/BSV Infrastructure/.gitbook/assets/CHAPTER 2 GIF 5.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/CHAPTER 2 GIF 5.gif" alt=""><figcaption></figcaption></figure>
 
 The length is the number of bytes in the serialized transaction. This rule allows miners to collectively set a practical limit for users on the size of a transaction. As the capabilities of nodes and node software improve this limit will rise, providing added utility to all network users.
 
@@ -14,7 +14,7 @@ The length is the number of bytes in the serialized transaction. This rule allow
 
 The nSequence fields of every transaction input and the nLockTime field of the transaction collectively determine the “finality” of a transaction. If a transaction is “non-final” then it can not be valid but it can become “final” at a later time. If a transaction is “final” then it can be included in a block.
 
-<figure><img src="../../../academy/BSV Infrastructure/.gitbook/assets/CHAPTER 2 GIF 6.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/CHAPTER 2 GIF 6.gif" alt=""><figcaption></figcaption></figure>
 
 The interpreter will evaluate nSequence and nLocktime as per the following:
 
@@ -45,7 +45,7 @@ When transactions are created in Bitcoin, they must spend what are known as ‘U
 
 Each UTXO holds a quantity of bitcoin satoshi tokens locked in a script. When the locking script is successfully executed in the script engine using an unlocking script, the satoshi tokens are released to be spent. To be successful, the full script must terminate with a single non-zero value remaining on the stack. The transaction then re-allocates the satoshis to new outputs which themselves become UTXOs, replacing their predecessors in the current UTXO set across the network.
 
-<figure><img src="../../../academy/BSV Infrastructure/.gitbook/assets/CHAPTER 2 GIF 7.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/CHAPTER 2 GIF 7.gif" alt=""><figcaption></figcaption></figure>
 
 If a transaction tried to create outputs that cumulatively represent more value than the inputs it would be spending, it would be creating new satoshi tokens which is expressly forbidden by the rules. In this way the number of tokens usable on the network remains fixed over time, with tokens only distributed on to the ledger as a reward to node operators in the initial bootstrap phase of the network.
 
@@ -53,7 +53,7 @@ If a transaction tried to create outputs that cumulatively represent more value 
 
 Nodes may not spend the outputs of a Coinbase transaction in a block that is less than 100 blocks higher than the one the Coinbase appears in.
 
-<figure><img src="../../../academy/BSV Infrastructure/.gitbook/assets/CHAPTER 2 GIF 8.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/CHAPTER 2 GIF 8.gif" alt=""><figcaption></figcaption></figure>
 
 This coinbase maturity rule ensures that a few things happen:
 
@@ -79,21 +79,10 @@ The currently accepted versions of the BSV transaction serialisation rules speci
 4. The number of outputs being created (VARINT (link this to [https://wiki.bitcoinsv.io/index.php/VarInt](https://wiki.bitcoinsv.io/index.php/VarInt) ), 1, 3, 5 or 9 Bytes).
 5. The outputs themselves which are each comprised of the following:
    1. The value in satoshis being locked into the output script (8 Bytes).
-   2. A field defining the length of the lockScript AKA scriptPubKey  (VARINT, 1, 3, 5 or 9 Bytes).
-   3. The output  lockScript.
+   2. A field defining the length of the lockScript AKA scriptPubKey (VARINT, 1, 3, 5 or 9 Bytes).
+   3. The output lockScript.
 6. nLockTime which is the time at which the transaction outputs can be spent. If the transaction has an input with a non-final sequence number and an nLockTime in the future, it is considered to be inside a payment channel. These transactions cannot be included in a block until the sequence number is final or nLockTime expires, either of which closes the payment channel. The transaction can be updated by submitting a new valid version with an increased nSequence value for at least one of the non-final inputs
 
-<figure><img src="../../../academy/BSV Infrastructure/.gitbook/assets/CHAPTER 2 GIF 9.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/CHAPTER 2 GIF 9.gif" alt=""><figcaption></figcaption></figure>
 
 While these rules are rigid and uniformly applied across all current transaction versions, there is significant flexibility within the rules. The hard limits imposed by the protocol itself allow for a transaction to create up to 2^64 outputs, with each output able to express a length field large enough to insert up to 18 Exabytes of data. These limits are theoretical of course, with limitations on actual usage being framed by the economic reality faced by nodes in the operation of the system.
-
-
-
-
-
-
-
-
-
-
-

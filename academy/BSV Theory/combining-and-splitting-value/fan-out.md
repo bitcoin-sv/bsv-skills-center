@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - CombiningSplittingValue - Fan Out.gif>)
+![](<../../../.gitbook/assets/Theory - CombiningSplittingValue - Fan Out.gif>)
 
 When a transaction is spending multiple inputs from multiple different transactions, the wallet does not necessarily need to know the full provenance of the input other than it’s transaction ID and index number. The network nodes perform the task of making sure that the inputs being spent do indeed come from valid transactions which have been or are in the process of being timestamped into a block, and that they have valid history leading back to their issuance. This removes the burden of chasing down a transaction’s history from the user.
 

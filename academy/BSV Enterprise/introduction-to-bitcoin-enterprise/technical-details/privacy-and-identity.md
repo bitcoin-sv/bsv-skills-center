@@ -1,12 +1,10 @@
 # Privacy and Identity
 
-Satoshi had this to say about privacy and ownership.&#x20;
+Satoshi had this to say about privacy and ownership.
 
 > As an additional firewall, a new key pair should be used for each transaction to keep them from being linked to a common owner. Some linking is still unavoidable with multi-input transactions, which necessarily reveal that their inputs were owned by the same owner. The risk is that if the owner of a key is revealed, linking could reveal other transactions that belonged to the same owner.
 
-
-
-<figure><img src="../../../../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (39) (1).png" alt=""><figcaption></figcaption></figure>
 
 Note particularly the diagram showing the updated data visibility model using BSV Blockchain.
 

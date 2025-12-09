@@ -24,13 +24,13 @@ A breakdown of the script evaluation process is shown below:
 
 <table><thead><tr><th width="194.33333333333331">Stack</th><th>Script</th><th>Description</th></tr></thead><tbody><tr><td>Empty.</td><td><p>&#x3C;pre-hash_value> | |</p><p>OP_SHA256 OP_RIPEMD160 &#x3C;ripemd160_hash> OP_EQUAL</p></td><td>scriptSig and scriptPubKey are combined.</td></tr><tr><td>&#x3C;pre-hash_value></td><td>OP_SHA256 OP_RIPEMD160 &#x3C;ripemd160_hash> OP_EQUAL</td><td>Pre-hash value is added to the stack.</td></tr><tr><td>&#x3C;sha256_hash></td><td>OP_RIPEMD160 &#x3C;ripemd160_hash> OP_EQUAL</td><td>Pre-hash value is hashed using SHA256 hashing algorithm</td></tr><tr><td>&#x3C;ripemd160_hash></td><td>&#x3C;ripemd160_hash> OP_EQUAL</td><td>SHA256 hash of pre-hash value is hashed with RIPEMD160 hash algorithm</td></tr><tr><td>&#x3C;ripemd160_hash> &#x3C;ripemd160_hash></td><td>OP_EQUAL</td><td>Expected RIPEMD160 hash is added to the stack</td></tr><tr><td>true</td><td>Empty.</td><td>Hash value is checked against the expected hash value</td></tr></tbody></table>
 
-<figure><img src="../.gitbook/assets/BSVA-BitcoinScript_Chapter4-Animation02.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/BSVA-BitcoinScript_Chapter4-Animation02.gif" alt=""><figcaption></figcaption></figure>
 
 As shown above, the pre-hash value is pushed onto the stack, before being double hashed, first with the SHA256 hashing algorithm and subsequently with the RIPEMD160 hashing algorithm. If the correct pre-hash value is used, the double hash value will match the expected hash outcome, and the input can be spent in the transaction.
 
 ## Pay to Script Hash (P2SH)
 
-Pay to Script Hash (P2SH) was a so-called 'soft fork' change introduced to Bitcoin in 2012 ostensibly to allow more complex scripts to be used with smaller transactions. The scheme uses protocol hacks to bypass the expected behaviour of the network, and was disallowed following the 2020 Genesis upgrade on the BitcoinSV network.&#x20;
+Pay to Script Hash (P2SH) was a so-called 'soft fork' change introduced to Bitcoin in 2012 ostensibly to allow more complex scripts to be used with smaller transactions. The scheme uses protocol hacks to bypass the expected behaviour of the network, and was disallowed following the 2020 Genesis upgrade on the BitcoinSV network.
 
 Invalid P2SH outputs are defined using the following template:
 
@@ -39,4 +39,3 @@ Invalid P2SH outputs are defined using the following template:
 This script performs the same process outlined in Example 3 above, but uses the OP\_HASH160 opcode to perform the double hash with a single instruction.
 
 Because P2SH introduces functionality that is not compatible with the Bitcoin protocol, nodes on the BSV network will evaluate any transaction sent to the network that creates a P2SH output as invalid, and will reject it with the 'Error: Pay to Script Hash' error code.
-

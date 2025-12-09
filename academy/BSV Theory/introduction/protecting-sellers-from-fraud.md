@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Intro - Protecting Sellers.gif>)
+![](<../../../.gitbook/assets/Theory - Intro - Protecting Sellers.gif>)
 
 Thanks to the practically irreversible nature of the Elliptic Curve Digital Signature Algorithm (ECDSA) sellers who receive payments over the Bitcoin network can simply and quickly verify the authenticity of the funds received without needing to revert to a trusted third party.
 

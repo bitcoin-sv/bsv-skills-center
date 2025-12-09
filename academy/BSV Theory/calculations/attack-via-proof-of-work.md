@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Calculations - Attack via Proof of Work.gif>)
+![](<../../../.gitbook/assets/Theory - Calculations - Attack via Proof of Work.gif>)
 
 In Bitcoin, typically payment details are handed out at the time of a transaction. The receiver gives the sender a Bitcoin address or script and the satoshis are transferred.
 

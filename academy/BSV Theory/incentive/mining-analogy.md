@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Incentive - Mining Analogy.gif>)
+![](<../../../.gitbook/assets/Theory - Incentive - Mining Analogy.gif>)
 
 As nodes extend the chain of proof of work and are awarded coins distributed from the initial issuance the quantity of coins in reserve is depleted. The analogy is akin to a group of miners digging out a stope to find gold to add to a circulating economy.
 

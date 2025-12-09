@@ -10,7 +10,7 @@ As soon as a node has received and validated a new block from one of its competi
 
 This means beginning the process of clearing validated transactions out of the mempool\* and preparing the next block’s Merkle tree. Doing any form of work on a superseded block becomes wasted effort as soon as with another node's block proposal is disseminated and validated; creating the incentive to be hyper aware of other nodes and any blocks they discover.
 
-<figure><img src="../.gitbook/assets/CHAPTER 1 GIF 6.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/CHAPTER 1 GIF 6.gif" alt=""><figcaption></figcaption></figure>
 
 This hyper awareness will have the effect of reducing the potential of orphan races, making the network more efficient and reducing the amount of work done producing valid blocks that don’t form part of the longest valid chain of proof-of-work.
 

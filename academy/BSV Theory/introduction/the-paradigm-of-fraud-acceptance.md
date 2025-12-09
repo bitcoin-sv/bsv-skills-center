@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Introduction - Paradigm of Fraud.gif>)
+![](<../../../.gitbook/assets/Theory - Introduction - Paradigm of Fraud.gif>)
 
 Due to the way in which payment services by trusted third parties operate, for merchants operating both on-line and in physical locations it is almost impossible for them to avoid coming into contact with bad actors who use fraudulent practices to obtain goods without paying. Commonly this is done through the acquisition of compromised credit card numbers and details, or by the true owner of the credit card reversing the charges made by the merchant through their own financial institution.
 

@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Abstract - p2p Cash- 1.gif>)
+![](<../../../.gitbook/assets/Theory - Abstract - p2p Cash- 1.gif>)
 
 Unlike in the legacy banking model, where for two parties to transact, both parties must employ the services of a trusted third party (e.g. a bank), in Bitcoin, money is exchanged peer-to-peer using the Bitcoin protocol.
 

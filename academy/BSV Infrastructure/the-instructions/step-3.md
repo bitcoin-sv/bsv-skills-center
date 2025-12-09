@@ -12,7 +12,7 @@ Each puzzle has a random outcome, and the frequency of solutions found, the bloc
 
 Read more about orphan blocks here: [https://wiki.bitcoinsv.io/index.php/Orphan\_Block](https://wiki.bitcoinsv.io/index.php/Orphan_Block)
 
-<figure><img src="../.gitbook/assets/CHAPTER 1 GIF 3.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/CHAPTER 1 GIF 3.gif" alt=""><figcaption></figcaption></figure>
 
 10 minutes was chosen as having longer block times would result in fewer competing nodes, while shorter block times would result in more orphan races. This means there are approximately 2016 blocks added to the Bitcoin blockchain every 2 weeks, creating a cap on the number of block winning nodes.
 

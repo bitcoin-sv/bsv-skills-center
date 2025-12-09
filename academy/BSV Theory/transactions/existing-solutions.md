@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Transactions - Existing Solutions.gif>)
+![](<../../../.gitbook/assets/Theory - Transactions - Existing Solutions.gif>)
 
 When payments are made, the simple validation of the signature does not provide a means for the merchant to check that the coins being handed over have not been spent in a separate transaction which would invalidate this transaction. This is a recurring problem in digital currencies and prior to the introduction of Bitcoin a typical solution was for each transaction to be routed back to a central arbiter who is responsible for checking the validity of the transaction using a closed system.
 

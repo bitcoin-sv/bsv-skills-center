@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Incentive - Coin Distribution.gif>)
+![](<../../../.gitbook/assets/Theory - Incentive - Coin Distribution.gif>)
 
 The distribution of new coins to the operators of block winning nodes acts as a subsidy to bootstrap the build-out of network infrastructure, giving the network time to accumulate users and providing a simple way to distribute the coinage used on the network to the miners who are providing the service of building blocks for network users.
 

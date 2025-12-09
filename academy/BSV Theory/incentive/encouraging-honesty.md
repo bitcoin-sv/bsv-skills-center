@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Incentives - Encouraging Honesty.gif>)
+![](<../../../.gitbook/assets/Theory - Incentives - Encouraging Honesty.gif>)
 
 Nodes make their income through the coins they award themselves in the coinbase transactions of valid blocks. The network has a rule that prevents coinbase rewards from being spent until 100 blocks have been built on top of the block in which they were awarded, meaning that without the support of the majority of competing nodes building on top of the block that contains it, a coinbase reward might never become a permanent part of the ledger, rendering the coins it contains unspendable.
 

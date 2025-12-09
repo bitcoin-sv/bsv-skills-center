@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Privacy - Key Re-use.gif>)
+![](<../../../.gitbook/assets/Theory - Privacy - Key Re-use.gif>)
 
 In situations where a user is receiving all of their funds into a re-used locking script, it becomes much easier to see what funds that user has received, and when they are spending them as a locking script is tied to a private key that would typically be held by a single person. In order to mitigate against this risk, the user can simply choose a new private key every time new funds are being received in order to separate the digital coins on the ledger.
 

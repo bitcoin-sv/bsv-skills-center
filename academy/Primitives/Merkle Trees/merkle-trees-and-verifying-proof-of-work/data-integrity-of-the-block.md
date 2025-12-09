@@ -2,7 +2,7 @@
 
 Below is the raw data for the fields of the block header from block 550204 that we used for Chapter 3.
 
-![](<../.gitbook/assets/Screen Shot 2022-08-11 at 3.20.44 pm.png>)
+![](<../../../../.gitbook/assets/Screen Shot 2022-08-11 at 3.20.44 pm.png>)
 
 | DATA FIELD               | BYTES | Hexadecimal Value (Little Endian)                                                                                                                                |
 | ------------------------ | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -19,7 +19,7 @@ Below is the raw data for the fields of the block header from block 550204 that 
 
 Let's see what happens to the block hash as we try to add an additional transaction to the block after the proof of work solution has been found and broadcast to the nodes of the network. Perhaps this transaction could be to redistribute coins that have already been spent on the network so that they may be spent again. The TXID seen below is converted to little endian, then double hashed to generate the right-hand branch value. The left-hand branch value which was formerly the Merkle root (converted to little endian) is concatenated with this right-hand branch value and double hashed to generate the new Merkle root.
 
-![](<../.gitbook/assets/Screen Shot 2022-08-11 at 3.21.45 pm.png>)
+![](<../../../../.gitbook/assets/Screen Shot 2022-08-11 at 3.21.45 pm.png>)
 
 | TXID                                                             | Branch Value                                                     | Merkle Root                                                      |
 | ---------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- |
@@ -29,7 +29,7 @@ Let's see what happens to the block hash as we try to add an additional transact
 
 Now the New Merkle root that has been calculated has been added to the Merkle root data field of the new block header candidate and serialised to generate the 80-byte string.
 
-![](<../.gitbook/assets/Screen Shot 2022-08-11 at 3.23.42 pm.png>)
+![](<../../../../.gitbook/assets/Screen Shot 2022-08-11 at 3.23.42 pm.png>)
 
 | DATA FIELD              | BYTES  | Hexadecimal Value (Little Endian)                                                                                                                                    |
 | ----------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -43,7 +43,7 @@ Now the New Merkle root that has been calculated has been added to the Merkle ro
 
 In the table below after passing the 80-byte string through a double application of the SHA256 function, the new block hash does not even come remotely close to being under the difficulty target. Therefore, to even attempt to promote this as a valid block with a proof of work solution, more attempts at the hash puzzle would have to be made by incrementing the nonce until a valid solution was found.
 
-![](<../.gitbook/assets/Screen Shot 2022-08-11 at 3.24.41 pm.png>)
+![](<../../../../.gitbook/assets/Screen Shot 2022-08-11 at 3.24.41 pm.png>)
 
 | HASH256 #550204 (ii)   | 3f26d0290c3e19ba35943b55c9d0184be966810d1ae6155bcafd06fd1cda8e56 |
 | ---------------------- | ---------------------------------------------------------------- |

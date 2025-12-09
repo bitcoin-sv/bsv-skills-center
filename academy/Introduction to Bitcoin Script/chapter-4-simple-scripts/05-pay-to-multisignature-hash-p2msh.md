@@ -16,7 +16,7 @@
 | 1 \<signature\_1> \<signature\_2> 2 \<pubkey\_1>\<pubkey\_2>\<pubkey\_3> 3                                        | OP\_CHECKMULTISIG                                                                                                                                                                                                                                                                | Constant value '3' is pushed onto the stack              |
 | true                                                                                                              | Empty.                                                                                                                                                                                                                                                                           | Multisignature evaluation is performed                   |
 
-<figure><img src="../.gitbook/assets/BSVA-BitcoinScript_Chapter4-Animation05 V1.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/BSVA-BitcoinScript_Chapter4-Animation05 V1.gif" alt=""><figcaption></figcaption></figure>
 
 As shown above, the spending parties must supply 2 valid signatures and the three public keys that correspond to the hash stored in the output. The 3 public keys are duplicated and hashed using the OP\_HASH160 opcode, and the resultant data item is checked against a hash value stored in the output.
 

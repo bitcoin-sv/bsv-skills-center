@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Network - Breaking The Tie.gif>)
+![](<../../../.gitbook/assets/Theory - Network - Breaking The Tie.gif>)
 
 As soon as a node finds a new valid block and one of the competing chaintips is extended, the rest of the nodes on the network will immediately begin working on top of the longest chaintip. It is important for all nodes that they have a means by which they can quickly change to the new block even if they were working on a different chain, which is why competing valid blocks are held and validated even if they were not the first seen.
 

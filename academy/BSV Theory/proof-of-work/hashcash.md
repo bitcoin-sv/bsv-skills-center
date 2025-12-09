@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Proof Of Work - Hashcash (2).gif>)
+![](<../../../.gitbook/assets/Theory - Proof Of Work - Hashcash (2).gif>)
 
 The implementation of Bitcoin’s distributed timestamp uses hash-based proof of work to give nodes the ability to demonstrate their willingness to both invest in network infrastructure and place operational expenditure at risk via the hashing competition.
 
@@ -18,4 +18,4 @@ _Imagining a war where many different armies must work together to conquer a com
 
 _This failure is known as a Byzantine Fault, in computing this is when it is unclear whether a component in a network is working properly or not. In Bitcoin each node is considered a ‘general’ who contributes to the consensus of a network._
 
-\
+\\

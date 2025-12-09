@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Proof of Work - Attacking The longest chain.gif>)
+![](<../../../.gitbook/assets/Theory - Proof of Work - Attacking The longest chain.gif>)
 
 Thanks to the cumulative nature of Bitcoin’s proof of work process, it can be shown that for an attacking node to overwrite a particular block or record which has already been built upon by the honest operators on the network, they would first have to create a competing block. This block includes or excludes the information targeted by the attack before creating a new chain of blocks that is longer than the existing chain of honest blocks being built upon by the network.
 

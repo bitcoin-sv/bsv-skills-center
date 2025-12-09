@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - SPV - Transaction Acceptance.gif>)
+![](<../../../.gitbook/assets/Theory - SPV - Transaction Acceptance.gif>)
 
 By being able to validate that the hash of the transaction itself (the TXID) can be probably shown to exist in a block that has been accepted and built upon by the network, a user can safely say that the transaction is valid.
 

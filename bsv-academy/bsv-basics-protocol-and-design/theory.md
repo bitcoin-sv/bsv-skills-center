@@ -16,7 +16,7 @@ A coin is defined as a chain of digital signatures. We are introduced to the con
 
 The solution proposed requires the use of a timestamp server. We’ve already covered the concept of what a “block” is - a batch of transactions that are written to the ledger. A hash of each block is taken and announced publicly to the rest of the network to act as a timestamp server. The hash acts to provide data integrity, and publicly announcing the small amount of data to the rest of the network allows all nodes to come to agreement on a common ledger.
 
-<figure><img src="../../academy/BSV Basics: Protocol and Design/.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
 
 ## Proof of Work
 
@@ -66,10 +66,3 @@ Here Satoshi does a lot of math to show that attacking the network is very hard 
 Here we are going to copy and paste the conclusion word for word, as it very succinctly covers the entire system, and armed with this course you should be able to follow it clearly:
 
 > “We have proposed a system for electronic transactions without relying on trust. We started with the usual framework of coins made from digital signatures, which provides strong control of ownership, but is incomplete without a way to prevent double-spending. To solve this, we proposed a peer-to-peer network using proof-of-work to record a public history of transactions that quickly becomes computationally impractical for an attacker to change if honest nodes control a majority of CPU power. The network is robust in its unstructured simplicity. Nodes work all at once with little coordination. They do not need to be identified, since messages are not routed to any particular place and only need to be delivered on a best effort basis. Nodes can leave and rejoin the network at will, accepting the proof-of-work chain as proof of what happened while they were gone. They vote with their CPU power, expressing their acceptance of valid blocks by working on extending them and rejecting invalid blocks by refusing to work on them. Any needed rules and incentives can be enforced with this consensus mechanism.”
-
-
-
-
-
-
-

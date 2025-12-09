@@ -8,7 +8,7 @@ When a node solves the puzzle, it must also propagate the solution to all other 
 
 Read about the first see rule and orphan race here: [https://wiki.bitcoinsv.io/index.php/First\_seen\_rule](https://wiki.bitcoinsv.io/index.php/First_seen_rule)
 
-<figure><img src="../.gitbook/assets/CHAPTER 1 GIF 4.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/CHAPTER 1 GIF 4.gif" alt=""><figcaption></figcaption></figure>
 
 When analysing this directive, it is important to also look at what is in a block so we can understand how much information needs to be transmitted across the network. In its full form, a block is a set of all transactions in the Merkle Tree plus the block header.
 

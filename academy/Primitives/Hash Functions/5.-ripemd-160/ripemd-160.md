@@ -1,6 +1,6 @@
 # RIPEMD-160
 
-![](<../.gitbook/assets/BSVA-HashFunctions_Ch5L1_DA1 (1).gif>)
+![](<../../../../.gitbook/assets/BSVA-HashFunctions_Ch5L1_DA1 (1).gif>)
 
 ## A Brief History of Race Integrity Primitives Evaluation: RIPEMD
 

@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Reclaiming Disk Space - The Merkle Tree.gif>)
+![](<../../../.gitbook/assets/Theory - Reclaiming Disk Space - The Merkle Tree.gif>)
 
 In order for nodes to be able to remove individual transactions that have been placed in a block without impacting the integrity of the block hash, a data structure known as a Merkle Tree is used.
 
@@ -18,6 +18,6 @@ Merkle trees allow Bitcoin blocks to grow at an unbounded rate with minimal impa
 
 A Merkle tree enables a node to remove or ‘prune’ individual transactions from their record of a given block, and to retain only hashes of the transaction, or even hashes of the branch the transaction was in. With just a block header, a node can provably show that any transaction for which they have a corresponding hash and merkle path is contained within a block. This allows nodes to keep efficient, high speed systems at the forefront of the network, making the most of dynamic memory which is expensive to keep.
 
-![](../.gitbook/assets/image.png)
+![](<../../../.gitbook/assets/image (26).png>)
 
-&#x20; Learn more about the Merkle Tree here: [https://en.wikipedia.org/wiki/Merkle\_tree](https://en.wikipedia.org/wiki/Merkle_tree)
+Learn more about the Merkle Tree here: [https://en.wikipedia.org/wiki/Merkle\_tree](https://en.wikipedia.org/wiki/Merkle_tree)

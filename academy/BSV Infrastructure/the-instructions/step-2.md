@@ -16,7 +16,7 @@ There are numerous steps to this process, and at scale there is significant inve
 
 Learn more about UTXO’s here: [https://wiki.bitcoinsv.io/index.php/UTXO](https://wiki.bitcoinsv.io/index.php/UTXO)
 
-<figure><img src="../.gitbook/assets/CHAPTER 1 GIF 2.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/CHAPTER 1 GIF 2.gif" alt=""><figcaption></figcaption></figure>
 
 **In this animation we can see how even though each node sees the same set of transactions, their Merkle trees are all different, as they saw and processed the transactions in a different order.**
 

@@ -22,23 +22,23 @@ The Formal Grammar for Bitcoin Script is defined as part of the Bitcoin protocol
 
 The complete script consists of two sections, the unlockScript (scriptSig) and the lockScript (scriptPubKey). The locking script is from the transaction output that is being spent, while the unlocking script is included in the transaction input that is spending the output.
 
-<figure><img src="../.gitbook/assets/scriptsig.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/scriptsig.gif" alt=""><figcaption></figcaption></figure>
 
 #### Valid opcodes for unlockScript elements
 
 Current consensus rules state that an unlockScript can only contain the first 96 opcodes, which allow constants and data to be pushed onto the stack. This requirement is a part of Validity of Script Consensus Rule, defined later.
 
-<figure><img src="../.gitbook/assets/unlockingscript.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/unlockingscript.gif" alt=""><figcaption></figcaption></figure>
 
 #### IF loops
 
 A branching operator (OP\_IF or OP\_NOTIF) must have a matching OP\_ENDIF.
 
-<figure><img src="../.gitbook/assets/IFNOTIF.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/IFNOTIF.gif" alt=""><figcaption></figcaption></figure>
 
 An OP\_ELSE can only be included between a branching operator and OP\_ENDIF pair. There can only be at most one OP\_ELSE between a branching operator and an OP\_ENDIF.
 
-<figure><img src="../.gitbook/assets/opelse.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/opelse.gif" alt=""><figcaption></figcaption></figure>
 
 #### OP\_RETURN
 
@@ -58,7 +58,7 @@ Currently, the following 5 opcodes are disabled: OP\_2MUL, OP\_2DIV, OP\_VER, OP
 
 For a byte sequence to validly represent a numeric value, the length of the byte sequence must be less than or equal to 750,000 bytes. A byte sequence that is larger than this is a valid byte sequence but is not a valid numeric value.
 
-<figure><img src="../.gitbook/assets/numericvaluesize.gif" alt=""><figcaption><p>This animation is INCORRECT and must be fixed both here and in Introduction to Infrastructure</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/numericvaluesize.gif" alt=""><figcaption><p>This animation is INCORRECT and must be fixed both here and in Introduction to Infrastructure</p></figcaption></figure>
 
 Note that while some operations require parameters to be valid numeric values, they may produce byte sequences which are not valid numeric values (for example, OP\_MUL may produce a byte sequence which is too large to validly represent a numeric value).
 

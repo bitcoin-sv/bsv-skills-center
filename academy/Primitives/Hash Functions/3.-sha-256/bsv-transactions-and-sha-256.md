@@ -23,7 +23,7 @@ Every satoshi is part of a chain of digital signatures tracing back to the genes
 
 Once a transaction is constructed and serialized into raw hexadecimal (HEX) form, it is hashed using double SHA-256 to generate a unique transaction ID (TXID). BSV nodes use TXIDs to organize transactions in memory pools and Merkle trees, ensuring efficient validation and tracking across the network.
 
-![](../.gitbook/assets/BSVA-HashFunctions_Ch3L2_DA1.gif)
+![](../../../../.gitbook/assets/BSVA-HashFunctions_Ch3L2_DA1.gif)
 
 ## P2PKH Transactions
 

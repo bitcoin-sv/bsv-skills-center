@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Reclaiming Disk Space - Compacting Blocks (1).gif>)
+![](<../../../.gitbook/assets/Theory - Reclaiming Disk Space - Compacting Blocks (1).gif>)
 
 Like the original generation parents in the family tree, the Merkle tree starts with a list of transactions which are hashed to form the base level. As long as the node has copies of all of the transactions, they can validate the whole structure.
 

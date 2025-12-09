@@ -1,6 +1,6 @@
 # What are Hash Functions?
 
-![](../.gitbook/assets/BSVA-HashFunctions_Ch1L1_DA1.gif)
+![](../../../../.gitbook/assets/BSVA-HashFunctions_Ch1L1_DA1.gif)
 
 A hash function is a mathematical process that maps a **bitstring** of any length to a bitstring of a defined length. This process must also be easy to compute. A _one-way hash function_ must be **preimage resistant** and **second preimage** **resistant** while a _secure cryptographic_ or _ideal hash function_ must be preimage resistant, second preimage resistant, and **collision resistant** – we'll cover what these terms mean in the following lessons of this chapter. The hash functions we'll be looking at in this course are the secure ideal hash functions found in the BSV system: **SHA-256** and **RIPEMD-160**. For the remainder of this course, when you see the term _hash function_, it means _secure cryptographic_ or _ideal hash function_.
 

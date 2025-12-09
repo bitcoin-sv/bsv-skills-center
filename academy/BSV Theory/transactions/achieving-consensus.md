@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Transactions - Achieving Consensus.gif>)
+![](<../../../.gitbook/assets/Theory - Transactions - Achieving Consensus.gif>)
 
 When the system is managed by a centralised party, the monitoring of which inputs are used in a transaction and their spent/unspent status is managed simply on a first seen basis.
 

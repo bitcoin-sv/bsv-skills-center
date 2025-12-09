@@ -6,8 +6,6 @@ There are a variety of OPCODES available to trigger entry into IF loops includin
 
 `OP_IF, OP_NOTIF, OP_ELSE`
 
-
-
 ### IF / NOTIF statements
 
 IF statements are used to allow Bitcoin script to do comparative analysis on stack data items to control entry into IF loops. IF loops are the only means provided in Bitcoin script to perform different operations depending on previous processing.
@@ -18,25 +16,25 @@ The format of a simple IF loop is as follows:
 
 `OP_IF`
 
-&#x20;   `<True action>`
+`<True action>`
 
 `OP_ENDIF`
 
-<figure><img src="../.gitbook/assets/BSVA-BitcoinScript_Chapter3-IFAnimation (2).gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/BSVA-BitcoinScript_Chapter3-IFAnimation (2).gif" alt=""><figcaption></figcaption></figure>
 
 In this example, if the operations performed in `<expression>` leave a non-zero item at the top of the stack, then the code in `<True action>` will be executed. Otherwise the script will jump to the opcode immediately after `OP_ENDIF`.
 
-The alternative to `OP_IF` is `OP_NOTIF`.&#x20;
+The alternative to `OP_IF` is `OP_NOTIF`.
 
 `<Expression>`
 
 `OP_NOTIF`
 
-&#x20;   `<False action>`
+`<False action>`
 
 `OP_ENDIF`
 
-<figure><img src="../.gitbook/assets/BSVA-BitcoinScript_Chapter3-NOTIFAnimation.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/BSVA-BitcoinScript_Chapter3-NOTIFAnimation.gif" alt=""><figcaption></figcaption></figure>
 
 When using `OP_NOTIF`, if the operations performed in `<expression>` leave a zero-value item at the top of the stack, then the code in `<False action>` will be executed. Otherwise the script will jump to the opcode immediately after `OP_ENDIF`.
 
@@ -50,11 +48,11 @@ Any IF loop can contain an ELSE statement which will cause the script to branch 
 
 `OP_IF`
 
-&#x20;   `<True action>`
+`<True action>`
 
 `OP_ELSE`
 
-&#x20;   `<False action>`
+`<False action>`
 
 `OP_ENDIF`
 
@@ -66,25 +64,25 @@ Using OP\_ELSE, IF loops can be nested allowing for complex nested functions to 
 
 `OP_IF`
 
-&#x20;   `<When 1 action>`
+`<When 1 action>`
 
 `OP_ELSE`
 
-&#x20;   `<Case 2 check>`
+`<Case 2 check>`
 
-&#x20;   `OP_IF`
+`OP_IF`
 
-&#x20;       `<When 2 action>`
+`<When 2 action>`
 
-&#x20;   `OP_ELSE`
+`OP_ELSE`
 
-&#x20;       `<Else action>`
-
-&#x20;   `OP_ENDIF`
+`<Else action>`
 
 `OP_ENDIF`
 
-<figure><img src="../.gitbook/assets/BSVA-BitcoinScript_Chapter3-IFELSEAnimation.gif" alt=""><figcaption></figcaption></figure>
+`OP_ENDIF`
+
+<figure><img src="../../../.gitbook/assets/BSVA-BitcoinScript_Chapter3-IFELSEAnimation.gif" alt=""><figcaption></figcaption></figure>
 
 An alternative method to nested IF loops is repeating IF loops in the code, although care must be taken to ensure that any 'ELSE' case is captured in an IF loop separately.
 
@@ -92,7 +90,7 @@ An alternative method to nested IF loops is repeating IF loops in the code, alth
 
 `OP_IF`
 
-&#x20;   `<When 1 action>`
+`<When 1 action>`
 
 `OP_ENDIF`
 
@@ -100,7 +98,7 @@ An alternative method to nested IF loops is repeating IF loops in the code, alth
 
 `OP_IF`
 
-&#x20;   `<When 2 action>`
+`<When 2 action>`
 
 `OP_ENDIF`
 
@@ -108,7 +106,6 @@ An alternative method to nested IF loops is repeating IF loops in the code, alth
 
 `OP_IF`
 
-&#x20;   `<Else action>`
+`<Else action>`
 
 `OP_ENDIF`
-

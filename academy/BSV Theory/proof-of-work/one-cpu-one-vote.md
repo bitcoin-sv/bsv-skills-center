@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Proof of Work - One CPU One Vote.gif>)
+![](<../../../.gitbook/assets/Theory - Proof of Work - One CPU One Vote.gif>)
 
 The very nature of proof-of-work is such that it cannot be faked, misrepresented or otherwise falsified. Without a Central Processing Unit (CPU) to cycle through combinations of nonce and block header, a node cannot participate in the block building process. Because proof of work requires the accumulation of infrastructure and the expenditure of energy, there is an inherent need for any node that wishes to participate in the activity of block building to have CPU power available to it in order to continuously process new combinations of block header and nonce to solve proof of work.
 

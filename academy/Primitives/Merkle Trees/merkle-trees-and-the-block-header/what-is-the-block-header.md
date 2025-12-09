@@ -6,7 +6,7 @@ As transactions occur on the BSV network, they are collected by miners to be per
 
 The block header is an 80-byte string of specific data elements. Firstly, a 4 byte version parameter followed by a 32 byte HASH256 of the previous block's header, the 32 byte Merkle root created from the Merkle tree containing all of the transactions in the block, a 4 byte timestamp indicating when the block was created, a 4 byte floating point number indicating the difficulty target for the proof of work process and a4 byte 'nonce' or 'number used once' which is used in the puzzle that miners compete to solve.
 
-![](<../.gitbook/assets/Screen Shot 2022-08-11 at 2.44.02 pm.png>)
+![](<../../../../.gitbook/assets/Screen Shot 2022-08-11 at 2.44.02 pm.png>)
 
 | **FIELD**                                                                                                                                                                                        | **PURPOSE**                                   | **BYTES** | **FORMAT**    | **STRING**                                                       |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------- | --------- | ------------- | ---------------------------------------------------------------- |

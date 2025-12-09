@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Introduction - Commerce on the Internet.gif>)
+![](<../../../.gitbook/assets/Theory - Introduction - Commerce on the Internet.gif>)
 
 At the time the whitepaper was published, internet commerce was a growing element of the economy with the rise of businesses such as eBay and Amazon proved that the internet could offer people business opportunities. The issue was and is still today that all transactions that are routed through legacy payment systems to pay for goods or services via the internet rely on trusted third parties to manage the payment process.
 

@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/theory - SPV - full network nodes.gif>)
+![](<../../../.gitbook/assets/theory - SPV - full network nodes.gif>)
 
 **In the context of this statement, a ‘Full Network Node’ is considered a node which performs all of the tasks outlined in Section 5 of the whitepaper, which are:**
 
@@ -20,7 +20,7 @@
 >
 > 6\) Nodes express their acceptance of the block by working on creating the next block in the chain, using the hash of the accepted block as the previous hash.
 >
-> &#x20;                                                                                                                                                                                                                                                                                                                                                                     \- Satoshi Nakamoto, Bitcoin Whitepaper
+> \- Satoshi Nakamoto, Bitcoin Whitepaper
 
 It is clear from this that nodes are systems that are specifically designed to certify the records being timestamped on the ledger.
 

@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Calculations - Exponential Odds.gif>)
+![](<../../../.gitbook/assets/Theory - Calculations - Exponential Odds.gif>)
 
 It is clear from this equation that as the attacker falls further and further behind, the chances of them ever catching the honest chaintip become much smaller as the honest tip is extended, making it exceptionally unlikely for an attacker with less capacity than the rest of the network to ever catch up.
 

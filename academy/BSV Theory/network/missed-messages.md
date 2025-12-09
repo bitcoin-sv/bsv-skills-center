@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Network - Missed Messages.gif>)
+![](<../../../.gitbook/assets/Theory - Network - Missed Messages.gif>)
 
 In the rare situation where a transaction has reached some but not all of the nodes on the network, it only takes until one of the nodes that received it to find a block that includes that transaction. This has no impact on the validity of the transaction, or the immediate usability of its outputs accepting that the timestamp applied to its place in the blockchain would necessarily be some time later than the ideal ‘as soon as possible’. Transactions can be missed or omitted due to many factors such as a particular node’s own policies or a break in network communications between competing parts of the network.
 

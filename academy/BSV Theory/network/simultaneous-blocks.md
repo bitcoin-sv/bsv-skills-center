@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Network - Simultaneous Blocks.gif>)
+![](<../../../.gitbook/assets/Theory - Network - Simultaneous Blocks.gif>)
 
 Because nodes work simultaneously to solve proof of work on separate and distinct block templates, there is always a chance that when a node finds a block, a competing node will find a different valid block solution for their own template at or around the same time.
 

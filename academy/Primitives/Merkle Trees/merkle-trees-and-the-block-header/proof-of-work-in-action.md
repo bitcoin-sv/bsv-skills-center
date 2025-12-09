@@ -2,7 +2,7 @@
 
 Block 550204 has two transactions in it. Below we can see the raw transaction data converted to the TXID through a double application of SHA256 and the Merkle root calculated from a double application of SHA256 upon the concatenated TXIDs that would make up the leaf nodes of the two-layer Merkle tree. Note that the output from the hash functions is displayed as little-endian notation so a reversal of the byte string of the hexadecimal character pairs of the Merkle root is necessary to get the same Merkle root that's displayed as big endian in block explorers. Similarly, if you are building a Merkle tree out of TXIDs that you have found on a block explorer, they will be listed in Big Endian meaning a byte reversal to Little Endian is necessary before concatenating as pairs.
 
-![](<../.gitbook/assets/Screen Shot 2022-08-11 at 2.58.44 pm.png>)
+![](<../../../../.gitbook/assets/Screen Shot 2022-08-11 at 2.58.44 pm.png>)
 
 | **TX**                                           | **Raw TX Data**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | **HASH256 (TXID in Little Endian)**                              | **HASH256 \[1\|2] (Little Endian)**                              |
 | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- |
@@ -12,7 +12,7 @@ Block 550204 has two transactions in it. Below we can see the raw transaction da
 
 Next, we see the Merkle root from the above calculations input as one element into the data fields of the block header. These values were obtained from a block explorer so again conversions are necessary to get all the decimal elements to hexadecimal and then a byte string reversal of the hexadecimal character pairs before all the data elements can be concatenated into a single 80-byte string. Although confusing for the human interpreting the endianness conventions, it is much more efficient for hardware to process inputs in little endian, and although such gains would not be noticeable when only one operation is performed, BSV is designed to handle a transaction throughput of millions of transactions a second, so any optimisation processes have been implemented in the protocol design.
 
-![](<../.gitbook/assets/Screen Shot 2022-08-11 at 2.59.59 pm.png>)
+![](<../../../../.gitbook/assets/Screen Shot 2022-08-11 at 2.59.59 pm.png>)
 
 | Data Field          | Bytes | Value                                                                                                                                                            | **Hexadecimal (Little Endian)**                                  |
 | ------------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
@@ -37,7 +37,7 @@ _0x denotes that this value is in hexadecimal_
 
 This calculation will yield an extremely large number, so by using the 4-byte value, the node software is able to parse the string for two pieces of information embedded within it. The first byte represents the index which will determine which power the following 3 bytes (coefficient) will be raised by. The nBits value is generally displayed in block explorers as a decimal number yet the calculation will be performed on the hexadecimal representation of that number by the node software. In the case of the block, we are working with the hexadecimal representation of nBits is 180202F3, where 18 (24 in decimal) will be the index and 0202F3 (131827 in decimal) the coefficient.
 
-![](<../.gitbook/assets/Screen Shot 2022-08-11 at 3.03.13 pm.png>)
+![](<../../../../.gitbook/assets/Screen Shot 2022-08-11 at 3.03.13 pm.png>)
 
 | <p><br>Hexadecimal</p>     | Decimal                                                          |                                                                                |
 | -------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------ |
@@ -48,7 +48,7 @@ This calculation will yield an extremely large number, so by using the 4-byte va
 
 As we can see the first attempt at generating a successful proof of work solution was invalid as the output from the double hashing of the block header was much higher ($$10^{21}$$) than the target value specified from inputting the nBits value into the equation. Assuming that no new transactions have been appended to the Merkle tree and we are still within the same second of the UNIX time, a new attempt at the proof of work can be made by incrementing the nonce by 1. This yields an almost entirely similar 80-byte string as the first concatenated block header data inputs with only one hexadecimal character being incremented. Yet, when we check the output from the double application of the SHA256 hash function to the string we can see a significantly lower value with a large number of leading zeros.
 
-![](<../.gitbook/assets/Screen Shot 2022-08-11 at 3.04.09 pm.png>)
+![](<../../../../.gitbook/assets/Screen Shot 2022-08-11 at 3.04.09 pm.png>)
 
 | Data Field                        | Bytes | Hexadecimal Value (Little Endian)                                                                                                                                |
 | --------------------------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |

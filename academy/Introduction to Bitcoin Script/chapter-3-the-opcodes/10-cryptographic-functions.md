@@ -4,7 +4,7 @@ Bitcoin script includes a range of cryptographic functions such as hashing funct
 
 ### Hash Functions
 
-<figure><img src="../.gitbook/assets/BSVA-BitcoinScript_Chapter3-AnimationPack18.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/BSVA-BitcoinScript_Chapter3-AnimationPack18.gif" alt=""><figcaption></figcaption></figure>
 
 There are three hash functions available in Bitcoin script:
 
@@ -20,7 +20,7 @@ Each hash function consumes the topmost data item on the stack and replace it wi
 
 ### ECDSA Signature Check Functions
 
-<figure><img src="../.gitbook/assets/BSVA-BitcoinScript_Chapter3-AnimationPack19.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/BSVA-BitcoinScript_Chapter3-AnimationPack19.gif" alt=""><figcaption></figcaption></figure>
 
 Bitcoin script provides users with both single and multisignature options based on the Secp256k1 elliptic curve. These functions are core to the Peer to Peer functionality of Bitcoin, allowing users to assert ownership of coins when transacting.
 
@@ -32,7 +32,7 @@ The messages used to generate the signatures are created using reproducible data
 
 #### OP\_CODESEPARATOR <a href="#op_codeseparator" id="op_codeseparator"></a>
 
-<figure><img src="../.gitbook/assets/BSVA-BitcoinScript_Chapter3-AnimationPack20.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/BSVA-BitcoinScript_Chapter3-AnimationPack20.gif" alt=""><figcaption></figcaption></figure>
 
 `OP_CODESEPARATOR` is used in a Bitcoin script to indicate to the node checking the signature exactly which part of the scriptPubKey is being signed. When transactions are submitted to the network, the node inserts `OP_CODESEPARATOR` at the junction between input and output.\
 \

@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Transactions - Electronic Coin.gif>)
+![](<../../../.gitbook/assets/Theory - Transactions - Electronic Coin.gif>)
 
 In Bitcoin, transactions are built by referencing unspent digital coins called ‘Unspent Transaction Outputs’ or “UTXOs” in transaction inputs. To be spent, the input must also include a solution to the script puzzle contained in the output which locks the satoshi tokens it holds. In almost all cases one part of this script puzzle requires a valid digital signature to be provided by the party that holds custody of the UTXO.
 

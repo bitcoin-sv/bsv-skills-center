@@ -8,13 +8,13 @@ When handling data items on the stack, they may need to be split or joined as pa
 
 <table><thead><tr><th width="164">Word</th><th width="74">Input</th><th width="94">Output</th><th>Description</th></tr></thead><tbody><tr><td>OP_CAT</td><td>x1 x2</td><td>out</td><td>Concatenates two strings.</td></tr><tr><td>OP_SPLIT</td><td>x n</td><td>x1 x2</td><td>Splits byte sequence x at position n.</td></tr></tbody></table>
 
-<figure><img src="../.gitbook/assets/BSVA-BitcoinScript_Chapter3-AnimationPack08.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/BSVA-BitcoinScript_Chapter3-AnimationPack08.gif" alt=""><figcaption></figcaption></figure>
 
 #### Example:
 
 `0x12345678 OP_1 OP_SPLIT`
 
-This example splits the bytevector `0x12345678` into `0x12` and `0x345678`&#x20;
+This example splits the bytevector `0x12345678` into `0x12` and `0x345678`
 
 #### Example:
 
@@ -28,7 +28,7 @@ These two opcodes are not part of the original Bitcoin script definition. They w
 
 <table><thead><tr><th width="164">Word</th><th width="74">Input</th><th width="94">Output</th><th>Description</th></tr></thead><tbody><tr><td>OP_NUM2BIN</td><td>a b</td><td>out</td><td>Converts numeric value a into byte sequence of length b.</td></tr><tr><td>OP_BIN2NUM</td><td>x</td><td>out</td><td>Converts byte sequence x into a minimally encoded numeric value.</td></tr></tbody></table>
 
-{% file src="../.gitbook/assets/BA_BSVA_EDUC_BITCOIN-SCRIPT-CH3VID5_DATA-TYPE-TRANSFORMATION_V1_072023_compressed.mp4" %}
+{% file src="../../../.gitbook/assets/BA_BSVA_EDUC_BITCOIN-SCRIPT-CH3VID5_DATA-TYPE-TRANSFORMATION_V1_072023_compressed.mp4" %}
 
 #### Example 1:
 

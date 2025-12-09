@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Transactions - Spending a Coin.gif>)
+![](<../../../.gitbook/assets/Theory - Transactions - Spending a Coin.gif>)
 
 Each UTXO is locked with a script commonly called a scriptPubKey. This scriptPubKey is a puzzle that defines a predicate. The spending party must provide a solution which allows the predicate to be solved with a ‘True’ or non-zero outcome.
 

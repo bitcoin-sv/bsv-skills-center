@@ -1,6 +1,6 @@
 # Why is Double Hashing Used in BSV
 
-![](../.gitbook/assets/BSVA-HashFunctions_Ch7L1_DA1.gif)
+![](../../../../.gitbook/assets/BSVA-HashFunctions_Ch7L1_DA1.gif)
 
 When it was released in 2009, the initial Bitcoin code base had many features which at first glance didn't make a lot of sense. Over time, the intention behind these features has slowly come to light. One of these features is the usage of double hash functions as opposed to single hash functions throughout the BSV system. Instead of simply using a single hash function like SHA-256 or RIPEMD-160, BSV uses double hash functions: HASH-256 and HASH-160.
 

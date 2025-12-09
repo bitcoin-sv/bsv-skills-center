@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Privacy - Stock Exchange Comparison.gif>)
+![](<../../../.gitbook/assets/Theory - Privacy - Stock Exchange Comparison.gif>)
 
 In the same way that stock exchanges keep private records of who exchanged with who and release a cleaned set of records containing only the price and size of each trade, so the Bitcoin ledger maintains a private tape of all records of exchange.
 

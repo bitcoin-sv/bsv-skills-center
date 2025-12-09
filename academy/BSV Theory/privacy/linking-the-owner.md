@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Privacy - Linking the Owner.gif>)
+![](<../../../.gitbook/assets/Theory - Privacy - Linking the Owner.gif>)
 
 If a user spends coins that it has received from third parties, or which were spent back to themselves as change, it becomes possible to trace some part of the chain of ownership back via the ledger. This risks exposing a user's financial activities to malicious parties who have an understanding of how to analyse the public ledger.
 

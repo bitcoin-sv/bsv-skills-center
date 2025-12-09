@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Combining and Splitting Value - Dynamically Sized Coins.gif>)
+![](<../../../.gitbook/assets/Theory - Combining and Splitting Value - Dynamically Sized Coins.gif>)
 
 Each time a bitcoin transaction takes place, one or more unspent transaction outputs are gathered into the transaction as inputs and spent into a new combination of outputs scripts. A Bitcoin transaction can handle as many or as few Satoshi tokens as are needed by the user and supported by network nodes.
 

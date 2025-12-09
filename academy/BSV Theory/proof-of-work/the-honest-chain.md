@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Proof of work - the honest chain.gif>)
+![](<../../../.gitbook/assets/Theory - Proof of work - the honest chain.gif>)
 
 As long as more than half of the CPU power used to perform proof of work is controlled by honest nodes, the honest chain will remain the longest chain and the most easy to follow chain by the users of the network. This is true even when a chain tip is extended by nodes who use their hashpower to accept a set of dishonest transactions, or to enforce rules that go against the will of the honest nodes in the system.
 

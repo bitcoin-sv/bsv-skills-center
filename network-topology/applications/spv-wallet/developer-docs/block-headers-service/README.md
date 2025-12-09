@@ -4,8 +4,8 @@ The Block Headers Service is a standalone service that communicates with the Bit
 
 ## Table of Contents
 
-* [How it is used in the SPV Wallet ecosystem](#how-it-is-used-in-the-spv-wallet-ecosystem)
-* [How merkle roots are verified](#how-merkle-roots-are-verified)
+* [How it is used in the SPV Wallet ecosystem](./#how-it-is-used-in-the-spv-wallet-ecosystem)
+* [How merkle roots are verified](./#how-merkle-roots-are-verified)
 * [Authentication](authentication.md)
 * [Configuration](configuration.md)
 
@@ -17,7 +17,7 @@ This service exposes a REST API with multiple endpoints, the most important from
 
 `GET /chain/merkleroots/verify`
 
-![Merkle Roots Verify](merkleroots.jpg)
+![Merkle Roots Verify](../../../../../.gitbook/assets/merkleroots.jpg)
 
 ## How merkle roots are verified
 

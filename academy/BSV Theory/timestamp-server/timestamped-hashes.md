@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Timestamp Server - Timestamped Hashes.gif>)
+![](<../../../.gitbook/assets/Theory - Timestamp Server - Timestamped Hashes.gif>)
 
 A Bitcoin block consists of an ordered set of transactions which each validly spend existing unspent transaction outputs into new transaction outputs. The network considers each transaction to be a separate item or event, and builds the blocks as such, using the hashed transaction message as an input into the block’s own hash function.
 

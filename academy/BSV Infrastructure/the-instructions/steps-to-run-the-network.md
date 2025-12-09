@@ -11,7 +11,7 @@ The steps to run the network are as follows:
 5. Nodes accept the block only if all transactions in it are valid and not already spent.
 6. Nodes express their acceptance of the block by working on creating the next block in the chain, using the hash of the accepted block as the previous hash.
 
-<figure><img src="../.gitbook/assets/CHAPTER 1 GIF 0.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/CHAPTER 1 GIF 0.gif" alt=""><figcaption></figcaption></figure>
 
 By collectively following these instructions, nodes are incentivised to find ways to develop their own competitive advantage, and by doing so, their investments in hardware and network infrastructure allows the network to scale efficiently. The network's incentives are structured such that the most honest, open, and capable participants are the most likely to be rewarded.
 

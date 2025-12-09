@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - SPV - Invalid Block Relay System.gif>)
+![](<../../../.gitbook/assets/Theory - SPV - Invalid Block Relay System.gif>)
 
 This proposed solution would be to set up a system to alert user wallets who requested the longest chain of proof of work from the network that the longest chain they could download was in-fact a rejected dishonest attack chain. This gives them details of the earliest block in the invalid chain, details of the detected invalid transactions, and the details of the longest valid chain including the valid versions of any double spends inserted into the malicious chain.
 

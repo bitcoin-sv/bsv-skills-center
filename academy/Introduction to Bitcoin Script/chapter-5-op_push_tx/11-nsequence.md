@@ -2,7 +2,7 @@
 
 The nSequence field is a 4 byte little endian number that is the sequence number of the input. This value can be used with nLocktime to put transactions into a non-final state, allowing a managed transfer of data to take place.
 
-<figure><img src="../.gitbook/assets/BSVA-BitcoinScript_Chapter5-Animation10.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/BSVA-BitcoinScript_Chapter5-Animation10.gif" alt=""><figcaption></figcaption></figure>
 
 #### Example: Extract and check nSequence
 

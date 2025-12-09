@@ -4,9 +4,9 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Proof Of Work - Hashcash (1).gif>)
+![](<../../../.gitbook/assets/Theory - Proof Of Work - Hashcash (1).gif>)
 
-![](<../.gitbook/assets/image (3).png>)
+![](<../../../.gitbook/assets/image (3) (2).png>)
 
 A **Nonce** is a ‘Number used ONCE’ and is the means by which the block header is iterated during the proof of work process. A section of the block header is changed by a small amount each time so that a new hash can be calculated from the number.
 

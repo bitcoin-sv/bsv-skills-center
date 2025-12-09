@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Combining and Splitting Value - Inputs and Outputs.gif>)
+![](<../../../.gitbook/assets/Theory - Combining and Splitting Value - Inputs and Outputs.gif>)
 
 To facilitate the aggregation of many small coins into one large payment, transactions support the capability to use multiple coins as inputs. This means that a user who’s wallet mainly receives micropayments can still use those small coins to make larger purchases without burdening the receiver. This same mechanism also allows for multiple users to participate in a transaction by separate signing an input or inputs into the transaction.
 

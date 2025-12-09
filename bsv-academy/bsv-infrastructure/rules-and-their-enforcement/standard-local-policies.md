@@ -10,7 +10,7 @@ Policies control which transactions the software will propagate across the P2P n
 
 The maximum acceptable transaction size is a standard policy that configures the largest transactions that the software will propagate across the P2P network or include in a block.
 
-<figure><img src="../../../academy/BSV Infrastructure/.gitbook/assets/CHAPTER 2 GIF 13.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/CHAPTER 2 GIF 13.gif" alt=""><figcaption></figcaption></figure>
 
 The default value for this policy setting is 10MB (10,000,000 bytes).
 
@@ -18,7 +18,7 @@ The default value for this policy setting is 10MB (10,000,000 bytes).
 
 The transaction evaluation timeout is a standard policy that defines the maximum amount of time that the software will allow for the evaluation of a transaction before terminating the evaluation and rejecting the transaction. This setting is always defined with a time unit and the default value is 1 second.
 
-<figure><img src="../../../academy/BSV Infrastructure/.gitbook/assets/CHAPTER 2 GIF 14.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/CHAPTER 2 GIF 14.gif" alt=""><figcaption></figcaption></figure>
 
 This policy applies to transactions that are received by the software and its processes for determining whether the transaction should be propagated across the P2P network or included in a block. The policy does not apply to the evaluation of transactions in a confirmed block.
 
@@ -45,7 +45,7 @@ The dust rule is a setting that nodes use to discourage bitcoin users from creat
 
 Since early in the history of Bitcoin the dust rate has been a standard policy across the network.
 
-<figure><img src="../../../academy/BSV Infrastructure/.gitbook/assets/CHAPTER 2 GIF 15 (1).gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/CHAPTER 2 GIF 15 (1).gif" alt=""><figcaption></figcaption></figure>
 
 The current policy implementation is defined such that smallest value a transaction’s output may contain is equal to (3x the size of the output script + 142) \* the minRelayTxFee parameter.
 
@@ -61,13 +61,11 @@ Script Language Policies apply to the execution of script.
 
 ### Minimal Encoding Policy
 
-<figure><img src="../../../.gitbook/assets/CHAPTER 2 GIF 16.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/CHAPTER 2 GIF 16 (1).gif" alt=""><figcaption></figcaption></figure>
 
 The Minimal Encoding Policy mandates that any push operations done within a script must use the most efficient pushdata opcode to do so. Bitcoin has individual pushdata opcodes to push data items up to 75 bytes in length using a single byte instruction. For data items which are between 76 and 255 bytes, the sequence OP\_PUSHDATA1 must be used, where the data length is defined using an 8 bit unsigned integer value. For data items between 256 and 65,535 bytes long, the sequence OP\_PUSHDATA2 must be used, where the data length is defined using a 16 bit unsigned integer value. For data items between 65,536 and 4,294,967,295 bytes long, the sequence OP\_PUSHDATA4 must be used, where the data length is defined using a 32 bit unsigned integer value. Data items larger than 4,294,967,295 bytes must be split in order to be pushed into a transaction.
 
 ### Numeric Value Length
-
-
 
 The length of numeric value policy defines the maximum length of a byte sequence to be considered a valid numeric value. The default value for this policy is 250,000 bytes.
 
@@ -75,7 +73,7 @@ Transactions which contain scripts that consume numeric values that are larger t
 
 ### Stack Memory Usage Policy
 
-<figure><img src="../../../.gitbook/assets/CHAPTER 2 GIF 17.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/CHAPTER 2 GIF 17 (1).gif" alt=""><figcaption></figcaption></figure>
 
 The stack memory usage policy limits the amount of memory that can be used on the stacks. This policy is evaluated against the sum of the memory used by the stack and the memory used by the alt-stack.
 
@@ -104,8 +102,3 @@ Before Genesis activation, the default setting for this policy was that non-stan
 After Genesis activation, the default setting for this policy is that non-standard transactions will be propagated across the P2P Network.
 
 Note that even though non-standard transactions will be propagated across the P2P Network after Genesis activation, other policies such as the Maximum Acceptable Transaction Size Policy remain in effect.
-
-
-
-
-

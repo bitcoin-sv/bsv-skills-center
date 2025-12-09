@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Introduction - Non Reversible.gif>)
+![](<../../../.gitbook/assets/Theory - Introduction - Non Reversible.gif>)
 
 Because financial institutions are required to be part of each transaction that uses legacy payment systems, when there is mediation they are forced to intervene. This is a time consuming and costly process for merchants and represents a drain on commerce, where depending on industry, as many as 3% of all credit card transactions are contested, costing the merchants fees, the cost of the goods charged back, and time, stress and effort.
 

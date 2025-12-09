@@ -6,7 +6,7 @@ The final 4 bytes of the block header is the ‘number used once’ (nonce) whic
 
 If a valid block header is discovered the miner can submit their block to the network for validation by their peers. Successful validation and acceptance of the block commits the batch of transactions whose Merkle root is in the block header to the public ledger. The nature of this outcome leads to valid block headers hashing to a value with numerous leading zeroes.
 
-![](../.gitbook/assets/BSVA-MerkleTrees_Ch3Less2_VA4.gif)
+![](../../../../.gitbook/assets/BSVA-MerkleTrees_Ch3Less2_VA4.gif)
 
 The difficulty target as specified by nBits is calculated by taking the elapsed time in seconds between a specific number of blocks that have been produced and seeing how far above or below that number is in seconds relative to an ideal elapsed time in seconds that averages one block being created every ten minutes. The difference between the elapsed time is divided by the ideal time to yield the value for the coefficient in the bitcoin difficulty adjustment algorithm.
 

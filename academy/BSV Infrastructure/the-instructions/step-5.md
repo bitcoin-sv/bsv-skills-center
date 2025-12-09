@@ -10,7 +10,7 @@ This is a big part of the user security model. Allowing Bitcoin users to accept 
 
 This instruction clearly outlines the node’s need to validate the contents of the block against its own knowledge of what exists on the ledger and the rules in place governing the protocol. If a node receives a block that contains an invalid transaction, the block cannot be accepted as valid. For example, if the node receives a block that contains a transaction that spends an already used output, the transaction is invalid and the block must be rejected because spendable outputs on the ledger can only be used once.
 
-<figure><img src="../.gitbook/assets/CHAPTER 1 GIF 5.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/CHAPTER 1 GIF 5.gif" alt=""><figcaption></figcaption></figure>
 
 The rule also defends against malicious actors who try to create invalid transactions on the ledger by ensuring nodes are incentivised to validate all transactions.
 

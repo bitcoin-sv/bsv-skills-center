@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Introduction - Proof of Acceptance.gif>)
+![](<../../../.gitbook/assets/Theory - Introduction - Proof of Acceptance.gif>)
 
 For merchants to have confidence in funds received via the Bitcoin network, there must be a means for them to be able to query the nodes who validate the transaction to ensure that it is not double spending valid inputs. This can be achieved in a variety of ways including:
 

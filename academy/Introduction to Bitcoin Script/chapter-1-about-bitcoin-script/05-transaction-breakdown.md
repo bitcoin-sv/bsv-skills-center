@@ -2,7 +2,7 @@
 
 Now we will break down the serialised transaction into its various components.
 
-<figure><img src="../.gitbook/assets/Tx Parameters.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Tx Parameters.gif" alt=""><figcaption></figcaption></figure>
 
 ### Version <a href="#version" id="version"></a>
 
@@ -14,7 +14,7 @@ This indicates that the transaction follows the version 01 of the transaction ev
 
 As usage increases, it is expected this field will be used to signal a variety of different transaction templates which may each be processed by different subsets of the mining network.
 
-<figure><img src="../.gitbook/assets/Tx Version Number.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Tx Version Number.gif" alt=""><figcaption></figcaption></figure>
 
 ### Quantity of inputs <a href="#quantity-of-inputs" id="quantity-of-inputs"></a>
 
@@ -22,13 +22,13 @@ As usage increases, it is expected this field will be used to signal a variety o
 
 This indicates that there is just 1 input being spent in this transaction.
 
-<figure><img src="../.gitbook/assets/Input Counter.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Input Counter.gif" alt=""><figcaption></figcaption></figure>
 
 This value is a 4-byte integer in Little Endian format. This means that if a transaction has more than 0xFFFFFFFF outputs (approx 4.3 billion) those that are created at index locations outside the range are practically unspendable.
 
 ### The Input <a href="#the-input" id="the-input"></a>
 
-<figure><img src="../.gitbook/assets/Deconstructed Inputs.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Deconstructed Inputs.gif" alt=""><figcaption></figcaption></figure>
 
 As explained previously, the input itself is broken down into 5 elements as follows:
 
@@ -74,7 +74,7 @@ The nSequence value can be used to generate payment channels which allow non-fin
 
 If the nSequence value is not UINT\_MAX then the transaction cannot be processed until the nLockTime (expressed as either block height or UNIX epoch ) has expired.
 
-<figure><img src="../.gitbook/assets/nlocktimensequence (1).gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/nlocktimensequence (1).gif" alt=""><figcaption></figcaption></figure>
 
 ### Number of Outputs <a href="#number-of-outputs" id="number-of-outputs"></a>
 
@@ -82,7 +82,7 @@ If the nSequence value is not UINT\_MAX then the transaction cannot be processed
 
 This tells us that there are two outputs in this transaction.
 
-<figure><img src="../.gitbook/assets/Output Counter.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Output Counter.gif" alt=""><figcaption></figcaption></figure>
 
 This value is a Variable Integer (VarInt) of 1-9 bytes meaning that a transaction can have 1.8 x 10^19 outputs. Remember though, only the first 4.3 billion can be referenced as inputs.
 
@@ -94,7 +94,7 @@ However, if the VarInt is going to be greater than `0xfc` (so the number you’r
 
 ### Output 1 Breakdown <a href="#output-1-breakdown" id="output-1-breakdown"></a>
 
-<figure><img src="../.gitbook/assets/Output Parameters.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Output Parameters.gif" alt=""><figcaption></figcaption></figure>
 
 This is the output in which Satoshi sends Hal Finney his Bitcoin.
 

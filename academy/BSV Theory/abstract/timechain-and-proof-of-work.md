@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Abstract - Timechain.gif>)
+![](<../../../.gitbook/assets/Theory - Abstract - Timechain.gif>)
 
 The word Time chain can be used to refer to the nature of the Bitcoin block chain as a chain of time stamped events in history. As transactions are received into the network, nodes capture and collate them into logs. These logs, or ‘blocks’, are made up of a timestamp applied to a sequential list of transactions and represent a consensus agreement of the proof of both existence and validity of all the transactions they contain.
 

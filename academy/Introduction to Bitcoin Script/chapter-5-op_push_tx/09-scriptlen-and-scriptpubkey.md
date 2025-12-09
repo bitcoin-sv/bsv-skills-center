@@ -12,7 +12,7 @@ To extract the locking script, we must first extract the length. There are 4 pos
 * If the first byte is 0xFE, the varInt is 5 bytes long, with the last 4 bytes containing the integer value of lockScriptLength.
 * If the first byte is 0xFF, the varInt is 9 bytes long, with the last 8 bytes containing the integer value of lockScriptLength.
 
-<figure><img src="../.gitbook/assets/BSVA-BitcoinScript_Chapter5-Animation08.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/BSVA-BitcoinScript_Chapter5-Animation08.gif" alt=""><figcaption></figcaption></figure>
 
 #### Example 1: 2 byte length field
 

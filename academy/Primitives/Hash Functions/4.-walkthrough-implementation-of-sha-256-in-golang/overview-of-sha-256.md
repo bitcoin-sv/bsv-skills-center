@@ -1,6 +1,6 @@
 # Overview of SHA-256
 
-![](../.gitbook/assets/BSVA-HashFunctions_Ch3L1_DA1.gif)
+![](../../../../.gitbook/assets/BSVA-HashFunctions_Ch3L1_DA1.gif)
 
 Although it's not required in order to gain an understanding of how BSV works, examining how each of the underlying hash functions used in BSV work can be helpful because the concepts and operations used within the hash function algorithms can be found in other parts of the BSV system. For example, combining binary values using the exclusive OR bit operation (XOR) is also used in both digital signature construction as well as Bitcoin Script.
 
@@ -23,4 +23,3 @@ Our implementation of SHA-256 follows this design:
 * Integrate computed and mutated working variables with initial values
 
 **3. Final value construction and output**
-

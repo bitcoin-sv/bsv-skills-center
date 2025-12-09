@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Calculations - Waiting for Confirmation.gif>)
+![](<../../../.gitbook/assets/Theory - Calculations - Waiting for Confirmation.gif>)
 
 To explore the probability of a receiver being defrauded, we look at the length of time it takes for both their transaction to be broadcast on the network, added to a block and built upon.
 

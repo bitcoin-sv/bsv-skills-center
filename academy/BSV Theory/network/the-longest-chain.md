@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Network - The Longest Chain.gif>)
+![](<../../../.gitbook/assets/Theory - Network - The Longest Chain.gif>)
 
 A node will always try to build on top of the longest valid chain of proof of work, as any block discovered on a block that is not at the longest valid chain tip will never be built upon by competing nodes. If a block is not built upon, the node operator receives no reward for creating the block and the proof of work that was done to build it would be wasted.
 

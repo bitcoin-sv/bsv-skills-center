@@ -8,17 +8,17 @@ The opcode OP\_DEPTH will leave a value on the stack which indicates the depth o
 
 <table><thead><tr><th width="132">Word</th><th width="95">Input</th><th width="132">Output</th><th>Description</th></tr></thead><tbody><tr><td>OP_DEPTH</td><td>items</td><td>items, qty items</td><td>Counts the number of stack items onto the stack and places the value on the top</td></tr></tbody></table>
 
-<figure><img src="../.gitbook/assets/BSVA-BitcoinScript_Chapter3-AnimationPack09.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/BSVA-BitcoinScript_Chapter3-AnimationPack09.gif" alt=""><figcaption></figcaption></figure>
 
-#### Example:&#x20;
+#### Example:
 
 `OP_DEPTH OP_1 OP_EQUAL OP_IF`
 
-&#x20;   `<pubkey>`
+`<pubkey>`
 
 `OP_ELSE`
 
-&#x20;   `OP_DUP OP_HASH160 <pubkeyhash> OP_EQUALVERIFY`
+`OP_DUP OP_HASH160 <pubkeyhash> OP_EQUALVERIFY`
 
 `OP_ENDIF`
 
@@ -32,7 +32,7 @@ OP\_SIZE evaluates the first item on the stack and adds its length to the top of
 
 <table><thead><tr><th width="118">Word</th><th width="91">Input</th><th width="103">Output</th><th>Description</th></tr></thead><tbody><tr><td>OP_SIZE</td><td>item</td><td>item, item size</td><td>Pushes the string length of the top element of the stack (without popping it).</td></tr></tbody></table>
 
-<figure><img src="../.gitbook/assets/BSVA-BitcoinScript_Chapter3-AnimationPack10.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/BSVA-BitcoinScript_Chapter3-AnimationPack10.gif" alt=""><figcaption></figcaption></figure>
 
 #### Example:
 

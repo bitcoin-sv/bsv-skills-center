@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Incentive - The Coinbase Tx.gif>)
+![](<../../../.gitbook/assets/Theory - Incentive - The Coinbase Tx.gif>)
 
 The first transaction in any block is called a ‘Coinbase transaction’. This transaction has by definition a single input which contains an arbitrary string of text up to 100 bytes long which nodes use to mark the number of the block in the chain and in some cases to identify themselves.
 

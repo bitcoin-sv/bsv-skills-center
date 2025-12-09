@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - SPV - Full Merkle Branches.gif>)
+![](<../../../.gitbook/assets/Theory - SPV - Full Merkle Branches.gif>)
 
 In a similar fashion to how nodes can store a pruned selection of transactions in their copy of the block chain, a user can store only a highly curated section of transactions using much the same technique, except instead of starting with the full copy of the block chain and selectively removing transactions, the user starts with a copy of the block header list which can be easily verified through Proof of Work, and selectively _adds_ only the transactions which they directly are interested in.
 

@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Saving Disk Space - Spent Transactions.gif>)
+![](<../../../.gitbook/assets/Theory - Saving Disk Space - Spent Transactions.gif>)
 
 When a UTXO is created in a transaction, the outputs that were spent as inputs to the transaction are consumed by the action, and cease to exist as live spendable tokens on the network. Once the transaction has been ‘mined’ into a block which the network has then expended work building upon, it can be said that the transaction record is immutable. This means that anyone with a copy of the transaction can prove that the transaction was created before the block timestamp.
 

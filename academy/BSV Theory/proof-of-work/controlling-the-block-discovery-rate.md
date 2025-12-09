@@ -4,7 +4,7 @@ To compensate for increasing hardware speed and varying interest in running node
 
 \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Proof of Work - Controlling the Block Discovery Rate.gif>)
+![](<../../../.gitbook/assets/Theory - Proof of Work - Controlling the Block Discovery Rate.gif>)
 
 In order to allow for node operators who invest in more efficient hardware to help discover more valid blocks through the proof of work process, the network uses an algorithm that adjusts the network difficulty to maintain a steady rate of block discovery no matter how many CPU cycles are applied to the proof of work process.
 

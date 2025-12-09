@@ -6,7 +6,7 @@ Nodes are controlled by enterprise entities which have corporate structures and 
 
 While the network has no ‘centralised’ leadership, the system is still coordinated and operates in a manner much more akin to a distributed system. The requirement to show Proof of Work to submit a block limits the ability of any party to participate in the consensus process. Valid blocks are the only type of message that can impact the network rules, and they cost money to create which creates an environment where investment is incentivised. Only nodes who perform the work of building blocks and solving the block hash puzzle have the right to agree or disagree about which rules are being enforced.
 
-<figure><img src="../../../.gitbook/assets/Chapter 5 GIF 1 (2).gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Chapter 5 GIF 1 (1).gif" alt=""><figcaption></figcaption></figure>
 
 The most important aspect of this is that the only participants who can play any part in determining the outcome or direction for the network are being paid to do so. There is no altruism in the network and the participants who use their resources in the most effective manner are rewarded long term.
 

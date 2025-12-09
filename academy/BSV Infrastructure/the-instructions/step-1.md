@@ -12,7 +12,7 @@ This instruction states that “New transactions are broadcast to all nodes”. 
 
 Nodes operate in a very dense ‘small world’ configuration which constitutes the centre of the BSV network. As a result they have awareness of which peers represent other active block building nodes.
 
-<figure><img src="../.gitbook/assets/CHAPTER 1 GIF 1.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/CHAPTER 1 GIF 1.gif" alt=""><figcaption></figcaption></figure>
 
 It is important for nodes to ensure that every other node on the network has knowledge of every transaction, as it is the precursor step to telling other nodes the positional index of the transaction in the node’s block template. Selfishly, this may sometimes mean nodes have knowledge of transactions they don't intend to timestamp, and sending them to any other nodes that don’t have them in the interest of making the propagation of a found block, i.e. adding a new block to the blockchain and earning the reward for doing so, more efficient.
 

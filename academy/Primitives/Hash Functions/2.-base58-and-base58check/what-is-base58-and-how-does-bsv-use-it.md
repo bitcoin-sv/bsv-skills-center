@@ -1,6 +1,6 @@
 # What is Base58 and How Does BSV use it?
 
-![](<../.gitbook/assets/BSVA-HashFunctions_Ch2L2_DA1 (1).gif>)
+![](<../../../../.gitbook/assets/BSVA-HashFunctions_Ch2L2_DA1 (1).gif>)
 
 The "check" of Base58Check refers to a shortened hash, or 'checksum', which is appended to the end of the Base58 encoded data.
 

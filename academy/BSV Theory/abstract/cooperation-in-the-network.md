@@ -4,7 +4,7 @@
 >
 > \- Satoshi Nakamoto, Bitcoin Whitepaper
 
-![](<../.gitbook/assets/Theory - Abstract - CPU power (1).gif>)
+![](<../../../.gitbook/assets/Theory - Abstract - CPU power (1).gif>)
 
 One of the ways it is possible to attack the integrity of the ledger is for a node operator to include in a block a transaction that double spends coins that were previously spent, or to otherwise include a transaction in a block that is invalid per network rules. Honest nodes will recognise this rule violation and refuse to build new blocks that follow this invalid block. Instead they will build new blocks on top of it’s valid predecessor and create an honest competing chain. So long as the honest node controls more than half of the hash power the honest chain will become longer and signal to all network participants to ignore the invalid block.
 

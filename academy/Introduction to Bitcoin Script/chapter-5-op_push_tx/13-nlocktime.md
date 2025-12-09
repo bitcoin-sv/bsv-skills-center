@@ -2,9 +2,9 @@
 
 The nLocktime value is used for creating payment channels. If a transaction has any inputs with non-final nSequence values (e.g. nSequence < 0xffffffff) and an nLocktime in the future, it is considered a payment channel, and cannot be put into a block until either the nLocktime expires, or the transaction is updated to have all final inputs.
 
-This can be useful if an output must be created that can't be spent before a particular time. The nSequence can be checked to be non-final, and the nLocktime can be checked to be later than a pre-set time/date value.&#x20;
+This can be useful if an output must be created that can't be spent before a particular time. The nSequence can be checked to be non-final, and the nLocktime can be checked to be later than a pre-set time/date value.
 
-<figure><img src="../.gitbook/assets/BSVA-BitcoinScript_Chapter5-Animation12.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/BSVA-BitcoinScript_Chapter5-Animation12.gif" alt=""><figcaption></figcaption></figure>
 
 #### Example: Check channel status
 

@@ -20,15 +20,15 @@ Only one of SIGHASH\_ALL, SIGHASH\_SINGLE and SIGHASH\_NONE can be used in any s
 
 If SIGHASH\_ALL is used, the signature must include all of the transaction outputs when it builds the pre-image.
 
-If SIGHASH\_SINGLE is used, the signature must include only the transaction output at the same index as the input being signed in the pre-image.&#x20;
+If SIGHASH\_SINGLE is used, the signature must include only the transaction output at the same index as the input being signed in the pre-image.
 
 If SIGHASH\_NONE is used, none of the transaction's outputs are included in the pre-image.
 
 ### SIGHASH\_FORKID
 
-SIGHASH\_FORKID is a flag that was added to the signatures after August 1 2017 to provide replay protection against the BTC network when it was separated from Bitcoin to add segregated witness. SIGHASH\_FORKID must ALWAYS be set, or the transactions will be invalid.&#x20;
+SIGHASH\_FORKID is a flag that was added to the signatures after August 1 2017 to provide replay protection against the BTC network when it was separated from Bitcoin to add segregated witness. SIGHASH\_FORKID must ALWAYS be set, or the transactions will be invalid.
 
-<figure><img src="../.gitbook/assets/BSVA-BitcoinScript_Chapter5-Animation13.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/BSVA-BitcoinScript_Chapter5-Animation13.gif" alt=""><figcaption></figcaption></figure>
 
 #### Example: Checking SIGHASH flags
 

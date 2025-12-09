@@ -13,7 +13,7 @@ Each of these Opcodes allows you to use a single programmatical step cause a par
 
 Opcodes like these can be used to feed inputs to other functions, making it simple and easy to configure operations such as multi-signature checks for groups of 16 people or less.
 
-<figure><img src="../.gitbook/assets/BSVA-BitcoinScript_Chapter3-Animation01.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/BSVA-BitcoinScript_Chapter3-Animation01.gif" alt=""><figcaption></figcaption></figure>
 
 #### Example:
 
@@ -29,7 +29,7 @@ Unlike other opcodes, these opcodes do not use any items from the stack, but rat
 
 <table><thead><tr><th width="184">Word</th><th width="98">Input</th><th width="92">Output</th><th>Description</th></tr></thead><tbody><tr><td><a href="https://wiki.bitcoinsv.io/index.php/Pushdata_Opcodes">Pushdata Bytelength</a> in HEX</td><td>none</td><td>data</td><td>The next &#x3C;<em>opcode></em> bytes is data to be pushed onto the stack. Used for data items up to 75 bytes in length.</td></tr><tr><td><a href="https://wiki.bitcoinsv.io/index.php/Pushdata_Opcodes">OP_PUSHDATA1</a></td><td>none</td><td>data</td><td>The next byte contains the number of bytes to be pushed onto the stack. Used for data items from 76 bytes to 255 bytes in length.</td></tr><tr><td><a href="https://wiki.bitcoinsv.io/index.php/Pushdata_Opcodes">OP_PUSHDATA2</a></td><td>(special)</td><td>data</td><td>The next two bytes contain the integer number of bytes to be pushed onto the stack in little endian format. Used for data items from 256 bytes to 65,535 bytes in length.</td></tr><tr><td><a href="https://wiki.bitcoinsv.io/index.php/Pushdata_Opcodes">OP_PUSHDATA4</a></td><td>(special)</td><td>data</td><td>The next four bytes contain the integer number of bytes to be pushed onto the stack in little endian format. Used for data items from 65,536 bytes to 4,294,967,295 bytes in length.</td></tr></tbody></table>
 
-<figure><img src="../.gitbook/assets/BSVA-BitcoinScript_Chapter3-Animation02.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/BSVA-BitcoinScript_Chapter3-Animation02.gif" alt=""><figcaption></figcaption></figure>
 
 ### Pushdata for items up to 75 bytes
 
@@ -41,7 +41,7 @@ For data items that are 75 bytes or less, the scripting language has separate op
 
 This example is a fully assembled 'Pay to Public Key Hash' script as it would be evaluated by a node on the network. In this example, everything after `OP_CODESEPARATOR` is retrieved from the UTXO being spent, and everything before `OP_CODESEPARATOR` is supplied by the spending party as the scriptSig. `OP_CODESEPARATOR` is inserted by the script evaluation engine to mark the separation between scriptSig and scriptPubKey.
 
-There are three examples of pushdata opcodes in the script.&#x20;
+There are three examples of pushdata opcodes in the script.
 
 1. The first uses the `0x48` opcode to push a 72 byte signature onto the stack.
 2. The second uses the `0x20` opcode to push a 32 byte public key onto the stack.
@@ -63,13 +63,13 @@ This example first uses `OP_PUSHDATA1` followed by `0x64` to push a 100 byte dat
 
 `OP_PUSHDATA2 0xe803 <1kB_data_item>`
 
-In this example `OP_PUSHDATA2` is used followed by `0xe803` which is the little endian hexadecimal value for 1000, indicating that a 1kB data item is being pushed onto the stack.&#x20;
+In this example `OP_PUSHDATA2` is used followed by `0xe803` which is the little endian hexadecimal value for 1000, indicating that a 1kB data item is being pushed onto the stack.
 
 #### Example 3:
 
 `OP_PUSHDATA4 0x40420f00 <1MB data item>`
 
-In this example `OP_PUSHDATA4` is used followed by `0x40420f00` which is the little endian hexadecimal value for 1,000,000, indicating that a 1MB data item is being pushed onto the stack.&#x20;
+In this example `OP_PUSHDATA4` is used followed by `0x40420f00` which is the little endian hexadecimal value for 1,000,000, indicating that a 1MB data item is being pushed onto the stack.
 
 ### Minimal Encoding Rule
 
