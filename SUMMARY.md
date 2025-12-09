@@ -253,7 +253,7 @@
       * [Merkle Path Verification](guides/sdks/py/examples/EXAMPLE_VERIFYING_ROOTS.md)
       * [ECIES](guides/sdks/py/examples/EXAMPLE_ECIES.md)
 
-## BSV Academy
+<!-- ## BSV Academy
 
 * [Getting Started](academy/getting-started.md)
 * [Introduction to Blockchain Technology](bsv-academy/introduction-to-blockchain-technology/README.md)
@@ -672,6 +672,7 @@
     * [Novel Service Delivery Methods](<academy/BSV Infrastructure/the-small-world-network/novel-service-delivery-methods.md>)
     * [MinerID](<academy/BSV Infrastructure/the-small-world-network/minerid.md>)
   * [Conclusion](bsv-academy/bsv-infrastructure/conclusion.md)
+  -->
 
 ## Research and Development
 
