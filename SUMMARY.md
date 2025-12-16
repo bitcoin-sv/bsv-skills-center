@@ -8,6 +8,7 @@
 * [Overview of GitHub repositories](intro/overview-of-github-repositories.md)
 * [Quick Start](intro/quick-start.md)
 
+<!--
 ## Protocol
 
 * [Introduction](protocol/introduction.md)
@@ -54,7 +55,8 @@
   * [Keys and Identity](bsv-skills-center/bsv-protocol-documentation/privacy/keys-and-identity.md)
   * [Private vs Anonymous](bsv-skills-center/bsv-protocol-documentation/privacy/private-vs-anonymous.md)
   * [Digital Signatures](bsv-skills-center/bsv-protocol-documentation/privacy/digital-signatures.md)
-  * [Privacy on the Public Blockchain](bsv-skills-center/bsv-protocol-documentation/privacy/privacy-in-public-blockchain.md)
+  * [Privacy on the Public Blockchain](bsv-skills-center/bsv-protocol-documentation/privacy/privacy-in-public-blockchain.md) 
+  -->
 
 ## Network Access Rules
 
