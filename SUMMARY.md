@@ -8,6 +8,7 @@
 * [Overview of GitHub repositories](intro/overview-of-github-repositories.md)
 * [Quick Start](intro/quick-start.md)
 
+<!--
 ## Protocol
 
 * [Introduction](protocol/introduction.md)
@@ -54,7 +55,8 @@
   * [Keys and Identity](bsv-skills-center/bsv-protocol-documentation/privacy/keys-and-identity.md)
   * [Private vs Anonymous](bsv-skills-center/bsv-protocol-documentation/privacy/private-vs-anonymous.md)
   * [Digital Signatures](bsv-skills-center/bsv-protocol-documentation/privacy/digital-signatures.md)
-  * [Privacy on the Public Blockchain](bsv-skills-center/bsv-protocol-documentation/privacy/privacy-in-public-blockchain.md)
+  * [Privacy on the Public Blockchain](bsv-skills-center/bsv-protocol-documentation/privacy/privacy-in-public-blockchain.md) 
+  -->
 
 ## Network Access Rules
 
@@ -253,7 +255,7 @@
       * [Merkle Path Verification](guides/sdks/py/examples/EXAMPLE_VERIFYING_ROOTS.md)
       * [ECIES](guides/sdks/py/examples/EXAMPLE_ECIES.md)
 
-## BSV Academy
+<!-- ## BSV Academy
 
 * [Getting Started](academy/getting-started.md)
 * [Introduction to Blockchain Technology](bsv-academy/introduction-to-blockchain-technology/README.md)
@@ -672,6 +674,7 @@
     * [Novel Service Delivery Methods](<academy/BSV Infrastructure/the-small-world-network/novel-service-delivery-methods.md>)
     * [MinerID](<academy/BSV Infrastructure/the-small-world-network/minerid.md>)
   * [Conclusion](bsv-academy/bsv-infrastructure/conclusion.md)
+  -->
 
 ## Research and Development
 
