@@ -14,27 +14,27 @@ To start the install of SV Node, make sure you use an account that can use `su` 
 
 Download the zipped release of your choosing, for this example we are using 1.1.1 which is the latest release at the time of writing:
 
-<pre class="language-sh"><code class="lang-sh"><strong>wget https://github.com/bitcoin-sv/bitcoin-sv/releases/download/v1.1.1/bitcoin-sv-1.1.1-x86_64-linux-gnu.tar.gz
+<pre class="language-sh"><code class="lang-sh"><strong>wget https://releases-svnode.bsvblockchain.org/svnode-1.2.0/bitcoin-sv-1.2.0-x86_64-linux-gnu.tar.gz
 </strong></code></pre>
 
 Confirm downloaded file sha hash matches those provided at [download.bitcoinsv.io](https://download.bitcoinsv.io/bitcoinsv/) for the version you have downloaded.
 
 ```sh
-sha256sum bitcoin-sv-1.1.1-x86_64-linux-gnu.tar.gz
+sha256sum bitcoin-sv-1.2.0-x86_64-linux-gnu.tar.gz
 # Expected Output 
-# da336914e512ed568b94496cd83c89a53e281b944cf08c5c01ddf06beb836705  bitcoin-sv-1.1.1-x86_64-linux-gnu.tar.gz
+# 994635b654bc7878895c672b17bea078ee013804580c56bdcf9fe9d109218716  bitcoin-sv-1.2.0-x86_64-linux-gnu.tar.gz
 ```
 
 Locate the file you downloaded and extract it using the `tar` command followed by the argument `xzf` followed by the file name. The argument `xzf` means eXtract the gZipped tar archive file. For example, for a 64-bit tar archive in your current directory, the command is:
 
 ```bash
-tar xvf bitcoin-sv-1.1.1-x86_64-linux-gnu.tar.gz
+tar xvf bitcoin-sv-1.2.0-x86_64-linux-gnu.tar.gz
 ```
 
 Create a symbolic link from a new directory called `bitcoin` to the `bitcoin-sv-1.0.16` directory you just made by unzipping for easier use and updates:
 
 ```bash
-ln -s bitcoin-sv-1.1.1 bitcoin
+ln -s bitcoin-sv-1.2.0 bitcoin
 ```
 
 Create a `bitcoin-data` directory to put bitcoin data in (or else Bitcoin will put data in `~/.bitcoin` by default):
