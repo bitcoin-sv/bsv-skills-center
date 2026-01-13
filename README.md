@@ -28,6 +28,8 @@ This documentation is built with the AI search tool in mind, responses will cite
 
 [Higher Learning: BSV Network Topology](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bsv-network-topology)
 
+[Higher Learning: BSV Opcodes](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bsv-opcodes)
+
 [Higher Learning: Bitcoin Primitives - Hash Functions](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bitcoin-primitives-hash-functions)
 
 Higher Learning: Hash Functions Crash Course (Coming soon)
