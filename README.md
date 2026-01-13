@@ -26,9 +26,11 @@ This documentation is built with the AI search tool in mind, responses will cite
 
 [Higher Learning: BSV Basics - Protocol and Design](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bsv-basics-protocol-and-design)
 
-Higher Learning: BSV Network Topology (Coming soon)
+[Higher Learning: BSV Network Topology](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bsv-network-topology)
 
 [Higher Learning: Bitcoin Primitives - Hash Functions](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bitcoin-primitives-hash-functions)
+
+Higher Learning: Hash Functions Crash Course (Coming soon)
 
 [Higher Learning: Bitcoin Primitives - Merkle Trees](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bitcoin-primitives-merkle-trees)
 
@@ -64,7 +66,7 @@ Higher Learning: BSV Network Topology (Coming soon)
 
 [Higher Learning: BSV Basics - Protocol and Design](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bsv-basics-protocol-and-design)
 
-Higher Learning: BSV Network Topology (Coming soon)
+[Higher Learning: BSV Network Topology](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bsv-network-topology)
 
 [Higher Learning: Introduction to blockchain technology](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/introduction-to-blockchain-technology)
 
@@ -110,6 +112,8 @@ Higher Learning: BSV Network Topology (Coming soon)
 
 [Higher Learning: Bitcoin Whitepaper Series](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bitcoin-whitepaper-series)
 
+[Higher Learning: BSV Network Topology](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bsv-network-topology)
+
 [Higher Learning: Deep Dive into the BSV blockchain](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain)
 
 * [Who is the BSV Association](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/the-bsv-associations-mission-and-impact)
@@ -131,7 +135,7 @@ Higher Learning: BSV Network Topology (Coming soon)
 
 [Higher Learning: Bitcoin as Historical Phenomenon](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bitcoin-as-historical-phenomenon)
 
-Higher Learning: BSV Network Topology (Coming soon)
+[Higher Learning: BSV Network Topology](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bsv-network-topology)
 
 [Higher Learning: BSV Basics - Protocol and Design](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bsv-basics-protocol-and-design)
 
@@ -167,11 +171,9 @@ Higher Learning: BSV Network Topology (Coming soon)
 * [Case studies](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain/bsv-case-studies)
 * [Collaborate on a POC](/broken/pages/gmGAkZLGKM0TELQ80TNW)
 
-Higher Learning: BSV Network Topology (Coming soon)
+[Higher Learning: BSV Network Topology](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bsv-network-topology)
 
 [Higher Learning: BSV Basics - Protocol and Design](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bsv-basics-protocol-and-design)
-
-Higher Learning: Beginner Blockchain for Executives (coming soon)
 
 Higher Learning: Data, Information, and Knowledge in the Digital Age - ICT (coming soon)
 
@@ -184,6 +186,8 @@ Higher Learning: Data, Information, and Knowledge in the Digital Age - ICT (comi
 [Higher Learning: Introduction to blockchain technology](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/introduction-to-blockchain-technology)
 
 [Higher Learning: Bitcoin Whitepaper Series](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bitcoin-whitepaper-series)
+
+[Higher Learning: BSV Network Topology](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bsv-network-topology)
 
 Higher Learning: Blockchain Fundamentals - ICT (coming soon)
 
