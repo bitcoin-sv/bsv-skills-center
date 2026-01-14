@@ -32,7 +32,7 @@ This documentation is built with the AI search tool in mind, responses will cite
 
 [Higher Learning: Bitcoin Primitives - Hash Functions](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bitcoin-primitives-hash-functions)
 
-Higher Learning: Hash Functions Crash Course (Coming soon)
+[Higher Learning: Hash Functions Crash Course](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/hash-functions-crash-course)
 
 [Higher Learning: Bitcoin Primitives - Merkle Trees](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bitcoin-primitives-merkle-trees)
 
