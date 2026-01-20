@@ -177,7 +177,7 @@ This documentation is built with the AI search tool in mind, responses will cite
 
 [Higher Learning: BSV Basics - Protocol and Design](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bsv-basics-protocol-and-design)
 
-Higher Learning: Data, Information, and Knowledge in the Digital Age - ICT (coming soon)
+[Higher Learning: Data, Information, and Knowledge in the Digital Age - ICT](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/data-information-and-knowledge-in-the-digital-age-ict)
 
 </details>
 
@@ -191,9 +191,7 @@ Higher Learning: Data, Information, and Knowledge in the Digital Age - ICT (comi
 
 [Higher Learning: BSV Network Topology](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bsv-network-topology)
 
-Higher Learning: Blockchain Fundamentals - ICT (coming soon)
-
-Higher Learning: Data, Information, and Knowledge in the Digital Age - ICT (coming soon)
+[Higher Learning: Data, Information, and Knowledge in the Digital Age - ICT](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/data-information-and-knowledge-in-the-digital-age-ict)
 
 [Higher Learning: Deep Dive into the BSV blockchain](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain)
 
