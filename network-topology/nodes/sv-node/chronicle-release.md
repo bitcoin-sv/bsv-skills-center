@@ -1,5 +1,12 @@
 # Chronicle Release
 
+## Activation Details
+
+* **TestNet Activation**: Chronicle activated on Testnet at block height 1,713,168
+* **MainNet Activation**: Chronicle will activate on MainNet at block height 943,816 (Target is 12:00 midday 07-Apr-2026)
+
+Please ensure you have upgraded SV Node prior to the activation height set to ensure business continuity. 
+
 ## Background
 
 The Chronicle release is a follow-up of [the Genesis upgrade in 2020](https://www.bsvblockchain.org/releases/changes-for-the-genesis-upgrade) which restored many aspects of the Bitcoin protocol that had been modified in previous software updates, including the removal of most limit-based consensus rules, replacing them with miner configurable settings that give node operators the autonomy needed to set their limits as they determine practical.
