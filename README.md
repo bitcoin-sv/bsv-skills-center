@@ -30,7 +30,7 @@ This documentation is built with the AI search tool in mind, responses will cite
 
 [Introduction to Bitcoin Script (Legacy Academy)](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/introduction-to-bitcoin-script)
 
-[Higher Learning: BSV Opcodes](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bsv-opcodes)
+Higher Learning: BSV Opcodes (Coming soon)
 
 [Higher Learning: Bitcoin Primitives - Hash Functions](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bitcoin-primitives-hash-functions)
 
