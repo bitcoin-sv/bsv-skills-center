@@ -12,7 +12,7 @@ The following instructions describe installing BSV Blockchain SV Node using tool
 
 To start the install of SV Node, make sure you use an account that can use `su` or `sudo` to install software into directories owned by the root user.
 
-Download the zipped release of your choosing, for this example we are using 1.2.0 which is the latest release at the time of writing:
+Download the zipped release of your choosing, for this example we are using 1.2.1 which is the latest release at the time of writing:
 
 <pre class="language-sh"><code class="lang-sh"><strong>wget https://releases-svnode.bsvblockchain.org/svnode-1.2.1/bitcoin-sv-1.2.1-x86_64-linux-gnu.tar.gz
 </strong></code></pre>
@@ -31,7 +31,7 @@ Locate the file you downloaded and extract it using the `tar` command followed b
 tar xvf bitcoin-sv-1.2.1-x86_64-linux-gnu.tar.gz
 ```
 
-Create a symbolic link from a new directory called `bitcoin` to the `bitcoin-sv-1.0.16` directory you just made by unzipping for easier use and updates:
+Create a symbolic link from a new directory called `bitcoin` to the `bitcoin-sv-1.2.1` directory you just made by unzipping for easier use and updates:
 
 ```bash
 ln -s bitcoin-sv-1.2.1 bitcoin
