@@ -156,7 +156,7 @@ help, uptime, getnetworkhashps
 
 **Methods to rate-limit aggressively**: `getrawmempool` (verbose), `gettxoutsetinfo`, `getblock` (verbosity 2), `sendrawtransaction`, and `sendrawtransactions` are computationally expensive and can be used for denial-of-service if left unrestricted.
 
-**Methods that must never be proxied**: `stop`, `addnode`, `disconnectnode`, `setban`, `setnetworkactive`, `invalidateblock`, all wallet methods, all frozen TXO methods, and any method that modifies node state. See the [sensitivity classifications](rpc-methods.md) in the RPC methods reference.
+**Methods that must never be proxied**: `stop`, `addnode`, `disconnectnode`, `setban`, `setnetworkactive`, `invalidateblock`, all wallet methods, all frozen TXO methods, and any method that modifies node state. See the [Sensitive Endpoints](rpc-methods.md#sensitive-endpoints) section in the RPC methods reference.
 
 ### Available Methods
 
