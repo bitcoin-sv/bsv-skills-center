@@ -230,10 +230,19 @@ A few practical rules for building against a public endpoint:
 
 ## Quickstart: machine-readable specs
 
-Two ready-to-use artefacts ship alongside this page so you don't have to retype the same JSON-RPC envelopes by hand:
+Two ready-to-use artefacts ship alongside this page so you don't have to retype the same JSON-RPC envelopes by hand.
 
-- **OpenAPI 3.1 spec:** {% file src="/.gitbook/assets/bsv-public-rpc.openapi.yaml" %} — drop into Swagger UI, Redoc, Mintlify's API playground, or any OpenAPI-aware client. Documents the JSON-RPC envelope, all verified-allowed methods as named request/response examples, and the gateway-specific error codes.
-- **Postman collection:** {% file src="/.gitbook/assets/BSV-Public-RPC.postman_collection.json" %} — import via **File > Import > Upload Files** in Postman (also accepted by Insomnia, Bruno, and Hoppscotch). Pre-filled with working example bodies and sample responses captured from the live endpoint.
+**OpenAPI 3.1 spec** — drop into Swagger UI, Redoc, Mintlify's API playground, or any OpenAPI-aware client. Documents the JSON-RPC envelope, all verified-allowed methods as named request/response examples, and the gateway-specific error codes.
+
+<!-- prettier-ignore-start -->
+{% file src="/.gitbook/assets/bsv-public-rpc.openapi.yaml" %}
+<!-- prettier-ignore-end -->
+
+**Postman collection** — import via **File > Import > Upload Files** in Postman (also accepted by Insomnia, Bruno, and Hoppscotch). Pre-filled with working example bodies and sample responses captured from the live endpoint.
+
+<!-- prettier-ignore-start -->
+{% file src="/.gitbook/assets/BSV-Public-RPC.postman_collection.json" %}
+<!-- prettier-ignore-end -->
 
 Both ship with the endpoint URL as a variable (`rpcUrl` / the OpenAPI `server`) defaulting to `https://bsv-rpc.publicnode.com`, so you can repoint either at a self-hosted node without editing individual requests.
 
