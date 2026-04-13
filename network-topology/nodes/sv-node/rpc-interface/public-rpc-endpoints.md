@@ -20,9 +20,9 @@ This page is a **companion to [RPC Interface](README.md)**. The methods, paramet
 
 ## Available endpoints
 
-| Operator                                             | Powered by      | Network | Endpoint URL                     | Auth | Notes                                |
-| ---------------------------------------------------- | --------------- | ------- | -------------------------------- | ---- | ------------------------------------ |
-| Allnodes ([PublicNode](https://www.publicnode.com/)) | BSV Association | mainnet | `https://bsv-rpc.publicnode.com` | None | CORS-enabled, HTTP/2, pruned SV Node |
+| Operator                                             | Powered by      | Network | Endpoint URL                     | Auth | Notes                                     |
+| ---------------------------------------------------- | --------------- | ------- | -------------------------------- | ---- | ----------------------------------------- |
+| Allnodes ([PublicNode](https://www.publicnode.com/)) | BSV Association | mainnet | `https://bsv-rpc.publicnode.com` | None | CORS-enabled, HTTP/2, pruned with txindex |
 
 The PublicNode landing page lives at <https://bsv.publicnode.com/> and reports live request statistics for the gateway. The actual JSON-RPC URL is the one in the table above.
 
@@ -44,7 +44,7 @@ curl -s https://bsv-rpc.publicnode.com \
 
 ### 2. Lightweight read clients & dashboards
 
-Block explorers, status pages, "current block height" widgets, fee dashboards, and similar read-only UIs typically need a handful of cheap RPC calls (`getblockcount`, `getblockchaininfo`, `getmininginfo`, `getmempoolinfo`). A public endpoint covers this without operational overhead.
+Status pages, "current block height" widgets, fee dashboards, and similar read-only UIs typically need a handful of cheap RPC calls (`getblockcount`, `getblockchaininfo`, `getdifficulty`, `getmempoolinfo`). A public endpoint covers this without operational overhead. Note: a full **block explorer** is _not_ a good fit — explorers need historical block and transaction data which a pruned node cannot serve. Use an unpruned node for that.
 
 Because the PublicNode endpoint sets `Access-Control-Allow-Origin: *`, it can be called **directly from a browser** — useful for static sites and client-side dashboards. (Note: calling any RPC from the browser exposes your usage pattern to the operator. Don't do this for anything sensitive.)
 
@@ -77,11 +77,11 @@ One-off scripts that walk recent blocks, compute fee statistics, or pull transac
 Public endpoints are a convenience, not infrastructure. Move to your own node — or a paid, SLA-backed provider — when any of the following apply:
 
 - **You handle user funds.** Exchanges, custodians, payment processors, and merchant gateways must run their own validating node. Any hosted service — however well-operated — can serve a stale or partial view of the chain, and you should be the one validating the blocks that move your customers' money.
-- **You need historical block data.** The public node is _pruned_ — it keeps only the recent tip. Calls like `getblock` against a block hash from years ago will return a "Block not available (pruned data)" error. For deep history use a node you control, an explorer API, or an archival service.
+- **You need historical block or transaction data.** The public node is _pruned_ — it retains only ~2–3 days of block data. `getblock` and `getrawtransaction` against older blocks/transactions will fail. Block _headers_ remain available for all heights, but for full historical data use your own unpruned node, an explorer API, or an archival service.
 - **You need wallet, peer, or admin RPCs.** Methods such as `getwalletinfo`, `listunspent`, `dumpprivkey`, `getpeerinfo`, `setban`, `addnode`, `stop`, and similar are blocked on the shared endpoint — and rightly so. They expose either the operator's node state or operator-only authority.
 - **You need a strict SLA, predictable latency, or guaranteed throughput.** The public endpoint is best-effort. The CDN in front of it can return 5xx, rate limits can tighten without notice, and the service is sized for community use — not for one consumer's burst traffic.
 - **You need privacy.** Every call you make is visible to the operator and to whatever CDN sits in front of them. If the _pattern_ of your queries is sensitive (e.g. monitoring a specific address), assume it is being observed.
-- **You need consensus-critical mining or block-template flows.** Use a node you control. `getminingcandidate` is callable on the public endpoint, but it reflects _that node's_ mempool view — not yours.
+- **You need mining or block-template flows.** Use a node you control. Mining RPCs reflect _that node's_ mempool view — not yours.
 
 ---
 
@@ -180,8 +180,7 @@ The following snapshot reflects the PublicNode endpoint at the time of writing. 
 | Chain state  | `getblockchaininfo`, `getblockcount`, `getbestblockhash`, `getblockhash`, `getblockheader`, `getblock`, `getchaintips`, `getdifficulty` |
 | Transactions | `getrawtransaction` (raw + verbose), `gettxout`, `sendrawtransaction`                                                                   |
 | Mempool      | `getmempoolinfo`, `getrawmempool`, `getmempoolancestors`                                                                                |
-| Mining       | `getmininginfo`, `getminingcandidate`                                                                                                   |
-| Network      | `getnetworkinfo`, `getconnectioncount`, `getinfo`                                                                                       |
+| Network      | `getnetworkinfo`, `getconnectioncount`, `getinfo`, `getnetworkhashps`                                                                   |
 | Utilities    | `verifymessage`                                                                                                                         |
 
 ### Restricted (returns `-32701 Method ... is not allowed`)
@@ -192,9 +191,16 @@ The following snapshot reflects the PublicNode endpoint at the time of writing. 
 
 `estimatefee`, `generate`, `stop`, `invalidateblock` — these return `-32601 Method not found` either because the method has been removed from SV Node or is disabled on the gateway.
 
-### Pruned-node caveat
+### Pruned node with transaction index
 
-The PublicNode node runs in pruned mode and reports a low `pruneheight` in `getblockchaininfo`. `getblock` against a hash older than the pruning window will fail with `Block not available (pruned data)`. Block _headers_ (`getblockheader`) and _transactions_ (`getrawtransaction` for indexed txs) generally remain available beyond the pruning window, but do not depend on this.
+The PublicNode node runs in **pruned mode with `txindex=1`**. This combination means:
+
+- **Block data is deleted** outside a rolling window of roughly 2–3 days (~400 blocks, size-dependent). Check `pruneheight` in `getblockchaininfo` for the current cutoff.
+- **Block headers are always available.** `getblockheader` works for any block, regardless of pruning.
+- **Transaction lookups work within the prune window.** `getrawtransaction` succeeds for transactions in retained blocks thanks to the transaction index. For transactions in pruned blocks, it returns _"No such mempool or blockchain transaction"_.
+- **The UTXO set is complete.** `gettxout` works for any unspent output regardless of whether its block has been pruned — the UTXO set is maintained independently.
+
+In short: the node knows _what_ the chain tip is and can prove headers all the way back to genesis, but it can only serve full block and transaction data for the most recent ~400 blocks. If you need deep historical data, run your own unpruned node.
 
 ---
 
