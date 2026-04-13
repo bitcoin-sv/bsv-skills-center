@@ -120,6 +120,7 @@
       * [Webhooks](network-topology/nodes/sv-node/alert-system/webhooks.md)
     * [RPC Interface](network-topology/nodes/sv-node/rpc-interface/README.md)
       * [RPC Methods](network-topology/nodes/sv-node/rpc-interface/rpc-methods.md)
+      * [Public RPC Endpoints](network-topology/nodes/sv-node/rpc-interface/public-rpc-endpoints.md)
     * [Frequently Asked Questions](network-topology/nodes/sv-node/frequently-asked-questions/README.md)
       * [Blocks](network-topology/nodes/sv-node/frequently-asked-questions/blocks.md)
       * [Initial Block Download](network-topology/nodes/sv-node/frequently-asked-questions/initial-block-download.md)
