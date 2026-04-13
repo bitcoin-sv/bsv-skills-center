@@ -224,6 +224,14 @@ A full list of methods is also available in [rpc-methods.md](rpc-methods.md "men
 - **getminingcandidate**: Retrieves a candidate block for mining, including transactions and other necessary information to start mining.
 - **submitminingsolution**: Submits a solution for a mined block to the network, attempting to add it to the blockchain.
 
+### Public RPC Access
+
+If you don't want to run your own node, a free, unauthenticated public endpoint is available at `https://bsv-rpc.publicnode.com` — operated by Allnodes under the PublicNode brand and powered by the BSV Association. It supports read-only chain queries, transaction broadcast, and mempool inspection over HTTPS with no API key required.
+
+The public endpoint is suitable for prototyping, lightweight dashboards, SPV helpers, and broadcast fallback. It is _not_ suitable for production custody, deep historical queries, or workloads that need an SLA.
+
+See [Public RPC Endpoints](public-rpc-endpoints.md) for full details, code examples, allowed methods, and machine-readable specs (OpenAPI + Postman).
+
 ### Error Handling
 
 Errors in the JSON-RPC API are returned with an `error` object. This object contains a code and a message indicating the nature of the error.
