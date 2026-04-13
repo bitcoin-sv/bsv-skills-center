@@ -1,0 +1,666 @@
+openapi: 3.1.0
+
+info:
+  title: BSV Public RPC
+  version: 1.0.0
+  summary: JSON-RPC interface for the public BSV mainnet node.
+  description: |
+    Hosted, no-auth JSON-RPC entry point to **BSV mainnet**, operated by
+    [Allnodes](https://www.allnodes.com/) under the [PublicNode](https://www.publicnode.com/)
+    brand and **powered by the BSV Association**.
+
+    This document is a companion to the
+    [BSV docs chapter on public RPC endpoints](./public-rpc-endpoints.md). It
+    describes the JSON-RPC envelope, the methods that are verified to work on
+    the public node, the gateway-specific error codes, and the response shapes.
+
+    The wire protocol is the standard SV Node JSON-RPC 1.0 over HTTPS, identical
+    to the local interface documented in
+    [RPC Interface](./rpc-interface.md). The only differences are the URL and
+    that requests are unauthenticated.
+
+    > This is a shared, best-effort service. Suitable for prototyping,
+    > lightweight reads, SPV helpers, and broadcast fallback. **Not** suitable
+    > for production custody, deep historical queries, or workloads that need
+    > an SLA. Run your own SV Node for those.
+  contact:
+    name: BSV Association
+    url: https://docs.bsvblockchain.org/
+  license:
+    name: Open Public Endpoint
+    url: https://www.publicnode.com/
+
+servers:
+  - url: https://bsv-rpc.publicnode.com
+    description: PublicNode (Allnodes) — BSV mainnet, powered by the BSV Association
+
+tags:
+  - name: chain
+    description: Chain state — tip, headers, blocks, difficulty.
+  - name: transactions
+    description: Transaction queries and broadcast.
+  - name: mempool
+    description: Mempool inspection.
+  - name: network
+    description: Node, network, and version info.
+  - name: patterns
+    description: Cross-cutting patterns — batch requests, error shapes.
+
+paths:
+  /:
+    post:
+      operationId: jsonRpc
+      summary: JSON-RPC entry point
+      description: |
+        All SV Node JSON-RPC calls are POSTed to the root path with a
+        `Content-Type: application/json` body. The body may be either a single
+        JSON-RPC request object or an array of request objects (a *batch*),
+        and the response shape mirrors the request shape.
+
+        Pick a method from the **Examples** dropdown to see a ready-to-send
+        request body and the corresponding response. Every example was captured
+        from the live PublicNode endpoint.
+      tags:
+        - chain
+        - transactions
+        - mempool
+        - network
+        - patterns
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              oneOf:
+                - $ref: '#/components/schemas/JsonRpcRequest'
+                - type: array
+                  items:
+                    $ref: '#/components/schemas/JsonRpcRequest'
+            examples:
+              getblockchaininfo:
+                $ref: '#/components/examples/req_getblockchaininfo'
+              getblockcount:
+                $ref: '#/components/examples/req_getblockcount'
+              getbestblockhash:
+                $ref: '#/components/examples/req_getbestblockhash'
+              getblockhash:
+                $ref: '#/components/examples/req_getblockhash'
+              getblockheader:
+                $ref: '#/components/examples/req_getblockheader'
+              getblock:
+                $ref: '#/components/examples/req_getblock'
+              getchaintips:
+                $ref: '#/components/examples/req_getchaintips'
+              getdifficulty:
+                $ref: '#/components/examples/req_getdifficulty'
+              getrawtransaction_verbose:
+                $ref: '#/components/examples/req_getrawtransaction_verbose'
+              getrawtransaction_hex:
+                $ref: '#/components/examples/req_getrawtransaction_hex'
+              gettxout:
+                $ref: '#/components/examples/req_gettxout'
+              sendrawtransaction:
+                $ref: '#/components/examples/req_sendrawtransaction'
+              getmempoolinfo:
+                $ref: '#/components/examples/req_getmempoolinfo'
+              getrawmempool:
+                $ref: '#/components/examples/req_getrawmempool'
+              getmempoolancestors:
+                $ref: '#/components/examples/req_getmempoolancestors'
+              getnetworkinfo:
+                $ref: '#/components/examples/req_getnetworkinfo'
+              getconnectioncount:
+                $ref: '#/components/examples/req_getconnectioncount'
+              getinfo:
+                $ref: '#/components/examples/req_getinfo'
+              batch:
+                $ref: '#/components/examples/req_batch'
+              restricted_method:
+                $ref: '#/components/examples/req_restricted_method'
+      responses:
+        '200':
+          description: |
+            JSON-RPC response. The HTTP status is `200` for both success and
+            method-level errors — always inspect the `error` field of the body.
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: '#/components/schemas/JsonRpcResponse'
+                  - type: array
+                    items:
+                      $ref: '#/components/schemas/JsonRpcResponse'
+              examples:
+                getblockchaininfo:
+                  $ref: '#/components/examples/res_getblockchaininfo'
+                getblockcount:
+                  $ref: '#/components/examples/res_getblockcount'
+                getbestblockhash:
+                  $ref: '#/components/examples/res_getbestblockhash'
+                getblockhash:
+                  $ref: '#/components/examples/res_getblockhash'
+                getblockheader:
+                  $ref: '#/components/examples/res_getblockheader'
+                getblock:
+                  $ref: '#/components/examples/res_getblock'
+                getchaintips:
+                  $ref: '#/components/examples/res_getchaintips'
+                getdifficulty:
+                  $ref: '#/components/examples/res_getdifficulty'
+                getrawtransaction_verbose:
+                  $ref: '#/components/examples/res_getrawtransaction_verbose'
+                gettxout_spent:
+                  $ref: '#/components/examples/res_gettxout_spent'
+                sendrawtransaction_decode_failed:
+                  $ref: '#/components/examples/res_sendrawtransaction_decode_failed'
+                getmempoolinfo:
+                  $ref: '#/components/examples/res_getmempoolinfo'
+                getconnectioncount:
+                  $ref: '#/components/examples/res_getconnectioncount'
+                batch:
+                  $ref: '#/components/examples/res_batch'
+                restricted_method:
+                  $ref: '#/components/examples/res_restricted_method'
+                method_not_found:
+                  $ref: '#/components/examples/res_method_not_found'
+        '429':
+          description: Rate-limited by the gateway. Back off and retry with jitter.
+        '5XX':
+          description: |
+            Upstream error from the CDN or the SV Node behind it. Retry with
+            backoff; consider failing over to a different endpoint or your own
+            node if it persists.
+
+components:
+
+  schemas:
+
+    JsonRpcRequest:
+      type: object
+      required: [jsonrpc, method]
+      properties:
+        jsonrpc:
+          type: string
+          enum: ["1.0", "2.0"]
+          description: |
+            JSON-RPC protocol version. SV Node accepts both `"1.0"` and `"2.0"`.
+            Examples here use `"1.0"` to match the canonical SV Node docs.
+        id:
+          description: |
+            Client-chosen identifier echoed back in the response. Use a string
+            or integer; in batches, give each request a distinct id so you can
+            match responses.
+          oneOf:
+            - type: string
+            - type: integer
+            - type: 'null'
+        method:
+          type: string
+          description: RPC method name.
+          examples:
+            - getblockchaininfo
+            - getrawtransaction
+            - sendrawtransaction
+        params:
+          description: |
+            Method parameters. Most SV Node methods take positional parameters
+            (a JSON array). A few accept a named-parameter object instead.
+          oneOf:
+            - type: array
+              items: true
+            - type: object
+              additionalProperties: true
+
+    JsonRpcResponse:
+      type: object
+      required: [id]
+      properties:
+        result:
+          description: |
+            Method result on success. `null` on error. Type depends on the
+            method — see the per-method examples.
+        error:
+          description: Error object on failure. `null` on success.
+          oneOf:
+            - type: 'null'
+            - $ref: '#/components/schemas/JsonRpcError'
+        id:
+          description: Echoes the `id` from the request.
+          oneOf:
+            - type: string
+            - type: integer
+            - type: 'null'
+        jsonrpc:
+          type: string
+          description: Present on some responses; mirrors the request value.
+
+    JsonRpcError:
+      type: object
+      required: [code, message]
+      properties:
+        code:
+          type: integer
+          description: |
+            Standard JSON-RPC / Bitcoin error code. The most common codes you'll
+            see from the public endpoint:
+
+            - `-32601` — Method not found / removed (e.g. `estimatefee`).
+            - `-32701` — **Gateway-specific.** Method exists in SV Node but is
+              blocked on the shared endpoint (e.g. `getpeerinfo`,
+              `getwalletinfo`).
+            - `-22`    — Transaction decode failed.
+            - `-26`    — Transaction rejected by mempool policy or consensus.
+        message:
+          type: string
+          description: Human-readable error message.
+        data:
+          description: Optional error data; type depends on the method.
+
+  examples:
+
+    # ----- Requests -----
+
+    req_getblockchaininfo:
+      summary: getblockchaininfo
+      description: Cheapest 'is the node alive and on mainnet?' probe.
+      value:
+        jsonrpc: "1.0"
+        id: "getblockchaininfo"
+        method: getblockchaininfo
+        params: []
+
+    req_getblockcount:
+      summary: getblockcount
+      value:
+        jsonrpc: "1.0"
+        id: "getblockcount"
+        method: getblockcount
+        params: []
+
+    req_getbestblockhash:
+      summary: getbestblockhash
+      value:
+        jsonrpc: "1.0"
+        id: "getbestblockhash"
+        method: getbestblockhash
+        params: []
+
+    req_getblockhash:
+      summary: getblockhash (by height)
+      value:
+        jsonrpc: "1.0"
+        id: "getblockhash"
+        method: getblockhash
+        params: [944183]
+
+    req_getblockheader:
+      summary: getblockheader (decoded)
+      description: Set the second parameter to `false` for the raw 80-byte hex header.
+      value:
+        jsonrpc: "1.0"
+        id: "getblockheader"
+        method: getblockheader
+        params:
+          - "00000000000000001d6aeeb079e142a23f820b0727c628d48278406a40df8550"
+          - true
+
+    req_getblock:
+      summary: getblock (verbosity 1)
+      description: |
+        Verbosity: 0 = raw block hex; 1 = JSON with txids; 2 = JSON with full
+        decoded transactions. The public node is pruned — calls against a hash
+        older than `pruneheight` will return "Block not available (pruned data)".
+      value:
+        jsonrpc: "1.0"
+        id: "getblock"
+        method: getblock
+        params:
+          - "00000000000000001d6aeeb079e142a23f820b0727c628d48278406a40df8550"
+          - 1
+
+    req_getchaintips:
+      summary: getchaintips
+      value:
+        jsonrpc: "1.0"
+        id: "getchaintips"
+        method: getchaintips
+        params: []
+
+    req_getdifficulty:
+      summary: getdifficulty
+      value:
+        jsonrpc: "1.0"
+        id: "getdifficulty"
+        method: getdifficulty
+        params: []
+
+    req_getrawtransaction_verbose:
+      summary: getrawtransaction (decoded)
+      value:
+        jsonrpc: "1.0"
+        id: "getrawtransaction"
+        method: getrawtransaction
+        params:
+          - "13f597d56cea981c489b1a8a06cefa7145f629cfd9ea28686ca400c37c207de7"
+          - 1
+
+    req_getrawtransaction_hex:
+      summary: getrawtransaction (raw hex)
+      value:
+        jsonrpc: "1.0"
+        id: "getrawtransaction"
+        method: getrawtransaction
+        params:
+          - "13f597d56cea981c489b1a8a06cefa7145f629cfd9ea28686ca400c37c207de7"
+
+    req_gettxout:
+      summary: gettxout
+      description: |
+        Returns details about an unspent output. Returns `null` if the output
+        has been spent or does not exist. Third parameter controls whether to
+        include mempool UTXOs.
+      value:
+        jsonrpc: "1.0"
+        id: "gettxout"
+        method: gettxout
+        params:
+          - "13f597d56cea981c489b1a8a06cefa7145f629cfd9ea28686ca400c37c207de7"
+          - 0
+          - true
+
+    req_sendrawtransaction:
+      summary: sendrawtransaction
+      description: |
+        Submits a serialized transaction to the gateway node, which then
+        propagates it across the P2P network. Returns the txid on success.
+        For production broadcast use ARC; use this RPC as a developer or
+        fallback path.
+      value:
+        jsonrpc: "1.0"
+        id: "sendrawtransaction"
+        method: sendrawtransaction
+        params:
+          - "<REPLACE WITH SIGNED RAW TX HEX>"
+
+    req_getmempoolinfo:
+      summary: getmempoolinfo
+      value:
+        jsonrpc: "1.0"
+        id: "getmempoolinfo"
+        method: getmempoolinfo
+        params: []
+
+    req_getrawmempool:
+      summary: getrawmempool
+      description: Pass `true` for verbose output (object keyed by txid with size/fee/depends).
+      value:
+        jsonrpc: "1.0"
+        id: "getrawmempool"
+        method: getrawmempool
+        params: [false]
+
+    req_getmempoolancestors:
+      summary: getmempoolancestors
+      value:
+        jsonrpc: "1.0"
+        id: "getmempoolancestors"
+        method: getmempoolancestors
+        params:
+          - "13f597d56cea981c489b1a8a06cefa7145f629cfd9ea28686ca400c37c207de7"
+
+    req_getnetworkinfo:
+      summary: getnetworkinfo
+      value:
+        jsonrpc: "1.0"
+        id: "getnetworkinfo"
+        method: getnetworkinfo
+        params: []
+
+    req_getconnectioncount:
+      summary: getconnectioncount
+      value:
+        jsonrpc: "1.0"
+        id: "getconnectioncount"
+        method: getconnectioncount
+        params: []
+
+    req_getinfo:
+      summary: getinfo (legacy)
+      description: |
+        Legacy summary call: version, block height, connection count, difficulty,
+        and policy limits. Marked deprecated upstream but still useful for quick
+        health checks.
+      value:
+        jsonrpc: "1.0"
+        id: "getinfo"
+        method: getinfo
+        params: []
+
+    req_batch:
+      summary: Batch — three reads
+      description: |
+        JSON-RPC batch: send an array of request objects, receive an array of
+        responses (matched by `id`). Most efficient way to fan out cheap reads.
+      value:
+        - jsonrpc: "1.0"
+          id: 1
+          method: getblockcount
+          params: []
+        - jsonrpc: "1.0"
+          id: 2
+          method: getbestblockhash
+          params: []
+        - jsonrpc: "1.0"
+          id: 3
+          method: getmempoolinfo
+          params: []
+
+    req_restricted_method:
+      summary: Restricted method (demo)
+      description: |
+        Demonstrates a method that is blocked on shared infrastructure. The
+        full list of blocked methods is in `public-rpc-endpoints.md`.
+      value:
+        jsonrpc: "1.0"
+        id: "getpeerinfo"
+        method: getpeerinfo
+        params: []
+
+    # ----- Responses -----
+
+    res_getblockchaininfo:
+      summary: getblockchaininfo
+      value:
+        result:
+          chain: "main"
+          blocks: 944183
+          headers: 944183
+          bestblockhash: "00000000000000001d6aeeb079e142a23f820b0727c628d48278406a40df8550"
+          difficulty: 30544825005.71214
+          mediantime: 1775814943
+          verificationprogress: 0.9999995916079044
+          pruned: true
+          pruneheight: 943800
+          softforks:
+            - id: "bip34"
+              version: 2
+              reject: { status: true }
+            - id: "bip66"
+              version: 3
+              reject: { status: true }
+            - id: "bip65"
+              version: 4
+              reject: { status: true }
+            - id: "csv"
+              version: 5
+              reject: { status: true }
+        error: null
+        id: "getblockchaininfo"
+
+    res_getblockcount:
+      summary: getblockcount
+      value:
+        result: 944183
+        error: null
+        id: "getblockcount"
+
+    res_getbestblockhash:
+      summary: getbestblockhash
+      value:
+        result: "00000000000000001d6aeeb079e142a23f820b0727c628d48278406a40df8550"
+        error: null
+        id: "getbestblockhash"
+
+    res_getblockhash:
+      summary: getblockhash
+      value:
+        result: "00000000000000001d6aeeb079e142a23f820b0727c628d48278406a40df8550"
+        error: null
+        id: "getblockhash"
+
+    res_getblockheader:
+      summary: getblockheader
+      value:
+        result:
+          hash: "00000000000000001d6aeeb079e142a23f820b0727c628d48278406a40df8550"
+          confirmations: 1
+          size: 2433558
+          height: 944183
+          version: 536870912
+          versionHex: "20000000"
+          merkleroot: "01881c7b824f922ca52a142f70306ab96097d68121cb1aa6c60794b8f9f2a95b"
+          num_tx: 4288
+          time: 1775816856
+          mediantime: 1775814943
+          nonce: 2639204574
+          bits: "1823ff01"
+          difficulty: 30544825005.71214
+          chainwork: "0000000000000000000000000000000000000000016c1faeadc7d5cafe46bf7f"
+        error: null
+        id: "getblockheader"
+
+    res_getblock:
+      summary: getblock (truncated)
+      value:
+        result:
+          hash: "00000000000000001d6aeeb079e142a23f820b0727c628d48278406a40df8550"
+          height: 944183
+          num_tx: 4288
+          size: 2433558
+          time: 1775816856
+          tx:
+            - "da3aa5c047a538d58b082cccd475c9d70fd66c6c3aab7eab7c72cb806906ec17"
+            - "..."
+        error: null
+        id: "getblock"
+
+    res_getchaintips:
+      summary: getchaintips
+      value:
+        result:
+          - height: 944183
+            hash: "00000000000000001d6aeeb079e142a23f820b0727c628d48278406a40df8550"
+            branchlen: 0
+            status: "active"
+          - height: 944006
+            hash: "00000000000000000677c00cf3cb6ea3a1b600a5df7e911dc8e7f5e537e32d7d"
+            branchlen: 1
+            status: "valid-headers"
+        error: null
+        id: "getchaintips"
+
+    res_getdifficulty:
+      summary: getdifficulty
+      value:
+        result: 30544825005.71214
+        error: null
+        id: "getdifficulty"
+
+    res_getrawtransaction_verbose:
+      summary: getrawtransaction (decoded, truncated)
+      value:
+        result:
+          txid: "13f597d56cea981c489b1a8a06cefa7145f629cfd9ea28686ca400c37c207de7"
+          hash: "13f597d56cea981c489b1a8a06cefa7145f629cfd9ea28686ca400c37c207de7"
+          version: 1
+          size: 313
+          locktime: 0
+          vin:
+            - txid: "7d0ef71312c6a10cc1cb83d47abd8d6cad931962316e45f8b1b8009f6ab0ce81"
+              vout: 2
+          vout:
+            - value: 0.00000390
+              n: 0
+        error: null
+        id: "getrawtransaction"
+
+    res_gettxout_spent:
+      summary: gettxout — spent or unknown
+      value:
+        result: null
+        error: null
+        id: "gettxout"
+
+    res_sendrawtransaction_decode_failed:
+      summary: sendrawtransaction — decode failed
+      value:
+        result: null
+        error:
+          code: -22
+          message: "TX decode failed"
+        id: "sendrawtransaction"
+
+    res_getmempoolinfo:
+      summary: getmempoolinfo
+      value:
+        result:
+          size: 6538
+          bytes: 3418626
+          usage: 19460688
+          maxmempool: 1000000000
+          mempoolminfee: 0.00000000
+        error: null
+        id: "getmempoolinfo"
+
+    res_getconnectioncount:
+      summary: getconnectioncount
+      value:
+        jsonrpc: "1.0"
+        result: 193
+        id: "getconnectioncount"
+
+    res_batch:
+      summary: Batch — three reads
+      value:
+        - result: 944183
+          error: null
+          id: 1
+        - result: "00000000000000001d6aeeb079e142a23f820b0727c628d48278406a40df8550"
+          error: null
+          id: 2
+        - result:
+            size: 6538
+            bytes: 3418626
+            usage: 19460688
+            maxmempool: 1000000000
+            mempoolminfee: 0.00000000
+          error: null
+          id: 3
+
+    res_restricted_method:
+      summary: Restricted method — gateway block
+      value:
+        jsonrpc: "1.0"
+        error:
+          code: -32701
+          message: "Method getpeerinfo is not allowed."
+        id: "getpeerinfo"
+
+    res_method_not_found:
+      summary: Method not found
+      value:
+        result: null
+        error:
+          code: -32601
+          message: "Method not found"
+        id: "estimatefee"

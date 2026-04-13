@@ -1,0 +1,456 @@
+{
+  "info": {
+    "_postman_id": "f9d6a3e1-2c5b-4c1a-9b71-bsvpublicrpc0001",
+    "name": "BSV Public RPC",
+    "description": "Most-used SV Node JSON-RPC methods, pre-wired to the public BSV mainnet endpoint at https://bsv-rpc.publicnode.com.\n\nThe endpoint is operated by Allnodes (PublicNode) and powered by the BSV Association as a free, open, unauthenticated entry point to BSV mainnet. It is a shared service: suitable for prototyping, lightweight reads, SPV helpers, and broadcast fallback — not for production custody, deep historical queries, or workloads that need an SLA.\n\nChange the `rpcUrl` collection variable to point at any other public or self-hosted SV Node endpoint without editing individual requests.\n\nDocumentation: see `public-rpc-endpoints.md` in the BSV docs (`network-topology/nodes/sv-node/`).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "rpcUrl",
+      "value": "https://bsv-rpc.publicnode.com",
+      "type": "string"
+    },
+    {
+      "key": "sampleBlockHash",
+      "value": "00000000000000001d6aeeb079e142a23f820b0727c628d48278406a40df8550",
+      "type": "string"
+    },
+    {
+      "key": "sampleTxid",
+      "value": "13f597d56cea981c489b1a8a06cefa7145f629cfd9ea28686ca400c37c207de7",
+      "type": "string"
+    },
+    {
+      "key": "sampleHeight",
+      "value": "944183",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Chain state",
+      "item": [
+        {
+          "name": "getblockchaininfo",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"jsonrpc\": \"1.0\",\n  \"id\": \"getblockchaininfo\",\n  \"method\": \"getblockchaininfo\",\n  \"params\": []\n}"
+            },
+            "url": { "raw": "{{rpcUrl}}", "host": ["{{rpcUrl}}"] },
+            "description": "Returns chain tip, headers, work, prune state, and active soft forks. Cheapest 'is the node alive and on mainnet?' probe."
+          },
+          "response": [
+            {
+              "name": "Sample response",
+              "originalRequest": {
+                "method": "POST",
+                "header": [{ "key": "Content-Type", "value": "application/json" }],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"jsonrpc\":\"1.0\",\"id\":\"getblockchaininfo\",\"method\":\"getblockchaininfo\",\"params\":[]}"
+                },
+                "url": { "raw": "{{rpcUrl}}", "host": ["{{rpcUrl}}"] }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [{ "key": "Content-Type", "value": "application/json" }],
+              "body": "{\n  \"result\": {\n    \"chain\": \"main\",\n    \"blocks\": 944183,\n    \"headers\": 944183,\n    \"bestblockhash\": \"00000000000000001d6aeeb079e142a23f820b0727c628d48278406a40df8550\",\n    \"difficulty\": 30544825005.71214,\n    \"mediantime\": 1775814943,\n    \"verificationprogress\": 0.9999995916079044,\n    \"pruned\": true,\n    \"pruneheight\": 943800,\n    \"softforks\": [\n      { \"id\": \"bip34\", \"version\": 2, \"reject\": { \"status\": true } },\n      { \"id\": \"bip66\", \"version\": 3, \"reject\": { \"status\": true } },\n      { \"id\": \"bip65\", \"version\": 4, \"reject\": { \"status\": true } },\n      { \"id\": \"csv\",   \"version\": 5, \"reject\": { \"status\": true } }\n    ]\n  },\n  \"error\": null,\n  \"id\": \"getblockchaininfo\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "getblockcount",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"jsonrpc\": \"1.0\",\n  \"id\": \"getblockcount\",\n  \"method\": \"getblockcount\",\n  \"params\": []\n}"
+            },
+            "url": { "raw": "{{rpcUrl}}", "host": ["{{rpcUrl}}"] },
+            "description": "Returns the height of the longest chain known to this node."
+          },
+          "response": [
+            {
+              "name": "Sample response",
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [{ "key": "Content-Type", "value": "application/json" }],
+              "body": "{\"result\":944183,\"error\":null,\"id\":\"getblockcount\"}"
+            }
+          ]
+        },
+        {
+          "name": "getbestblockhash",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"jsonrpc\": \"1.0\",\n  \"id\": \"getbestblockhash\",\n  \"method\": \"getbestblockhash\",\n  \"params\": []\n}"
+            },
+            "url": { "raw": "{{rpcUrl}}", "host": ["{{rpcUrl}}"] },
+            "description": "Returns the hash of the best (tip) block in the longest blockchain."
+          },
+          "response": [
+            {
+              "name": "Sample response",
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [{ "key": "Content-Type", "value": "application/json" }],
+              "body": "{\"result\":\"00000000000000001d6aeeb079e142a23f820b0727c628d48278406a40df8550\",\"error\":null,\"id\":\"getbestblockhash\"}"
+            }
+          ]
+        },
+        {
+          "name": "getblockhash (by height)",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"jsonrpc\": \"1.0\",\n  \"id\": \"getblockhash\",\n  \"method\": \"getblockhash\",\n  \"params\": [{{sampleHeight}}]\n}"
+            },
+            "url": { "raw": "{{rpcUrl}}", "host": ["{{rpcUrl}}"] },
+            "description": "Returns the hash of the block at the given height. Replace `sampleHeight` collection variable to query a different block."
+          },
+          "response": [
+            {
+              "name": "Sample response",
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [{ "key": "Content-Type", "value": "application/json" }],
+              "body": "{\"result\":\"00000000000000001d6aeeb079e142a23f820b0727c628d48278406a40df8550\",\"error\":null,\"id\":\"getblockhash\"}"
+            }
+          ]
+        },
+        {
+          "name": "getblockheader (by hash)",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"jsonrpc\": \"1.0\",\n  \"id\": \"getblockheader\",\n  \"method\": \"getblockheader\",\n  \"params\": [\"{{sampleBlockHash}}\", true]\n}"
+            },
+            "url": { "raw": "{{rpcUrl}}", "host": ["{{rpcUrl}}"] },
+            "description": "Returns the block header for the given block hash. Set the second parameter to `false` to get the raw 80-byte hex header instead of the decoded JSON."
+          },
+          "response": [
+            {
+              "name": "Sample response",
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [{ "key": "Content-Type", "value": "application/json" }],
+              "body": "{\n  \"result\": {\n    \"hash\": \"00000000000000001d6aeeb079e142a23f820b0727c628d48278406a40df8550\",\n    \"confirmations\": 1,\n    \"size\": 2433558,\n    \"height\": 944183,\n    \"version\": 536870912,\n    \"versionHex\": \"20000000\",\n    \"merkleroot\": \"01881c7b824f922ca52a142f70306ab96097d68121cb1aa6c60794b8f9f2a95b\",\n    \"num_tx\": 4288,\n    \"time\": 1775816856,\n    \"mediantime\": 1775814943,\n    \"nonce\": 2639204574,\n    \"bits\": \"1823ff01\",\n    \"difficulty\": 30544825005.71214,\n    \"chainwork\": \"0000000000000000000000000000000000000000016c1faeadc7d5cafe46bf7f\"\n  },\n  \"error\": null,\n  \"id\": \"getblockheader\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "getblock (by hash, verbose)",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"jsonrpc\": \"1.0\",\n  \"id\": \"getblock\",\n  \"method\": \"getblock\",\n  \"params\": [\"{{sampleBlockHash}}\", 1]\n}"
+            },
+            "url": { "raw": "{{rpcUrl}}", "host": ["{{rpcUrl}}"] },
+            "description": "Returns block data for the given hash. Verbosity:\n  0 = raw block hex\n  1 = JSON with txids\n  2 = JSON with full decoded transactions\n\nNote: the PublicNode endpoint runs in pruned mode. Hashes older than `pruneheight` (see getblockchaininfo) will return `Block not available (pruned data)`."
+          },
+          "response": [
+            {
+              "name": "Sample response (truncated)",
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [{ "key": "Content-Type", "value": "application/json" }],
+              "body": "{\n  \"result\": {\n    \"hash\": \"00000000000000001d6aeeb079e142a23f820b0727c628d48278406a40df8550\",\n    \"height\": 944183,\n    \"num_tx\": 4288,\n    \"size\": 2433558,\n    \"time\": 1775816856,\n    \"tx\": [\n      \"da3aa5c047a538d58b082cccd475c9d70fd66c6c3aab7eab7c72cb806906ec17\",\n      \"...\"\n    ]\n  },\n  \"error\": null,\n  \"id\": \"getblock\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "getchaintips",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"jsonrpc\": \"1.0\",\n  \"id\": \"getchaintips\",\n  \"method\": \"getchaintips\",\n  \"params\": []\n}"
+            },
+            "url": { "raw": "{{rpcUrl}}", "host": ["{{rpcUrl}}"] },
+            "description": "Returns information about all known chain tips, including stale branches."
+          },
+          "response": [
+            {
+              "name": "Sample response",
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [{ "key": "Content-Type", "value": "application/json" }],
+              "body": "{\n  \"result\": [\n    { \"height\": 944183, \"hash\": \"00000000000000001d6aeeb079e142a23f820b0727c628d48278406a40df8550\", \"branchlen\": 0, \"status\": \"active\" },\n    { \"height\": 944006, \"hash\": \"00000000000000000677c00cf3cb6ea3a1b600a5df7e911dc8e7f5e537e32d7d\", \"branchlen\": 1, \"status\": \"valid-headers\" }\n  ],\n  \"error\": null,\n  \"id\": \"getchaintips\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "getdifficulty",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"jsonrpc\": \"1.0\",\n  \"id\": \"getdifficulty\",\n  \"method\": \"getdifficulty\",\n  \"params\": []\n}"
+            },
+            "url": { "raw": "{{rpcUrl}}", "host": ["{{rpcUrl}}"] },
+            "description": "Returns the proof-of-work difficulty as a multiple of the minimum difficulty."
+          },
+          "response": [
+            {
+              "name": "Sample response",
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [{ "key": "Content-Type", "value": "application/json" }],
+              "body": "{\"result\":30544825005.71214,\"error\":null,\"id\":\"getdifficulty\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Transactions",
+      "item": [
+        {
+          "name": "getrawtransaction (verbose)",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"jsonrpc\": \"1.0\",\n  \"id\": \"getrawtransaction\",\n  \"method\": \"getrawtransaction\",\n  \"params\": [\"{{sampleTxid}}\", 1]\n}"
+            },
+            "url": { "raw": "{{rpcUrl}}", "host": ["{{rpcUrl}}"] },
+            "description": "Returns the transaction by txid. Second parameter:\n  0 = serialized hex (default if omitted)\n  1 = decoded JSON object"
+          },
+          "response": [
+            {
+              "name": "Sample response (truncated)",
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [{ "key": "Content-Type", "value": "application/json" }],
+              "body": "{\n  \"result\": {\n    \"txid\": \"13f597d56cea981c489b1a8a06cefa7145f629cfd9ea28686ca400c37c207de7\",\n    \"version\": 1,\n    \"size\": 313,\n    \"locktime\": 0,\n    \"vin\": [ { \"txid\": \"...\", \"vout\": 2 } ],\n    \"vout\": [ { \"value\": 0.00000390, \"n\": 0 } ]\n  },\n  \"error\": null,\n  \"id\": \"getrawtransaction\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "getrawtransaction (raw hex)",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"jsonrpc\": \"1.0\",\n  \"id\": \"getrawtransaction\",\n  \"method\": \"getrawtransaction\",\n  \"params\": [\"{{sampleTxid}}\"]\n}"
+            },
+            "url": { "raw": "{{rpcUrl}}", "host": ["{{rpcUrl}}"] },
+            "description": "Returns the serialized hex form of the transaction. Pair with a client-side parser when bandwidth matters."
+          }
+        },
+        {
+          "name": "gettxout",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"jsonrpc\": \"1.0\",\n  \"id\": \"gettxout\",\n  \"method\": \"gettxout\",\n  \"params\": [\"{{sampleTxid}}\", 0, true]\n}"
+            },
+            "url": { "raw": "{{rpcUrl}}", "host": ["{{rpcUrl}}"] },
+            "description": "Returns details about an unspent transaction output. Returns `null` if the output has been spent or does not exist. Third parameter controls whether to include mempool UTXOs."
+          },
+          "response": [
+            {
+              "name": "Spent or unknown",
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [{ "key": "Content-Type", "value": "application/json" }],
+              "body": "{\"result\":null,\"error\":null,\"id\":\"gettxout\"}"
+            }
+          ]
+        },
+        {
+          "name": "sendrawtransaction",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"jsonrpc\": \"1.0\",\n  \"id\": \"sendrawtransaction\",\n  \"method\": \"sendrawtransaction\",\n  \"params\": [\"<REPLACE WITH SIGNED RAW TX HEX>\"]\n}"
+            },
+            "url": { "raw": "{{rpcUrl}}", "host": ["{{rpcUrl}}"] },
+            "description": "Submits a serialized transaction to the local node, which then propagates it across the P2P network. Returns the txid on success.\n\nFor production broadcast use ARC. Use this RPC as a developer / fallback path."
+          },
+          "response": [
+            {
+              "name": "Decode failure example",
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [{ "key": "Content-Type", "value": "application/json" }],
+              "body": "{\"result\":null,\"error\":{\"code\":-22,\"message\":\"TX decode failed\"},\"id\":\"sendrawtransaction\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mempool",
+      "item": [
+        {
+          "name": "getmempoolinfo",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"jsonrpc\": \"1.0\",\n  \"id\": \"getmempoolinfo\",\n  \"method\": \"getmempoolinfo\",\n  \"params\": []\n}"
+            },
+            "url": { "raw": "{{rpcUrl}}", "host": ["{{rpcUrl}}"] },
+            "description": "Returns counts and byte sizes for the node's current mempool."
+          },
+          "response": [
+            {
+              "name": "Sample response",
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [{ "key": "Content-Type", "value": "application/json" }],
+              "body": "{\n  \"result\": {\n    \"size\": 6538,\n    \"bytes\": 3418626,\n    \"usage\": 19460688,\n    \"maxmempool\": 1000000000,\n    \"mempoolminfee\": 0.00000000\n  },\n  \"error\": null,\n  \"id\": \"getmempoolinfo\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "getrawmempool",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"jsonrpc\": \"1.0\",\n  \"id\": \"getrawmempool\",\n  \"method\": \"getrawmempool\",\n  \"params\": [false]\n}"
+            },
+            "url": { "raw": "{{rpcUrl}}", "host": ["{{rpcUrl}}"] },
+            "description": "Returns the txids in the node's mempool. Pass `true` for verbose output (object keyed by txid with size/fee/depends)."
+          }
+        },
+        {
+          "name": "getmempoolancestors",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"jsonrpc\": \"1.0\",\n  \"id\": \"getmempoolancestors\",\n  \"method\": \"getmempoolancestors\",\n  \"params\": [\"{{sampleTxid}}\"]\n}"
+            },
+            "url": { "raw": "{{rpcUrl}}", "host": ["{{rpcUrl}}"] },
+            "description": "Returns the in-mempool ancestor txids of the given transaction. Useful for understanding chained unconfirmed transactions."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Network & node",
+      "item": [
+        {
+          "name": "getnetworkinfo",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"jsonrpc\": \"1.0\",\n  \"id\": \"getnetworkinfo\",\n  \"method\": \"getnetworkinfo\",\n  \"params\": []\n}"
+            },
+            "url": { "raw": "{{rpcUrl}}", "host": ["{{rpcUrl}}"] },
+            "description": "Returns version, protocol version, sub-version, peer count, and relay/policy parameters of the gateway node."
+          }
+        },
+        {
+          "name": "getconnectioncount",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"jsonrpc\": \"1.0\",\n  \"id\": \"getconnectioncount\",\n  \"method\": \"getconnectioncount\",\n  \"params\": []\n}"
+            },
+            "url": { "raw": "{{rpcUrl}}", "host": ["{{rpcUrl}}"] },
+            "description": "Returns the number of connections the gateway node has to peers."
+          }
+        },
+        {
+          "name": "getinfo",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"jsonrpc\": \"1.0\",\n  \"id\": \"getinfo\",\n  \"method\": \"getinfo\",\n  \"params\": []\n}"
+            },
+            "url": { "raw": "{{rpcUrl}}", "host": ["{{rpcUrl}}"] },
+            "description": "Legacy summary call: version, block height, connection count, difficulty, and policy limits. Marked deprecated upstream but still useful for quick health checks."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Patterns",
+      "item": [
+        {
+          "name": "Batch request (3 calls)",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "[\n  { \"jsonrpc\": \"1.0\", \"id\": 1, \"method\": \"getblockcount\",     \"params\": [] },\n  { \"jsonrpc\": \"1.0\", \"id\": 2, \"method\": \"getbestblockhash\",  \"params\": [] },\n  { \"jsonrpc\": \"1.0\", \"id\": 3, \"method\": \"getmempoolinfo\",    \"params\": [] }\n]"
+            },
+            "url": { "raw": "{{rpcUrl}}", "host": ["{{rpcUrl}}"] },
+            "description": "JSON-RPC batch: send an array of request objects, receive an array of responses (matched by `id`). The most efficient way to fan out cheap reads against a public endpoint."
+          }
+        },
+        {
+          "name": "Restricted method example (-32701)",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"jsonrpc\": \"1.0\",\n  \"id\": \"getpeerinfo\",\n  \"method\": \"getpeerinfo\",\n  \"params\": []\n}"
+            },
+            "url": { "raw": "{{rpcUrl}}", "host": ["{{rpcUrl}}"] },
+            "description": "Demonstrates the gateway error response for a method that is blocked on shared infrastructure. See `public-rpc-endpoints.md` for the full list."
+          },
+          "response": [
+            {
+              "name": "Blocked",
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [{ "key": "Content-Type", "value": "application/json" }],
+              "body": "{\"jsonrpc\":\"1.0\",\"error\":{\"code\":-32701,\"message\":\"Method getpeerinfo is not allowed.\"},\"id\":\"getpeerinfo\"}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
