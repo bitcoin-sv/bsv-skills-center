@@ -172,7 +172,7 @@ The opcodes listed below will be re-instated.
 
 Opcode number 98, hex `0x62`
 
-`OP_VER` pushes the executing transaction's version onto the stack. The transaction version is the first four bytes of the transaction containing the executing script. The value is treated as a script number.
+`OP_VER` pushes the executing transaction's version onto the stack. The transaction version is the first four bytes of the transaction containing the executing script.
 
 ```
 Inputs: none
@@ -183,9 +183,9 @@ Outputs: tos = transaction version
 
 Opcode number 101, hex `0x65`
 
-Compares the `tos` with the executing transaction's version as a greater than or equals comparison as part of the following traditional if-then-else expression: `OP_VERIF [statements] [OP_ELSE [statements]] OP_ENDIF`
+Compares the `tos` with the executing transaction's version as an equivalence comparison as part of the following traditional if-then-else expression: `OP_VERIF [statements] [OP_ELSE [statements]] OP_ENDIF`
 
-Logically equivalent to `OP_VER OP_GREATERTHANOREQUAL OP_IF`.
+Logically equivalent to `OP_VER OP_EQUAL OP_IF`.
 
 ```
 Inputs: comparison value -> tos. 
@@ -195,10 +195,10 @@ Inputs: comparison value -> tos.
 
 Opcode number 102, hex `0x66`
 
-Compares the `tos` with the executing transaction's version as a greater than or equals comparison as part of the following expression:\
+Compares the `tos` with the executing transaction's version as an equivalence comparison as part of the following expression:\
 `OP_VERNOTIF [statements] [OP_ELSE [statements]] OP_ENDIF`
 
-Logically equivalent to `OP_VER OP_GREATERTHANOREQUAL OP_NOTIF`
+Logically equivalent to `OP_VER OP_EQUAL OP_NOTIF`
 
 ```
 Inputs: comparison value -> tos
