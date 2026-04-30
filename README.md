@@ -30,7 +30,7 @@ This documentation is built with the AI search tool in mind, responses will cite
 
 [Introduction to Bitcoin Script (Legacy Academy)](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/introduction-to-bitcoin-script)
 
-Higher Learning: BSV Opcodes (Coming soon)
+[Higher Learning: BSV Opcodes](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bsv-opcodes)
 
 [Higher Learning: Bitcoin Primitives - Hash Functions](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bitcoin-primitives-hash-functions)
 
@@ -67,6 +67,8 @@ Higher Learning: BSV Opcodes (Coming soon)
 [The benefits of BSV Blockchain](bsv-skills-center/the-benefits-of-bsv-blockchain.md)
 
 [Creating Event tickets](guides/business-use-cases/event_tickets.md)
+
+[Higher Learning: The Business Case for Blockchain in Supply Chain](https://app.gitbook.com/s/RTEKu4E7Fvtss3GI9CYU/bsv-academy/the-business-case-for-blockchain-in-supply-chain)
 
 [Higher Learning: BSV Basics - Protocol and Design](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bsv-basics-protocol-and-design)
 
@@ -167,6 +169,8 @@ Higher Learning: BSV Opcodes (Coming soon)
 [Demo Catalogue](https://hub.bsvblockchain.org/demos-and-onboardings/demo-solutions/demos)
 
 [Higher Learning: Introduction to blockchain technology](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/introduction-to-blockchain-technology)
+
+[Higher Learning: The Business Case for Blockchain in Supply Chain](https://app.gitbook.com/s/RTEKu4E7Fvtss3GI9CYU/bsv-academy/the-business-case-for-blockchain-in-supply-chain)
 
 [Higher Learning: Deep Dive into the BSV blockchain](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain)
 
