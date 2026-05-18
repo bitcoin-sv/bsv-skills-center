@@ -28,6 +28,8 @@ This documentation is built with the AI search tool in mind, responses will cite
 
 [Higher Learning: BSV Network Topology](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bsv-network-topology)
 
+[Higher Learning: Proof-of-Work: The Only Viable Consensus Mechanism](https://hub.bsvblockchain.org/higher-learning/bsv-academy/proof-of-work-the-only-viable-consensus-mechanism)
+
 [Introduction to Bitcoin Script (Legacy Academy)](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/introduction-to-bitcoin-script)
 
 [Higher Learning: BSV Opcodes](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bsv-opcodes)
@@ -68,6 +70,8 @@ This documentation is built with the AI search tool in mind, responses will cite
 
 [Creating Event tickets](guides/business-use-cases/event_tickets.md)
 
+[Higher Learning: Proof-of-Work: The Only Viable Consensus Mechanism](https://hub.bsvblockchain.org/higher-learning/bsv-academy/proof-of-work-the-only-viable-consensus-mechanism)
+
 [Higher Learning: The Business Case for Blockchain in Supply Chain](https://app.gitbook.com/s/RTEKu4E7Fvtss3GI9CYU/bsv-academy/the-business-case-for-blockchain-in-supply-chain)
 
 [Higher Learning: BSV Basics - Protocol and Design](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bsv-basics-protocol-and-design)
@@ -88,6 +92,8 @@ This documentation is built with the AI search tool in mind, responses will cite
 <details>
 
 <summary>Lawyers</summary>
+
+[Higher Learning: Proof-of-Work: The Only Viable Consensus Mechanism](https://hub.bsvblockchain.org/higher-learning/bsv-academy/proof-of-work-the-only-viable-consensus-mechanism)
 
 [Higher Learning: Bitcoin Primitives: Digital Signatures](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bitcoin-primitives-digital-signatures)
 
@@ -114,7 +120,9 @@ This documentation is built with the AI search tool in mind, responses will cite
 
 [SV Node](network-topology/nodes/sv-node/installation/sv-node/)
 
-[Academy: Bitcoin Infrastructure](https://hub.bsvblockchain.org/bsv-skills-center/~/changes/149/bsv-academy/bsv-infrastructure)
+[Higher Learning: Proof-of-Work: The Only Viable Consensus Mechanism](https://hub.bsvblockchain.org/higher-learning/bsv-academy/proof-of-work-the-only-viable-consensus-mechanism)
+
+[BSV Academy: Bitcoin Infrastructure](https://hub.bsvblockchain.org/bsv-skills-center/~/changes/149/bsv-academy/bsv-infrastructure)
 
 [Higher Learning: Bitcoin Whitepaper Series](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bitcoin-whitepaper-series)
 
@@ -136,6 +144,8 @@ This documentation is built with the AI search tool in mind, responses will cite
 <summary>Academics</summary>
 
 [Higher Learning: Introduction to blockchain technology](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/introduction-to-blockchain-technology)
+
+[Higher Learning: Proof-of-Work: The Only Viable Consensus Mechanism](https://hub.bsvblockchain.org/higher-learning/bsv-academy/proof-of-work-the-only-viable-consensus-mechanism)
 
 [Higher Learning: Bitcoin Whitepaper Series](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bitcoin-whitepaper-series)
 
@@ -169,6 +179,8 @@ This documentation is built with the AI search tool in mind, responses will cite
 [Demo Catalogue](https://hub.bsvblockchain.org/demos-and-onboardings/demo-solutions/demos)
 
 [Higher Learning: Introduction to blockchain technology](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/introduction-to-blockchain-technology)
+
+[Higher Learning: Proof-of-Work: The Only Viable Consensus Mechanism](https://hub.bsvblockchain.org/higher-learning/bsv-academy/proof-of-work-the-only-viable-consensus-mechanism)
 
 [Higher Learning: The Business Case for Blockchain in Supply Chain](https://app.gitbook.com/s/RTEKu4E7Fvtss3GI9CYU/bsv-academy/the-business-case-for-blockchain-in-supply-chain)
 
