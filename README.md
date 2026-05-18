@@ -122,7 +122,7 @@ This documentation is built with the AI search tool in mind, responses will cite
 
 [Higher Learning: Proof-of-Work: The Only Viable Consensus Mechanism](https://hub.bsvblockchain.org/higher-learning/bsv-academy/proof-of-work-the-only-viable-consensus-mechanism)
 
-[BSV Academy: Bitcoin Infrastructure](https://hub.bsvblockchain.org/bsv-skills-center/~/changes/149/bsv-academy/bsv-infrastructure)
+Higher Learning: Bitcoin Infrastructure - coming soon
 
 [Higher Learning: Bitcoin Whitepaper Series](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bitcoin-whitepaper-series)
 
