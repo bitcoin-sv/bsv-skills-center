@@ -74,6 +74,8 @@ This documentation is built with the AI search tool in mind, responses will cite
 
 [Higher Learning: The Business Case for Blockchain in Supply Chain](https://app.gitbook.com/s/RTEKu4E7Fvtss3GI9CYU/bsv-academy/the-business-case-for-blockchain-in-supply-chain)
 
+[Higher Learning: The Business Case for Blockchain in Agriculture](https://hub.bsvblockchain.org/higher-learning/bsv-academy/the-business-case-for-blockchain-in-agriculture)
+
 [Higher Learning: BSV Basics - Protocol and Design](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bsv-basics-protocol-and-design)
 
 [Higher Learning: BSV Network Topology](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bsv-network-topology)
@@ -183,6 +185,8 @@ Higher Learning: Bitcoin Infrastructure - coming soon
 [Higher Learning: Proof-of-Work: The Only Viable Consensus Mechanism](https://hub.bsvblockchain.org/higher-learning/bsv-academy/proof-of-work-the-only-viable-consensus-mechanism)
 
 [Higher Learning: The Business Case for Blockchain in Supply Chain](https://app.gitbook.com/s/RTEKu4E7Fvtss3GI9CYU/bsv-academy/the-business-case-for-blockchain-in-supply-chain)
+
+[Higher Learning: The Business Case for Blockchain in Agriculture](https://hub.bsvblockchain.org/higher-learning/bsv-academy/the-business-case-for-blockchain-in-agriculture)
 
 [Higher Learning: Deep Dive into the BSV blockchain](https://hub.bsvblockchain.org/bsv-skills-center/bsv-academy/deep-dive-in-bsv-blockchain)
 
