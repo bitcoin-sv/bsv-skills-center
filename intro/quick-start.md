@@ -113,7 +113,7 @@ You should see a response like this:
 
 ## Congratulations
 
-You're a BSV Developer.&#x20;
+You're a BSV Developer.
 
 You can keep running the same script - it will keep appending new transactions to the `.transactions` file until you run out of funds. BSV is so cheap that this could be a few thousand transactions later.
 
@@ -174,4 +174,4 @@ If you want to contribute new ScriptTemplates of your own design there's a [repo
 
 For more guidance from the documentation - jump here.
 
-[Broken link](broken-reference "mention")
+[https://github.com/bitcoin-sv/docs/blob/master/intro/broken-reference/README.md](https://github.com/bitcoin-sv/docs/blob/master/intro/broken-reference/README.md "mention")

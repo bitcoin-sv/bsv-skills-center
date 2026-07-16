@@ -1,6 +1,6 @@
 # Sighash Flags
 
-A SIGHASH [flag](https://wiki.bitcoinsv.io/index.php/Flag) is used to indicate which part of the transaction is signed by the [ECDSA signature](https://wiki.bitcoinsv.io/index.php/Elliptic\_Curve\_Digital\_Signature\_Algorithm). The mechanism provides a flexibility in constructing transactions. There are in total 6 different flag combinations that can be added to a digital signature in a transaction. Note that different inputs can use different SIGHASH flags enabling complex compositions of spending conditions.
+A SIGHASH [flag](https://wiki.bitcoinsv.io/index.php/Flag) is used to indicate which part of the transaction is signed by the [ECDSA signature](https://wiki.bitcoinsv.io/index.php/Elliptic_Curve_Digital_Signature_Algorithm). The mechanism provides a flexibility in constructing transactions. There are in total 6 different flag combinations that can be added to a digital signature in a transaction. Note that different inputs can use different SIGHASH flags enabling complex compositions of spending conditions.
 
 NOTE: Currently all BitcoinSV transactions require an additional SIGHASH flag called SIGHASH\_FORKID which is 0x40
 
@@ -21,49 +21,49 @@ Items that are _always_ signed
 
 The signature on any input always signs the [TXID](https://wiki.bitcoinsv.io/index.php/TXID) and [VOUT](https://wiki.bitcoinsv.io/index.php/VOUT) that comprise the Outpoint being spent as well as the [version](https://wiki.bitcoinsv.io/index.php?title=Version\&action=edit\&redlink=1) of the protocol that the transaction is being evaluated under and the [locktime](https://wiki.bitcoinsv.io/index.php/NLocktime) being applied to the transaction.
 
-<figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 ### Items that are _never_ signed
 
 Unlocking scripts are _never_ signed
 
-<figure><img src="../../.gitbook/assets/image (32).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 ### SIGHASH\_ALL
 
 SIGHASH\_ALL signs all inputs and outputs used to build the transaction. Once an input signed with SIGHASH\_ALL is added to a transaction, the transaction's details cannot be changed without that signature being invalidated.
 
-<figure><img src="../../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 ### SIGHASH\_SINGLE
 
 SIGHASH\_SINGLE signs all inputs and the output that shares the same index as the input being signed. If that output or any inputs are changed that signature becomes invalidated.
 
-<figure><img src="../../.gitbook/assets/image (34).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
 ### SIGHASH\_NONE
 
 SIGHASH\_NONE signs all inputs and no outputs. Any output can be changed without invalidating the signature however if any inputs are changed that signature becomes invalidated.
 
-<figure><img src="../../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
 ### SIGHASH\_ALL|ANYONECANPAY
 
 \`Once an input signed with SIGHASH\_ALL|ANYONECANPAY is added to a transaction outputs cannot be changed or added without that signature being invalidated.
 
-<figure><img src="../../.gitbook/assets/image (36).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
 ### SIGHASH\_SINGLE|ANYONECANPAY
 
 SIGHASH\_SINGLE|ANYONECANPAY signs the input being signed and the output that shares the same index. If that output is changed that signature becomes invalidated.
 
-<figure><img src="../../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
 ### SIGHASH\_NONE|ANYONECANPAY
 
 SIGHASH\_NONE|ANYONECANPAY signs a single inputs and no outputs. This type of signature can be used to easily assign funds to a person or smart-contract without creating an on-chain action.
 
-<figure><img src="../../.gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 
 ### Use cases
 
@@ -84,4 +84,3 @@ Using SINGLE | ANYONECANPAY modularises a transaction. Any number of these trans
 {% hint style="info" %}
 Please note that after the [Chronicle release](https://docs.bsvblockchain.org/network-topology/nodes/sv-node/chronicle-release#id-2.-opcodes), the BSV Blockchain will support both the original TDA and the BIP143 Algorithm (with SIGHASH\_FORKID), allowing flexibility for devs and users. It means that users will be able to decide how to sign transactions
 {% endhint %}
-

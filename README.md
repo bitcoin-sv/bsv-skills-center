@@ -22,7 +22,7 @@ This documentation is built with the AI search tool in mind, responses will cite
 
 [Mockchain](guides/local-blockchain-stack/mockchain.md)
 
-[Example Verifying Beef.md](guides/sdks/ts/examples/EXAMPLE_VERIFYING_BEEF.md)
+[Example Verifying Beef.md](guides/sdks/ts/examples/example_verifying_beef.md)
 
 [Higher Learning: BSV Basics - Protocol and Design](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bsv-basics-protocol-and-design)
 
@@ -62,11 +62,11 @@ This documentation is built with the AI search tool in mind, responses will cite
 
 <summary>Entrepreneurs</summary>
 
-[What Can I do?](what-can-i-do/)
+[What Can I do?](intro/what-can-i-do.md)
 
 [Demo Catalogue](https://hub.bsvblockchain.org/demos-and-onboardings/demo-solutions/demos)
 
-[The benefits of BSV Blockchain](bsv-skills-center/the-benefits-of-bsv-blockchain.md)
+[The benefits of BSV Blockchain](intro/the-benefits-of-bsv-blockchain.md)
 
 [Creating Event tickets](guides/business-use-cases/event_tickets.md)
 

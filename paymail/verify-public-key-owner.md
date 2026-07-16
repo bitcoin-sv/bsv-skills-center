@@ -77,4 +77,4 @@ A public key is added to the body of the request. The final schema is the follow
 
 ### Flow
 
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>

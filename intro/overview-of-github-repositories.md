@@ -37,7 +37,7 @@ In addition, the following repositories are related to SPV Wallets:
 * Key generator admin: [https://github.com/bitcoin-sv/spv-wallet-admin-keygen](https://github.com/bitcoin-sv/spv-wallet-admin-keygen)
 * Fireblocks bridge: [https://github.com/bitcoin-sv/fireblocks-paymail-spv-bridge](https://github.com/bitcoin-sv/fireblocks-paymail-spv-bridge)
 
-More in-depth information and guidance about SPV Wallets is available [here](../bsv-skills-center/bsv-protocol-documentation/light-clients-and-spv-processes/)
+More in-depth information and guidance about SPV Wallets is available [here](https://github.com/bitcoin-sv/docs/blob/master/bsv-skills-center/bsv-protocol-documentation/light-clients-and-spv-processes/README.md)
 
 ### Block Headers Service
 
@@ -57,7 +57,7 @@ Full details on ARC are not yet available in this BSV Skills Center, but can be 
 
 **SV Node** is the main node software used within BSV Blockchain. It is based on the original implementation of the Bitcoin protocol implemented as a monolith. The main repository is available here: [https://github.com/bitcoin-sv/bitcoin-sv](https://github.com/bitcoin-sv/bitcoin-sv)\
 \
-For more details, see [Node Operations](../bsv-skills-center/bsv-protocol-documentation/node-operations/) and the [SV Node installation guide](../network-topology/nodes/sv-node/installation/).
+For more details, see [Node Operations](https://github.com/bitcoin-sv/docs/blob/master/bsv-skills-center/bsv-protocol-documentation/node-operations/README.md) and the [SV Node installation guide](../network-topology/nodes/sv-node/installation/).
 
 There is ongoing work for an improved and scalable microservice implementation of the node software (Teranode) to support a much larger network throughput of transaction processing. For more information, visit [bsvblockchain.org/teranode](https://www.bsvblockchain.org/teranode)
 

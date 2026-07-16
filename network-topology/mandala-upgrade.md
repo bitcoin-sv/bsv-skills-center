@@ -22,11 +22,9 @@ These services expand network scalability and performance, catering to various a
 
 Built on a foundation of SPV, enabling p2p edge validation, and integration with the blockchain.
 
-
-
 ## The Blockchain Mandala Concept
 
-<figure><img src="/.gitbook/assets/image (30).png" alt=""><figcaption><p>Mandala</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (43).png" alt=""><figcaption><p>Mandala</p></figcaption></figure>
 
 ### Ultra-Small-World Network
 
@@ -46,8 +44,7 @@ The existing blockchain network faces several challenges:
 
 • Node Software Limitations: Performance varies based on hardware and settings.
 
-• Resource Drain: Non-mining nodes consume resources without contributing to the network.\
-
+• Resource Drain: Non-mining nodes consume resources without contributing to the network.\\
 
 ## Mandala Upgrade Solutions
 
