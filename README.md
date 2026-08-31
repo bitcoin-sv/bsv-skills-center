@@ -74,6 +74,8 @@ This documentation is built with the AI search tool in mind, responses will cite
 
 [Higher Learning: The Business Case for Blockchain in Supply Chain](https://app.gitbook.com/s/RTEKu4E7Fvtss3GI9CYU/bsv-academy/the-business-case-for-blockchain-in-supply-chain)
 
+[Higher Learning: Blockchain Solutions for Retail Trust and Transparency](https://hub.bsvblockchain.org/higher-learning/bsv-academy/blockchain-solutions-for-retail-trust-and-transparency)
+
 [Higher Learning: The Business Case for Blockchain in Agriculture](https://hub.bsvblockchain.org/higher-learning/bsv-academy/the-business-case-for-blockchain-in-agriculture)
 
 [Higher Learning: BSV Basics - Protocol and Design](https://hub.bsvblockchain.org/bsv-academy/bsv-academy/bsv-basics-protocol-and-design)
